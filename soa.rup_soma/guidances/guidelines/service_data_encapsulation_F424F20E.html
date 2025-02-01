@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Service Data Encapsulation</title>
+<meta content="Guideline" name="uma.type">
+<meta content="service_data_encapsulation" name="uma.name">
+<meta content="Service Data Encapsulation" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i99p8OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i99p8OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i_Kj0OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i_Kj0OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_jC070OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_jC070OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_jgOCcOBoEe-aS_x8ARA3yA", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_jgOCcOBoEe-aS_x8ARA3yA", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_j-pD0OBoEe-aS_x8ARA3yA", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_j-pD0OBoEe-aS_x8ARA3yA", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "_kSE9MOBoEe-aS_x8ARA3yA", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "_kSXREOBoEe-aS_x8ARA3yA", "1.6727924656888407E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.6727924656888407E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lB0YEOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lB0YEOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lCgUkOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lCgUkOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_lEvJMOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_lEvJMOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lKd9wOBoEe-aS_x8ARA3yA", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lKd9wOBoEe-aS_x8ARA3yA", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lc2uQOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lc2uQOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_ldiqwOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_ldiqwOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_mJtYwCwTEduKcvYAyaKSaA", "_lneC0OBoEe-aS_x8ARA3yA", "1.6727924656888407E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_ObqZoCwUEduKcvYAyaKSaA", "_lpGagOBoEe-aS_x8ARA3yA", "1.6727924656888407E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lsiJAOBoEe-aS_x8ARA3yA", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "1.6727924656888407E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lsiJAOBoEe-aS_x8ARA3yA", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "1.6727924656888407E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_d5dewE7OEduvcvbnLvkXhA", "1.6727924656888407E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.6727924656888407E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Service Data Encapsulation</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline takes the idea of encapsulation as it is applied in object-oriented development and extends it to services. It further describes how communication with a service is done by message exchange, introducing the metaphor of services as 'fiefdoms,' which may interact directly only with known 'emissaries,' which, in turn, interact with the consumer.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_service_identification_data_1AFDAC0A.html" guid="_mJtYwCwTEduKcvYAyaKSaA">Data Model Analysis</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_model_message_BE931590.html" guid="{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}">Message</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_service_message_design_D1BA096D.html" guid="_ObqZoCwUEduKcvYAyaKSaA">Message Design</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_model_service_1EE4C96C.html" guid="{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}">Service</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_service_data_encapsulation__guidelines_for" name="XE_service_data_encapsulation__guidelines_for"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introduction</a>
+</h3>
+<p>
+    It has been common practice in both object-oriented and component-based development to have a set of components
+    representing persistent entities residing in a shared database. In fact, it was often a vision of many IT organizations
+    to have a single database schema containing all the persistent elements used in the enterprise. While this has had
+    limited success for some organizations, for many of them, the common enterprise schema has not been developed. There
+    are many reasons why such an approach fails, many of them non-technical, but relating to multiple applications;
+    accessing, locking, and changing the same shared data are very difficult issues to resolve across organizational
+    boundaries.
+</p>
+<p>
+    In this guideline, we will address two concerns that are very much related: the notion that a service should be a
+    complete encapsulation of the data it requires and that the only sharing of information between services be conducted
+    via message exchange.
+</p>
+<p>
+    This guideline provides additional detail to the topic of data-driven service identification.
+</p>
+<h3>
+    <a id="Data_Fiefdoms" name="Data_Fiefdoms">Services as Fiefdoms</a>
+</h3>
+<p>
+    One of the terms most often used when describing the notion of object-oriented development is the notion of
+    encapsulation, that an object should encapsulate its state (private data) and its implementation logic. In a services
+    world, we cleanly separate the notion of a&nbsp;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_service_1EE4C96C.html" guid="{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}">Artifact: Service</a> (implementation) from its <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}">Artifact: Service Specification</a>. This section will address the need
+    for encapsulation of state. This concept has been documented, initially in [HELLAND] and more recently in [SESSIONS]
+    and was focused on the development of autonomous, therefore more easily evolvable systems.
+</p>
+<p align="center">
+    <img height="217" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_encapsulation-01.gif"     width="98" border="0" />
+</p>
+<p>
+    The commonly used analogy [HELLAND] is that in applying for new insurance you tend to use an agent. The agent is
+    responsible for helping you fill out the forms for application and usually does this with access to data for types of
+    policies kinds and rates. The insurance agent is acting as the emissary on behalf of the insurance company's fiefdom.
+    In fact the insurance company may only accept policy applications from an approved agent. The fiefdom is responsible
+    for distributing up-to-date policy, rate, and form information to agents as well as processing applications. However,
+    even though the fiefdom has provided the policy information to the agent and the agent has been certified by the
+    fiefdom, the first thing the insurance company does with the application is validate it completely - the fiefdom still
+    does not trust the emissary.
+</p>
+<p>
+    The following sections outline the role of the two primary elements in more detail. While this is not presented as a
+    concrete pattern or as a prescriptive approach, the principles embodied are important in considering service-oriented
+    solutions.
+</p>
+<h4>
+    Role of the Fiefdom
+</h4>
+<p>
+    The fiefdom is an autonomous service; it only allows communication via messages that are generally assumed to be
+    created by emissaries who act on behalf of the consumer. The fiefdom is secure, autonomous, and completely defines a
+    data boundary. No data sources or other persistent data is shared between fiefdoms or between fiefdoms and other
+    software elements. Now, it is possible that a single database server may underpin more than one service for
+    persistence, but different table spaces or database containers for each fiefdom ensure data integrity, security, and so
+    on.
+</p>
+<p>
+    Another key aspect of the pattern is that to ensure that the emissary can act as a reasonable agent, that it can
+    interact with the consumer with the minimum of required communication with the fiefdom, and that the fiefdom will
+    distribute copies of certain reference data to the emissaries for them to store and use locally. So in the insurance
+    example above, the catalog of available policies, their requirements, restrictions and prices is distributed
+    periodically to agents. Of course, it is important that the agent be able to use this information, but also that they
+    understand that this information is a copy of the data and not necessarily the data the fiefdom is using, and that the
+    information may be out of date. It may be updated once per month and if the update is received, the emissary may not be
+    able to process new applications or it may process them based on the older data.
+</p>
+<p>
+    As mentioned above, the fact that an emissary acts on behalf of a fiefdom does not imply any form of trust relationship
+    between the two parties. To ensure that the emissary has not been usurped, all messages will be validated for syntax,
+    semantics and policy before being accepted.
+</p>
+<p>
+    The detailed responsibilities of the fiefdom are:
+</p>
+<ul>
+    <li>
+        Managing and distributing reference data to all emissaries, clearly identifying the effective dates of the data.
+    </li>
+    <li>
+        Managing the state of transactional data; all transactions are managed entirely on the inside.
+    </li>
+    <li>
+        Validate all communication with emissaries.
+    </li>
+</ul>
+<h4>
+    Role of the Emissary
+</h4>
+<p>
+    The emissary acts as an agent and may be located as a per-consumer component, an Internet-based component, or a
+    specifically deployed component, but critically it has the characteristics that it manages the reference data required
+    to fill out messages sent the fiefdom processes. It is also responsible for managing local copies of per-transaction
+    messages. So, for example, customers may identify themselves as having an existing policy, this can be looked up by the
+    emissary first to pre-populate the form with some information, and this copy of the existing policy can be cached by
+    the emissary for the duration of the application completion transaction.
+</p>
+<p>
+    In general, an emissary is used when the communication between fiefdom and consumer represents some more complex
+    transaction that the emissary is now able to manage more efficiently, such as filling out complex requests, as in the
+    current example. This pattern can be seen in many organizations today where the order-fulfillment system that processes
+    orders and schedules them for delivery is often the same system that has been in place for many years. As these
+    organizations have started selling products interactively over the Web, the web application acts as an emissary that
+    has a local copy of the product catalog and helps the customer prepare an order. Of course it is not the web
+    application that processes the order; it submits the orders to the existing system. Because the emissary completes this
+    order based on reference data, it is reasonable to expect that the order will not be rejected because it is not
+    correct. On the other hand, as we said above, the existing order system is going to validate the order before accepting
+    it.
+</p>
+<p>
+    The detailed responsibilities of the emissary are:
+</p>
+<ul>
+    <li>
+        Act as an agent, on behalf of the consumer, to complete messages and interact with the fiefdom.
+    </li>
+    <li>
+        Manage, where appropriate, a logical transaction querying reference data, populating messages, and submitting
+        information on behalf of the consumer.
+    </li>
+    <li>
+        Manage a local copy of the reference data, updating as advised by the fiefdom.
+    </li>
+    <li>
+        Manage caching policies on time-sensitive data as identified by the fiefdom.
+    </li>
+</ul>
+<h3>
+    <a id="Data_Boundaries" name="Data_Boundaries">Service Data Boundaries</a>
+</h3>
+<p>
+    In general, many applications are developed as vertically integrated sets of components (see the concept <i><a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/concepts/service-oriented_architecture_8328ABAD.html" guid="8.613638237693525E-307">Service-Oriented Architecture</a></i> for more information). This tends to lead to
+    applications that have few natural integration points. The most common approach for integration, mainly because it
+    sounds so easy, is to have two or more applications share a common data store. So, where Inventory and Ordering share
+    the notion of a "Product," they are accessing the same tables in the database. This leads to a number of potential
+    concurrency and performance issues and interrelations that now couple these applications that affect their individual
+    evolution and the ability of the business to rehost, redevelop, or simply change one of the applications.
+</p>
+<p align="center">
+    <img height="194" alt="Diagram is described in the textual content."     src="./../../../soa.rup_soma/guidances/concepts/resources/co_soa_portfolio-02.gif" width="206" border="0" />
+</p>
+<p>
+    For development of service-oriented solutions, we recommend that a service manage a specific, bounded, and coherent
+    data model. So, analysis of the usage of the two applications shown above should identify the usage of the data by them
+    and how it can be separated to be managed by two autonomous services. This is not to say that there are no
+    interconnections between the data models as they are separated. For example, both the Inventory and Ordering services
+    will need a common definition of products and also locations where inventory is stored and where orders are sourced.
+</p>
+<p>
+    Approaches to dealing with this are to either create a third service for the shared concept (here, a product catalog
+    service would be relevant) or to manage the concept in just one of the new services. For example, location would
+    logically be managed by Inventory. Now, messages sent to and from one of these services will need to contain the
+    identifier for the shared elements so they can be queried or retrieved if needed. For example, in the case of the
+    inventory, a query for the products currently managed by a location would return a list of product identifiers (and one
+    assumes quantities on hand); if the details of the products are required, this would be retrieved from the product
+    catalog service.
+</p>
+<p>
+    Obviously a key work product in the analysis of the data boundaries is the <i><a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Data
+    Model</a></i>. Data models will need to be created for the existing database and carefully separated out at the
+    physical data model or preferably at the logical data model.
+</p>
+<h3>
+    <a id="Data_Views" name="Data_Views">Service Messages as Data Views</a>
+</h3>
+<p>
+    If all data is stored only within the service and access is denied to all outside the service, all communication has to
+    be through messages identified in the Service Specification. However, it is always important to note that these
+    messages, because they are representing a query and return of data from the database to the consumer, are specifically
+    copies of data held by the service. As such, they may actually represent a stale state of the service. For example, by
+    querying for the quantity on-hand of product "234," a message is returned identifying that location "562" has a
+    quantity of "12." The operation will fail, though, if another consumer takes eight items from the stock and the
+    original consumer tries to acquire 12 items.
+</p>
+<p>
+    This is, in effect, issues of design and traditional transaction management; managing the scope and boundaries of
+    transactions made a little more complex or at least more visible due to the loosely coupled nature of services and
+    service consumers. Therefore, messages not only&nbsp;have to be considered as views of the data, but also as copies of
+    data. Some guidance has been written in a number of places including <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/whitepapers/soa_cbd_paper_5703509E.html" guid="2.48704851646278E-307">SOA</a>
+    to relate how messages can specifically identify their lifetime and applicability.
+</p>
+<p>
+    Another effect of this transformation to the messaging-based approach inherent to service-oriented solutions is that we
+    can now refocus the idea of a common data model for applications into a common message model for integration. What this
+    means is that, wherever possible, messages defined for service specifications are based on common structures, possibly
+    separated into cohesive schema that can be reused across services. This is a far more flexible approach to integration
+    in that it also matches the loose coupling approach of services themselves. Also, most of the technologies used in
+    service implementation include either technologies, tools, or runtimes that provide message-transformation capabilities
+    where message schema do not exactly match.
+</p>
+<p>
+    For more information, specifically on message leasing and caching, see the <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/tasks/soa_service_message_design_D1BA096D.html" guid="_ObqZoCwUEduKcvYAyaKSaA">Task:
+    Message Design</a>.
+</p>
+<h3>
+    <a id="References" name="References">References</a>
+</h3>
+<p>
+    [HELLAND] <i>Fiefdoms and Emissaries</i>, Pat Helland, Microsoft.
+</p>
+<p>
+    [SESSIONS] <i>Software Fortresses: Modeling Enterprise Architectures</i>, Roger Sessions, Addison Wesley, 2003.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Интерфейсы приложений J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="interfaces_for_j2ee_applications" name="uma.name">
+<meta content="Интерфейсы приложений J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i_Kj0OBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jFRy4OBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_jjZSQOBoEe-aS_x8ARA3yA", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_kATQsOBoEe-aS_x8ARA3yA", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "_kVqcsOBoEe-aS_x8ARA3yA", "4.292643163694118E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.292643163694118E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lCgUkOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lGIQUOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_lMCrEOBoEe-aS_x8ARA3yA", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_ldiqwOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lfZr8OBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "4.292643163694118E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.292643163694118E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Интерфейсы приложений J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждается проектирование интерфейсов для приложений J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">Интерфейс</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    Интерфейсу Java, как это определено в синтаксисе языка Java, не запрещено иметь операций, - он может иметь Поле Java,
+    Класс или элементы Интерфейса. По этой причине, Интерфейсы Java моделируются как классы со стереотипом
+    &lt;&lt;JavaInterface&gt;&gt;.
+</p>
+<p>
+    Интерфейс UML не соответствует прямо языковой конструкции Java или разработке J2EE.
+</p>
+<h3>
+    <a id="Interfaces in Preliminary Design" name="Interfaces in Preliminary Design"></a>Интерфейсы в проекте Java
+</h3>
+<p>
+    Даже хотя интерфейсы UML не соответствует языковым конструкциям Java или J2EE, существуют ситуации, в которых
+    разработчик может их использовать. Некоторые причины этого состоят в том, что они:
+</p>
+<ul>
+    <li>
+        потенциально предназначены для других языков и технологий
+    </li>
+    <li>
+        выражают идею интерфейса без предварительного решения о том, будет ли использоваться интерфейс Java или некоторый
+        представитель или класс доступа
+    </li>
+</ul>
+<p>
+    Если языком реализации является Java, то можно использовать классы стереотипов &lt;&lt;JavaInterface&gt;&gt; в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Модели проекта</a> вместо интерфейсов UML. Это позволяет более легко
+    развивать Модель проекта в соответствии с <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">Моделью реализации</a> (см. <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305">Концепция: Преобразование из Проекта в исходный код</a>).
+</p>
+<p>
+    Заметьте, что классы стереотипа &lt;&lt;JavaInterface&gt;&gt; не могут быть представлены как <i>lollipop</i> за
+    пределами подсистем или компонентов UML. Вместо этого, открытые интерфейсы показываются как видимые всем элементы,
+    которыми владеет подсистема, или видимые всем элементы, расположенные в компоненте UML.
+</p>
+<h3>
+    <a id="Interfaces in EJB Design" name="Interfaces in EJB Design"></a>Интерфейсы в проекте EJB
+</h3>
+<p>
+    Интерфейсы EJB - это специализация интерфейсов Java. Их стереотипы описаны в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Руководство: Идентификация объектов EJB</a>.
+</p>
+<p>
+    Для моделирования интерфейсов разработчик может использовать интерфейсы UML, классы стереотипов
+    &lt;&lt;JavaInterface&gt;&gt; или классы стереотипов, свойственных EJB.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

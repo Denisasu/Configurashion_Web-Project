@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Проектирование объектов JavaBean </title>
+<meta content="Guideline" name="uma.type">
+<meta content="designing_javabeans" name="uma.name">
+<meta content="Проектирование объектов JavaBean " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.360568578285337E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.360568578285337E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Проектирование объектов JavaBean </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом разделе обсуждается проектирование объектов JavaBean для приложения J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Проектирование классов</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    Этот раздел посвящен проектированию объектов JavaBean и различным возможностям проектировщика.
+</p>
+<p>
+    Дополнительная информация об объектах JavaBean приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/javabean_D488CF3B.html" guid="7.536447688812142E-306">Концепция:
+    объекты JavaBean</a>.
+</p>
+<h3>
+    <a id="JavaBean_Properties" name="JavaBean_Properties"></a>Свойства JavaBean
+</h3>
+<p>
+    Во внутреннем формате значение свойства может храниться как частное поле, но может и вычисляться. Проектировщик может
+    выбрать предварительное вычисление значения свойства или "ленивое" вычисление, когда значение вычисляется только по
+    запросу вызывающего.
+</p>
+<p>
+    Проектировщик также может сделать свойство привязанным или ограниченным. Если свойство привязано или ограничено, то
+    проектировщик должен выбрать механизм <a href="#Events_and_Notification">событий и уведомления</a>.
+</p>
+<h3>
+    <a id="Events_and_Notification" name="Events_and_Notification"></a>События и уведомление
+</h3>
+<p>
+    Для реализации механизма уведомления у проектировщика есть две возможности:
+</p>
+<ul>
+    <li>
+        Воспользоваться классами <i>PropertyChangeSupport</i> и <i>PropertyChangeEvent</i> из пакета <i>java.beans</i>.
+    </li>
+    <li>
+        Создать пользовательский механизм уведомления
+    </li>
+</ul>
+<p>
+    Классы из пакета <i>java.beans</i> предоставляют реализацию, применимую в большинстве случаев. Класс
+    <i>PropertyChangeEvent</i> содержит ссылку на объект, выдавший событие, имя свойства как значение типа String и два
+    объекта, представляющие старое и новое значения свойства. Класс <i>PropertyChangeSupport</i> обслуживает набор из
+    <i>PropertyChangeListener</i> и содержит код уведомления в методе <i>firePropertyChange</i>.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/property_change_support.gif" />
+    </p>
+</blockquote>
+<p>
+    Класс <i>PropertyChangeSupport</i> обычно применяется для объектов JavaBean, входящих в состав пользовательских
+    интерфейсов.
+</p>
+<p>
+    Пользовательское уведомление может оказаться уместным, если требуется минимизировать нагрузку, связанную с созданием
+    объектов событий. Недостаток заключается в том, что необходимо реализовать механизм уведомления. Проектировщик,
+    реализующий пользовательский механизм уведомления, должен помнить, что в процессе уведомления другая нить может
+    добавлять или удалять получатели. Для того чтобы обеспечить правильные действия, в большинстве случаев создается копия
+    набора получателей; уведомление затем выполняется с помощью этой копии. Большинство опубликованных реализаций создают
+    такую копию в начале процесса уведомления, что приводит к созданию множества дубликатов и снижению производительности.
+    Однако, поскольку уведомление более распространено, нежели добавление и удаление получателей, можно заранее создать
+    копию с более продолжительным сроком действия во время добавления или удаления получателей и затем многократно
+    использовать ее для уведомления, что ускорит выполнение.
+</p>
+<p>
+    С точки зрения производительности труда разработчиков, пользовательское уведомление следует применять только в том
+    случае, если "узким местом" производительности оказывается поддержка изменения свойств из пакета <i>java.beans</i>.
+</p>
+<p>
+    В следующих примерах демонстрируется применение и поддержки изменения свойств из пакета <i>java.beans</i>, и
+    пользовательского механизма уведомления.
+</p>
+<p>
+    &nbsp;
+</p>
+<p>
+    <b>Пример</b>: объект JavaBean Tank, применяющий <i>java.beans.PropertyChangeSupport</i>
+</p>
+<p>
+    В этом примере рассматривается объект JavaBean <i>Tank</i> (бак), у которого одно привязанное свойство - <i>level</i>
+    (уровень). При изменении своего уровня объект <i>Tank</i> выдает событие <i>PropertyChangeEvent</i>, обрабатываемое
+    объектом <i>TankController</i>.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/tank_example.gif" />
+    </p>
+</blockquote>
+<p>
+    &nbsp;
+</p>
+<p>
+    <b>Пример</b>: объект JavaBean Tank, применяющий пользовательское уведомление
+</p>
+<p>
+    В следующем примере класс <i>Tank</i> реализован с пользовательским, более эффективным механизмом уведомления,
+    позволяющим избежать создания объектов во время уведомления.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/tank_custom_example.gif" />
+    </p>
+</blockquote><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="Логотип Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Данная информация полностью или частично разработана компанией <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

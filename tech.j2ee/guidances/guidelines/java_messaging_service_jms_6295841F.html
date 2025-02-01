@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Служба сообщений Java (JMS) </title>
+<meta content="Guideline" name="uma.type">
+<meta content="java_messaging_service_jms" name="uma.name">
+<meta content="Служба сообщений Java (JMS) " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.706166121514094E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.706166121514094E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Служба сообщений Java (JMS) </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждаются способы использования Службы сообщений Java (JMS), а также способы ее проектирования и моделирования для приложения J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Определение механизмов проектирования</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    Служба сообщений Java (JMS) может использоваться для связи между компонентами. Возможности JMS, такие как асинхронная
+    связь и гарантированная доставка, делают ее популярным выбором для приложений. JMS можно использовать также для
+    синхронной связи, но преимущественно применяется асинхронная.
+</p>
+<p>
+    В этом руководстве описано, когда следует использовать JMS, как ее моделировать, а также даны некоторые замечания о
+    проекте.
+</p>
+<p>
+    Более подробная информация о JMS находится в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_messaging_service_jms_84F49452.html" guid="9.950419951286216E-306">Концепция: Служба сообщений Java (JMS)</a>.
+</p>
+<h3>
+    <a id="Modeling_JMS" name="Modeling_JMS"></a>Моделирование JMS
+</h3>
+<p>
+    Клиенты JMS моделируются как классы. На следующей диаграмме показано типичное взаимодействие поставщика сообщения для
+    отправки сообщений с помощью JMS. В примере очередь используется как назначение.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма, описанная в сопроводительном тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/jms_send_queue.gif" />
+    </p>
+</blockquote>
+<p>
+    Клиент JMS должен реализовать интерфейс получателя сообщений. Поставщик JMS обеспечивает вызов специального метода
+    <i>onMessage</i> при поступлении любого сообщения.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма, описанная в сопроводительном тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/msg_consumer.gif" />
+    </p>
+</blockquote>
+<p>
+    На следующей диаграмме показана типичная установка клиента JMS.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма, описанная в сопроводительном тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/msg_consumer_sequ.gif" />
+    </p>
+</blockquote>
+<h3>
+    <a id="Designing_JMS" name="Designing_JMS"></a>Проектирование JMS
+</h3>
+<p>
+    Существует два основных способа проектирования приложений JMS: <i>двухточечный</i> и <i>опубликовать-подписаться</i>.
+</p>
+<p>
+    В <b>двухточечной</b> модели JMS применяется для доставки сообщения ОДНОМУ клиенту.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма, описанная в сопроводительном тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/pt_to_pt.gif" />
+    </p>
+</blockquote>
+<p>
+    Производители сообщений связывается с потребителями сообщений, отправляя сообщения в одну очередь. На понятийном
+    уровне, очередь имеет только одного потребителя, но многие поставщики JMS позволяют иметь многих потребителей для
+    выравнивания нагрузки. Когда разрешены многие потребители, каждое сообщение обрабатывается одним и только одним
+    потребителем. Сообщения сохраняются в очереди до тех пор, пока они не будут обработаны или просрочены.
+</p>
+<p>
+    В модели <b>опубликовать-подписаться</b> шаблон связи разрешает многим производителям отправлять сообщения многим
+    потребителям. Потребители подписываются на разделы, а промежуточное программное обеспечение доставляет сообщения им.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма, описанная в сопроводительном тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/publish_subscribe.gif" />
+    </p>
+</blockquote>
+<p>
+    В отличие от двухточечной модели, модель опубликовать-подписаться сохраняет сообщения в разделе до тех пор, пока все
+    клиенты его не получат.
+</p><b>Примечание:</b> Начиная с версии JMS 1.1, вы можете комбинировать эти две модели в одном приложении JMS. <br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="Логотип Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Данная информация полностью или частично разработана компанией <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

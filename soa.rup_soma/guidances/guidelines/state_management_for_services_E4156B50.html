@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: State Management for Services</title>
+<meta content="Guideline" name="uma.type">
+<meta content="state_management_for_services" name="uma.name">
+<meta content="State Management for Services" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i99p8OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i_Kj0OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_jC070OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_jgOCcOBoEe-aS_x8ARA3yA", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_j-pD0OBoEe-aS_x8ARA3yA", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "_kUCFAOBoEe-aS_x8ARA3yA", "4.2228409903513537E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.2228409903513537E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lB0YEOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lCgUkOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_lEvJMOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lKd9wOBoEe-aS_x8ARA3yA", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lc2uQOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_ldiqwOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lsiJAOBoEe-aS_x8ARA3yA", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "4.2228409903513537E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_d5dewE7OEduvcvbnLvkXhA", "4.2228409903513537E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.2228409903513537E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: State Management for Services</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">In this guideline, issues surrounding the use of stateful and stateless services are explored in terms of their effect on performance and robustness, and also when the interaction requires a transactional approach. The notion of state management in an SOA environment can be considered to fall into three main categories: Transaction State, Security State and Functional State.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}">Service Specification</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_state_management_for_services__guidelines_for" name="XE_state_management_for_services__guidelines_for"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introduction</a>
+</h3>
+<p>
+    The notion of stateful and stateless components is particularly important in the development of distributed
+    applications and systems, although it has only recently tended to become part of the common vocabulary. Essentially,
+    the notion is that if two components or services are communicating and there is some state managed by the server
+    component for the duration of the conversation with the client, it is possible for a crash in the server component (or
+    network failure) to mean that the client is unable to complete the conversation and must start over. Also, it makes the
+    redirecting of client requests to one of a set of components harder unless the set of components share some common
+    store for the state of the conversation. This has become a well known issue in the development of Web applications
+    where its state is carefully managed so as to be avoided where possible and managed either by the client, by the
+    conversation itself (passing the state in each message), or in carefully designed stateful server-side components. For
+    example, the common example for stateful Web interaction is the shopping cart. Users will expect that the shopping cart
+    persists while they briefly walk away from the computer, but how is this accomplished with 100,000 concurrent users?
+</p>
+<p>
+    Now, this is not to say that stateful components are inherently bad, they just represent a possible area of performance
+    and resilience failure unless carefully managed and developed to more rigorous standards. In fact, all business
+    applications contain services which by their very nature manage or represent entities that are inherently stateful or
+    contain services which must be accessed in certain logical sequences. In fact the J2EE architecture defines separate
+    Stateless and Stateful Session Beans to explicitly denote these issues and defines certain restrictions on stateful
+    components. This brings us to a simple classification for stateful services, the reasons why we cannot avoid them in
+    the first place. A service may have to be stateful for one of the following reasons:
+</p>
+<blockquote>
+    <p>
+        <b>The Service Holds State on behalf of the Client</b>; this is the shopping-cart example. Somehow, some data has
+        to be persisted between calls between client and the service, this data is part of the conversation, and so,
+        without care, it can bind a client to a given server resource.
+    </p><b>The Service Manages a Stateful Resource</b>; in this case the service tends to manage a set of resources or
+    entities, each of which has state. For example a customer order has state, a network switch has state, and so on.
+    Therefore, the interface for a service that manages that object by closing or deferring an order or rebooting a switch
+    is changing the state of a particular entity. 
+    <p>
+        <b>The Service Has a Stateful Protocol</b>; in this case the service has some logical ordering to the operations it
+        provides. For example it has login(), dostuff() and logoff() operations, which we can deduce means that you cannot
+        call the dostuff() or logoff() operation unless the login() operation is called.
+    </p>
+</blockquote>
+<p>
+    Another form of state which is found in many component architectures, but is not applicable in the services world, is
+    the notion of transactional state. It is possible in a component world to denote that a get() and update() method on a
+    component may be called by a client within the scope of a transaction created and maintained by the client. The
+    update() method is assumed to change some underlying transactional store. This almost always requires the intervention
+    of the middleware platform to coordinate the transactions and ensure that methods requiring transactions are called by
+    a client with an open transaction. For services, it is not considered appropriate or desirable to follow a model where
+    transactions in the classic two-phase commit sense are held open over a number of service invocations. Now, standards
+    are being developed for transactions across service invocations, but they follow a fundamentally different paradigm
+    (compensation) and are supported differently by middleware platforms.
+</p>
+<p>
+    The most obvious technique, which was hinted at above, for the successful development of stateful services is to
+    externalize service state, thus making it not only explicit that the service has state, but that this state can be
+    identified as part of the service specification. This is discussed for the two classes of stateful service below.
+</p>
+<p>
+    As most software services will be developed on top of an existing middleware platform such as J2EE or Microsoft .NET,
+    there are implementation techniques described within those platform architectures to help with state management.
+    Therefore, this guideline focuses on design techniques for certain classes of stateful services. It is also worth
+    noting that this is by no means a new area of concern. In mainframe development, the development of conversational and
+    non-conversational transactions in CICS (IBM Customer Information Control System) with green screen (actually 3270
+    terminal) clients have been known and described by developers, designers, and architects for many years.
+</p>
+<h3>
+    <a id="Stateful_Conversation" name="Stateful_Conversation">Persistent Conversation State</a>
+</h3>
+<p>
+    This is a case where the easiest advise is to avoid the situation in the first place. Wherever possible, if a design
+    calls for the management of state during a conversation between a service and its consumers, it would be best to try to
+    decide if another approach can be taken. If not, externalize this state by passing all of the required state data
+    between service and consumer with each message making up the entire conversation. This approach may mean that the size
+    of the messages are significantly increased, but the service itself is now entirely stateless. Another approach is to
+    carry a conversation identifier within each message and persist all conversation state into a permanent store such as a
+    database. While this has significant performance consequences on the server side, it may be countered against the
+    network and client performance saved with the smaller messages.
+</p>
+<p>
+    One of the primary purposes of making these services stateless is to be able to provide a set of identical services
+    that can service any request using load-balancing techniques to distribute clients. This load balancing is possible if
+    all state is completely externalized or persisted in a common store.
+</p>
+<h3>
+    <a id="Stateful_Resources" name="Stateful_Resources">Managing Stateful Resources</a>
+</h3>
+<p>
+    In this case, we look at the management of resources themselves that have explicit state. In fact, that state is an
+    important aspect of the resource itself. It may be that we can describe the state of the resource, the customer order
+    or network switch mentioned above using a state machine, describing not only the valid states but also the manner in
+    which the operations provided by the service affect the state of the underlying resource(s).
+</p>
+<p>
+    However we accomplish this description, it is important to note that this state is an intrinsic part of the resource.
+    However, it may not be explicitly expressed in the information model representing it. It is also important to note that
+    where we are managing any set of entities, we have to be able to identify any individual resource that we are acting
+    upon whether or not they again have an explicit identifier.
+</p>
+<p>
+    Note that where a service represents the access to, or query of the state of a physical entity such as a network switch
+    or a process-control element, it is not possible to consider externalizing the state of the entity. The state of a
+    valve is only known by querying the valve. Although we can construct and reply with a message describing the current
+    state of the valve, this is not a permanent situation. The state of the valve can change during transmission or
+    processing of this message.
+</p>
+<p>
+    In the Web services area, there is a set of emerging standards known as the Web Services Resource Framework (WSRF)
+    which discusses patterns of stateful services and approaches to the encoding of state, particularly in the case of
+    services representing the management of stateful resources. For more information, see the <a href="http://www.ibm.com/developerworks/library/ws-resource/"><i>IBM WS-ResourceFramework site</i></a>.
+</p>
+<h3>
+    <a id="Stateful_Specifications" name="Stateful_Specifications">Stateful Service Specifications</a>
+</h3>
+<p>
+    The example mentioned above involves a service that has some logical sequencing to the operations it provides. Many
+    services will provide interfaces of this form. In some cases, this relates back to stateful resources except that in
+    that case, the ordering of the operations is based on the state of the managed resource. In this case, the ordering is
+    based on the conversation itself. The following example demonstrates a service specification that has some associated
+    protocol, first the structural specification and then a state machine is shown that describes the behavioral
+    specification.
+</p>
+<p align="center">
+    <img height="121" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_state-01.gif" width="119"     border="0" />
+</p>
+<p>
+    The Purchase Order can be in one of the states <i>{Open, Canceled, Fulfilled, Closed}</i> and changes state based on
+    the operations provided on the specification above. We also denote that in the case of the self transition on the state
+    Open, we execute the OrderChanged operation sending notifications of the change.
+</p>
+<p align="center">
+    <img height="275" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_state-02.gif" width="365"     border="0" />
+</p>
+<p>
+    In many cases where services are developed all within a single business and technical scope, detailed behavioral
+    specifications may not be developed or will be described less formally in text. Where services are exposed outside of
+    such a scope, for example, exposed between partitions, they represent a logical specification for interaction between
+    partitions and should be developed in far more detail. Also, detailed specifications allow for more efficient and
+    effective reuse by consumers when services are expected to be reused frequently.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Дескриптор задачи: Message Design</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="soa_service_message_design" name="uma.name">
+<meta content="Message Design" name="uma.presentationName">
+<meta content="_P5_SMEn3EduC74V7YHXTOQ" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_6Jd70DtdEdqPaeZADstHAA&path=_6Jd70DtdEdqPaeZADstHAA,_zL1rsEn2EduC74V7YHXTOQ,_P5_SMEn3EduC74V7YHXTOQ';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_P5_SMEn3EduC74V7YHXTOQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Дескриптор задачи: Message Design</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This task describes the required actions for developing a comprehensive message design model (catalog). It discusses, as background, message exchange patterns and the relationship of the domain model to the message model. Design considerations for message granularity and message performance are also outlined.</td>
+</tr>
+<tr>
+<td>На основе задачи метода: <a href="./../../soa.rup_soma/tasks/soa_service_message_design_D1BA096D.html" guid="_ObqZoCwUEduKcvYAyaKSaA">Message Design</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Роли</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Главный:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_designer_22702C0E.html" guid="_MZwFoEn3EduC74V7YHXTOQ">Designer</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Дополнительно:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_database_designer_86C5727E.html" guid="_P6LfcEn3EduC74V7YHXTOQ">Database Designer</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_software_architect_2D0E0C1E.html" guid="_MZwFoUn3EduC74V7YHXTOQ">Software Architect</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Помощь:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Входы</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Обязательный:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/soa_service_model_F19FEE3D.html" guid="_MZwFpUn3EduC74V7YHXTOQ">Service Model</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">Необязательный:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_analysis_model_1D2097AF.html" guid="_P6XssEn3EduC74V7YHXTOQ">Analysis Model</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/rup_data_model_27BE77BF.html" guid="_P6XssUn3EduC74V7YHXTOQ">Data Model</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Внешний:
+								</span>
+<ul>
+<li>Нет</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Выходы</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/capabilitypatterns/soa_service_model_F19FEE3D.html" guid="_MZwFpUn3EduC74V7YHXTOQ">Service Model</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Шаги</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading">Use Message Standards</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td>When defining the message specifications for services identified, it is important to take into account an enterprise’s
+message standards if they exist.<span style="mso-spacerun: yes">&nbsp;</span> Where message standards are not defined, it
+is advisable to develop them. Where industry message schemas exist, it is recommended to leverage them.<span style="mso-spacerun: yes">&nbsp;</span> For example, XML messaging specifications have been defined for the finance,
+government, travel (OTA XML [Open Travel Alliance, <a href="http://www.opentravel.org/online_schema.cfm">http://www.opentravel.org/online_schema.cfm</a>]) and communications
+industries.<span style="mso-spacerun: yes">&nbsp;</span> In addition, there are non-industry specific schemas available
+from OAGIS [Open Applications Group, <a href="http://www.openapplications.org/index.htm">http://www.openapplications.org/index.htm</a>]. 
+<h3 style="MARGIN: 6pt 0in">
+    <span     style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-ansi-language: EN-US; mso-bidi-language: AR-SA">Common
+    message format</span>
+</h3>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    Common messages refer to messages that are transferred across the tiers of a n-tier architecture. <span     style="mso-spacerun: yes">&nbsp;</span>Typically, user-interface information is captured, sent through to a controller
+    tier, processed in the business or application layers and then passed on to a persistence layer or back-end legacy
+    system. <span style="mso-spacerun: yes">&nbsp;</span>During each of these transfers, a message is being exchanged
+    between tiers where each may have a different format. <span style="mso-spacerun: yes">&nbsp;</span>The key thing is to
+    agree on one standard for a common message format within the enterprise so as to overcome any format translation
+    overhead where an Enterprise Service Bus (ESB) is not used or when its use is deemed expensive in terms of format
+    translation. <span style="mso-spacerun: yes">&nbsp;</span>The use of an ESB will take care of many of these mediations,
+    transformations and routing. <span style="mso-spacerun: yes">&nbsp;</span>This is the Integration layer as depicted in
+    the SOA layers model.
+</p>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    In some cases, it may suffice to agree on the outgoing and incoming message formats. <span     style="mso-spacerun: yes">&nbsp;</span>The issue of a common message format is a key architectural decision: you may
+    choose to “roll your own” as specified here, adopt industry models such as travel industry’s OTA XML or adopt
+    non-industry specific models such as those defined by OAGIS. <span style="mso-spacerun: yes">&nbsp;</span>In some
+    cases, the decision will be to use a common enterprise message format that updates fields in the message and passes it
+    on to the next tier for further processing.<span style="mso-spacerun: yes">&nbsp;</span> If such a common scheme cannot
+    be achieved due to political factors, then adapters that translate messages to an internal common message format can be
+    designed. <span style="mso-spacerun: yes">&nbsp;</span>They can also be leveraged as part of an ESB.
+</p>
+<div style="mso-element: endnote-list">
+    <b style="mso-bidi-font-weight: normal"><span     style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-ansi-language: EN-US; mso-bidi-language: AR-SA">ISV
+    Considerations</span></b> <span     style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-ansi-language: EN-US; mso-bidi-language: AR-SA">:
+    Messages that invoke services realized within ISV packages may need to be augmented with data attributes to satisfy
+    constraints within the ISV package data model. <span style="mso-spacerun: yes">&nbsp;</span>Such data elements may be
+    identified through analysis of the realized service within the ISV package Component or may also be identified through
+    the ISV package bottom-up service analysis. <span style="mso-spacerun: yes">&nbsp;</span>Since these attributes may not
+    be identified until service realization, they may need to be retrofitted into the common message once they are
+    identified.</span>
+</div>
+<h4 style="MARGIN: 6pt 0in 6pt 0.5in; TEXT-INDENT: -0.5in; mso-element: endnote-list; mso-list: l0 level4 lfo1; tab-stops: list blank 0in blank .5in left .7in">
+    Common Message format and data architecture
+</h4>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    <span style="mso-bookmark: _Toc83012232">In general, services should not indicate anything about the underlying data
+    models. <span style="mso-spacerun: yes">&nbsp;</span>Rather, they should be used to encapsulate the underlying data
+    models whose data stores are leveraged by the service components that realize the services. <span     style="mso-spacerun: yes">&nbsp;</span>Thus, services that are view, edit, delete, add search and other operations on a
+    database may not be good candidates for services, but could be used as underlying component operations as they are used
+    today.</span>
+</p>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    <span style="mso-bookmark: _Toc77069206"><span style="mso-bookmark: _Toc83012232">Existing data architectures that
+    define conceptual, logical or physical data models are required sources in defining common message formats.<span     style="mso-spacerun: yes">&nbsp;</span> The definitions of common message formats should be coordinated with data
+    architecture efforts and data models.<span style="mso-spacerun: yes">&nbsp;</span> This analysis will ensure the
+    availability of proper data stores and schemas for the service components that will realize new services. <span     style="mso-spacerun: yes">&nbsp;</span>Existing data architecture will be enhanced to accommodate new services if new
+    data needs to be added to the underlying systems.</span></span>
+</p>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    <span style="mso-bookmark: _Toc77069206"><span style="mso-bookmark: _Toc83012232">In many enterprises, existing systems
+    often reflect the existence of silos and data islands that collaborate through batch processes.<span     style="mso-spacerun: yes">&nbsp;</span> Migrating away from isolated data stores is possible through the means of
+    services.<span style="mso-spacerun: yes">&nbsp;</span> Identifying a service provider’s data sources is accomplished
+    during service realization.</span></span>
+</p>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    <span style="mso-bookmark: _Toc77069206"><span style="mso-bookmark: _Toc83012232"><b     style="mso-bidi-font-weight: normal">ISV Considerations</b>: Logical Data Model needs to accommodate the pre-defined,
+    often implicit data models embodied in ISV packages. <span style="mso-spacerun: yes">&nbsp;</span>Thus message transfer
+    between packaged applications and the existing data models need to occur. <span     style="mso-spacerun: yes">&nbsp;</span>This is often done through APIs offered by the ISV’s. <span     style="mso-spacerun: yes">&nbsp;</span>In a SOA, adapters to these ISV data models become important, especially if the
+    ISV is not exposing its underlying data and functionality through services.</span></span>
+</p>
+<p class="MsoNormal" style="MARGIN: 6pt 0in; mso-element: endnote-list">
+    <span style="mso-bookmark: _Toc77069206"><span style="mso-bookmark: _Toc83012232">Note that in some cases where the ISV
+    data model is accessible, it may be possible to customize the model to accommodate the messages required to support the
+    identified services. <span style="mso-spacerun: yes">&nbsp;</span>Conversely, if the data model is not accessible,
+    service messaging may be constrained by the data model contained within the ISV.<span     style="mso-spacerun: yes">&nbsp;</span> A mediation mechanism can also be employed to curtail the problem.<span     style="mso-spacerun: yes">&nbsp;</span> Mediation, such as that provided by an ESB can be used in this context to
+    support interfacing with ISV packages. <span style="mso-spacerun: yes">&nbsp;</span>The ISV data model may also dictate
+    additional attributes that are required above and beyond those required to implement the service.</span></span>
+</p>
+<h4 style="MARGIN: 6pt 0in 6pt 0.5in; TEXT-INDENT: -0.5in; mso-element: endnote-list; mso-list: l0 level4 lfo1; tab-stops: list blank 0in blank .5in left .7in">
+    <span style="mso-bookmark: _Toc77069206"><span style="mso-bookmark: _Toc83012232">Common message format with all
+    relevant services</span></span>
+</h4>
+<div style="mso-element: endnote-list">
+    <span     style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-bidi-font-family: 'Times New Roman'; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-US; mso-ansi-language: EN-US; mso-bidi-language: AR-SA">Common
+    message formats must be reconciled with the input/output messages of individual services, so they are related and
+    assigned to allow appropriate services to use and update them as needed. <span     style="mso-spacerun: yes">&nbsp;</span>Services may need to extract information from or expect output from the common
+    enterprise message format. <span style="mso-spacerun: yes">&nbsp;</span>These are documented in the Service Common
+    Message Format template.</span>
+</div></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Reusing the Domain Model</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    In the concept <a class="elementLinkWithUserText" href="./../../extend.bus_model/guidances/concepts/domain_design_846FF5B2.html" guid="_qr6IQE6nEduhs-ki98mFFw">Concept: Domain Design</a>, the notion of domain modeling was outlined, similar to the
+    notion of an analysis model or business-analysis model in representing core concepts from the business domain in a
+    technology independent manner. It is clear that the messages used by services are technology aware (if not
+    technology-specific in the case of XML Schema used for Web Services) in the same way the database schema used to store
+    the domain data is technology specific within the service. In fact, we may consider the following relationship.
+</p>
+<p align="center">
+    <img height="106" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/resources/co_soa_msg_design-01.gif"     width="246" border="0" />
+</p>
+<p>
+    This demonstrates the relationship between the domain model used for discovery of the key domain elements and the
+    message model as the realization of the domain model as a set of elements passed into and returned from services.
+</p>
+<p align="center">
+    <img height="206" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/resources/co_soa_msg_design-02.gif"     width="435" border="0" />
+</p>
+<p>
+    The following is a typical Java/component model where we can see the separation of the Interface from the Class and the
+    inclusion of "accessor" functions to get and set the value of the state variables. This is a very common approach, but
+    it has the disadvantage that, if the consumer and component are in different address spaces or on different machine,
+    the cost of communicating each call is high in terms of accessing the entire state of any one component.
+</p>
+<p align="center">
+    <img height="266" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/resources/co_soa_msg_design-03.gif"     width="737" border="0" />
+</p>
+<p>
+    Another issue is the relationships between components, the notion that an Account has a set of Customers is difficult
+    to develop in this style and usually ends up in managing lists of identifiers used to retrieve individual objects.
+</p>
+<p>
+    In developing a service model we might use a <a class="elementLinkWithUserText" href="./../../soa.rup_soma/tasks/soa_service_identification_data_1AFDAC0A.html" guid="_mJtYwCwTEduKcvYAyaKSaA"><em>data-driven service identification</em></a> approach leading to the specification of
+    an AccountMgr service and a MeetingMgr service. The first service specification acts as the central location for
+    managing all accounts and contacts. In fact, the core data model for the Customer Relationship Management (CRM)
+    solutions was built using this and other services. The second service has been separated because it can be used by the
+    CRM solutions and other solutions for booking meetings and it will interface with the enterprise Groupware
+    applications.
+</p>
+<p>
+    The following is a sample from the model; it shows the service specifications, the messages can be assumed from the
+    domain model above.
+</p>
+<p align="center">
+    <img height="134" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/resources/co_soa_msg_design-04.gif"     width="338" border="0" />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Understand Message Exchange Patterns</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    When thinking about messages, there is a natural tendency to consider them to be simply the parameters to operations.
+    This is made more likely because the UML representation of services uses operations with parameters and the Web
+    Services Description Language (WSDL 1.1) uses a similar approach. However, when thinking in terms of <a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_service_1EE4C96C.html" guid="{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}"><i>Services</i></a> and <a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}"><i>Service Specifications</i></a>, it is more helpful to think in terms
+    of messages as reusable elements that are either produced by or used/consumed by a service operation. In services
+    parlance, the operation simply becomes a <i>message exchange</i>, albeit a named exchange on a service that is
+    distinguishable from another exchange that may use the same input and output messages.
+</p>
+<p>
+    The notion of <i>message exchange pattern</i>s has been of interest in the Web services standards world, as a part of
+    the analysis of the use of services in developing standards to support their specification. A message exchange pattern
+    names a particular combination of produced, used, or consumed message between two services (or between a service and a
+    consumer) and provides a common vocabulary for service designers to describe operations on service specifications.
+</p>
+<p>
+    The following lists common exchange patterns that can be used in the definition of service specifications. Such
+    patterns are usually found during the modeling of <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_collab_76358B24.html" guid="{9BBBE5B0-4D39-4555-9E20-0ADBD8327D29}">Service Collaborations</a></i>.
+</p>
+<p>
+    <b>Synchronous Request/Response:</b> This is in effect a traditional method invocation where the service consumer sends
+    a message to a service and then blocks waiting until a reply is received from the service.
+</p>
+<p align="center">
+    <img height="91" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/resources/co_soa_choreography-01.gif"     width="262" border="0" />
+</p>
+<p>
+    <b>One Way Message:</b> In this case, the consumer simply sends a message to the service, not waiting for or expecting
+    a reply. This pattern can be considered an asynchronous method call with no reply type, meaning that the service
+    consumer continues execution after the message is sent, rather than waiting for the service to process the message.
+</p>
+<p align="center">
+    <img height="91" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/resources/co_soa_choreography-02.gif"     width="250" border="0" />
+</p>
+<p>
+    <b>Notification:</b> In this case, the service is responsible for sending messages back to the consumer (usually
+    another service). To accomplish thi,s the consumer has to have somehow registered with the service so that the service
+    knows where to send the notification messages.
+</p>
+<p align="center">
+    <img height="91" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/resources/co_soa_choreography-03.gif"     width="253" border="0" />
+</p>
+<p>
+    <b>Asynchronous Request/Response:</b> This is a combination of the one-way message and notification. The service
+    consumer sends a message, including a reply-to address. When the service completes its processing, it calls the
+    originator back. The fact that service consumers send the first message in an asynchronous manner does require them to
+    keep track of all sent requests so that responses, when received from the service, can be correlated to the original
+    request.
+</p>
+<p align="center">
+    <img height="110" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/resources/co_soa_choreography-04.gif"     width="262" border="0" />
+</p>
+<p>
+    <b>Publish/Subscribe</b>: Again this is a combination. A service consumer registers interest in a "topic" with a
+    publication service. Other services or service consumers publish messages (send messages) to the publication service
+    identifying the topic associated with the message. If the topic matches previously registered consumers, they are
+    notified of the new message. In this case it is possible to very loosely couple the services participating. Any
+    consumer or publisher only needs to know the location of the publication service and new consumers can be added to the
+    solution without significant effort.
+</p>
+<p align="center">
+    <img height="130" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/resources/co_soa_choreography-05.gif"     width="346" border="0" />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Manage Message Granularity</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Services are intended to provide large-granularity operations. As such, the messages that flow in and out of such
+    operations tend to be large-grained also. This concern was originally highlighted early in the deployment of Web
+    Service solutions where the use of HTTP as a transport, SOAP as a protocol, and XML as a wire format tended to lead to
+    relatively slow responses and very high bandwidth requirements. For example, consider a request for a stock quote from
+    a service. A simple stock quote was often demonstrated in the early Web Services days. The ticker symbol is four
+    characters and the response is a decimal number. In an RPC style, binary protocol we might expect that the message
+    identifier might add some overhead, let's say 8 bytes, and so we could expect somewhere in the region of 8+4 for the
+    request and 8+8 (for a high precision decimal) in response. With HTTP/SOAP, we might expect something of the following
+    form:
+</p>
+<table width="100%" border="1">
+    <tbody>
+        <tr>
+            <th width="50%">
+                Request
+            </th>
+            <th width="50%">
+                Response
+            </th>
+        </tr>
+        <tr>
+            <td valign="top" align="left" width="50%">
+<pre>
+  SOAPAction: "http://www.webservicex.net/Quote"<br />
+
+  User-Agent: MyAgent 1.0<br />
+
+  Content-Type: text/xml; charset=UTF-8<br />
+
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;<br />
+
+  &lt;soap:Envelope<br />
+
+   xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"<br />
+
+   xmlns:tns="http://www.webservicex.net/"&gt;<br />
+
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;<br />
+
+   &lt;soap:Body&gt;<br />
+
+    &lt;tns:Quote&gt;<br />
+
+     &lt;tns:Symbol&gt;IBM&lt;/tns:Symbol&gt;<br />
+
+    &lt;/tns:Quote&gt;<br />
+
+   &lt;/soap:Body&gt;<br />
+
+  &lt;/soap:Envelope&gt;
+</pre>
+            </td>
+            <td valign="top" align="left" width="50%">
+<pre>
+  HTTP/1.1 200 OK<br />
+
+  X-Powered-By: ASP.NET<br />
+
+  Connection: close<br />
+
+  Content-Length: 522<br />
+
+  X-AspNet-Version: 1.1.4322<br />
+
+  Date: Mon, 21 Mar 2005 00:34:21 GMT<br />
+
+  Content-Type : text/xml; charset=utf-8<br />
+
+  Server : Microsoft-IIS/6.0Cache-Control: private, max-age=0<br />
+
+  &lt;?xml version="1.0" encoding="utf-8"?&gt;<br />
+
+  &lt;soap:Envelope<br />
+
+   xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;<br />
+
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;<br />
+
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;<br />
+
+   &lt;soap:Body&gt;<br />
+
+    &lt;QuoteResponse xmlns="http://www.webservicex.net/"&gt;<br />
+
+      &lt;Quote&gt;&lt;Last&gt;89.28&lt;/Last&gt;<br />
+
+      &lt;/Quote&gt;<br />
+
+    &lt;/QuoteResponse&gt;<br />
+
+   &lt;/soap:Body&gt;<br />
+
+  &lt;/soap:Envelope&gt;
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    Early adopters of Web Service Technology came to two conclusions. First, services were optimized for a small number of
+    operations providing data as documents rather than the more complex style of traditional component models. This has the
+    advantage of amortizing the overhead of the protocols across a bigger actual data payload. Also, between services in an
+    enterprise, at least between services within the same solution, smaller,simpler protocol bindings were chosen and
+    HTTP/SOAP was reserved for situations where it was necessary, such as interfacing to services outside the enterprise.
+</p>
+<p>
+    This notion is not entirely new. Even in the component world, the Value Object pattern, or the J2EE Service Facade are
+    both approaches to reduce the number of communications round-trips between client and server. Both use the notion of
+    sending a complete copy of the component state to the client rather than using the traditional accessor functions. For
+    services, we may also like to consider the fact that services are being developed that are more closely aligned with
+    business models, especially business process models. As such, messages come to reflect common business documents in the
+    same way EDI Transaction Sets (Electronic Data Interchange) represent business documents such as orders, invoices,
+    shipping notices, and so on.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Manage Message Exchange Performance</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    In general, the use of large messages is valuable in overcoming communications performance, although in some cases the
+    large data message can be a problem. For example, in the SOAP messages above, we saw how the message size, using HTTP,
+    SOAP, and XML significantly increased the size of the data. This has been a complaint of early systems built using Web
+    Services technologies. On the other hand, these issues have allowed us to learn some interesting lessons such as
+    considering performance in terms of code performance, message design, and protocol choice as an early design activity.
+</p>
+<p>
+    One important aspect to consider is that as we are moving large chunks of state from service to consumer or service to
+    service, these messages actually represent stale snapshots of the service state. So, one of the considerations is to
+    explicitly manage this "staleness" by identifying the time the data can be considered reliable or to "lease" it to the
+    consumer such that it expires after some amount of time. For more information, see the white paper <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/whitepapers/soa_cbd_paper_5703509E.html" guid="2.48704851646278E-307">Using Service-Oriented Architecture and Component-Based Development to Build Web Service
+    Applications</a></i>.
+</p>
+<p>
+    Another topic that has to be considered is the caching of content. Caching is usually a concern that is dealt with as a
+    performance optimization for applications, but in an service-oriented solution, the distributed nature and
+    message-based communication lends itself well to the insertion of caches between consumers and services. These caches
+    are not the typical database caches used for optimizing queries, but more like caches used in web servers and web
+    proxies. In fact, in the case of Web Services using HTTP and SOAP, these proxies may be used as caches to serve up
+    service responses in certain situations.
+</p>
+<p>
+    The issues however, in regard to the use of any cache, are really how the cache understands the policies used to serve
+    content from the cache and how a service can invalidate the cache. The technical infrastructure used to host and manage
+    deployed services should provide caching capabilities. One area of service policy we expect to see in the future is the
+    provision of cache management information.
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Свойства</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Несколько вхождений" abbr="Несколько вхождений">Несколько вхождений</th><td align="left" class="sectionTableCell" headers="property_Несколько вхождений"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Управляется событиями" abbr="Управляется событиями">Управляется событиями</th><td align="left" class="sectionTableCell" headers="property_Управляется событиями"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Выполняющийся" abbr="Выполняющийся">Выполняющийся</th><td align="left" class="sectionTableCell" headers="property_Выполняющийся"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Необязательный" abbr="Необязательный">Необязательный</th><td align="left" class="sectionTableCell" headers="property_Необязательный"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Запланированный" abbr="Запланированный">Запланированный</th><td align="left" class="sectionTableCell" headers="property_Запланированный"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_Повторяющийся" abbr="Повторяющийся">Повторяющийся</th><td align="left" class="sectionTableCell" headers="property_Повторяющийся"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

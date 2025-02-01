@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Идентификация bean-объектов, управляемых сообщениями</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_message-driven_beans" name="uma.name">
+<meta content="Идентификация bean-объектов, управляемых сообщениями" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.4428031829474456E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.4428031829474456E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Идентификация bean-объектов, управляемых сообщениями</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждается, как определить и смоделировать bean-объекты, управляемые сообщениями для приложения J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Определение элементов проекта</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    Это руководство посвящено идентификации bean-объектов, управляемых сообщениями. Дополнительное руководство о
+    bean-объектах, управляемых сообщениями предоставлено в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/message-driven_bean_12D6102.html" guid="3.616542707987638E-305">Руководство по рабочему продукту: bean-объекты, управляемые сообщениями</a>. Общее
+    руководство об объектах EJB находится в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Руководство по рабочему продукту: Объекты EJB.</a>
+</p>
+<p>
+    Некоторые характеристики bean-объектов, управляемых сообщениями:
+</p>
+<ul>
+    <li>
+        Они не сохраняют состояния.
+    </li>
+    <li>
+        Они не возвращают значений или исключительных ситуаций клиентам.
+    </li>
+    <li>
+        Они не имеют интерфейсов, клиенты не получают к ним прямого доступа, а осуществляют его, посылая сообщения
+        назначению (или конечной точке), которое обслуживается bean-объектом. Существует один метод получателя запросов
+        ("onMessage()" в случае bean-объекта JMS, управляемого сообщениями), который обрабатывает все сообщения. Это
+        означает, что во время выполнения с помощью операции "instanceOf()" должна выполняться проверка типов, чтобы
+        определить тип сообщения.
+    </li>
+</ul>
+<p>
+    Сообщения могут посылаться контейнеру откуда угодно, в том числе из других объектов EJB, Web-компонентов и клиентских
+    приложений. Контейнер по мере необходимости вызывает управляемые сообщениями объекты EJB, чтобы обработать входящие
+    сообщения. Объекты EJB, управляемые сообщениями, могут получать непосредственный доступ к другому сеансу, объектам EJB
+    сущности или уровню EIS для обработки сообщений.
+</p>
+<h3>
+    <a id="Guidelines" name="Guidelines"></a>Идентификация bean-объектов, управляемых сообщениями
+</h3>
+<p>
+    Bean-объекты, управляемые сообщениями, предоставляют асинхронный способ обработки сообщений. Сущностные bean-объекты и
+    bean-объекты сеанса могут вызываться только синхронно. Bean-объекты, управляемые сообщениями, идентифицируются как
+    часть определения параллелизма для всей системы. Общее руководство о параллелизме находится в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/concurrency_3E796647.html" guid="1.5676516174458592E-304">Руководство: Параллелизм</a>, в том числе, шаблоны проектирования для разделения
+    инициатора и вызываемого кода. Bean-объекты, управляемые сообщениями, обычно определяются как часть <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Задача: Описание архитектуры выполнения</a> в качестве средств
+    обеспечения параллелизма с помощью контейнера EJB. Как таковые они, в общем случае, не определяются непосредственно от
+    классов анализа, а определяются для разрешения специфических проблем проекта, таких как быстродействие или разделение
+    обязанностей.
+</p>
+<p>
+    Некоторые причины для введения bean-объектов, управляемых сообщениями, состоят в следующем:
+</p>
+<ul>
+    <li>
+        Разделение обязанностей между разными областями программного обеспечения. Сообщения могут отправляться в очередь,
+        не имея связи с их получателем. Могут поддерживаться множественные отправители и получатели.
+    </li>
+    <li>
+        Увеличение производительности с помощью разрешения отправителю сообщения выполнять обработку вместо его блокировки
+        при синхронном вызове (который происходит при вызове сущностного bean-объекта или bean-объекта сеанса).
+    </li>
+    <li>
+        Повышение надежности с помощью разрешения отправителю сообщения продолжать работу, даже если получатели сообщений
+        не подключены.
+    </li>
+    <li>
+        Другие преимущества могут быть получены с помощью ориентированного на сообщения промежуточного программного
+        обеспечения (MOM), которое находится за интерфейсом <font color="#000000">сообщений</font> , например,
+        гарантированная доставка сообщений.
+    </li>
+    <li>
+        Существование элемента проекта (например, унаследованной системы), который использует сообщения для
+        взаимодействия.<br />
+    </li>
+</ul>
+<h3>
+    <a id="Modeling" name="Modeling"></a>Моделирование bean-объектов, управляемых сообщениями
+</h3>
+<p>
+    Общее руководство по моделированию объектов EJB приведено в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Руководство: Идентификация объектов EJB</a>. Заметьте, однако, что bean-объекты,
+    управляемые сообщениями, обычно моделируются как часть Представления процесса. Специфические указания по моделированию
+    управляемых сообщениями bean-объектов в Представлении процесса находятся в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_the_run-time_architecture_for_j2ee_applications_58C0C0A2.html" guid="1.7390519818410197E-305">Руководство: Описание архитектуры выполнения приложения J2EE</a>.
+</p>
+<h3>
+    <a id="Returning" name="Returning"></a>Возврат результатов отправителям сообщений
+</h3>
+<p>
+    Bean-объект, управляемые сообщениями не могут прямо посылать ответы отправителю сообщения.
+</p>
+<p>
+    Обычная стратегия отправки ответа состоит во введении другого назначения или конечной точки для ответов. Более
+    подробная информация об этой стратегии находится в разделе [<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html" guid="1.4494927535802764E-304">ROM02</a>].
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

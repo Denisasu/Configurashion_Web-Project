@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Концепция: Конфигурации развертывания J2EE </title>
+<meta content="Concept" name="uma.type">
+<meta content="j2ee_deployment_configurations" name="uma.name">
+<meta content="Конфигурации развертывания J2EE " name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jIamcOBoEe-aS_x8ARA3yA", "7.671163061311939E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "7.671163061311939E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lI0_AOBoEe-aS_x8ARA3yA", "7.671163061311939E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_liGaoOBoEe-aS_x8ARA3yA", "7.671163061311939E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.671163061311939E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Концепция: Конфигурации развертывания J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом разделе обсуждаются достоинства и недостатки различных конфигураций развертывания, предназначенных для платформы J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/perform_developer_test_512B18D9.html" guid="{55EAEE66-A254-457F-BCC3-D1C21ED88134}">Выполнение тестов разработчика</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/define_test_environment_configurations_605902BA.html" guid="{187268D3-3166-4823-8DD8-5E1112004AC3}">Определение конфигурации среды тестирования</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Разработчик архитектуры</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    Введение
+</h2>
+<p class="Body">
+    Платформа J2EE поддерживает разработку и развертывание множества стандартных конфигураций развертывания. Эти
+    стандартные конфигурации <span style="COLOR: windowtext">требуют принятия большого числа эвристических решений, помимо
+    непосредственной разработки приложений</span>. В следующих разделах приведены описания наиболее распространенных
+    конфигураций развертывания с информацией об их достоинствах и недостатках.
+</p>
+<p style="MARGIN-LEFT: 0px">
+    Если вы еще не знакомы с концепциями J2EE, прочтите о них в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Обзор Java 2 Platform Enterprise Edition (J2EE)</a>, прежде чем продолжить работу.
+</p>
+<h2>
+    <a name="Standalone Deployment Configuration" id="Standalone Deployment Configuration"></a>Автономная конфигурация
+    развертывания
+</h2>
+<p class="Body">
+    Первая конфигурация развертывания показана на рисунке 1. В этой конфигурации нет ни контейнера Web, ни контейнера EJB;
+    клиент обращается к ресурсам EIS напрямую и сам отвечает за обработку любой логики презентаций, бизнес-логики и логики
+    интеграции.
+</p>
+<p class="JDFPFigure" align="center">
+    <img height="182" alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/co_j2e1.jpg" width="294" />
+</p>
+<p class="FN" align="center">
+    <b><font size="2">Рисунок 1. Автономная конфигурация развертывания</font></b>
+</p>
+<p class="Body">
+    На первый взгляд, данная конфигурация выглядит привлекательной для приложений, предоставляющих простые средства
+    управления данными, хранящимися в ресурсах EIS. Однако у этой конфигурации есть несколько недостатков.
+</p>
+<p class="Body">
+    Изменения в ресурсах EIS могут серьезно повлиять на реализацию приложения, которая часто напрямую зависит от внутренней
+    структуры каждого ресурса EIS, например структуры таблиц баз данных. Любое изменение в приложении требует полного
+    обновления приложения для каждого пользователя - в конфигурации не предусмотрен центральный сервер, на котором можно
+    было бы развернуть приложение, чтобы клиенты немедленно получали доступ ко всем исправлениям.
+</p>
+<p class="Body">
+    Кроме того, такая конфигурация развертывания не способствует разграничению зон ответственности. Например, логика
+    презентаций и бизнес-логика часто бывают тесно взаимосвязаны, что затрудняет поддержку и обслуживание приложений.
+</p>
+<p class="Body">
+    Однако настоящие проблемы, связанные с этой конфигурацией развертывания, появляются, когда вы решите масштабировать
+    приложение. Производительность клиентских рабочих станций ограничена, поэтому нагрузку следует распределять среди
+    нескольких компьютеров. Однако автономная конфигурация не предназначена для поддержки распределенной обработки. Кроме
+    того, когда вы попытаетесь организовать поддержку нескольких клиентов, одновременно обращающихся к ресурсам EIS, то
+    обнаружите, что производительность приложений ограничена самим ресурсом EIS, например числом параллельных соединений с
+    базами данных.
+</p>
+<h2>
+    <a name="EJB-Centric Deployment Configuration" id="EJB-Centric Deployment Configuration"></a>Конфигурация развертывания
+    с EJB-центром
+</h2>
+<p class="Body">
+    Конфигурация развертывания с EJB-центром показана на рисунке 2. В этой конфигурации между клиентским контейнером и
+    ресурсами EIS находится контейнер EIS; контейнер Web отсутствует. Логика презентаций находится на клиенте, а
+    бизнес-логика - в объектах EJB. В отличие от прямого доступа к ресурсам EIS, все запросы клиентов контролируются
+    соответствующими объектами EJB. Клиенты, таким образом, защищены от изменений в ресурсах EIS.
+</p>
+<p class="JDFPFigure" align="center">
+    <img height="171" alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/co_j2e2.jpg" width="443" />
+</p>
+<p class="FN" align="center">
+    <b><font size="2">Рисунок 2. Конфигурация развертывания с EJB-центром</font></b>
+</p>
+<p class="Body">
+    Конфигурация развертывания с EJB-центром избавляет от многих недостатков, присущих автономной конфигурации
+    развертывания. С точки зрения масштабируемости, реализация платформы J2EE может распределять нагрузку по нескольким
+    компьютерам. Кроме того, за эффективное использование ограниченных ресурсов, таких как соединения с базами данных,
+    отвечает контейнер EJB. Применительно к поддержке и обслуживанию приложений, эта конфигурация способствует
+    разграничению логики презентаций и бизнес-логики.
+</p>
+<p class="Body">
+    Однако один из недостатков конфигурации развертывания с EJB-центром заключается в том, что даже незначительные
+    изменения в пользовательском интерфейсе требуют полного обновления приложения для каждого пользователя. Хотя
+    бизнес-логику, заключенную внутри объектов EJB, можно заново развернуть на сервере (предоставив тем самым пользователям
+    немедленный доступ ко всем изменениям), это не распространяется на логику презентаций. Это неудобно, поскольку внешний
+    вид и характеристики приложений могут изменяться весьма часто.
+</p>
+<h2>
+    <a name="Web-Centric Deployment Configuration" id="Web-Centric Deployment Configuration"></a>Конфигурация развертывания
+    с Web-центром
+</h2>
+<p class="Body">
+    Конфигурация развертывания с Web-центром показана на рисунке 3. В этой конфигурации между клиентским контейнером и
+    ресурсами EIS находится контейнер Web; контейнер EJB отсутствует. И логика презентаций, и бизнес-логика обрабатываются
+    элементами контейнера Web (JSP и сервлетами). В этой конфигурации на клиенте применяется простой язык описаний, такой
+    как HTML, хотя может применяться и XML или WML.
+</p>
+<p class="JDFPFigure" align="center">
+    <img height="177" alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/co_j2e3.jpg" width="458"     v:shapes="_x0000_i1027" />
+</p>
+<p class="FN" align="center">
+    <b><font size="2">Рисунок 3. Конфигурация развертывания с Web-центром</font></b>
+</p>
+<p class="Body">
+    Конфигурация развертывания с Web-центром в большей степени направлена на поддержку внешнего вида приложения и в меньшей
+    - на поддержку бизнес-логики. Такая конфигурация поддерживает частые изменения внешнего вида приложения и находит
+    сегодня широкое применение.
+</p>
+<p class="Body">
+    Конфигурация развертывания с Web-центром обладает рядом достоинств. Во-первых, изменения в ресурсах EIS не влияют на
+    клиентов, поскольку те не обращаются к этим ресурсам напрямую. Во-вторых, можно заново развернуть все приложение без
+    необходимости выполнять какое-либо обновление для пользователей, поскольку приложение полностью находится на сервере.
+</p>
+<p class="Body">
+    Однако, в то время как применение объектов EJB иногда считается неоправданным для задания, отказ от их применения
+    зачастую приводит к тем же проблемам, что и в случае автономной конфигурации развертывания. Конкретно, эта конфигурация
+    не способствует четкому разграничению ответственности между логикой презентаций и бизнес-логикой, из-за чего могут
+    появляться тесно связанные друг с другом элементы, затрудняющие поддержку и обслуживание приложения. Кроме того, все
+    проблемы масштабируемости, характерные для автономной конфигурации развертывания, возникают и в случае архитектуры с
+    Web-центром.
+</p>
+<h2>
+    <a name="Multi-Tier Deployment Configuration" id="Multi-Tier Deployment Configuration"></a>Многоуровневая конфигурация
+    развертывания
+</h2>
+<p class="Body">
+    Многоуровневая конфигурация развертывания показана на рисунке 4. Эта конфигурация содержит и контейнер Web, и контейнер
+    EJB, и она сочетает в себе все достоинства предыдущих конфигураций развертывания и отсутствие их недостатков. Логика
+    презентаций обрабатывается элементами контейнера Web, а бизнес-логика - объектами EJB контейнера EJB.
+</p>
+<p class="JDFPFigure" align="center">
+    <img height="253" alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/co_j2e4.jpg" width="571" />
+</p>
+<p class="FN" align="center">
+    <b><font size="2">Рисунок 4. Многоуровневая конфигурация развертывания</font></b>
+</p>
+<p class="Body">
+    Изменения в ресурсах EIS не влияют на клиентов, поскольку те не обращаются к этим ресурсам напрямую. Кроме того, можно
+    заново развернуть все приложение без необходимости выполнять какое-либо обновление для пользователей, поскольку
+    приложение полностью находится на сервере.
+</p>
+<p class="Body">
+    С точки зрения масштабируемости, обработка может быть распределенной. Также с точки зрения масштабируемости, за
+    эффективное использование ограниченных ресурсов, таких как соединения с базами данных, отвечает контейнер EJB.
+</p>
+<p class="Body">
+    Применительно к поддержке и обслуживанию приложений, эта конфигурация способствует четкому разграничению зон
+    ответственности. Логика презентаций отделена от ресурсов EIS, а бизнес-логика - от внешнего вида приложений. Это четкое
+    разграничение позволяет распределить задачи между разработчиками разных специальностей и разрабатывать логику
+    презентаций и бизнес-логику отдельно друг от друга.
+</p>
+<p class="Body">
+    Многоуровневая конфигурация развертывания также упрощает перенос с одного клиентского устройства (например,
+    Web-браузера) на другой (например, PDA). При этом не требуется полностью переписывать приложение заново, поскольку
+    бизнес-логика, инкапсулированная в объектах EJB, остается без изменений и может использоваться "как есть".
+</p>
+<p class="Body">
+    Подводя итог, отметим, что существует несколько конфигураций развертывания, каждая из которых имеет свои плюсы и
+    минусы. Одна из целей, преследовавшихся при разработке платформы J2EE, - обеспечить достаточную гибкость платформы,
+    чтобы она могла поддерживать любую конфигурацию развертывания, считающуюся подходящей для организации, и в то же время
+    была достаточно приспособленной для нужд предприятия.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

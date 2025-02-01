@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация:  Идентификация классов Java</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_java_classes" name="uma.name">
+<meta content=" Идентификация классов Java" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.5015077375422883E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.5015077375422883E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация:  Идентификация классов Java</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждается, как определить и смоделировать классы Java для приложения J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Определение элементов проекта</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    В приложении на Java классы Java являются основополагающими строительными блоками всех конструкций реализации, таких
+    как объекты JavaBean, объекты EJB, сервлеты и аплеты. Вся логика реализации предоставляется классами Java.
+</p>
+<p>
+    Классы - это шаблоны, по которым создаются объекты. Классы инкапсулируют структуры данных вместе с алгоритмами для
+    работы с ними. Классом обычно является фабрика для объектов, которые он определяет.
+</p>
+<p>
+    Это руководство не объясняет подробно концепцию классов или объектно-ориентированного проектирования. Последующее
+    обсуждение предполагает, что читатель знаком с объектно-ориентированным проектированием. Подробное описание
+    объектно-ориентированного проектирования можно найти в соответствующем разделе.
+</p>
+<h3>
+    <a id="Java_Class_Features" name="Java_Class_Features"></a>Возможности класса Java
+</h3>
+<p>
+    Классы Java включают в себя:
+</p>
+<ul>
+    <li>
+        Функции-члены
+    </li>
+    <li>
+        Данные-члены
+    </li>
+    <li>
+        Статические функции
+    </li>
+    <li>
+        Статические данные
+    </li>
+    <li>
+        Наследование
+    </li>
+    <li>
+        Реализацию интерфейсов
+    </li>
+</ul>
+<p>
+    Функции-члены реализуют некоторое поведение, связанное с отдельными объектами. Функции-члены выполняются в контексте
+    отдельных объектов.
+</p>
+<p>
+    Данные-члены определяют структуры данных для объектов в виде набора объявлений переменных. В идеальном случае, доступ к
+    данным-членам осуществляется только через функции-члены.
+</p>
+<p>
+    Статические функции - это методы, которые выполняются вне контекста отдельных объектов.
+</p>
+<p>
+    Статические данные принадлежат к определяющему их классу, а не к отдельным объектам, которые он определяет. В
+    выполняющемся приложении существует ровно один экземпляр статических данных. Доступ к статическим данным обычно
+    осуществляется только через статические функции, хотя в некоторых проектах экземпляры получают непосредственный доступ
+    к статическим данным.
+</p>
+<p>
+    Классы Java могут быть связаны посредством наследования, что выражается ключевым словом Java "расширяет". Наследование
+    предоставляет изощренную технику повторного использования исходного кода, позволяя проектировщикам выносить общие
+    структуры данных и поведение в суперклассы, оставляя специфическое поведение в подклассах.
+</p>
+<p>
+    Интерфейс объявляет набор методов, реализация которых предоставлена в классах. В классе может быть реализовано
+    несколько интерфейсов, а интерфейс может быть реализован несколькими классами. Отделение интерфейса от реализации
+    увеличивает разделение классов. Осуществление доступа к объектам через интерфейсы обеспечивает прямой путь к
+    использованию полиморфизма.
+</p>
+<h3>
+    <a id="Identifying_Java_Classes" name="Identifying_Java_Classes"></a>Идентификация классов Java
+</h3>
+<p>
+    В приложении J2EE могут быть определены классы Java для поддержки проектирования элементов J2EE. Дополнительная
+    информация об идентификации этих элементов приведена в следующих разделах:
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Руководство: Идентификация объектов EJB</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_servlets_951FE427.html" guid="6.749276633239724E-306">Руководство: Идентификация сервлетов</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_javabeans_B4489D75.html" guid="2.8184208504373704E-306">Прием: Идентификация объектов JavaBean</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_j2ee_application_clients_A6AFA9D0.html" guid="1.2221823675598937E-305">Прием: Идентификация клиентских приложений J2EE</a>
+    </li>
+</ul>
+<p>
+    Руководство по идентификации дополнительных классов Java не отличается от руководства по идентификации любых других
+    видов классов. Более подробная информация находится в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Задача: identify_design_elements_real-time_design</a>.
+</p>
+<h3>
+    <a id="Modeling_Java_Classes" name="Modeling_Java_Classes"></a>Моделирование классов Java
+</h3>
+<p>
+    Классы Java моделируются как классы UML.
+</p>
+<p>
+    На приведенной ниже диаграмме показано представление UML класса Java и соответствующий исходный код Java.
+</p>
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <img alt="Диаграмма, описанная в сопроводительном тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/myclass.gif" />
+            </td>
+            <td>
+                class MyClass {<br />
+                 private int myMemberData;<br />
+                 private String myOtherMemberData;<br />
+                 private static int myStaticData;<br />
+                 public int getMyMemberData() {<br />
+                 return this.myOtherMemberData;<br />
+                 }<br />
+                 public static int getMyStaticData() {<br />
+                 return MyClass.myStaticData;<br />
+                 }<br />
+                 }<br />
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="Логотип Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Данная информация полностью или частично разработана компанией <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

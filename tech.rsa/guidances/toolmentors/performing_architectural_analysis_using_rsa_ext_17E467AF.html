@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту: Performing Architectural Analysis Using Rational Software Architect</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="performing_architectural_analysis_using_rsa_ext" name="uma.name">
+<meta content="Performing Architectural Analysis Using Rational Software Architect" name="uma.presentationName">
+<meta content="Tool:rup_rational_software_architect:Rational Software Architect" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Software Architect" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_T5H-cEUCEdqMr9-tA4TBpQ", "_CvKrgK4LEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_T5H-cEUCEdqMr9-tA4TBpQ", "_CvKrgK4LEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_T5H-cEUCEdqMr9-tA4TBpQ", "_CvKrgK4LEdqFg48R_ivTjA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_CvKrgK4LEdqFg48R_ivTjA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту: Performing Architectural Analysis Using Rational Software Architect</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This tool mentor describes how to perform architectural analysis using the RSA modeling environment.</td>
+</tr>
+<tr>
+<td>Инструмент: <a href="./../../../core.base_rup/tools/rup_rational_software_architect_736B9F40.html" guid="_T5H-cEUCEdqMr9-tA4TBpQ">Rational Software Architect</a> 
+<br>Расширяет: <a href="./../../../tech.rsa/guidances/toolmentors/performing_architectural_analysis_using_rsa_E610F162.html" guid="{B62A5A4A-E7ED-4F1C-8C5F-40261A46CB84}">Performing Architectural Analysis Using Rational Software Development Platform.</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Архитектурный анализ</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Overview
+</h3>
+<p>
+    This tool mentor assumes that a set of structured models has already been created, in accordance with the <a class="elementlinkwithusertext" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>.
+</p>
+<p>
+    The following steps are performed in this tool mentor:
+</p>
+<ul>
+    <li>
+        <a href="#Develop Architecture Overview">Develop Architecture Overview</a>
+    </li>
+    <li>
+        <a href="#Survey Available Assets">Survey Available Assets</a>
+    </li>
+    <li>
+        <a href="#Define the High-Level Organization of Subsystems">Define the High-Level Organization of
+        Subsystems</a>
+    </li>
+    <li>
+        <a href="#Identify Key Abstractions">Identify Key Abstractions</a>
+    </li>
+    <li>
+        <a href="#Identify Stereotypical Interactions">Identify Stereotypical Interactions</a>
+    </li>
+    <li>
+        <a href="#Develop Deployment Overview">Develop Deployment Overview</a>
+    </li>
+    <li>
+        <a href="#Identify Analysis Mechanisms">Identify Analysis Mechanisms</a>
+    </li>
+    <li>
+        <a href="#Review the Results">Review the Results</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Additional Tool Information</a>
+</p>
+<h3>
+    <a id="Develop Architecture Overview" name="Develop Architecture Overview">Develop Architecture Overview</a>
+</h3>
+<p>
+    For this step, the tool can be used in two ways:
+</p>
+<ul>
+    <li>
+        as a drawing tool for creating informal diagrams that describe the architecture overview
+    </li>
+    <li>
+        as a UML modeling tool to create formal semantic models that specify most details of a solution and from which
+        significant portions of the implementation can be automatically generated, using model-to-model and model-to-code
+        transformations.
+    </li>
+</ul>
+<p>
+    For J2EE applications, there are a number of standard deployment configurations on which you can base your initial
+    architecture.&nbsp;For creating&nbsp;a set of diagrams, you will want to use a combination of elements from the
+    Deployment and Geometric Shapes drawers from the palette.
+</p>
+<p>
+    For more information, refer to the following white papers for guidance on structuring models:
+</p>
+<ul>
+    <li>
+        <a class="elementlinkwithusertext" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>
+    </li>
+    <li>
+        <a class="elementlinkwithusertext" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Model Driven Development and Model Driven Architecture</a>
+    </li>
+</ul>
+<h3>
+    <a id="Survey Available Assets" name="Survey Available Assets">Survey Available Assets</a>
+</h3>
+<p>
+    Note: some of the tool capabilities mentioned in this section are not supported in RSM.
+</p>
+<p>
+    The architect must consider the reuse of in-place assets, including existing models.&nbsp;The tool&nbsp;also offers
+    extensive support for automated architectural analysis, enabling the use to perform architecture discovery through
+    high-level software visualization and patterns and anti-patterns detection. For more information, refer to the <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/guidelines/architectural_discovery,_analysis_and_control_2153BFC.html" guid="2.843707701997842E-305">Architectural Discovery, Analysis and Control</a> guidelines.
+</p>
+<p>
+    <b>Identify Transformation Requirements</b>
+</p>
+<p>
+    The tool&nbsp;can be used in three ways:
+</p>
+<ol>
+    <li>
+        As a drawing tool for creating informal diagrams that describe the architecture overview.
+    </li>
+    <li>
+        As a UML modeling tool to create formal semantic models that specify most details of an solution and from which
+        additional details can be automatically generated, using model-to-model and model-to-code transformations.
+    </li>
+    <li>
+        As a UML modeling tool to create formal semantic models that specify most details of a solution. Transformations
+        occur, but they are performed manually.
+    </li>
+</ol>
+<p>
+    If you are working under either scenario 2 or 3 (above), then thought must go into the transformations that will be
+    needed. In a best case scenario, the transformation that is needed will already exist and will provide the necessary
+    functionality.
+</p>
+<p>
+    If you are working under scenario 2 (above) and the transformation does not quite meet your needs, then you will need
+    to do one of the following:
+</p>
+<ul>
+    <li>
+        Extend the existing transformation.
+    </li>
+    <li>
+        Update the transformation by changing the code of the transformation.
+    </li>
+    <li>
+        Create a new transformation that either feeds into or accepts output from the existing transformation.
+    </li>
+    <li>
+        If reuse is not possible and you need to create a new standalone transformation, you may want to use the existing
+        template as an example/starting point.
+    </li>
+</ul>
+<p>
+    Hint: There are sample transformations that you can reuse or use as a starting point for your own transformation:
+    business model to use case model, use case model to analysis model, and analysis model to design model.
+</p>
+<p>
+    If you need to create a new transformation, use the following 6 steps to guide you:
+</p>
+<ol>
+    <li>
+        Create a transformation plug-in project
+    </li>
+    <li>
+        Specify type of Source and Target Model
+    </li>
+    <li>
+        Specify Applicable Profiles
+    </li>
+    <li>
+        Add rules to the transformation
+    </li>
+    <li>
+        Implement transformation specific behavior
+    </li>
+    <li>
+        Test the transformation
+    </li>
+</ol>
+<p>
+    <b>Identify Reusable Patterns</b>
+</p>
+<p>
+    In addition to looking for transformations to reuse, it is important to think of the relevant patterns that may be
+    applicable to your project. As with transformations, the best-case scenario is that the patterns you require already
+    exist as needed.
+</p>
+<p>
+    If the patterns identified do not quite fit your needs, you have a number of options:
+</p>
+<ol>
+    <li>
+        Create a new pattern that works in conjunction with the existing pattern
+    </li>
+    <li>
+        Update the pattern so that it does suit your needs
+    </li>
+    <li>
+        Use the existing pattern as a blueprint/sample as you build a new pattern that better fits your needs
+    </li>
+</ol>
+<p>
+    Refer to the help category <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /> <em>Extending RSx functionality</em> (RSx stands for RSA, RSM or RSD).
+</p>
+<p>
+    If you decide to create your own pattern, use the following 6 steps to guide you:
+</p>
+<ol>
+    <li>
+        Create a pattern library
+    </li>
+    <li>
+        Add a pattern to the pattern library
+    </li>
+    <li>
+        Add template parameters to the pattern
+    </li>
+    <li>
+        Specify dependencies between template parameters
+    </li>
+    <li>
+        Implement pattern specific behavior
+    </li>
+    <li>
+        Test the pattern
+    </li>
+</ol>
+<p>
+    <b>Identify Reusable Profiles</b>
+</p>
+<p>
+    Review your inventory of available profiles and decide if you will need to augment this collection of profiles.
+    Profiles can be a useful mechanism to assist in adding detail and precision to your model without tying you to a
+    specific implementation. Another aspect to consider is the inter-relationship between patterns, transformations and
+    profiles. These mechanisms can be used alone, but often offer a higher level of productivity when used together.
+</p>
+<p>
+    <b>Identify Reusable Models and Code Elements</b>
+</p>
+<p>
+    The architect must consider the reuse of in-place assets, including existing models.&nbsp;The tool&nbsp;also offers
+    extensive support for automated architectural analysis, enabling the user to perform architecture discovery through
+    high-level software visualization and patterns and anti-patterns detection. For more information, refer to the <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/guidelines/architectural_discovery,_analysis_and_control_2153BFC.html" guid="2.843707701997842E-305">Architectural Discovery, Analysis and Control</a> guidelines. .
+</p>
+<p>
+    There is also a tutorial titled: <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Creating Architectural Control Rules and Reviewing the Architecture of an Application</i> where you can
+    get a better understanding of some of the automation features in&nbsp;the tool&nbsp;to evaluate existing assets.
+</p>
+<p>
+    <b>Check developerWorks for Assets</b>
+</p>
+<p>
+    Note that the Rational Technical Library on the <a href="http://www.ibm.com/developerworks/rational/library/" target="blank">IBM developerWorks</a> contains assets that you might find useful.
+</p>
+<p>
+    <b>Use RAS and the Asset Explorer</b>
+</p>
+<p>
+    When working with the Reusable Asset Specification (RAS), you will want to switch to the RAS Perspective in
+    the&nbsp;tool workbench. A key view in the perspective is the Asset Explorer, which allows you to connect to an
+    existing repository, navigate thru repositories or create repositories containing RAS assets. In addition, an asset
+    stored in a repository can be commented on by users of the system - providing another mechanism to help you in your
+    selection of assets.
+</p>
+<p>
+    For more information, refer to:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><em>RAS Assets - RAS
+        Asset to Import/Export</em>&nbsp;
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><em>Tutorials and
+        samples for importing and exporting RAS assets</em>&nbsp;
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Packaging Assets
+        for Reuse</i>
+    </li>
+    <li>
+        <em><img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />Finding
+        RAS<i>&nbsp;Assets</i></em>
+    </li>
+</ul>
+<h3>
+    <a id="Define the High-Level Organization of Subsystems" name="Define the High-Level Organization of Subsystems">Define
+    the High-Level Organization of Subsystems</a>
+</h3>Your decisions about how the solution will be organized into components, services, and subsystems are captured in the
+design model (e.g. an EIT Design Model) and based upon architectural considerations such as: 
+<ul>
+    <li>
+        layering strategy
+    </li>
+    <li>
+        componentization strategy (driven in turn by concerns of functional cohesion and loose coupling)
+    </li>
+    <li>
+        project-specific division of labor
+    </li>
+</ul>
+<p>
+    If a Model Driven Development (MDD) approach using automated transformations is taken, the model-to-model and
+    model-to-code transformations introduce additional concerns regarding model structures. For instance, you may wish to
+    align the packages of your design model to reflect the set of projects in which you will develop the implementation.
+    Alternatively, a "mapping model" can be used to define how the implementation artifacts of the solution will be
+    organized into projects and folders, and how the design model constructs will map into those projects and folders. See
+    <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Specifying File Names
+    for the Output of a UML&nbsp;Transformation.</i>
+</p>
+<p>
+    If you are not using automated transformations as part of your MDD approach, then you must take steps to provide the
+    information that is embedded in the automated transformation:
+</p>
+<ul>
+    <li>
+        Additional diagrams
+    </li>
+    <li>
+        Notes on diagrams
+    </li>
+    <li>
+        Use Profiles
+    </li>
+    <li>
+        Use Constraints
+    </li>
+    <li>
+        Additional documentation that details the mapping
+    </li>
+</ul>
+<p>
+    The tool&nbsp;can also support the need to organize elements in more than one way, in order to accommodate all the
+    stakeholders and their specific perspectives. The solution is to use &lt;&lt;perspective&gt;&gt; packages which
+    separates the organization of the design model elements from the diagrammatic views of the model's content, enabling
+    you to create as many other views as are necessary, views which can reflect orthogonal organizational approaches. In
+    addition with the communication of the design ideas represented in your model, this approach can also assist in helping
+    you to gain a better understanding of the elements that comprise your solution.
+</p>
+<p>
+    For more information, refer to the following white papers for guidance on structuring models:
+</p>
+<ul>
+    <li>
+        <a class="elementlinkwithusertext" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/layering_strategies_300DC1D1.html" guid="1.0962026102409748E-305">Layering Strategies</a>
+    </li>
+    <li>
+        <a class="elementlinkwithusertext" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Model Driven Development and Model Driven Architecture</a>
+    </li>
+</ul>
+<h3>
+    <a id="Identify Key Abstractions" name="Identify Key Abstractions">Identify Key Abstractions&nbsp;</a>
+</h3>
+<p>
+    Capture key abstractions in class diagrams with brief descriptions of each class. To do this:
+</p>
+<ol>
+    <li>
+        Open the Design Model. If you plan on maintaining a separate Analysis Model, then the same kind of information
+        should be also recorded in that model.
+    </li>
+    <li>
+        Navigate to the package containing key abstractions. An alternative is to use a Key Abstractions
+        &lt;&lt;perspective&gt;&gt; package. See <a class="elementlinkwithusertext" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>.
+    </li>
+    <li>
+        Add a class diagram. See <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Adding Class Diagrams to Model Elements</i>.
+    </li>
+    <li>
+        Add classes to the diagram, stereotyped as &lt;&lt;entity&gt;&gt;. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Creating and Modifying Class Diagrams</i> and <img         height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Applying Stereotypes to
+        Model Elements</i>.
+    </li>
+    <li>
+        Add a description to each class using the Documentation tab in the Properties View. See <img height="16"         alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documenting Model Elements</i>.
+    </li>
+    <li>
+        Optionally associate a document with the class: in the Model Explorer, right click the model element to which you
+        want to link a file, and then click&nbsp;Add UML &gt; URL . See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Linking Model Elements to External Files</i>.
+    </li>
+    <li>
+        Define any relationships that exist between the classes. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Relationships</i>. 
+        <ul>
+            <li>
+                Add association relationships.
+            </li>
+            <li>
+                Specify the kinds of association relationships.
+            </li>
+            <li>
+                Add generalization relationships.
+            </li>
+        </ul>
+    </li>
+</ol>
+<p>
+    For more information, refer to <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Modeling Static Structure&nbsp;by Using&nbsp;Class Diagrams</i>.
+</p>
+<h3>
+    <a id="Identify Stereotypical Interactions" name="Identify Stereotypical Interactions">Identify Stereotypical
+    Interactions</a>
+</h3>
+<p>
+    This step is included only when performing this activity during inception.
+</p>
+<p>
+    The purpose of this step is to identify those interactions, between key abstractions in the system, that characterize
+    or are representative of significant kinds of activity in the system. These interactions are captured as Use-Case
+    Realizations.
+</p>
+<p>
+    For guidance on creating Use-Case Realizations, see <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">Use-Case
+    Analysis</a>.
+</p>
+<p>
+    When working with iteration diagrams, it is quick and easy to switch between Communication Diagram and Sequence Diagram
+    views:
+</p>
+<ol>
+    <li>
+        Add either a Sequence or Communication Diagram to your model. This will create the diagram within an owning
+        Interaction.
+    </li>
+    <li>
+        Add model elements to the diagram created as needed, to represent the interaction.
+    </li>
+    <li>
+        To add the companion diagram, right-click on the Interaction and select Add Diagram &gt; Communication Diagram.
+    </li>
+    <li>
+        If you started with a Communication Diagram, the flow is the same, except after right-clicking on the interaction
+        you select Add Diagram &gt; Sequence Diagram.
+    </li>
+</ol>
+<h3>
+    <a id="Develop Deployment Overview" name="Develop Deployment Overview">Develop Deployment Overview</a>
+</h3>
+<ol>
+    <li>
+        Add a deployment diagram to the Deployment Model.
+    </li>
+    <li>
+        Add nodes to the diagram.
+    </li>
+    <li>
+        Use Stereotyped Node from the Deployment drawer in the palette and use one of the predefined types of nodes. Note
+        that most of the predefined nodes have customized graphical representations related to the type of the node.
+    </li>
+    <li>
+        Add associations between nodes.
+    </li>
+</ol>
+<p>
+    Additional tips:
+</p>
+<ol>
+    <li>
+        Use notes and color as visual cues to draw attention to important features of your diagram.
+    </li>
+    <li>
+        Provide details consistent with level of abstraction required. Expose only those adornments that are essential to
+        understanding.
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ol>
+            <li>
+                Use Delete from Diagram to remove undesired elements from a diagram. This will remove the elements from the
+                diagram but not impact the underlying model.
+            </li>
+            <li>
+                Use Filters to hide\expose details. Right clicking on model elements in a diagram and selecting Filters can
+                access this.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Use elements from the Geometric Shapes drawer to add any additional information that needs to be captured, but is
+        not well represented by elements found in the Deployment drawer.
+    </li>
+    <li>
+        Focus on communicating one aspect of a system's static deployment view. No single deployment diagram need capture
+        everything about a system's deployment view.
+    </li>
+    <li>
+        Use &lt;&lt;perspective&gt;&gt; packages as needed to bring together model elements to provide an additional or
+        alternate view.
+    </li>
+    <li>
+        If more detail and precision is needed for the diagram, use profiles, constraints, notes and the documentation tab
+        to record the information.
+    </li>
+</ol>
+<h3>
+    <a id="Identify Analysis Mechanisms" name="Identify Analysis Mechanisms">Identify Analysis Mechanisms</a>
+</h3>
+<p>
+    There are&nbsp;tool features and capabilities that will&nbsp;help in the bottom-up identification of some Analysis
+    Mechanisms through the support for Architectural Analysis (pattern and anti-pattern detection). The RAS repository is a
+    good place for collecting all the potential candidates for reuse. See <img height="16" alt="help book icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Creating Software Modeling Artifacts&nbsp;for Reuse</i> and
+    <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Applying Patterns</i>
+    for a complete view on what are the requirements for packaging reusable assets.
+</p>
+<p>
+    If you have patterns, transformations,models, written guidance or other artifacts that you wish to share and reuse
+    withing the wider organization, RAS can help. It will allow you to search, review, provide feedback and incorporate a
+    reusable asset in a solution. For additional guidance on working with the Reusable Asset Specification and assets that
+    have been packaged using this specification, refer to:
+</p>
+<ul class="noindent">
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><em>RAS Assets
+        -&nbsp;RAS Asset to Import/Export</em>&nbsp;
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><em>Tutorials and
+        Samples regarding&nbsp;importing and exporting RAS assets</em>&nbsp;
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Packaging Assets
+        for Reuse</i>
+    </li>
+    <li>
+        <em><img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Finding RAS
+        Assets</i></em>&nbsp;
+    </li>
+</ul>
+<p>
+    As you work through this step, document each analysis mechanism and its clients. There a number of ways in
+    which&nbsp;the tool&nbsp;can assist you in finding and representing this information:
+</p>
+<ul>
+    <li>
+        Find clients by right clicking on the mechanism and using Filters &gt; Show Related Elements
+    </li>
+    <li>
+        Use a Topic Diagram. See <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Topic Diagrams</i>
+    </li>
+    <li>
+        Use a Browse Diagram See <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Browse Diagrams</i>&nbsp;
+    </li>
+    <li>
+        Use &lt;&lt;perspective&gt;&gt; packages to provide a view of the mechanisms that are used.
+    </li>
+    <li>
+        Use &lt;&lt;framework&gt;&gt; packages to provide how the mechanisms will fulfill their obligations.&nbsp;
+    </li>
+</ul>
+<h3>
+    <a id="Review the Results" name="Review the Results">Review the Results</a>
+</h3>
+<p>
+    The results of architectural analysis are preliminary and relatively informal; therefore, reviews should be informal as
+    well. It might be helpful to publish any models to html format. Also note that diagrams can be copied to Microsoft Word
+    and other programs.
+</p>
+<p>
+    For more information, refer to <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Publishing Models</i> and to the <img height="16" alt="help book icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publishing a Model to Web</i> tutorial.
+</p>
+<h3>
+    <a id="moreinfo">Additional Tool Information</a>
+</h3>
+<p>
+    Tutorials:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Applying&nbsp;a
+        Pattern</i>
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Create a
+        Pattern</i>
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Understanding the
+        UML&nbsp;Model Hierarchy</i>&nbsp;
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Introduction to the
+        Modeling Perspective</i>
+    </li>
+</ul>
+<p>
+    Samples:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Patterns - Simple
+        UML Model</i>&nbsp;
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

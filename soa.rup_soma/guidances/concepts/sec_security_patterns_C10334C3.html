@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Концепция: Security Patterns</title>
+<meta content="Concept" name="uma.type">
+<meta content="sec_security_patterns" name="uma.name">
+<meta content="Security Patterns" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "_zJPhoDx3EduNwuGvuWPNZA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_m8lcIDIyEduePY7oPsXsLA", "_ll7xwOBoEe-aS_x8ARA3yA", "_zJPhoDx3EduNwuGvuWPNZA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_WdljEE7OEduvcvbnLvkXhA", "_zJPhoDx3EduNwuGvuWPNZA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_zJPhoDx3EduNwuGvuWPNZA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Концепция: Security Patterns</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/tasks/sec_identify_security_patterns_1953748F.html" guid="_m8lcIDIyEduePY7oPsXsLA">Identify Security Patterns</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introduction
+</h3>
+<p>
+    "Security" is generally perceived to be a complex, mind-numbing discipline.&nbsp; A "pattern" is a term that most
+    people believe they have an intuitive understanding of, because it is a natural part of human education to recognize
+    and generalize about perceived patterns.&nbsp; For the purposes of this exercise we will take the following as working
+    definitions:
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <strong>Security</strong> is <em>"The condition of a system that results from the establishment and maintenance of
+        measures to protect the system."</em>&nbsp; [<a href="./../../../soa.rup_soma/guidances/concepts/./resources/#references">1</a>]
+    </p>
+    <p>
+        <em>"A <strong>pattern</strong> is the abstraction from a concrete form which keeps recurring in specific
+        non-arbitrary contexts."</em> [<a href="./../../../soa.rup_soma/guidances/concepts/./resources/#references">2</a>]
+    </p>
+</blockquote>
+<p>
+    So, to attempt to couple the two terms, "security" and "patterns" can introduce some tension.&nbsp; There have been
+    various attempts to produce security patterns (see appendix A).&nbsp;&nbsp; This paper has attempted to collect and
+    codify the material that has been gathered over several years by various security practioners from various customer
+    engagements producing a strawman for IBM security patterns. The working definition for "security patterns" in the
+    context of this paper is:
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <em>An abstraction of the conditions that result from the establishment and maintenance of recurring measures used
+        to protect the system.</em>
+    </p>
+</blockquote>
+<p>
+    Within the software development community there is currently an effort to establish [<a href="./../../../soa.rup_soma/guidances/concepts/./resources/#references">3</a>] a methodology for pattern development.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <em>Fundamental to any science or engineering discipline is a common vocabulary for expressing its concepts, and a
+        language for relating them together. The goal of patterns within the software community is to create a body of
+        literature to help software developers resolve recurring problems encountered throughout all of software
+        development. Patterns help create a shared language for communicating insight and experience about these problems
+        and their solutions. Formally codifying these solutions and their relationships lets us successfully capture the
+        body of knowledge which defines our understanding of good architectures that meet the needs of their users. Forming
+        a common pattern language for conveying the structures and mechanisms of our architectures allows us to
+        intelligibly reason about them. The primary focus is not so much on technology as it is on creating a culture to
+        document and support sound engineering architecture and design.</em> [<a href="./../../../soa.rup_soma/guidances/concepts/./resources/#references">4</a>]
+    </p>
+</blockquote>
+<p>
+    The fundamental point of confusion, is that patterns, like beauty, seem to be in the eye of the beholder.&nbsp;So, if
+    you get any 5 security people together, they will define patterns specific to their area of interest.
+</p>
+<p>
+    It is for this reason, that I digress into a discussion of "roles" to help group patterns by the community of
+    interest.&nbsp;
+</p>
+<h3>
+    Who’s on First?
+</h3>
+<p>
+    Within the world of software, there are people who design things, people who draw pictures and write documents, people
+    who write code, and people who pull all the pieces together and provide computer based systems.
+</p>
+<p>
+    Each organization probably has its own way of defining the tasks, but there are archetypal roles.
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <em>An archetype is an idealized model of a person, object or concept from which similar instances are derived,
+        copied, patterned or emulated. In psychology, an archetype is a model of a person, personality or behaviour.</em>
+        [<a href="./../../../soa.rup_soma/guidances/concepts/./resources/#references">5</a>]
+    </p>
+</blockquote>
+<p>
+    In any medium to large organization, tasks are assigned to different people based on their organizational
+    responsibilities.&nbsp; In general, business analysts and business applications need to protect the informational
+    assets of the business.&nbsp;&nbsp;&nbsp; They drive the creation of the business application requirements for
+    security.
+</p>
+<h5>
+    Archetype 1 – Business Analyst
+</h5>
+<p>
+    In organizations that have to comply with legislative or regulatory requirements there is sometimes a specific set of
+    tasks at the "C" level to monitor and enforce these regulations.&nbsp; The CSO and CPO generally work with business
+    analysts to compile a set of corporate guidelines and requirements…..the fundamentals of good business practice.
+</p>
+<h5>
+    Archetype 2 - Chief Security (Privacy) Officer
+</h5>
+<p>
+    Most organizations of any size today have a firewall. Even individual users in their homes establish firewalls for
+    their home networks.&nbsp; Someone has to setup and maintain these devices. Some are simple, some are complex.
+</p>
+<h5>
+    Archetype 3 - Network Security Officer
+</h5>
+<p>
+    When it&nbsp; comes to actually understanding and selecting some kind of security mechanisms to meet the requirements
+    specified by the business, there are many people that work together to implement security.&nbsp;&nbsp;
+</p>
+<h5>
+    Archteype 4-&nbsp; Security Architect
+</h5>
+<p>
+    TBD: Security Developer, Security Deployer, Security Policy Author, Security Policy Administrator, Security System
+    Adminstrator
+</p>
+<h3>
+    Looking at patterns by Role
+</h3>
+<p>
+    It is the intent of this paper and the accompanying slide deck, to provide a strawman for identifying and illustrating
+    existing common security patterns within the IBM customer- business analyst community.&nbsp; The task of the e-business
+    patterns effort is&nbsp; the reconciliation of the volume of information into an abstraction that is general enough to
+    be grasped by the non-security practitioner and yet maintains enough context to provide a concrete underpinning to the
+    security community.
+</p>
+<p>
+    IBM is a microcosm of the larger software industry in that it represents both product development and business
+    application service development, as well as middleware products for management and deployment of applications.&nbsp;
+</p>
+<p>
+    There are several methodologies for designing and developing secure applications (i.e MASS, Open Group, JAAS) but
+    several of these are targetted to the trained security professional with a detailed understanding of technology. So,
+    one group of patterns will be "security architectural patterns". Detailed architectures for security are needed for
+    developing the technology to provide security solutions and these are referenced by the patterns where appropriate but
+    it is not the intent of this paper to document all the security architectural patterns.
+</p>
+<h3>
+    What is security?
+</h3>
+<p>
+    The IETF is an organization that has been fundamental to the development of the internet as we know it today. The IETF
+    established a security glossary in 2000, and this captures most if the fundamental concepts of computer security.
+    Improvements are made, new technologies and mechanisms come in and out of use, but the basic definitions remain.
+</p>
+<p>
+    The most common components that are in practice today for security include the following:&nbsp; identification and
+    authentication, authorization, assurance, audit, message protection, confidentiality, integrity.&nbsp; Rather than only
+    providing patterns for each individual security mechanism, this strawman has looked across the individual security
+    mechanisms to identify the common characteristics.&nbsp; This white paper focuses on the identification of a “security
+    solution pattern”.&nbsp; These common elements were derived from looking at a detailed set of individual pattern
+    elements for each security mechanism (i.e, authentication---- username, password, Kerberos, PKI) and then abstracting
+    those things that were in common across authentication, authorization, assurance, etc.
+</p>
+<p>
+    Looking for common elements in all security patterns&nbsp; resulted in the identification of the 3 sub-pattern elements
+    that are present in some form in any type of security solution:
+</p>
+<ol>
+    <li>
+        there has to be&nbsp; point within the software where the security mechanism is called…..this is called a "control
+        point"&nbsp;
+    </li>
+    <li>
+        there is typically some type of meta-information that is important to the execution of #1 and&nbsp; this is called
+        "system trust and access properties"
+    </li>
+    <li>
+        there is some task which relates to the initialization and ongoing maintenance of the security mechanism and these
+        are called "security management/workflow tasks".
+    </li>
+</ol>
+<p align="center">
+    <img height="506" alt="An overview of security patterns" src="./../../../soa.rup_soma/guidances/concepts/./resources/security_patterns_overview.png"     width="440" />
+</p>
+<p>
+    To demonstrate how each individual security mechanism can be mapped to these 3 sub-elements we give an example of
+    "identification".&nbsp; Again, from the IETF glossary:
+</p>
+<blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+    <p>
+        <em>identification&nbsp; -&nbsp; (I) An act or process that presents an identifier to a system so that the system
+        can recognize a system entity and distinguish it from other entities. (See: authentication.)</em>&nbsp;
+    </p>
+</blockquote>
+<p>
+    Distinguishing one person from another when invoking an application is a pattern that every business confronts. The
+    strategies for addressing the business problem vary based on the number and diversity of the elements involved in the
+    application and its deployment environment.&nbsp; Some businesses leave the decision about "naming" to the individual
+    applications or maybe to a group of applications in a line of business.&nbsp; Some businesses are constrained by the
+    software in their data centers. Some have tightly coupled the application deployment environment to a strict set of
+    mechanisms.&nbsp;&nbsp;
+</p>
+<p>
+    Nonetheless, there is a point at which an "identifier" is presented to an application, and this is considered to be a
+    "security control point" pattern, for identification.&nbsp;&nbsp; The quanitity and type of information required also
+    varies significantly.&nbsp;&nbsp; An identifier can be a real person’s name, ( i.e,&nbsp; Maryann Hondo ) or a&nbsp;
+    pseudonym ( mhondo).&nbsp; The identifier can be globally unique ( a UUID) or it can be unique within a qualified
+    namespace ( i.e, <a href="mailto:mhondo@us.ibm.com">mhondo@us.ibm.com</a>) .
+</p>
+<h3>
+    Characteristics of a Security Pattern
+</h3>
+<ul>
+    <li>
+        Definition of one or more control points (Identity, authentication, authorization, policy enforcement, audit,
+        compliance, message protection)
+    </li>
+    <li>
+        Definition of system protection properties (Configuration constraints; trust and access rules)
+    </li>
+    <li>
+        Definition of management tasks (Provisioning, registry/repository synchronization, governance, monitoring)
+    </li>
+</ul>
+<h3>
+    <a id="references" name="references">References</a>
+</h3>
+<ol>
+    <li>
+        RFC 2828 Internet Security Glossary May 2000
+    </li>
+    <li>
+        <em>Understanding and Using Patterns in Software Development</em>, Dirk Riehle and Heinz Zullighoven.
+    </li>
+    <li>
+        <em>Design Patterns: Elements of Reusable Object-Oriented Software,</em> Erich Gamma, Richard Helm, Ralph Johnson,
+        and John Vlissides.
+    </li>
+    <li>
+        <em>Patterns and Software: Essential Concepts and Terminology</em>, Brad Appleton: <a href="http://www.cmcrossroads.com/bradapp/docs/patterns-intro.html#Origins">http://www.cmcrossroads.com/bradapp/docs/patterns-intro.html#Origins</a>
+    </li>
+    <li>
+        Wikipedia: <a href="http://en.wikipedia.org/wiki/Archetype">http://en.wikipedia.org/wiki/Archetype</a>
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

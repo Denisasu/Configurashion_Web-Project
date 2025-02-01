@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Концепция: Model-Driven Development (MDD) and Model Driven Architecture (MDA)</title>
+<meta content="Concept" name="uma.type">
+<meta content="mdd_and_mda" name="uma.name">
+<meta content="Model-Driven Development (MDD) and Model Driven Architecture (MDA)" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "4.227832989444728E-303"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.227832989444728E-303"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Концепция: Model-Driven Development (MDD) and Model Driven Architecture (MDA)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This Guidance introduce MDD and MDA whose main tenet is to emphasize the role of models in software engineering.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Архитектурный анализ</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introduction
+</h3>
+<p>
+    Models are an important kind of&nbsp;work product&nbsp;in the Rational Unified Process and are typically expressed (in
+    RUP) using the Unified Modeling Language (UML), in a tool and environment-neutral way, so that RUP may be deployed and
+    enacted with many toolsets in many environments. The <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/supportingmaterials/model_visually_uml_5FB6F965.html" guid="2.2182245081579854E-305">Supporting Material: Visual Modeling</a> explores some of the reasons for modeling,
+    including:
+</p>
+<div style="MARGIN-LEFT: 2em">
+    <ul>
+        <li>
+            To aid in the understanding of complex systems
+        </li>
+        <li>
+            To explore and compare design alternatives at a low cost As a foundation for implementation
+        </li>
+        <li>
+            To capture requirements precisely
+        </li>
+        <li>
+            To communicate decisions unambiguously
+        </li>
+    </ul>
+</div>
+<p>
+    Models are seen as a way to reason about system behavior (both desired and realized) and structure, and communicate the
+    results of these deliberations to interested stakeholders. MDD and MDA emphasize the role of models as foundational
+    elements for implementation, in the expectation that they will be more than blueprints based on which human developers
+    will write code, but are themselves enactable or executable to a degree depending on the capability of the supporting
+    toolset. This follows a trend, begun a long time ago, of increasing the level of abstraction at which the human
+    developer works. This shifts the spotlight from code as we know it, to models expressed in a yet higher, perhaps
+    graphical, language. RUP, by identifying certain artifacts as models rather than documents (capturing requirements and
+    design, for example) containing pictures of models, implicitly supports this possibility.<a id="Viewpoints and Views" name="Viewpoints and Views"></a>
+</p>
+<h3>
+    Viewpoints and Views <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif"     width="26" border="0" /></a>
+</h3>
+<p>
+    A viewpoint, as its name implies, is a notional position from which some aspects or concerns about the system (or the
+    set of models representing the system) are made visible, implying the application of a set of concepts and rules to
+    form a conceptual filter. The term "perspective" is used similarly, to describe a way of viewing and understanding
+    models that best serves the many different orientations and concerns of the diverse stakeholders.
+</p>
+<p>
+    Views are projections of models, which show entities that are relevant from a particular viewpoint or perspective.
+</p>
+<p>
+    In MDD, viewpoints and views are used to separate concerns, for example, to deal with the logical structure
+    independently of the physical structure and independently of the process structure. The closer the models are to the
+    problem domain, the more strongly the viewpoints or perspectives map to the business concerns of the stakeholders; as
+    the models are developed closer to executable form, the more computational concerns intrude. In either case, the aim is
+    not simply to produce passive illustrations, but models that are, at least potentially, generative of implementations
+    that satisfy these separate concerns.
+</p>
+<h3>
+    <a id="Elaboration and Translation" href="#Top" name="Elaboration and Translation"></a>Elaboration and Translation
+    (Transformation) <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h3>
+<p>
+    These terms are often used informally to distinguish between model changes done by hand (elaboration) and model changes
+    done by a tool (translation). In RUP, elaboration has a quite different formal meaning - it is the name of a life-cycle
+    phase - but in this section, we are using it informally to illustrate apparently differing approaches to the evolution
+    of models.
+</p>
+<p>
+    There is also a sense of different step size in translation and elaboration - a sense that a model is elaborated in
+    several small steps until there is sufficient detail (including language, infrastructure or operating system detail) to
+    generate code from it, either by a tool or manually. By manually, we mean that a human can look at the model and write
+    Java, C++, or other languages, possibly elaborating further in the process. In contrast, in translation, the model,
+    still at a level of abstraction unsullied by language, infrastructure or operating system concerns, is converted into
+    something that executes and produces the desired result with little or no further elaboration. Note that the desired
+    result includes performance and other non-functional characteristics. Therefore, implicit in this approach, is that
+    such cross-cutting architectural concerns are addressed in the way the model is constructed and the way in which it
+    describes resource requirements.
+</p>
+<p>
+    Another word, <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/transformation_B58336DE.html" guid="_yZF5hNnmEdmO6L4XMImrsA">Term
+    Definition: transformation</a>, has come into currency, to describe the process of generating a target model from a
+    source model by following a set of rules and working according to a set of parameters. Note that we use the term
+    "model" here in the same way as RUP, so the target model could be the implementation elements, for example, code or
+    text. Of course, transformation can be done by hand, which makes successive transformations (adding detail) equivalent
+    to elaboration, and the rules may be very complex and rooted in deep experience of the available technology and the
+    domain. The default meaning however, is that transformation is done automatically, which is examined again in the next
+    section on Model Driven Architecture&reg;.
+</p>
+<p>
+    Note that the idea of transformation simply involves a source model and a target model. The usual case is that the
+    target model is less abstract than the source model, that is, that the target is somehow more specific than the source,
+    but this is not implicit in the idea of transformation. Note that transformation can also add detail to a model,
+    producing a target model that is more refined, while remaining broadly at the same level of abstraction, in that no
+    information relevant to another domain is introduced. Contrast this with a transformation that produces code from a UML
+    model, much is introduced into this target model that is of no concern to the business stakeholder, provided required
+    behavior and nonfunctional characteristics are maintained.
+</p>
+<p>
+    The ability to realize the translation ideal depends on the capabilities of the tool and our ability to codify, capture
+    and reuse the knowledge employed by an experienced human. The amount of knowledge that must be captured and codified
+    depends on the level of abstraction from which we make our translation step - the higher the level, the more knowledge
+    and the more domain dependence, typically.
+</p>
+<p>
+    In MDD, we strive to raise the level of abstraction from which we can automatically generate an operational system. A
+    model is elaborated to the point where it can be used to generate something. Then the strong preference is that the
+    output does not have to be elaborated further to execute. Further, our ambition is to make the preceding elaboration,
+    as far as possible, through successive automated transformations. Thus, the two approaches converge: translation is
+    realized by successive transformation steps, automated as far as possible. The final transformation to executing system
+    occurs with the model description still at a high level of abstraction, and with the technology, infrastructure, and
+    target language selections encoded in the transformation engine, and the rules and data supplied to it.
+</p>
+<p>
+    An additional benefit of MDD is that we hope to be able to reuse transformations, by having them codify platform and
+    domain knowledge and best practices through creation by experts in the corresponding domains. In this way, we
+    facilitate reuse by less skilled developers and avoid re-creation from scratch with each new application.
+</p>
+<h4>
+    What is a High Level of Abstraction? <a href="#Top"><img height="20" alt="To top of page"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    There are a few ways to look at this. One is along the spectrum of language, and we are seeing the emergence of forms
+    of executable UML, for example. Another is from the perspective of domain engineering, where the language and modeling
+    concepts may be specialized for the domain. For example, UML is a general-purpose language, so, along this dimension
+    you find the use of <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/uml_profile_1B75E5A2.html" guid="_yZilc9nmEdmO6L4XMImrsA">Term
+    Definition: UML profile</a> to specialize the use of UML. Yet another way is the felt need to avoid vendor-specific,
+    infrastructure-specific models so as to remain open to new technology.
+</p>
+<p>
+    In terms of expression of the detailed dynamics, the work done on <a href="http://www.omg.org/technology/documents/formal/uml.htm" target="_blank">UML Action Semantics</a> has made
+    executable forms of UML a possibility, but the concrete syntax and notation are not standardized and the level of the
+    Action Semantics is akin to other OO languages. Therefore, UML plus Action Semantics is probably not the final answer,
+    but it is an indication of where things are headed.
+</p>
+<p>
+    We conclude that a model expressed in UML, or using a UML profile, that contains no vendor-dependent elements, is not
+    dependent on a particular infrastructure platform, such as J2EE or Microsoft&reg; .NET, and is semantically complete in
+    structure and behavior without recourse to a particular procedural language (Java, C#, ...) is at a high level of
+    abstraction by this definition, although the issue of the level of the Action Semantics remains.
+</p>
+<p>
+    From a problem-domain perspective, that is, the user or business customer viewpoint, a possible and attractive solution
+    is the formulation of domain-specific modeling languages. These are languages that are abstract, in the sense that they
+    are couched in terms and concepts familiar to workers in the particular domain, yet are complete in their ability to
+    express model dynamics, while still being UML based.
+</p>
+<h4>
+    <a id="How does this relate to RUP" href="http://www.omg.org/technology/documents/formal/uml.htm" target="_blank" name="How does this relate to RUP"></a>How does this relate to RUP? <a href="#Top"><img height="20"     alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    The relationship of the RUP Analysis, Design and Implementation Models illustrates these ideas: the <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">Analysis Model</a> represents an early view of how the behavior expressed
+    in use cases will be realized; it is naturally skewed descriptively towards the domain of the problem being addressed,
+    and the <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">Analysis Classes</a> it contains are regarded as conceptual groupings of
+    the required responsibilities and behavior. The Analysis Model is not usually complete enough to execute, except
+    perhaps in a thought experiment by a human reading the model and filling in the gaps, because too much is left unsaid.
+    Instead, the Analysis Model has to go through a process of refinement, adding detail and precision, resulting in the <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Design Model</a>.
+</p>
+<p>
+    RUP allows a project to maintain a separate Analysis Model or to regard the Analysis Model as something that evolves
+    into the Design Model. The process of refinement is described at some length in RUP's tasks, with the default
+    interpretation that humans playing the roles of Software Architect and Designer will accomplish this evolution,
+    probably with considerable tool assistance. Note that this refinement can be regarded as a sequence of model
+    transformations, some of which may potentially be automated, for example, in the application of <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/analysis_pattern_86D515F0.html" guid="_x613Q9nmEdmO6L4XMImrsA">Term Definition: analysis pattern</a> and <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/design_pattern_4AEB9B64.html" guid="_yF4CnNnmEdmO6L4XMImrsA">Term
+    Definition: design pattern</a> patterns in the RUP tasks <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Architectural Analysis</a> and <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Identify Design Mechanisms</a> .
+</p>
+<h5>
+    <a id="When is the Design Model Complete" href="./../../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" name="When is the Design Model Complete" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}"></a>When is the Design Model
+    Complete? <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h5>
+<p>
+    The Design Model evolves throughout the life of the project, through several iterations; therefore, when is the Design
+    Model (or some portion of it) able to be turned into code, that is, when can we start to produce <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Implementation Elements</a> and integrate them into interesting <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_build_BA336272.html" guid="{53728CD9-FA47-4B58-A443-E9F9DC196916}">Builds</a> of the system? RUP offers some guidance on <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305">Mapping from Design to Code</a> but fundamentally there are no hard and fast answers. You
+    move to implementation when, through review for example, you judge that you can, and that point can vary considerably
+    between organizations and projects. RUP offers a number of ways to proceed from design to code, two of which we discuss
+    here to illustrate how decisions about design completeness are made:
+</p>
+<p>
+    <strong>1. Sketch and Code</strong><br />
+     RUP says: <em>"One common approach to design is to sketch out the design at a fairly abstract level, and then move
+    directly to code. Maintenance of the design model is manual."</em>
+</p>
+<p>
+    To be successful with this approach requires that the developer is able to bridge the abstraction gap between the
+    design and implementation levels. Often maintenance of the design model is a secondary concern and the code becomes the
+    focus!
+</p>
+<p>
+    <strong>2. Round-Trip Engineering (RTE) with Single Evolving Design Model</strong><br />
+     RUP says: <em>"In this approach, there is a single Design Model. Initial sketches of design elements evolve to the
+    point where they can be synchronized with code."</em>
+</p>
+<p>
+    Here the developers close the abstraction gap with a sequence of modeling steps. The difference between this approach
+    and "sketch and code" is that the intermediate steps are manifest and, at the end, the abstract version of the design
+    model has disappeared.
+</p>
+<p>
+    In both cases, the potential value of an abstract design model is lost: in "sketch and code" because the abstract
+    design model is typically not maintained and, over time, loses touch with the code and in "single evolving design
+    model" because the abstract version disappears. Even if an initial version is kept, it usually suffers the same fate as
+    the sketch and code design model. Note that the end point for the design model with RTE is really code visualization,
+    and a similar visualization could be reverse-engineered from code produced in sketch and code with appropriate tooling.
+    In RUP, we mitigate the loss of the abstract design model, to some extent, by capturing significant architectural views
+    and design rationale, at critical points, in the Software Architecture Document.
+</p>
+<p>
+    MDD offers the hope that the abstract design model will become foundational to code generation and have longevity. It
+    becomes the primary basis for maintenance and, in fact, may be the only basis for maintenance. It also offers a clear
+    definition of the end point for design, that is, that point at which, as far as the transformation engine is concerned,
+    the model is complete, consistent and unambiguous and able to be turned into an executable system. How abstract the
+    model can be depends on the available technology and toolset (for an example see <img height="16" alt="helpbook icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Tour: Rational Software Architect Overview) and may also be
+    domain dependent. Note that as far as MDD is concerned, this is simply another transformation (design to code) but an
+    important one that jumps across abstraction levels.
+</p>
+<p>
+    The next section describes an emerging framework standard for MDD, an initiative of the Object Management Group (OMG)
+    called Model Driven Architecture&reg; (MDA&reg;).
+</p>
+<h2>
+    <a id="Model Driven Architecture MDA" href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" name="Model Driven Architecture MDA" guid="1.424219730601675E-305"></a>Model Driven Architecture (MDA) <a href="#Top"><img height="20" alt="To top of page"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h2>
+<h3>
+    <a id="Motivation" href="#Top" name="Motivation"></a>Motivation <a href="#Top"><img height="20" alt="To top of page"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    MDA is an initiative of the OMG, an industry consortium of some 800 members with a mission to establish standard
+    guidelines and specifications to provide a common vendor-neutral framework for application development and encourage
+    interoperability across major hardware and software infrastructure platforms. The Unified Modeling Language is a
+    product of the OMG. The OMG now promotes MDA as its flagship specification and with the OMG's stance as the promulgator
+    of practical standards intended to be supported by industry IC, practice, products and tools, and noting the success of
+    UML, MDA is worthy of study. There is a wealth of information on MDA, including the most recent MDA Guide [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" target="_blank" guid="7.755968586980351E-308">OMG03</a>], on the OMG's <a href="http://www.omg.org" target="_blank">Web site</a> .
+    There are also several books available such as [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" target="_blank" guid="7.755968586980351E-308">FRA03</a>], [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" target="_blank" guid="7.755968586980351E-308">KLE03</a>], and [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" target="_blank" guid="7.755968586980351E-308">MEL04</a>] and many articles, such as "An MDA Manifesto" by Grady Booch, Alan Brown,
+    Sridhar Iyengar, James Rumbaugh and Bran Selic in The MDA Journal, May 2004.
+</p>
+<h3>
+    <a id="MDAs Core Ideas" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" target="_blank" name="MDAs Core Ideas" guid="7.755968586980351E-308"></a>MDA's Core Ideas <a href="#Top"><img height="20"     alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    MDA introduces some specific concepts and terminology that distinguish it from more general approaches to MDD, and
+    these are defined and discussed in the following sections.
+</p>
+<h4>
+    <a id="Building on Existing Standards" href="#Top" name="Building on Existing Standards"></a>Building on Existing
+    Standards <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h4>
+<p>
+    MDA is underpinned by existing OMG standards, including:
+</p>
+<ul>
+    <li>
+        The Meta-Object Facility (MOF) - In addition to defining a language for the construction of metamodels, for
+        example, UML and <a href="#CWM">CWM</a>, the MOF defines a framework for implementing repositories for models and
+        metamodels, allowing a consistent approach to manipulation of these models when using MDA. The MOF is thus an
+        essential technology for MDA.
+    </li>
+    <li>
+        The Unified Modeling Language (UML) - The <a href="#PlatformIndependentModelPIM">PIM</a>s, <a href="#PlatformModel">PM</a>s and the <a href="#PlatformSpecificModelPSM">PSM</a> s are defined in UML, which is
+        the foundational notation for MDA.
+    </li>
+    <li>
+        XML Metadata Interchange (XMI) - XMI defines a UML model interchange format based on XML.
+    </li>
+    <li>
+        <a id="CWM" href="#PlatformSpecificModelPSM" name="CWM"></a>The Common Warehouse Metamodel (CWM) - As UML is to
+        application modeling, so the CWM is to data modeling.
+    </li>
+</ul>
+<h4>
+    <a id="PlatformIndependence" href="#PlatformSpecificModelPSM" name="PlatformIndependence"></a>Platform Independence <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    An intuitive notion of a <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/platform_4197EF6C.html" guid="_yQJ_-dnmEdmO6L4XMImrsA">Term Definition:
+    platform</a> is that it supports a higher architectural layer through provision of services with a well-defined set of
+    interfaces that hide the implementation details. The OMG definition (in the MDA Guide) of platform is:
+</p>
+<p>
+    <em>"A set of subsystems/technologies that provide a coherent set of functionality through interfaces and specified
+    usage patterns that any subsystem that depends on the platform can use without concern for the details of how the
+    functionality provided by the platform is implemented."</em>
+</p>
+<p>
+    This is similar to the concept of a <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/layer_F3814B38.html" guid="_yMbWgNnmEdmO6L4XMImrsA">Term Definition:
+    layer</a> as it is used in RUP.
+</p>
+<p>
+    The idea of <em>platform independence</em> is slightly slippery: it is a quality or characteristic of a model, for
+    example, one might say a model is independent of a particular platform when it does not contain any references to
+    services or capability provided by that platform. However, the statement is relative because it is difficult to
+    envisage an absolute form of platform independence. The MDA Guide acknowledges this and also admits the possibility of
+    degrees of platform independence with respect to a particular platform where, for example, a model uses a generalized
+    form of a feature in a particular platform.
+</p>
+<p>
+    The achievement of platform independence has been assisted by the evolution of platforms such as J2EE, .NET and
+    WebSphere, to increasing levels of abstraction in terms of what is exposed to applications. This makes the
+    identification of platform-neutral constructs much more tractable and the platform-specific transformations that
+    convert them much simpler and easier to write.
+</p>
+<h4>
+    <a id="PlatformIndependentModelPIM" name="PlatformIndependentModelPIM"></a>Platform Independent Model (PIM) <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    It follows that we can say a model is a PIM with respect to a particular platform when it is not bound to usage of that
+    platform and could be used with any platform of that type. In a previous section, we discussed the idea of a high level
+    of abstraction and concluded that a model expressed in UML (or using a UML profile) that contains no vendor-dependent
+    elements, is not dependent on a particular infrastructure platform, and is semantically complete in structure and
+    behavior without recourse to a particular procedural language was at least notionally executable and at a high level of
+    abstraction. Is such a model platform independent? Yes and no. No, with respect to a perhaps imaginary UML Virtual
+    Machine, and yes, with respect to a whole class of platforms on which such a virtual machine would depend.
+</p>
+<h4>
+    <a id="PlatformModel" href="#Top" name="PlatformModel"></a>Platform Model <a href="#Top"><img height="20"     alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    The platform model is that set of concepts (representing parts and services), specifications, interface definitions,
+    constraint definitions and any other requirements that an application needs to use a particular platform. In MDA, the
+    platform models are detailed and formalized in UML, for example, and available in a MOF-compliant repository. For
+    example, platform models could be built for J2EE or .NET, among others.
+</p>
+<h4>
+    <a id="PlatformSpecificModelPSM" href="#Top" name="PlatformSpecificModelPSM"></a>Platform Specific Model (PSM) <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    A PIM is transformed into one or more PSMs by the addition of information that makes it specific to a particular
+    platform or platforms. The PIM and the PSM still specify the same system, but the PSM is constrained to particular
+    technology and may contain platform-specific elements. Note that there is no implication that a transformation step
+    (PIM to PSM, or its associated platform) is large or small. A transformation involving the application of a small set
+    of patterns refines the model and, in some sense makes it more specific; this emphasizes the relativity of the terms
+    PIM and PSM.
+</p>
+<h4>
+    <a id="ViewpointsandView" href="#Top" name="ViewpointsandView"></a>Viewpoints and View <a href="#Top"><img height="20"     alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    These terms are used in the same way in MDA as we described for MDD:
+</p>
+<ul>
+    <li>
+        A viewpoint, as its name implies, is a notional position from which some aspects or concerns about the system are
+        made visible, implying the application of a set of concepts and rules to form a conceptual filter. Given that some
+        information about the system is suppressed, it is a form of abstraction. The term <em>perspective</em> is used
+        similarly.
+    </li>
+    <li>
+        From a viewpoint, you can see <em>views</em>, which are projections of models, showing entities that are relevant
+        from that viewpoint.
+    </li>
+</ul>
+<p>
+    MDA specifies three viewpoints on a system: a computation independent viewpoint, a platform independent viewpoint, and
+    a platform specific viewpoint.
+</p>
+<h5>
+    <a id="ComputationIndependentViewpoint" href="#Top" name="ComputationIndependentViewpoint"></a>Computation Independent
+    Viewpoint <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h5>
+<p>
+    From the computation independent viewpoint, you are concerned about the context for the system, the requirements and
+    constraints under which it must operate, and the things in the environment with which it must interact. From this
+    viewpoint, you do not see details of system structure or behavior.
+</p>
+<p>
+    The <strong><em>Computation Independent Model (CIM)</em></strong> is a view of the system or system-to-be from the
+    computation independent viewpoint. The CIM is similar in concept to a combination of the Domain Model in RUP, which is
+    the set of artifacts, including Business Glossary and Business Analysis Model, that is output from the Task: Develop a
+    Domain Model (in Business Modeling), and the Use-Case Model, which is the computationally-independent description of
+    the behavior of the system. The CIM, which is couched in the language of the subject-matter or domain experts, is an
+    important link in the identification, during Analysis and Design, of key abstractions in the system-to-be.
+</p>
+<h5>
+    <a id="PlatformIndependentViewpoint" href="#Top" name="PlatformIndependentViewpoint"></a>Platform Independent Viewpoint
+    <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h5>
+<p>
+    The platform independent viewpoint is relative to a particular platform. From that viewpoint you can see the structure
+    and behavior of a system without the details of that platform. The PIM is a view of the system from the platform
+    independent viewpoint.
+</p>
+<h5>
+    <a id="PlatformSpecificViewpoint" href="#Top" name="PlatformSpecificViewpoint"></a>Platform Specific Viewpoint <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h5>
+<p>
+    From the platform specific viewpoint, also relative to a specific platform, you can see what was visible from the
+    platform independent viewpoint but now with the platform usage details revealed. The PSM is a view of the system from a
+    platform specific viewpoint.
+</p>
+<h4>
+    <a id="AutomationofTransformation" href="#Top" name="AutomationofTransformation"></a>Automation of Transformation <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    The idea of transformation is fundamental to MDA and model transformation is defined simply as <em>"the process of
+    converting one model to another model of the same system"</em>. MDA also defines a little pattern to visualize the
+    conversion and to illustrate use of some of the terminology we have seen:<br />
+</p>
+<p align="center">
+    <img height="263"     alt="MDA pattern, showing PIM and other information as input to a transformation, and PSM and record of transformation as output."      src="./../../../tech.rsa/guidances/concepts/resources/mdapattern.gif" width="293" />
+</p>
+<p class="picturetext" align="center">
+    The MDA Pattern
+</p>
+<p>
+    The intention of the diagram is to show that the transformation is a first-class thing: the transformation takes the
+    PIM and other information and combines them to produce the PSM.
+</p>
+<p>
+    Model transformation can, of course, be done manually. This is little different than the way software design has always
+    proceeded. Even here, MDA is useful in delineating and formalizing the idea of transformation, the process, and the
+    additional information to be used. MDA also suggests that a record of the transformation be produced; this provides
+    strong traceability from the PIM to the PSM because it should include a map from the elements of the PIM to the
+    elements of the PSM. Most leverage comes from being able to automate transformations, even if only partially, yielding
+    the same advantages that came from the replacement of assembler programming with high-level languages.
+</p>
+<h5>
+    <a id="HowisTransformationPerformed" href="#Top" name="HowisTransformationPerformed"></a>How is Transformation
+    Performed? <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h5>
+<p>
+    MDA does not prescribe a single way to do transformation: a mapping, driven by the choice of a platform, is prepared to
+    give a specification of how to transform a PIM into a PSM for that platform; this mapping results in a transformation
+    definition (perhaps expressed as a set of transformation rules), possibly with transformation parameters, written in a
+    transformation definition language. Note that the OMG issued an RFP (MOF 2.0 Query/Views/Transformations RFP) in the
+    expectation of standardizing (for the MOF) languages for creating model views, querying a model and writing
+    transformation definitions. The MDA Guide describes several approaches to transformation, including:
+</p>
+<ul>
+    <li>
+        Metamodel Transformation - This approach assumes there is a PIM-level MOF metamodel in the language of which the
+        PIM is built. Equally, for the chosen platform, there is a PSM-level metamodel in the language of which a PSM may
+        be constructed. A mapping between the two metamodels can be used to construct a transformation definition; this is
+        then used to transform PIM into PSM.
+    </li>
+    <li>
+        Marking - A mapping for the chosen platform is prepared. This mapping is used to construct a transformation
+        definition, which includes a set of marks that are used to mark elements of the PIM, yielding a 'marked PIM', and a
+        definition of what to do with elements so marked. The marked PIM is then further transformed to produce the PSM.
+        The marking is typically a manual process, but the subsequent transformation may be automated.
+    </li>
+    <li>
+        Model Transformation - The PIM is built using platform-independent types, also specified in a model, where the
+        elements in the PIM are subtypes of the platform-independent types. A particular platform is chosen, which is
+        associated with a set of platform-specific types. A mapping is made between the two type sets, yielding a
+        transformation definition, which is applied to the PIM, producing a PSM expressed in subtypes of the
+        platform-specific types. This approach is somewhat similar to metamodel transformation except that the
+        transformation is restricted to types in a model rather than concepts from a MOF metamodel.
+    </li>
+    <li>
+        Pattern Application - The PIM is built using a set of types and abstract patterns that are platform independent.
+        For the chosen platform, a set of platform-specific types and patterns exists. A mapping is made between the two
+        type and pattern sets, giving a transformation definition to be applied to the PIM. This produces a PSM where the
+        abstract patterns have been made platform specific.
+    </li>
+</ul>
+<p>
+    For more detail, the reader is referred to the MDA Guide [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" target="_blank" guid="7.755968586980351E-308">OMG03</a>].
+</p>
+<h5>
+    <a id="HowisTransformationApplied" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" target="_blank" name="HowisTransformationApplied" guid="7.755968586980351E-308"></a>How is Transformation Applied? <a href="#Top"><img     height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h5>
+<p>
+    The simplest scenario for the application of MDA is:
+</p>
+<ol>
+    <li>
+        Prepare a PIM
+    </li>
+    <li>
+        Select a platform
+    </li>
+    <li>
+        Prepare a mapping if one does not already exist
+    </li>
+    <li>
+        Apply the transformation to produce a PSM
+    </li>
+    <li>
+        Turn the PSM into code. If the PSM needs no further refinement and can be directly implemented, it is an
+        implementation, as defined in the next section
+    </li>
+</ol>
+<p>
+    PSMs for other platforms can be generated in the same way.
+</p>
+<h4>
+    Repeated Application of the MDA Pattern <a href="#Top"><img height="20" alt="To top of page" src="./../../../tech.rsa/guidances/concepts/resources/top.gif"     width="26" border="0" /></a>
+</h4>
+<p>
+    However, the MDA pattern is amenable to repeated application: a generated PSM at one level becomes the PIM for the
+    next, that is, for the next, increasingly specialized, platform choice. Note that in MDD, as we describe it in RUP and
+    support it with the IBM Rational toolset, our preference is to minimize the number of refinement steps, that is, to
+    proceed from a representation that is close to the customer's problem statement to an executable form as directly as
+    possible.
+</p>
+<p align="center">
+    <img height="517" alt="Three repeated applications of the MDA pattern, for three different platforms"     src="./../../../tech.rsa/guidances/concepts/resources/rptmdapatt.gif" width="228" align="middle" />
+</p>
+<p class="picturetext" align="center">
+    Repeated Application of the MDA Pattern
+</p>
+<p>
+    The intention of the above diagram is to show three applications of the MDA pattern, with the initial PIM becoming a
+    PSM dependent on platform 1, then transformed again to be dependent on platform 2 as well, then transformed again to be
+    dependent on platforms 1, 2 and 3.
+</p>
+<h4>
+    General Model-to-Model Transformation <a href="#Top"><img height="20" alt="To top of page" src="./../../../tech.rsa/guidances/concepts/resources/top.gif"     width="26" border="0" /></a>
+</h4>
+<p>
+    The same concepts can be applied to a general transformation, that is, any model to any model. If, for example, there
+    exist two metamodels whose languages are used to express the models, then, in principle, a mapping can be made,
+    yielding a transformation definition. This is applied in the way we have already seen for PIM to PSM transformation.
+</p>
+<h4>
+    <a id="Implementation" href="#Top" name="Implementation"></a>Implementation <a href="#Top"><img height="20"     alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    The MDA Guide uses "implementation" in a similar way to RUP's Implementation Model. It is a specification of all the <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Implementation Elements</a> needed to construct, deploy, install and
+    operate the system.
+</p>
+<p>
+    A PSM may itself be an implementation or may require further refinement before it can be turned into code. Note that
+    the production of an implementation PSM can skip the step of manifesting the PSM and go straight to code. In this case,
+    the more abstract PIM is able to be turned directly into code by the transformation engine. A visualization of the code
+    may still be provided to the developer to help understanding, but this can be reverse engineered from the code.
+</p>
+<h3>
+    <a id="PutativeBenefits" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" name="PutativeBenefits" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}"></a>Putative Benefits <a href="#Top"><img     height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<h4>
+    <a id="PortabilityandInteroperability" href="#Top" name="PortabilityandInteroperability"></a>Portability and
+    Interoperability <a href="#Top"><img height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26"     border="0" /></a>
+</h4>
+<p>
+    MDA offers the hope of controlling the expense and perturbation of technology churn by allowing a relatively stable set
+    of PIMs to be retargeted to whatever new technology is required. The expectation is that, with increasing acceptance of
+    MDA, the developers of new technology will also deliver mappings so that transformations can be done quickly.
+</p>
+<p>
+    By extending the PIM-PSM mappings for two platforms, MDA suggests that 'bridges' can be built between the two PSMs, and
+    ultimately between the two implementations, so that a PIM can be distributed across platforms. Most companies are faced
+    with the reality of developing for heterogeneous environments with a mix of new and old technologies, so this ability
+    to realize interoperability is potentially of great benefit.
+</p>
+<h4>
+    <a id="ReducedLifecycleCost" href="#Top" name="ReducedLifecycleCost"></a>Reduced Lifecycle Cost <a href="#Top"><img     height="20" alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<h5>
+    <a id="Productivity" href="#Top" name="Productivity"></a>Productivity <a href="#Top"><img height="20"     alt="To top of page" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h5>
+<p>
+    The focus of development with MDA becomes the more abstract PIM. With a powerful toolset to generate a PSM (or code),
+    such an environment should be more productive in much the same way that working in a high-level language is more
+    productive then working in assembler, particularly given that a PIM, or something like it, is often developed anyway,
+    for example, serving as the Design Model in RUP. The productivity gain depends critically on how much manual
+    intervention is needed in the transformation process.
+</p>
+<h5>
+    <a id="Quality" href="#Top" name="Quality"></a>Quality <a href="#Top"><img height="20" alt="To top of page"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h5>
+<p>
+    Ideally, in MDA, the target of maintenance is the PIM. Consequently, with the proviso that the PIM is well-architected,
+    there should be fewer defects in the life of the product because there are fewer opportunities for a human to inject
+    them, and the defects that are discovered should be less costly to fix, through the benefit of automated
+    transformation. The concentration on the PIM is also more closely aligned with domain concerns, so there should be a
+    higher probability of satisfying the users' needs.<br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

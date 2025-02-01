@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту: Проектирование объектов EJB с помощью Rational XDE Developer - Java Platform Edition</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="ejb_design" name="uma.name">
+<meta content="Проектирование объектов EJB с помощью Rational XDE Developer - Java Platform Edition" name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{AE563102-AE3C-46BE-A020-4DF7144064E8}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{AE563102-AE3C-46BE-A020-4DF7144064E8}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{AE563102-AE3C-46BE-A020-4DF7144064E8}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{AE563102-AE3C-46BE-A020-4DF7144064E8}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{AE563102-AE3C-46BE-A020-4DF7144064E8}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту: Проектирование объектов EJB с помощью Rational XDE Developer - Java Platform Edition</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этой памятке по инструменту описана процедура проектирования объектов EJBs с помощью Rational XDE. </td>
+</tr>
+<tr>
+<td>Инструмент: <a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Проектирование классов</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_XDE_Developer_-_Java_Platform_Edition__Designing_EJBs" name="XE_XDE_Developer_-_Java_Platform_Edition__Designing_EJBs"></a> 
+<h3>
+    Назначение
+</h3>
+<p>
+    В этой памятке по инструменту описан процесс проектирования <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Рекомендаций: Enterprise JavaBean (EJB)</a> с помощью Rational XDE. Дополнительная
+    информация о проектировании объектов EJB приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_enterprise_javabeans_ejbs_1F6B0E88.html" guid="2.8082009592332426E-306">Рекомендация: Проектирование объектов EJB</a>.
+</p>
+<h3>
+    Обзор
+</h3>
+<p>
+    В этой памятке по инструменту предполагается, что модель кода XDE EJB и структура пакета уже созданы.
+    &nbsp;Дополнительная информация приведена в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setting_up_for_a_project_7FDC2887.html" guid="{1EE5423F-50CD-4676-B4DF-AA3982065F97}">Памятка по инструменту: Подготовка к созданию проекта с помощью Rational
+    XDE Developer</a>. &nbsp;
+</p>
+<p>
+    В этой памятке по инструменту предусмотрены следующие шаги:
+</p>
+<ul>
+    <li>
+        <a href="#Identify_the_EJBs">Создание объектов EJB</a>
+    </li>
+    <li>
+        <a href="#Define_Attributes">Добавление атрибутов</a>
+    </li>
+    <li>
+        <a href="#Define_Operations">Добавление операций</a>
+    </li>
+    <li>
+        <a href="#Define_Behavior">Определение поведения</a>
+    </li>
+    <li>
+        <a href="#Design_Supporting_Classes">Проектирование классов поддержки</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Дополнительная информация</a>
+</p>
+<p>
+    Ссылки на разделы Web-справки Rational XDE&trade; помечены значком <img height="16" alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" />.
+</p>
+<h3>
+    <a id="Identify_the_EJBs" name="Identify_the_EJBs">Создание объектов EJB</a>
+</h3>
+<p>
+    Ниже описана процедура создания объектов EJB с помощью XDE:
+</p>
+<ol>
+    <li>
+        Задайте правила создания имен объектов EJB и определите, какие интерфейсы нужно создать - локальные или удаленные.
+        Значения этих параметров задайте заранее. Инструкции по настройке этих параметров приведены в разделе <img         alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Настройка параметров сервлетов и объектов EJB</i> 
+        <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_t_sttng_ejb_prefs.htm");-->.<br />
+    </li>
+    <li>
+        Добавьте к модели один или несколько объектов EJB. См. раздел <img alt="справка"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Создание объектов EJB</i> 
+        <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_o_creating_ejbs.htm");-->.<br />
+         <b>Примечание</b>: объекты EJB можно создавать на основе существующего класса. В этом случае методы и поля класса
+        будут скопированы в объект EJB. См. раздел <img alt="справка"         src="./../../../core.base_rup/resources/helpbook.gif" /><i>Создание объектов EJB на основе существующих классов</i> 
+        <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_t_create_ejb_existing.htm");-->. При создании
+        объектов EJB на основе существующих классов в Структуре модели можно выбрать одновременно несколько классов. Все
+        они будут преобразованы в EJB одного типа. Таким образом, в первый этап можно создать все сеансовые объекты EJB, а
+        во второй - все сущностные объекты EJB CMP 2.0.
+    </li>
+</ol>
+<p>
+    Для просмотра и моделирования объектов EJB удобно использовать Диаграмму объектов EJB. В ней в сжатом виде приведены
+    основные данные объектов EJB. Эти данные можно редактировать. &nbsp;См. раздел <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Диаграмма EJB</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_o_ejb_diag.htm");-->. Например, интерфейсы не
+    используются, и поэтому по умолчанию не указываются, а поля CMP 2.0 выводятся в виде атрибутов, хотя они на самом деле
+    реализуются как методы "get/set", которые также не указываются.<br />
+     <b>Примечание</b>: В этом состоит причина, по которой вы увидите "атрибут" для поля CMP в Структуре модели и
+    стандартную диаграмму классов для сущностного EJB CMP 2.0, даже хотя атрибут будет "запрещен" в исходном коде. В таких
+    случаях в свойстве "Синхронизация" для атрибута задано значение "false". Это значит, что в при выполнении обратного
+    проектирования этот атрибут игнорируется.
+</p>
+<h3>
+    <a id="Define_Attributes" name="Define_Attributes"></a>Добавление атрибутов
+</h3>
+<p>
+    После создания объектов EJB можно добавить поля. За примером обратитесь к разделу <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Добавление полей, управляемых контейнером, к сущностным объектам EJB</i>
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_t_add_cmfields_entity_beans.htm");-->.
+</p>
+<p>
+    Для объектов EJB можно создавать поля (или классы) первичных ключей. См. раздел <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Добавление первичных ключей к сущностным объектам JavaBean</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_t_specify_primary_key.htm");-->.
+</p>
+<p>
+    Можно также определить карту связей между таблицами базы данных в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Модели
+    данных</a> и постоянными сущностными объектами EJB, управляемыми контейнером (CMP). Дополнительная информация приведена
+    в разделе <img alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Использование объектов EJB с базами
+    данных</i> <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","dm_o_using_ejbs.htm");-->.
+</p>
+<h3>
+    <a id="Define_Operations" name="Define_Operations">Определение операций</a>
+</h3>
+<p>
+    Можно добавить "бизнес-методы", которые отражают специфику приложения. К ним относятся методы распределения прав
+    просмотра и редактирования приложения, а также стандартные методы поддержки объектов EJB: "find", "select" и "create".
+    См. раздел <img alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Моделирования методов в объектах EJB</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_o_mod_ejb_methods.htm");-->.
+</p>
+<p>
+    Стандартные методы поддержки объектов EJB выводятся в соответствующем интерфейсе. Базовые методы Java применяются для
+    поддержки реализации и в интерфейсе автоматически не выводятся. Для вывода методов поддержки реализации в стандартном
+    интерфейсе или в интерфейсе экземпляра можно настроить соответствующие параметры. См. раздел <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Вывод бизнес-методов</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_t_promot_ejb_meths.htm");-->.
+</p>
+<p>
+    При проектировании сущностных объектов EJB BMP необходимо включить все методы "create", "postCreate" и "find", для
+    создания экземпляров объектов EJB и соответствующего заполнения их данными. Кроме того, для объектов EJB BMP и CMP
+    необходимо предоставить соответствующие "бизнес-методы", разрешающие клиенту доступ и манипулирование данными.
+</p>
+<h3>
+    <a id="Define_Behavior" name="Define_Behavior">Определение поведения</a>
+</h3>
+<p>
+    В то время как часть поведения EJB обеспечивается методами, дополнительное поведение обеспечивается с помощью
+    взаимодействий EJB. С помощью средства Помощник соединения можно создать ссылки между объектами EJB, а между
+    сущностными объектами EJB CMP 2.0 можно создать взаимоотношения, управляемые контейнером (CMR). См. раздел <img     alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Определение взаимосвязей для объектов EJB</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_o_relating_ejbs.htm");-->.
+</p>
+<h3>
+    <a id="Design_Supporting_Classes" name="Design_Supporting_Classes">Проектирование классов поддержки</a>
+</h3>
+<p>
+    Поддержку классов Java можно смоделировать в отдельных моделях кода Java или в одной модели кода объекта EJB.
+</p>
+<p>
+    Более сложные шаблоны включают взаимодействия классов поддержки, инкапсулирующих создание EJB для клиентов bean-объекта
+    (шаблон "Поиск службы", см. <i>Базовые шаблоны J2EE</i> ([<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html" guid="1.4494927535802764E-304">ALU01</a>]). Можно также использовать встроенные шаблоны GoF (Gang of Four). См. раздел
+    <img alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Применение примеров шаблонов GoF</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"ea","ea_t_apply_gang_four_smpl_pttrn.htm");-->. Дополнительная
+    информация о работе с шаблонами приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Применение шаблонов</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"ea","ea_o_apply_pttrn.htm");-->.
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Дополнительная информация</a> &nbsp;
+</h3>
+<p>
+    Общие сведения об объектах EJB в XDE приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Моделирование объектов EJB</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_o_mod_ejbs.htm");-->.
+</p>
+<p>
+    См. также раздел <img alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Общие сведения о моделировании
+    объектов EJB</i> <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_w_mod_ejbs.htm");-->.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

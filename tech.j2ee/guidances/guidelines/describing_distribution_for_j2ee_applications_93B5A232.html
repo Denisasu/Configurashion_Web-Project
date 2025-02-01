@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Описание распределения приложений J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="describing_distribution_for_j2ee_applications" name="uma.name">
+<meta content="Описание распределения приложений J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.0306406686133254E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.0306406686133254E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Описание распределения приложений J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом разделе рассматривается моделирование развертывания модулей и приложений J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">Создание описания варианта</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Введение
+</h3>
+<p>
+    Приложения J2EE обладают специфическими особенностями, благодаря которым возможно их гибкое развертывание. Ниже
+    приведены конкретные указания по развертыванию &nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">модулей J2EE</a> и <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">приложений J2EE</a>.
+</p>
+<p>
+    Информация о стандартных конфигурациях развертывания J2EE приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/j2ee_deployment_configurations_C0F819AF.html" guid="7.671163061311939E-306">Концепция: конфигурации развертывания J2EE</a>.
+</p>
+<h3>
+    Моделирование распределения
+</h3>
+<p>
+    Раздел <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">Задача: описать распределение</a> содержит пример модели развертывания
+    высокого уровня. Ниже приведен пример, относящийся к J2EE, в котором рассматривается приложение интерактивного
+    аукциона.
+</p>
+<p align="center">
+    <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/basic_deployment.gif" />
+</p>
+<p>
+    В этом очень простом примере будет рассмотрен каждый из физических узлов и предложен набор контейнеров и процессов,
+    которые могли бы работать на каждом узле.
+</p>
+<p>
+    Однако развертывание J2EE может быть значительно более сложным. Рассмотрим другой, более сложный пример.
+</p>
+<p align="center">
+    <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/clustered_deployment.gif" />
+</p>
+<p align="left">
+    В этом примере распределитель нагрузки направляет запросы в кластер Web-серверов и серверов приложений. Приложение J2EE
+    может также содержать несколько серверов имен JNDI, толстых клиентов приложений, серверов сообщений и т.п. При желании
+    в диаграмму можно добавить протоколы, сетевое соединение, брандмауэры и т.п.
+</p>
+<p align="left">
+    Обратите внимание, что в предыдущем примере не перечисляются и не моделируются модули J2EE для каждого узла. Дело в
+    том, что в этих примерах только один логический контейнер EJB и один контейнер Web. Все объекты EJB и EJB-JAR
+    развертываются на всех серверах EJB. То же относится и к компонентам Web.
+</p>
+<p align="left">
+    Другая возможность моделирования распределения приложения J2EE - моделирование отображения модулей J2EE и/или
+    приложений J2EE на конкретные серверы. Это показано на диаграмме развертывания UML в виде нарисованной зависимости
+    (стереотипное &lt;&lt;развертывание&gt;&gt;), ведущей от архива к узлу. Следующая диаграмма демонстрирует эту
+    возможность. В этом примере архив J2EE (EAR) отображается в узел (конкретный сервер приложений).
+</p>
+<p align="center">
+    <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/ear_deployment.gif" />
+</p>
+<p align="left">
+    Вообще говоря, моделировать назначение архивов J2EE узлам и контейнерам необязательно. Однако в некоторых случаях
+    необходимо, чтобы определенные элементы системы находились на узле с конкретными характеристиками (например, узле,
+    поддерживающем базу данных, или узле, поддерживающем устаревшую систему). В таких случаях может оказаться полезным
+    смоделировать развертывание модулей J2EE на конкретных узлах. Кроме того, моделирование отображения с архива на сервер
+    особенно полезно, если существует автоматика, поддерживающая фактическое развертывание архивов на указанном сервере.
+</p><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

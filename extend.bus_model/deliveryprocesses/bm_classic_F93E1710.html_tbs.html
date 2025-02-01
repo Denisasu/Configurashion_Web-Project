@@ -1,0 +1,1150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Процесс доставки: Business Modeling Lifecycle</title>
+<meta content="DeliveryProcess" name="uma.type">
+<meta content="bm_classic" name="uma.name">
+<meta content="Business Modeling Lifecycle" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_ohnn0UWDEdqnTcN9Tj887Q&path=_ohnn0UWDEdqnTcN9Tj887Q';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  defaultQueryStr, false, true, true);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div autoWrap="true">
+<div id="page-guid" value="_ohnn0UWDEdqnTcN9Tj887Q"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Процесс доставки: Business Modeling Lifecycle</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/deliveryprocess.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This delivery process represents an example of a process focused only on Business Modeling.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="middle">
+<td class="tab"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td><td class="tab" nowrap><a id="TAB_Description" class="tab" href="./../../extend.bus_model/deliveryprocesses/bm_classic_F93E1710.html_desc.html">Описание</a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap><a id="TAB_WBS" class="tab" href="./../../extend.bus_model/deliveryprocesses/bm_classic_F93E1710.html_wbs.html"><span style="white-space:nowrap;">Структура работы</span></a></td><td width="1"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_a.gif"></td><td class="activeTab" nowrap><span style="white-space:nowrap;">Распределение групп</span></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-a_i.gif"></td><td class="tab" nowrap><a id="TAB_WPBS" class="tab" href="./../../extend.bus_model/deliveryprocesses/bm_classic_F93E1710.html_wpbs.html"><span style="white-space:nowrap;">Использование рабочего продукта</span></a></td><td width="21"><img title="" alt="" height="17" width="21" src="./../../images/tab_end-i.gif"></td><td width="50%"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td colspan="4"><img height="2" title="" alt="" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space_middle.gif"></td><td class="activeTab"><img title="" alt="" height="2" width="10" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space.gif"></td><td colspan="3"><img title="" alt="" height="2" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="10"><img title="" alt="" height="5" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="sectionHeading">Структура группы</div>
+<div class="sectionContent">
+<div id="treeContent"></div>
+<script language="JavaScript">
+contentPage.processPage.treeTable.data = {
+title: "Структура группы", summary: "Структура группы", 
+columns: [
+["presentation_name", "Элемент структуры"],
+["model_info", "Сведения о модели"],
+["teams", "Группа"],
+["type", "Тип"],
+["is_planned", "Запланированный"],
+["has_multiple_occurrences", "Несколько вхождений"],
+["is_optional", "Необязательный"]],
+rows: [
+
+{id: "9ec9b8b4", parentId: "", relPath: ",_kHLi8DeEEdqm3Lp7Xn1J6A", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_business_architect_bom", title: "Business Architect", url: "./../../extend.bus_model/capabilitypatterns/rup_business_architect_bom_1F50DFA.html", 
+	predecessors: "", info: "", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c31b818", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_analysis_model", title: "Business Analysis Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_analysis_model_48087677.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4283191e", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_poc", title: "Business Architectural Proof-of-Concept", url: "./../../extend.bus_model/capabilitypatterns/rup_business_poc_3CD3FF87.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "5116b1da", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_architecture_document", title: "Business Architecture Document", url: "./../../extend.bus_model/capabilitypatterns/rup_business_architecture_document_787BE4B5.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4a574764", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_deployment_model", title: "Business Deployment Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_deployment_model_1DCBB876.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1c46c55a", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_design_model", title: "Business Design Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_design_model_9B7AD421.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "deb8f774", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_analysis_model", title: "Business Analysis Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_analysis_model_48087677.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "89decf3e", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_poc", title: "Business Architectural Proof-of-Concept", url: "./../../extend.bus_model/capabilitypatterns/rup_business_poc_67E1C97E.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e25cfe22", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_architecture_document", title: "Business Architecture Document", url: "./../../extend.bus_model/capabilitypatterns/rup_business_architecture_document_787BE4B5.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4a8fa56c", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_deployment_model", title: "Business Deployment Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_deployment_model_1DCBB876.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "80468836", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_design_model", title: "Business Design Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_design_model_9B7AD421.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "9967d89c", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_use_case_model", title: "Business Use Case Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_use_case_model_73334A59.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "49a5ac7c", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_architectural_analysis", title: "Business Architectural Analysis", url: "./../../extend.bus_model/capabilitypatterns/bm_architectural_analysis_B413FA41.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "75a9a910", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_construct_poc", title: "Construct Business Architectural Proof-of-Concept", url: "./../../extend.bus_model/capabilitypatterns/bm_construct_poc_86B50E44.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "911e3a46", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "functional_area_analysis", title: "Functional Area Analysis", url: "./../../extend.bus_model/capabilitypatterns/functional_area_analysis_19C12524.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "95ea9174", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_prioritize_use_cases", title: "Prioritize Business Use Cases", url: "./../../extend.bus_model/capabilitypatterns/bm_prioritize_use_cases_CA1BFBB8.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "92bb9800", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_operation_analysis", title: "Business Operation Analysis", url: "./../../extend.bus_model/capabilitypatterns/bm_operation_analysis_2463B0BB.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e3f5a7dc", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_operation_design", title: "Business Operation Design", url: "./../../extend.bus_model/capabilitypatterns/bm_operation_design_1FE15A75.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "95790fb8", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_uc_analysis", title: "Business Use-Case Analysis", url: "./../../extend.bus_model/capabilitypatterns/bm_uc_analysis_6AA10942.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c35260ba", parentId: "9ec9b8b4", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_define_system_context", title: "Define Business System Context", url: "./../../extend.bus_model/capabilitypatterns/bm_define_system_context_D420B6D6.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "b8a1708a", parentId: "", relPath: ",_ICe14EoLEdqJ3YriPA4Mmg", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_business_designer", title: "Business Designer", url: "./../../extend.bus_model/capabilitypatterns/rup_business_designer_4AA2960C.html", 
+	predecessors: "", info: "", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "db9041d6", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_entity", title: "Business Entity", url: "./../../extend.bus_model/capabilitypatterns/rup_business_entity_4A9EC35.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e224a01a", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_event", title: "Business Event", url: "./../../extend.bus_model/capabilitypatterns/rup_business_event_F343004B.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e08d2360", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_bm_operation", title: "Business Operation", url: "./../../extend.bus_model/capabilitypatterns/rup_bm_operation_2BBCA9F0.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "a03b3b94", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_bm_operation_realization", title: "Business Operation Realization", url: "./../../extend.bus_model/capabilitypatterns/rup_bm_operation_realization_9EA9D924.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "16fbae", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_use_case", title: "Business Use Case", url: "./../../extend.bus_model/capabilitypatterns/rup_business_use_case_1E17C1D6.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ebbd49f8", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_use_case_realization", title: "Business Use-Case Realization", url: "./../../extend.bus_model/capabilitypatterns/rup_business_use_case_realization_CE3F6BEC.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f251a83c", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_worker", title: "Business Worker", url: "./../../extend.bus_model/capabilitypatterns/rup_business_worker_D8DD4BFC.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "57d109f8", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_model", title: "Analysis Model", url: "./../../extend.bus_model/capabilitypatterns/rup_analysis_model_C2B986BF.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "98bebe84", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_analysis_model", title: "Business Analysis Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_analysis_model_76A84F16.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "32750154", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_deployment_model", title: "Business Deployment Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_deployment_model_3CA7E3E7.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e228a6f6", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_design_model", title: "Business Design Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_design_model_384CB108.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "9634f02", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_entity", title: "Business Entity", url: "./../../extend.bus_model/capabilitypatterns/rup_business_entity_4A9EC35.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1c07542", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_event", title: "Business Event", url: "./../../extend.bus_model/capabilitypatterns/rup_business_event_F343004B.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "7580d55a", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_bm_operation", title: "Business Operation", url: "./../../extend.bus_model/capabilitypatterns/rup_bm_operation_2BBCA9F0.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "76a34958", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_bm_operation_realization", title: "Business Operation Realization", url: "./../../extend.bus_model/capabilitypatterns/rup_bm_operation_realization_9EA9D924.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c4a23aea", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_use_case", title: "Business Use Case", url: "./../../extend.bus_model/capabilitypatterns/rup_business_use_case_1E17C1D6.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "dcb63cd4", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_use_case_model", title: "Business Use Case Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_use_case_model_8BF62A57.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4dc5ace0", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_worker", title: "Business Worker", url: "./../../extend.bus_model/capabilitypatterns/rup_business_worker_D8DD4BFC.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "34970f22", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_business_specification", title: "Supplementary Business Specification", url: "./../../extend.bus_model/capabilitypatterns/rup_supplementary_business_specification_EF2FC3CD.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ebd978fc", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_specification", title: "Supplementary Specifications", url: "./../../extend.bus_model/capabilitypatterns/rup_supplementary_specification_2F89BD11.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f19a76a2", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_usecase_model", title: "Use-Case Model", url: "./../../extend.bus_model/capabilitypatterns/rup_usecase_model_8C35C811.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "af606ee6", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_operation_analysis", title: "Business Operation Analysis", url: "./../../extend.bus_model/capabilitypatterns/bm_operation_analysis_2463B0BB.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c1dc8cb0", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_operation_design", title: "Business Operation Design", url: "./../../extend.bus_model/capabilitypatterns/bm_operation_design_1FE15A75.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "9ea164da", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_uc_analysis", title: "Business Use-Case Analysis", url: "./../../extend.bus_model/capabilitypatterns/bm_uc_analysis_6AA10942.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "d0f3acfe", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "define_automation_reqs", title: "Define Automation Requirements", url: "./../../extend.bus_model/capabilitypatterns/define_automation_reqs_2343A256.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "13fcc8ac", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "detail_a_business_entity", title: "Detail a Business Entity", url: "./../../extend.bus_model/capabilitypatterns/detail_a_business_entity_D837B0A1.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "944ba862", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "detail_business_use_case", title: "Detail a Business Use Case", url: "./../../extend.bus_model/capabilitypatterns/detail_business_use_case_227F8020.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "36292ab8", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "detail_a_business_worker", title: "Detail a Business Worker", url: "./../../extend.bus_model/capabilitypatterns/detail_a_business_worker_2A5DF59F.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "42b0a0d4", parentId: "b8a1708a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_construct_poc", title: "Construct Business Architectural Proof-of-Concept", url: "./../../extend.bus_model/capabilitypatterns/bm_construct_poc_86B50E44.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c6e5f168", parentId: "", relPath: ",_mhCSADXeEdqet_BdNf66_w", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_business_process_analyst", title: "Business-Process Analyst", url: "./../../extend.bus_model/capabilitypatterns/rup_business_process_analyst_7207C24A.html", 
+	predecessors: "", info: "", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "74d36e96", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_glossary", title: "Business Glossary", url: "./../../extend.bus_model/capabilitypatterns/rup_business_glossary_D5A3E53E.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ead59280", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_goal", title: "Business Goal", url: "./../../extend.bus_model/capabilitypatterns/rup_business_goal_73C17336.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e51535e", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_rule", title: "Business Rule", url: "./../../extend.bus_model/capabilitypatterns/rup_business_rule_DA5124C8.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "831f01f2", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_use_case_model", title: "Business Use Case Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_use_case_model_11E6D1AD.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "7b102022", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_vision", title: "Business Vision", url: "./../../extend.bus_model/capabilitypatterns/rup_business_vision_407B49C.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "931942be", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_business_specification", title: "Supplementary Business Specification", url: "./../../extend.bus_model/capabilitypatterns/rup_supplementary_business_specification_4CC5C33A.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f6b6a6dc", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_target_organization_assessment", title: "Target-Organization Assessment", url: "./../../extend.bus_model/capabilitypatterns/rup_target_organization_assessment_B6590544.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "23a06cba", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_analysis_model", title: "Business Analysis Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_analysis_model_C8859B03.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "7c4b9efa", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_glossary", title: "Business Glossary", url: "./../../extend.bus_model/capabilitypatterns/rup_business_glossary_D5A3E53E.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "9fc75fd8", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_goal", title: "Business Goal", url: "./../../extend.bus_model/capabilitypatterns/rup_business_goal_73C17336.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "adaf9d04", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_bm_operation", title: "Business Operation", url: "./../../extend.bus_model/capabilitypatterns/rup_bm_operation_2BBCA9F0.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "849a4b2a", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_rule", title: "Business Rule", url: "./../../extend.bus_model/capabilitypatterns/rup_business_rule_DA5124C8.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "13b264ce", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_use_case_model", title: "Business Use Case Model", url: "./../../extend.bus_model/capabilitypatterns/rup_business_use_case_model_D9C2D989.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "440447d4", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_vision", title: "Business Vision", url: "./../../extend.bus_model/capabilitypatterns/rup_business_vision_407B49C.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "41f43b5e", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_business_specification", title: "Supplementary Business Specification", url: "./../../extend.bus_model/capabilitypatterns/rup_supplementary_business_specification_42D09300.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4bbb1a16", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_target_organization_assessment", title: "Target-Organization Assessment", url: "./../../extend.bus_model/capabilitypatterns/rup_target_organization_assessment_B6590544.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "19d02602", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "assess_target_org", title: "Assess Target Organization", url: "./../../extend.bus_model/capabilitypatterns/assess_target_org_747CE271.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "dce01c06", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "capture_common_biz_vocabulary", title: "Capture a Common Business Vocabulary", url: "./../../extend.bus_model/capabilitypatterns/capture_common_biz_vocabulary_E08C21C4.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2d2ee8ec", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_define_system_context", title: "Define Business System Context", url: "./../../extend.bus_model/capabilitypatterns/bm_define_system_context_D420B6D6.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "de9621c4", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "find_business_actors_and_use_cases", title: "Find Business Actors and Use Cases", url: "./../../extend.bus_model/capabilitypatterns/find_business_actors_and_use_cases_FA99ADB.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "340d43ba", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "identify_business_goals", title: "Identify Business Goals and KPIs", url: "./../../extend.bus_model/capabilitypatterns/identify_business_goals_7E8F1069.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "92f0d65c", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "maintain_business_rules", title: "Maintain Business Rules", url: "./../../extend.bus_model/capabilitypatterns/maintain_business_rules_64662F3E.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e670f6b6", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "refine_business_use_case", title: "Refine a Business Use-Case", url: "./../../extend.bus_model/capabilitypatterns/refine_business_use_case_86896C38.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "468a8e84", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "set_and_adjust_goals", title: "Set and Adjust Objectives", url: "./../../extend.bus_model/capabilitypatterns/set_and_adjust_goals_2C94B271.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "7f7e1f6e", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "structure_business_use_case_model", title: "Structure the Business Use-Case Model", url: "./../../extend.bus_model/capabilitypatterns/structure_business_use_case_model_C8DF92B1.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "8f96e93e", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_architectural_analysis", title: "Business Architectural Analysis", url: "./../../extend.bus_model/capabilitypatterns/bm_architectural_analysis_B413FA41.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "5fa533c0", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_operation_analysis", title: "Business Operation Analysis", url: "./../../extend.bus_model/capabilitypatterns/bm_operation_analysis_2463B0BB.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "630db83c", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_operation_design", title: "Business Operation Design", url: "./../../extend.bus_model/capabilitypatterns/bm_operation_design_1FE15A75.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "90feef6", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_uc_analysis", title: "Business Use-Case Analysis", url: "./../../extend.bus_model/capabilitypatterns/bm_uc_analysis_6AA10942.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1078dad8", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_construct_poc", title: "Construct Business Architectural Proof-of-Concept", url: "./../../extend.bus_model/capabilitypatterns/bm_construct_poc_86B50E44.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "59f444c6", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "functional_area_analysis", title: "Functional Area Analysis", url: "./../../extend.bus_model/capabilitypatterns/functional_area_analysis_19C12524.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "be590630", parentId: "c6e5f168", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "bm_prioritize_use_cases", title: "Prioritize Business Use Cases", url: "./../../extend.bus_model/capabilitypatterns/bm_prioritize_use_cases_CA1BFBB8.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "b588c51a", parentId: "", relPath: ",_JYV1kEoLEdqJ3YriPA4Mmg", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_technical_reviewer", title: "Technical Reviewer", url: "./../../extend.bus_model/capabilitypatterns/rup_technical_reviewer_8F296ED9.html", 
+	predecessors: "", info: "", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "273e8dea", parentId: "b588c51a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_review_record", title: "Review Record", url: "./../../extend.bus_model/capabilitypatterns/rup_review_record_14FA7F2.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "d587a1a6", parentId: "b588c51a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "review_the_business_object_model", title: "Review the Business Analysis Model", url: "./../../extend.bus_model/capabilitypatterns/review_the_business_object_model_DE36002E.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f32642a", parentId: "b588c51a", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "review_the_business_use_case_model", title: "Review the Business Use-Case Model", url: "./../../extend.bus_model/capabilitypatterns/review_the_business_use_case_model_999053B6.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "3e6f87de", parentId: "", relPath: ",_CMQG8Ri2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_system_analyst", title: "Аналитик", url: "./../../core.base_rup/capabilitypatterns/rup_system_analyst_7C438D2F.html", 
+	predecessors: "", info: "", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "24a27d90", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_requirements_attributes", title: "Атрибуты требований", url: "./../../core.base_rup/capabilitypatterns/rup_requirements_attributes_8A207CCE.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "20d2e656", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_vision", title: "Видение", url: "./../../core.base_rup/capabilitypatterns/rup_vision_757A8155.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "8537a7c0", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_glossary", title: "Глоссарий", url: "./../../core.base_rup/capabilitypatterns/rup_glossary_F897E9F0.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2bfc6ac0", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_specification", title: "Дополнительные спецификации", url: "./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_828D159B.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2878e440", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_stakeholder_requests", title: "Запросы заинтересованных лиц", url: "./../../core.base_rup/capabilitypatterns/rup_stakeholder_requests_36378F3E.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "608f49b6", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_usecase_model", title: "Модель прецедентов", url: "./../../core.base_rup/capabilitypatterns/rup_usecase_model_40D56F4E.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "11f6828e", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_requirements_management_plan", title: "План управления требованиями", url: "./../../core.base_rup/capabilitypatterns/rup_requirements_management_plan_6126F4AC.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "42fcda58", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_storyboard", title: "Раскадровка", url: "./../../core.base_rup/capabilitypatterns/rup_storyboard_19B33FD6.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2306f9fa", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_requirements_attributes", title: "Атрибуты требований", url: "./../../core.base_rup/capabilitypatterns/rup_requirements_attributes_8A207CCE.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "831dd4f2", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_vision", title: "Видение", url: "./../../core.base_rup/capabilitypatterns/rup_vision_757A8155.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1c23efaa", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_glossary", title: "Глоссарий", url: "./../../core.base_rup/capabilitypatterns/rup_glossary_F897E9F0.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "67b5470e", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_specification", title: "Дополнительные спецификации", url: "./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_A55978EE.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "91e2b362", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_stakeholder_requests", title: "Запросы заинтересованных лиц", url: "./../../core.base_rup/capabilitypatterns/rup_stakeholder_requests_DEE18705.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "40c36a0e", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_usecase_model", title: "Модель прецедентов", url: "./../../core.base_rup/capabilitypatterns/rup_usecase_model_40D56F4E.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "921be16a", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_requirements_management_plan", title: "План управления требованиями", url: "./../../core.base_rup/capabilitypatterns/rup_requirements_management_plan_6126F4AC.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f680a2d4", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_storyboard", title: "Раскадровка", url: "./../../core.base_rup/capabilitypatterns/rup_storyboard_AD297D8C.html", 
+	predecessors: "", info: "Изменяет", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "b8ace3be", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "elicit_stakeholder_requests", title: "Определение требований заинтересованных лиц", url: "./../../core.base_rup/capabilitypatterns/elicit_stakeholder_requests_A46376B9.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "6d6da260", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "find_actors_and_use_cases", title: "Поиск субъектов и вариантов", url: "./../../core.base_rup/capabilitypatterns/find_actors_and_use_cases_2686D1B6.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "187d8efc", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "develop_vision", title: "Разработка видения", url: "./../../core.base_rup/capabilitypatterns/develop_vision_62E594E5.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "d4d90de2", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "develop_supplementary_specification", title: "Разработка дополнительных спецификаций", url: "./../../core.base_rup/capabilitypatterns/develop_supplementary_specification_684227DF.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "78fdb52e", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "develop_rm_plan", title: "Разработка плана управления требованиями", url: "./../../core.base_rup/capabilitypatterns/develop_rm_plan_24C2A2B1.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "12105792", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "capture_common_vocabulary", title: "Создание общего словаря", url: "./../../core.base_rup/capabilitypatterns/capture_common_vocabulary_D4E9285E.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "520fa97c", parentId: "3e6f87de", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "manage_dependencies", title: "Управление зависимостями", url: "./../../core.base_rup/capabilitypatterns/manage_dependencies_DDEEEFBC.html", 
+	predecessors: "", info: "Выполняет как владелец", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "86a3b572", parentId: "", relPath: ",_xa9aEDndEdqxANP9kNH4WA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_requirement_specifier", title: "Разработчик требований", url: "./../../core.base_rup/capabilitypatterns/rup_requirement_specifier_B52F911A.html", 
+	predecessors: "", info: "", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "4fc030fe", parentId: "86a3b572", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_usecase", title: "Вариант", url: "./../../core.base_rup/capabilitypatterns/rup_usecase_D8187B2B.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f88e59c8", parentId: "86a3b572", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_requirements_specification", title: "Спецификации требований программного обеспечения", url: "./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_BE906976.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2f284488", parentId: "86a3b572", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_actor", title: "Субъект", url: "./../../core.base_rup/capabilitypatterns/rup_actor_B6C064D8.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "172a9520", parentId: "86a3b572", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_requirement", title: "Требование программного обеспечения", url: "./../../core.base_rup/capabilitypatterns/rup_software_requirement_B3F28966.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c1a23bfc", parentId: "86a3b572", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "develop_supplementary_specification", title: "Разработка дополнительных спецификаций", url: "./../../core.base_rup/capabilitypatterns/develop_supplementary_specification_684227DF.html", 
+	predecessors: "", info: "Выполняет как дополнительную", type: "Дескриптор задачи", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+]};
+				</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту: Компоновка модулей и приложений J2EE с помощью Rational XDE Developer - Java Platform Edition</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="assembling_j2ee_mods_and_apps" name="uma.name">
+<meta content="Компоновка модулей и приложений J2EE с помощью Rational XDE Developer - Java Platform Edition" name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{3B38F989-686C-4AC9-91EE-981F90D75F0D}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{3B38F989-686C-4AC9-91EE-981F90D75F0D}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{3B38F989-686C-4AC9-91EE-981F90D75F0D}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{3B38F989-686C-4AC9-91EE-981F90D75F0D}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{3B38F989-686C-4AC9-91EE-981F90D75F0D}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту: Компоновка модулей и приложений J2EE с помощью Rational XDE Developer - Java Platform Edition</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этой памятке по инструменту приведены инструкции по созданию архивов J2EE (например, файлов JAR, WAR, EJB-JA и EAR) с помощью среды Rational XDE. </td>
+</tr>
+<tr>
+<td>Инструмент: <a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/integrate_subsystem_E8F878D6.html" guid="{58FF0476-120F-411A-AD8C-16573032BE91}">Интегрирование подсистемы</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/integrate_system_9AFF7BFD.html" guid="{3233A207-6271-4492-A8BF-64E1D89D6C5E}">Интегрирование системы</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Назначение
+</h3>
+<p>
+    В этой памятке по инструменту приведены следующие сведения о J2EE:
+</p>
+<ul>
+    <li>
+        Информация об архивах J2EE, см. раздел <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Концепция: Обзор J2EE (Java 2 Platform Enterprise Edition)</a>.
+    </li>
+    <li>
+        Информация о&nbsp;модулях J2EE, см. раздел Концепция: Обзор J2EE (Java 2 Platform Enterprise Edition).
+    </li>
+    <li>
+        Информация о приложениях J2EE, см. раздел <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">Рекомендация: Приложение J2EE</a>.
+    </li>
+    <li>
+        Информация о компоновке модулей J2EE, см. раздел <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_modules_17925A58.html" guid="3.7932077950837037E-305">Рекомендация: Компоновка модулей J2EE</a>.
+    </li>
+    <li>
+        Информация о компоновке приложений J2EE, см. раздел <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_applications_38E5D5D5.html" guid="3.347498143656868E-305">Рекомендация: Компоновка приложений J2EE</a>.
+    </li>
+</ul>
+<h3>
+    Обзор
+</h3>
+<p>
+    XDE предоставляет средства автоматического создания архивов J2EE, формирования их содержимого и привязки архивов к
+    узлам (контейнерам и серверам). Эти операции выполняются в модулях развертывания XDE.
+</p>
+<p>
+    В этой памятке по инструменту предусмотрены следующие шаги:
+</p>
+<ul>
+    <li>
+        <a href="#Setting_Up_the_Assembly_Workspace">Настройка Рабочей области компоновки</a>
+    </li>
+    <li>
+        <a href="#Defining_the_Archives">Создание архивов</a>
+    </li>
+    <li>
+        <a href="#Defining_the_Deployment_Descriptors">Создание файлов описания</a>
+    </li>
+    <li>
+        <a href="#Validating_the_Archives">Проверка архивов</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Дополнительная информация</a>
+</p>
+<p>
+    Ссылки на разделы Web-справки Rational XDE&trade; помечены значком <img height="16" alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" />.
+</p>
+<h3>
+    Настройка Рабочей области компоновки
+</h3>
+<p>
+    В среде XDE Рабочая область компоновки представляет собой модели развертывания XDE (EJB, Web и EAR). Поэтому на этом
+    этапе нужно создать необходимые модели развертывания XDE. За рекомендациями, какие проекты и модели развертывания нужно
+    создать, обратитесь к разделу <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">Рекомендации по созданию структуры моделей XDE</a>.
+</p>
+<p>
+    Возможно, некоторые модели развертывания уже были созданы при создании проектов XDE. Однако при необходимости
+    компоновщик может создать дополнительные отдельные рабочие области компоновки и использовать их для тестирования и
+    развертывания приложений.
+</p>
+<p>
+    В XDE рабочие области компоновки можно сформировать с помощью отдельных моделей развертывания XDE или путем создания
+    нескольких архивов в одной модели развертывания. Например, в одной модели можно создать архив для тестирования, и архив
+    для разработки. &nbsp;Преимущество этого подхода в том, что потребуется меньше моделей XDE и упростится процедура
+    добавления, удаления и изменения компонентов J2EE, архивных файлов и других элементов архивов. Однако при этом
+    потребуется управлять текущими изменениями в одной модели. В отдельной модели было бы проще при необходимости
+    ограничить доступ к содержимому архивов.
+</p>
+<p>
+    Модели развертывания XDE можно создавать вручную (см. раздел <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Создание моделей развертывания Java</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_t_creating_java_deply_model.htm");-->или с помощью
+    мастеров развертывания J2EE среды XDE одновременно с созданием архива (см. следующий <a href="#Defining_the_Archives">шаг: Создание архивов</a>). Мастеры развертывания XDE создают или обновляют модели
+    развертывания EJB, Web или EAR (модель EAR содержит "вкладываемый" файл EAR, который необходимо развертывать в
+    большинстве серверов приложений).
+</p>
+<p>
+    Сведения о заполнении моделей развертывания XDE приведена в следующих шагах этой памятки по инструменту.
+</p>
+<h3>
+    Создание архивов
+</h3>
+<p>
+    На этом этапе можно создать архивы (если они еще не созданы) и сформировать их содержимое.
+</p>
+<p>
+    Архивы EJB-JAR модуля J2EE формируются в моделях развертывания EJB, а архивы WAR - в моделях Web. В этих моделях
+    развертывания можно указать, какие элементы нужно занести в архив.
+</p>
+<p>
+    Архивы EAR приложения J2EE формируются в модели развертывания EAR. В этой модели можно указать, какие архивы модуля
+    J2EE нужно включить в файл EAR, и с каким узлом сервера приложений связать этот файл. Дополнительная информация о
+    привязке архивов к узлам приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Развертывание: взаимодействие компонентов</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","rs_c_deploys_relshp.htm");-->. В узлах содержится информация
+    о том, какой тип сервера и какие данные потребуются для развертывания. Если в XDE поддерживается сервер приложений, то
+    для оптимизации развертывания можно задать свойства этого сервера, например, задать роли обеспечения защиты приложений.
+    Дополнительная информация приведена в разделе <img alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Узлы
+    развертывания (Java)</i> <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_m_nodes.htm");-->. См. также
+    раздел <img alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Серверы приложений (Java)</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_m_app_server.htm");-->.
+</p>
+<p>
+    Для настройки моделей развертывания в XDE можно использовать мастеры развертывания приложений J2EE. С помощью этих
+    мастеров можно создавать модели и архивы, формировать содержимое архивов и указывать узлы, в которых будет развернут
+    архив. В моделях развертывания EJB и Web определите элементы для добавления в архивы модуля J2EE, после чего мастер
+    развертывания установит взаимодействие между файлами архивов и компонентами. В модели развертывания EAR определите,
+    какие архивы войдут в файл EAR (в моделях развертывания EJB и Web мастер развертывания настраивает взаимодействие с
+    архивами по умолчанию), а также укажите узлы сервера приложений, где будет развернут архив. Дополнительная информация о
+    мастерах развертывания XDE приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Мастеры развертывания J2EE</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_o_deploy_wizards.htm");-->.
+</p>
+<p>
+    Замечания по работе с мастерами развертывания XDE:
+</p>
+<ul>
+    <li>
+        Перед запуском мастеров нужно открыть модели XDE, в которых содержатся элементы для добавления в архив, после чего
+        эти элементы появятся в выпадающих списках, и их можно будет выбрать для добавления архив.
+    </li>
+    <li>
+        Мастеры только добавляют элементы в архивы. Мастеры не удаляют элементы, добавленные в архив ранее, даже если эти
+        элементы не отмечены при последующих вызовах мастеров.
+    </li>
+    <li>
+        Если в модели развертывания XDE содержится несколько архивов, XDE считает один из них архивом по умолчанию. Архивом
+        по умолчанию становится архив, указанный в процессе выполнения последнего шага мастера развертывания. При
+        использовании XDE в средстве разработки приложений WebSphere Studio Application Developer среда XDE будет работать
+        только с этим архивом, так как для средства разработки требуется отдельный проект для каждого архива. Поэтому
+        инструменты средства разработки будут недоступны для работы с остальными архивами.
+    </li>
+    <li>
+        Мастеры можно запускать каждый раз для добавления в архив новых элементов приложения, для создания архивов или для
+        внесения изменений в данные развертывания. Дополнительная информация о развертывании архивов J2EE приведена в
+        разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/toolmentors/deploying_j2ee_mods_and_apps_934BB4EE.html" guid="{709B15F1-BB9D-4379-920E-5A6E7DB36536}">Памятка по инструменту: Развертывание модулей и приложений J2EE с
+        помощью Rational XDE Developer - Java Platform Edition</a>.
+    </li>
+    <li>
+        По завершении работы с мастерами рекомендуется для каждой модели развертывания открыть диаграмму по умолчанию, а
+        затем перетащить в эту диаграмму и разместить в ней новые элементы (компоненты и архивы), созданные в моделях
+        развертывания.
+    </li>
+</ul>
+<p>
+    Результаты выполнения этого шага необходимо сохранить в диаграммах развертывания. Дополнительная информация приведена в
+    разделе <img alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Работа с диаграммами развертывания</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"rs","rs_o_work_with_deploy_dgm.htm");-->. См. также раздел <img     alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Размещение и группировка элементов диаграммы</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"rs","rs_o_lay_out_group_shp_dgm.htm");-->.
+</p>
+<h3>
+    Создание файлов описания
+</h3>
+<p>
+    В XDE разработчик не редактирует файлы описания напрямую. Он только задает основные свойства этих файлов в моделях
+    развертывания XDE, а затем файлы создаются автоматически в процессе развертывания. Каждой модели развертывания XDE
+    соответствует один файл описания. Дополнительная информация о файлах описания в XDE приведена в разделе <img     alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Файлы описания</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_m_dplymnt_dscrptr.htm");-->.
+</p>
+<p>
+    Мастеры развертывания XDE (описанные в предыдущем <a href="#Defining_the_Archives">шаге: Создание архивов</a>)
+    автоматически задают некоторые свойства файла описания во время создания архива и каждый раз при запуске самих мастеров
+    развертывания. Таким образом постепенно изменяется содержимое файлов описания.
+</p>
+<p>
+    Для развертывания архивов JAR (включая EJB-JAR и WAR) на некоторых серверах приложений необходимо задать этим архивам
+    расширение EAR. Это может потребоваться при тестировании компонента приложения. В этом случае подойдет файл EAR,
+    который автоматически создают мастеры развертывания XDE.
+</p>
+<p>
+    Однако разработчикам приложений часто требуется задать содержимое EAR, например, роли обеспечения защиты приложения. В
+    модели развертывания XDE можно с помощью панелей инструментов или всплывающих меню задавать роли обеспечения защиты,
+    распределять права доступа, моделировать транзакции и осуществлять другие действия. С применением помощника Connector
+    Assistant по настройке взаимосвязей, предусмотренного в каждой панели инструментов, можно установить взаимосвязь между
+    элементами. При наличии нескольких возможных вариантов можно выбрать нужную опцию. Дополнительная информация о
+    помощнике Connector Assistant приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Настройка взаимосвязей для объектов EJB</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_o_relating_ejbs.htm");-->. Дополнительная информация о
+    моделировании файлов WAR приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Моделирование файлов WAR</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"wm","wm_o_modeling_web_deploy.htm");-->. Дополнительная информация о
+    моделировании файлов EJB-JAR приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Моделирование развертывания</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_o_mod_deply.htm");-->.
+</p>
+<p>
+    Модели развертывания XDE (EJB, Web и EAR) содержат всю информацию, необходимую для создания файлов описания EJB
+    (ejb-jar.xml), Web (web.xml) и Enterprise Application (application.xml). При этом часть данных берется из моделей кода,
+    связанных с моделями развертывания. Это файлы описания, определенные в стандарте J2EE. Для завершения развертывания на
+    большинстве серверов приложений потребуется создать дополнительные файлы описания. XDE создает дополнительные файлы
+    описания, которые можно использовать в поддерживаемых серверах приложений. &nbsp;Дополнительная информация приведена в
+    разделе <img alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Развертывание приложений Java</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_c_java_app_deploy.htm");-->.
+</p>
+<p>
+    Если между таблицами базы данных в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Модели
+    данных</a> и постоянными сущностными объектами EJB, управляемыми контейнером (CMP), создана карта связей, на ее основе
+    будут созданы карты связей в предоставленных вендорами файлах описания. Карты связей не входят в стандартный набор
+    элементов файла описания объекта EJB. Если карта связей Модели данных не создана, для таких объектов EJB будет
+    применяться карта связей по умолчанию. Дополнительная информация приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Использование объектов EJB с базами данных</i>
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"dm","dm_o_using_ejbs.htm");-->.
+</p>
+<p>
+    XDE не моделирует и не создает полное содержание файлов описания, предоставленных вендорами. Вместо этого разработчик
+    может отключить функцию автоматического создания файлов описания и управлять ими самостоятельно. У каждого архива есть
+    свойство, где перечислены файлы или каталоги, которые будут добавлены в архив, но не подлежат моделированию. Для файлов
+    JAR это свойство называется <span style="FONT-FAMILY: monospace">JARNonModelElements</span>, для файлов EJB-JAR - <span     style="FONT-FAMILY: monospace">EJBNonModelElements</span>, для файлов WAR - <span     style="FONT-FAMILY: monospace">WebNonModelElements</span>, а для файлов EAR - <span     style="FONT-FAMILY: monospace">EARNonModelElements</span>. Добавьте в свойства соответствующего архива файлы описания и
+    другие файлы, которыми вы хотите управлять самостоятельно. Дополнительная информация приведена в разделе <img     alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Развертывание приложений Java</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_c_java_app_deploy.htm");-->.
+</p>
+<h3>
+    Проверка архивов
+</h3>
+<p>
+    Перед началом развертывания рекомендуется проверить правильность работы модели развертывания XDE. Благодаря этому можно
+    будет выявить скрытые или непредвиденные ошибки, особенно на стороне сервера приложений. Рекомендуется также проверять
+    правильность функционирования моделей и в процессе работы, например, несколько раз при компоновке, затем один раз перед
+    развертыванием.
+</p>
+<p>
+    В XDE можно проверить целостность моделей развертывания. В Структуре моделей выберите нужную модель и вызовите
+    контекстную команду "Проверить". При обнаружении неполадок будет составлен список задач. Дополнительная информация
+    приведена в разделе <img alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Проверка моделей Java</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j","j_o_val_jmodels.htm");-->. Информация о том, какие элементы
+    моделей развертывания проверяются средой XDE, приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Правила проверки моделей развертывания</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_r_deply_valid_rules.htm");-->.
+</p>
+<h3>
+    Дополнительная информация
+</h3>
+<p>
+    В среде XDE можно моделировать архивы J2EE и файлы описания. Можно также импортировать в эту среду файлы описания или
+    целые архивы. Дополнительная информация приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Импорт и Экспорт в среде разработки</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_o_dply_imp_exp.htm");-->.
+</p>
+<p>
+    Дополнительная информация о моделирования развертывания XDE приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Моделирование развертывания</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_o_mod_deply.htm");-->. Дополнительная информация о
+    развертывании приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/toolmentors/deploying_j2ee_mods_and_apps_934BB4EE.html" guid="{709B15F1-BB9D-4379-920E-5A6E7DB36536}">Памятка по инструменту: Развертывание модулей и приложений J2EE с помощью
+    Rational XDE Developer - Java Platform Edition</a>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

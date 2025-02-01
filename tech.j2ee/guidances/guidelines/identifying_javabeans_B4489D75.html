@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Идентификация объектов JavaBean</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_javabeans" name="uma.name">
+<meta content="Идентификация объектов JavaBean" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.8184208504373704E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.8184208504373704E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Идентификация объектов JavaBean</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждается, как определить и смоделировать объекты JavaBean для приложения J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Определение элементов проекта</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    Это руководство посвящено идентификации объектов JavaBean.
+</p>
+<p>
+    Более подробная информация об объектах JavaBean находится в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/javabean_D488CF3B.html" guid="7.536447688812142E-306">Концепция:
+    Объекты JavaBean</a>.
+</p>
+<h3>
+    <a id="Identifying_JavaBeans" name="Identifying_JavaBeans"></a>Идентификация объектов JavaBean
+</h3>
+<p>
+    Объекты JavaBean - это классы Java, написанные в соответствии с соглашениями модели компонентов объектов JavaBean.
+</p>
+<p>
+    Объекты JavaBean могут использоваться в их простой форме, в которой свойства открыты с помощью методов получения и
+    установки, но события не генерируются. Для такого объекта JavaBean применимы рекомендации по именованию методов
+    получения и установки для полей простых классов Java. Этот тип объектов JavaBean обычно используется на страницах JSP,
+    где он служит носителем данных от формы к Web-странице.
+</p>
+<p>
+    Можно усложнить поведение объекта, если необходимо уведомлять другие части об изменениях или попытке изменить свойство
+    объекта JavaBean. В этом случае, объект JavaBean нужно спроектировать так, чтобы он генерировал события, описывающие
+    изменение свойства.
+</p>
+<p>
+    Объекты JavaBean, которые генерируют (и обрабатывают) события, обычно применяются в структурах интерфейсов, таких как
+    Swing, где они реализуют архитектурный шаблон Модель-Представление-Контроллер. Объекты JavaBean, представляющие
+    визуальные компоненты, часто имеют дополнительные классы, такие как модули настройки bean-объекта, позволяющие
+    производить модификацию экземпляров объектов JavaBean во время проектирования.<br />
+</p>
+<h3>
+    <a id="Modeling_JavaBeans" name="Modeling_JavaBeans"></a>Моделирование объектов JavaBean
+</h3>
+<p>
+    Объекты JavaBean моделируются как классы Java.
+</p>
+<p>
+    Свойства объектов JavaBean не моделируются явно. Вместо этого, они идентифицируются с помощью соглашений об именах
+    объектов JavaBean.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма UML, показывающая свойства Клиента."         src="./../../../tech.j2ee/guidances/concepts/resources/customer.gif" />
+    </p>
+</blockquote>
+<p>
+    На диаграммах проекта полезно использовать зависимости, показывающие, какие классы генерируют и обрабатывают события.
+    Обработчики событий вводятся как интерфейсы, которые имеют свои конкретные реализации.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма UML, показывающая обработчики событий."         src="./../../../tech.j2ee/guidances/concepts/resources/event_example.gif" />
+    </p>
+</blockquote>
+<p>
+    <br />
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="Логотип Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Данная информация полностью или частично разработана компанией <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

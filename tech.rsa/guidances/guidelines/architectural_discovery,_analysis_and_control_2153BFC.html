@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Architectural Discovery, Analysis and Control</title>
+<meta content="Guideline" name="uma.type">
+<meta content="architectural_discovery,_analysis_and_control" name="uma.name">
+<meta content="Architectural Discovery, Analysis and Control" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.843707701997842E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.843707701997842E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Architectural Discovery, Analysis and Control</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline describes how to perfrom architectural discovery, analysis and control using the RSA modeling environment for a project.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Архитектурный анализ</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Introduction
+</h3>
+<p>
+    In several tasks in RUP, we canvass the need to examine the emerging <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Design
+    Model</a>, make judgments about various quality aspects, and then, if necessary, refactor the model. It is also
+    important to be able to maintain the architectural integrity of a system once it has moved into implementation, to
+    ensure architectural and design constraints are not violated and that the system, as implemented, continues to align
+    with the architectural vision. In RUP, these major checkpoints occur in the Tasks: <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/review_the_architecture_D27975CC.html" guid="{35BAFA92-EAF9-41E8-8BDE-AB9B61A68E04}">Review
+    the Architecture</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/review_the_design_34CB80A9.html" guid="{9574768B-7886-40C9-9938-A7E36E9B0739}">review_the_design_gui_design</a> and <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/review_code_27AD7580.html" guid="{9EC0DF69-EEE1-4B41-8F48-9FB6B0DB7F72}">Review Code</a>.
+</p>
+<p>
+    A different, but allied, problem arises during architectural and design synthesis: in the Tasks: <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Architectural Analysis</a> (see <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Develop
+    Architecture Overview</a> and <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Survey
+    Available Assets</a>) and <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">Incorporate Existing Design Elements</a>, the Software Architect is
+    advised to look for opportunities to reuse existing design and code assets, incorporating them into the Design Model,
+    after reverse-engineering, if necessary. Unless the reused assets come with some type of quality certification, the
+    Software Architect will want to subject them to the same scrutiny as newly created design and code.
+</p>
+<p>
+    In both cases, the consequential needs of the Software Architect are the same for this static analysis:
+</p>
+<ul>
+    <li>
+        To take a coded application (or fragment thereof), discover its symbolic structure, and recover this,
+        <em>ideally</em> into a Design Model, in UML form. The recovery of browsable documentary artifacts also has
+        significant value in allowing the Software Architect to see how the code is really structured, when documentation
+        does not exist, or is out of date
+    </li>
+    <li>
+        To be able to analyze any Design Model, collect the quality metrics (such as&nbsp;<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/coupling_3996FD6F.html" guid="_yErvwNnmEdmO6L4XMImrsA">Term Definition: coupling</a>) that are called out in the <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_measurement_plan_E4DFAC77.html" guid="{5932E02C-C446-4F54-83A4-307C878811E9}">Artifact: Measurement Plan</a> and check compliance with the <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Artifact: Software Architecture Document</a> and the <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Design Guidelines</a>
+    </li>
+    <li>
+        To be made aware of significant architectural or design changes so that corrective action may be taken, if
+        necessary. Significance is judged against criteria set by the Software Architect
+    </li>
+</ul>
+<p>
+    In theory, these needs could be fulfilled through inspection; in practice, for larger, more complex systems, some type
+    of automated assistance is essential. The following sections provide some elaboration of these topics and examples of
+    tool support.
+</p>
+<h3>
+    <a id="architecture_discovery_recovery" href="./../../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" name="architecture_discovery_recovery" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}"></a>Architecture Discovery and Recovery
+</h3>
+<h4>
+    Background
+</h4>
+<p>
+    In Greenfield development, software architecture emerges from the requirements and the domain context and conventions
+    (including patterns and mechanisms); the <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">Supplementary Specifications</a> artifact has an important role in
+    determining the architecture. This process of shaping the software architecture is sometimes called discovery, because
+    there is rarely a straightforward, mechanical mapping from requirements to architecture. Here, however, we are using
+    <em>discovery</em> in a different sense, to describe the process of helping the Software Architect understand an
+    existing application or application fragment in coded form. Architectural <em>recovery</em> is more ambitious: through
+    recovery, not only does the Software Architect seek to understand an application, but also to extract a model of that
+    application, ideally at a level of abstraction compatible with the Design Model. The possibility then exists of merging
+    these models and, through <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/transformation_B58336DE.html" guid="_yZF5hNnmEdmO6L4XMImrsA">Term
+    Definition: transformation</a>, generating a new application, perhaps for a different <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/platform_4197EF6C.html" guid="_yQJ_-dnmEdmO6L4XMImrsA">Term Definition: platform</a>.
+</p>
+<h4>
+    Discovery
+</h4>
+<p>
+    In the Tasks: <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Architectural Analysis</a> (see <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Develop
+    Architecture Overview</a> and <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Survey
+    Available Assets</a>) and <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">Incorporate Existing Design Elements</a>, the Software Architect looks
+    for opportunities to reuse existing design and code assets. For example, an organization might have several <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_reference_architecture_13D031C0.html" guid="{855CE09A-D297-4373-BEEA-D38B8AB348DA}">Reference Architectures</a> in its asset base, and ideally these are
+    complete with up-to-date documentation and models. However, often there is little more than source code and, if there
+    is architectural documentation, it is not current.
+</p>
+<p>
+    In many cases, the Software Architect cannot treat such code as a black box (even if the interfaces are clearly
+    defined) but needs to understand its structure. This process is greatly assisted by the ability to automatically
+    generate browsable depictions of the code. The Software Architect can then visually 'discover' patterns and
+    antipatterns in the code. An example of this kind of assistance is found in the Rational Software Architect tool, where
+    the architecture discovery capability will automatically populate topic diagrams, such as package structure, class
+    internals, inheritance trees, and collaborations, for Java applications. For more information, see <img height="16"     alt="helpbook icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Rational Software Architect documentation.
+</p>
+<h4>
+    Recovery and Transformation
+</h4>
+<p>
+    When reusable assets are complete with models, it is possible to combine those models with project-specific models and
+    then proceed into platform-specific implementation using transformation techniques. When code is all that exists, it
+    might still be possible to reuse it even with a transformation-based approach by integrating the code produced from
+    transformation with the legacy code.
+</p>
+<p>
+    The Software Architect has most power and flexibility through the use of architecture recovery: recovery capability
+    will generate a semantically-rich model of the application, which can be used for code generation as well as for
+    browsing. In practice, reverse-engineering code back to a straightforward visual representation is often tractable;
+    abstracting such a model back to the same level as a <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/platform_independent_model_E0546510.html" guid="_yQTJ4NnmEdmO6L4XMImrsA">Term Definition: platform independent model</a> Design Model is, in general, difficult
+    to automate completely.
+</p>
+<p>
+    This is essentially a <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/platform_specific_model_9E1D3B55.html" guid="_yQTJ5tnmEdmO6L4XMImrsA">Term Definition: platform specific model</a> to <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/platform_independent_model_E0546510.html" guid="_yQTJ4NnmEdmO6L4XMImrsA">Term Definition: platform independent model</a> transformation (see <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Concept: Model-Driven Development (MDD) and Model Driven Architecture (MDA )</a>); the
+    recovered PIM (fragment) is then combined with the Design Model (itself a PIM) using a <em>model merge</em> (see [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">OMG03</a>]) type of transformation.
+</p>
+<h3>
+    <a id="analysis_of_architectures" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" name="analysis_of_architectures" guid="7.755968586980351E-308"></a>Analysis of Architectures
+</h3>
+<p>
+    Having browsable models allows the Software Architect to verify architectural quality through inspection. However, this
+    can be tedious and time-consuming, and checking standards and rules compliance and gathering metrics this way is error
+    prone. The Software Architect should look to automate as much as possible of this process, and thereby spend more time
+    finding and applying remedies; automation allows the Software Architect to experiment, to ask "what if" and quickly
+    check the result.
+</p>
+<h4>
+    What Can Be Automated?
+</h4>
+<p>
+    Automated architectural analysis can:
+</p>
+<ul>
+    <li>
+        Find patterns and antipatterns (pathological structures) in the architecture
+    </li>
+    <li>
+        Perform measurements on various structures and report <em><a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/metrics_373A077A.html" guid="7.859204246016091E-305">Metrics</a></em>
+    </li>
+    <li>
+        Check for compliance with constraints from the Software Architect (see Architectural Control)
+    </li>
+</ul>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/pattern_E76690AA.html" guid="_yPtUDNnmEdmO6L4XMImrsA">Term Definition: pattern</a> is dictated by&nbsp;project and organization standards, and
+    the rationale for their use is captured in the Software Architecture Document (if they have architectural significance)
+    or the Design Guidelines. Through automated analysis, the Software Architect can quickly check pattern usage, to verify
+    that the intent of the Software Architecture Document and the Design Guidelines is met. Antipatterns are pathological
+    architectural and design structures that in some way weaken the architecture, by making it less robust, more complex,
+    or more difficult to maintain, for example.
+</p>
+<p>
+    The measurements to be performed are called out in the Work Product: Measurement Plan (some suggested metrics are to be
+    found in <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/metrics_373A077A.html" guid="7.859204246016091E-305">Guideline: Metrics</a>). The Measurement Plan also describes how a metric is to be used,
+    for example, whether higher or lower values are better or whether it is the trend that is important, so it is useful to
+    have the metrics analysis also identify hot spots - places in the architecture where change would yield significant
+    improvement in the collected metrics. Not surprisingly, these will often be associated with pathologies in the
+    structure. The Software Architect then has an objective basis for improvement, can make changes, or delegate follow-up
+    actions that can be tested once complete.
+</p>
+<h4>
+    What Is the Target of Analysis?
+</h4>
+<p>
+    The target of analysis can vary through the lifecycle, depending on the development approach chosen. When a project
+    uses a transformational (generational) approach, the target will normally be the Design Model, on the assumption that
+    the generated application is always synchronized with the design. When an <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">Artifact: Implementation Model</a> is created and separately maintained,
+    or when code is reused, focus shifts to the code, to ensure it retains architectural integrity when measured against
+    the Software Architecture Document and the Design Guidelines.
+</p>
+<p>
+    This type of analysis (on an Implementation Model) might not actually recover an explicit Design Model from the code,
+    for analysis purposes; it is, nevertheless, concerned with architecture and design issues (as they are manifest in the
+    code), not coding standards.
+</p>
+<h4>
+    An Example of these Concepts and Capabilities
+</h4>
+<p>
+    The Rational Software Architect tool, in addition to its ability to recover documentation for Java applications through
+    architecture discovery, can identify and report against a set of pre-defined patterns that could indicate potential
+    trouble spots in the architecture. These patterns include, among others:
+</p>
+<ul>
+    <li>
+        The Butterfly
+    </li>
+    <li>
+        The Breakable
+    </li>
+    <li>
+        The Hub
+    </li>
+    <li>
+        The Tangle
+    </li>
+</ul>
+<h5>
+    The Butterfly
+</h5>
+<p>
+    A <em>butterfly</em> is an element, such as a class, that has many relationships with other dependent elements, which
+    would be affected if the butterfly were changed. If the relationships are direct, these elements are called <em>local
+    butterflies</em>. Rational Software Architect can also trace relationships as they cascade through an application and
+    determine if changes to an element could affect not only the direct dependents, but their dependents in turn, and so on
+    transitively through the entire application. Such an element with many indirect dependencies is called a <em>global
+    butterfly</em>. An illustration of a local butterfly is shown below. The diagram also shows that the relationships can
+    be other than UML dependencies: for example, an element is dependent on another when it realizes it; a change in the
+    specifying element will affect the element that realizes it.
+</p>
+<p align="center">
+    <img height="331"     alt="A class with four dependents, two with use dependencies, one with a generalization relationship, and one with a realization relationship"      src="./../../../tech.rsa/guidances/guidelines/resources/butterfly.gif" width="255" />
+</p>
+<p class="picturetext" align="center">
+    A Local Butterfly
+</p>
+<h5>
+    The Breakable
+</h5>
+<p>
+    A <em>breakable</em> is an element that has many dependencies; that is, it has many relationships where it depends on
+    another element. A change to any of those other elements will affect the breakable. As with butterflies, when the
+    relationships are direct these elements are called <em>local breakables,</em> and <em>global breakables</em> if there
+    are many indirect relationships that impact the element. A global breakable is vulnerable to changes in many parts of
+    an application and indicates a lack of modularity. An illustration of a local breakable is shown below.
+</p>
+<p align="center">
+    <img height="334"     alt="A class with four dependents, two by use dependency relationships, one by a generalization relationship, and one by a realization relationship."      src="./../../../tech.rsa/guidances/guidelines/resources/breakable.gif" width="255" />
+</p>
+<p class="picturetext" align="center">
+    A Local Breakable
+</p>
+<h5>
+    The Hub
+</h5>
+<p>
+    A <em>hub</em> is an element that combines the characteristics of a butterfly and a breakable. It also has
+    <em>local</em> and <em>global</em> forms. The presence of global hubs is an indication of poor partitioning, resulting
+    in software that is extremely sensitive to change-changes tend to ripple through the entire application.
+</p>
+<h5>
+    The Tangle
+</h5>
+<p>
+    A tangle is a large group of elements whose relationships are so convoluted that a change in any one of them could
+    affect all of the others. Such structures are a source of major instability.
+</p>
+<p>
+    The Software Architect, working with the Rational Software Architect tool, can discover these hot spots quickly and
+    work with the Designer to rectify them. For more information, see <img height="16" alt="helpbook icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Rational Software Architect documentation.
+</p>
+<h4>
+    Timing
+</h4>
+<p>
+    The results of these analyses are valuable at any review milestone, as objective and quantifiable evidence of
+    architectural and design quality, or when, as in <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">Update the Organization of the Design Model</a> (in Task: Incorporate
+    Existing Design Elements) there are significant architectural changes.
+</p>
+<h3>
+    <a id="architectural_control" href="./../../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" name="architectural_control" guid="{5C647173-4E32-4594-96A9-2548B47722FA}"></a>Architectural Control
+</h3>
+<p>
+    The vision of the Software Architect is captured in the Software Architecture Document and practical guidance for the
+    Designer is found in the Design Guidelines. Even when that vision is shared by all staff, it is sometimes obscured by
+    the day-to-day exigencies of project work. With deadlines to meet, corners might be cut, and the Software Architect
+    usually cannot participate in every decision. So arises the issue of control: just as the Project Manager has to set
+    thresholds and limits and monitor them (see <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/monitor_project_status_1A73CCB1.html" guid="{A7E3EAB8-8E5A-408C-B1EF-3CD3D3B0DEDD}">Task:
+    Monitor Project Status</a>), the Software Architect has an analogous task for the emerging software design and
+    implementation.
+</p>
+<p>
+    Architectural control gives the Software Architect the capability to create rules to enforce architectural constraints.
+    For example, the Software Architect might define a rule that would raise a warning on every realization of a particular
+    interface. The simple expression of this rule without tool support would require more or less constant review to catch
+    breaches. With automation, the rules can be encoded so that violations of the ruleset can be caught during architecture
+    analysis. This is still occurring after the fact, and an advanced control environment would encode the rules into the
+    design and code production process, preventing them from being broken in the first place; even so, it greatly improves
+    the manual review process.
+</p>
+<p>
+    The Rational Software Architect tool includes such a capability for Java applications: the Software Architect can set
+    rules and then run analyses to verify compliance. For more information, see <img height="16" alt="helpbook icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> Rational Software Architect documentation.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

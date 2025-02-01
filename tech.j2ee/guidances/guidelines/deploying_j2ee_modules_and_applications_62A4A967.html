@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Развертывание модулей и приложений J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="deploying_j2ee_modules_and_applications" name="uma.name">
+<meta content="Развертывание модулей и приложений J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "5.3908533897796765E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="5.3908533897796765E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Развертывание модулей и приложений J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом разделе указано, как развернуть автономные модули J2EE и приложения J2EE в операционной среде. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/perform_developer_test_512B18D9.html" guid="{55EAEE66-A254-457F-BCC3-D1C21ED88134}">Выполнение тестов разработчика</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/define_test_environment_configurations_605902BA.html" guid="{187268D3-3166-4823-8DD8-5E1112004AC3}">Определение конфигурации среды тестирования</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/support_development_1443EF07.html" guid="{35936CF9-4B04-402A-9482-07E5CFB45D99}">Разработка справочных материалов</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Введение
+</h3>
+<p>
+    Эта страница содержит указания по развертыванию автономных модулей J2EE и приложений J2EE в операционной среде. В
+    качестве операционной среды может выступать среда разработки, среда тестирования или установочный сайт заказчика.
+    Детали развертывания зависят от приложения и среды и обычно требуют применения инструментов, поставляемых вендором. В
+    данном разделе приведено общее описание требуемых шагов, включая установку, настройку и запуск приложения.
+</p>
+<h3>
+    Установка
+</h3>
+<p>
+    Следующие действия выполняются при установке архивов J2EE в среде развертывания.
+</p>
+<ul>
+    <li>
+        Определите, какие файлы следует развернуть (конкретная <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_build_BA336272.html" guid="{53728CD9-FA47-4B58-A443-E9F9DC196916}">Компоновка</a> в Хранилище управления конфигурацией).
+    </li>
+    <li>
+        Заранее настройте все необходимые ресурсы, такие как соединения с базами данных.
+    </li>
+    <li>
+        Перешлите архивы в целевое аппаратное обеспечение (которое должно быть указано в модели развертывания и/или
+        инструкциях по установке).
+    </li>
+    <li>
+        Если целевое аппаратное обеспечение - это конфигурация тестирования, то выполните все дополнительные необходимые
+        инструкции по установке, которые указаны в этой конфигурации.
+    </li>
+</ul>
+<h3>
+    Настройка
+</h3>
+<p>
+    Среда целевого аппаратного и программного обеспечения проверяется с целью убедиться, что это обеспечение настроено в
+    соответствии с инструкциями по установке. В частности, проверяется, обработаны ли внешние зависимости, отображены ли
+    роли защиты в пользовательские группы и учетные записи в целевой среде и настроены ли остальные приложения и ресурсы,
+    участвующие в работе приложения J2EE, такие как устаревшие системы, базы данных и совместно используемые службы и
+    библиотеки (например, JAR третьих сторон для Web-служб и поддержки XML).
+</p>
+<p>
+    Если вы хотите отладить приложение, то включите отладку на сервере приложений. Обычно для этого необходимо
+    перезапустить сервер приложений в режиме отладки. Соответствующие инструкции приведены в документации по серверу
+    приложений.
+</p>
+<h3>
+    Запуск
+</h3>
+<p>
+    Приложение запускается, после чего оно становится доступно для использования и тестирования.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

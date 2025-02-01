@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Service Mediation</title>
+<meta content="Guideline" name="uma.type">
+<meta content="service_mediation" name="uma.name">
+<meta content="Service Mediation" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i99p8OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i99p8OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i_Kj0OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i_Kj0OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_jC070OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_jC070OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_jgOCcOBoEe-aS_x8ARA3yA", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_jgOCcOBoEe-aS_x8ARA3yA", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_j-pD0OBoEe-aS_x8ARA3yA", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_j-pD0OBoEe-aS_x8ARA3yA", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "_kSkscOBoEe-aS_x8ARA3yA", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "_kTZy4OBoEe-aS_x8ARA3yA", "2.5614739075754752E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.5614739075754752E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lB0YEOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lB0YEOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lCgUkOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lCgUkOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_lEvJMOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_lEvJMOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lKd9wOBoEe-aS_x8ARA3yA", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lKd9wOBoEe-aS_x8ARA3yA", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lc2uQOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lc2uQOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_ldiqwOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_ldiqwOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lsiJAOBoEe-aS_x8ARA3yA", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "2.5614739075754752E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lsiJAOBoEe-aS_x8ARA3yA", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "2.5614739075754752E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_d5dewE7OEduvcvbnLvkXhA", "2.5614739075754752E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.5614739075754752E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Service Mediation</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline describes ways in which communication between incompatible consumers and services is enabled through mediation, transforming consumer requests or protocols into forms that service providers can understand.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_chan_BB29CCA8.html" guid="{95AA7C70-6259-4627-B705-6A67E33A47BC}">Service Channel</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_gtway_4D9ADED2.html" guid="{B0BF4414-0382-4605-9EE9-82F0DEC7292C}">Service Gateway</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_service_mediation__guidelines_for" name="XE_service_mediation__guidelines_for"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">Introduction</a>
+</h3>
+<p>
+    Mediation is the act of intervention between conflicting parties to promote reconciliation or compromise. In
+    particular, three common forms of reconciliation are required in distributed systems in general and service-oriented
+    solutions in particular.
+</p>
+<ul>
+    <li>
+        <b>Interface mediation</b>; in object- or component-based systems interface, mediation is the change between
+        operation definitions between sender and receiver. In a service-oriented solution, this is seen as a mismatch in
+        message content/schema between sender and receiver.
+    </li>
+    <li>
+        <b>Protocol mediation</b>; most common object- or component-based solutions tend to be based around a common
+        protocol or set of protocols for communication. In service-oriented solutions, a mix of protocols across the entire
+        solution is common and it is one of the advantages of the architecture. To communicate between services, messages
+        will have to span different protocols between sender and receiver.
+    </li>
+    <li>
+        <b>Operation mediation</b>; this form of mediation may also look familiar to developers. It is related to the
+        common <i>strategy pattern</i>. A component is able to select between one of a set of implementations of a
+        particular service or operation based on runtime parameters or content of the request. This is also known as
+        content-based routing.
+    </li>
+</ul>
+<p>
+    It is important to note that more and more middleware platforms provide capabilities for advanced mediation without
+    having to develop explicit mediation components. In this case, as the middleware detects mismatches in data structure
+    or communications protocols, it can perform the mediation in its runtime. It is also possible for these platforms to
+    provide mediators that act as switches based on message content and business rules to select the correct implementation
+    of a given consumer request.
+</p>
+<h3>
+    <a id="Data_Mediation" name="Data_Mediation">Data Mediation in Activities</a>
+</h3>
+<p>
+    In terms of connecting services where the definition of messages do not match or the messages require transformation
+    between sender and receiver, it is possible to use a capability provided by UML 2.0 Activities to denote the
+    transformation between the sender and receiver. This capability, the association of a UML 2.0 Behavior to an ObjectFlow
+    between two Actions, allows for the identification of a reusable transformation behavior that can turn one message into
+    another (specifically from the UML 2.0 specification <i>Changes or replaces data tokens flowing along edge</i>).
+</p>
+<p>
+    As noted above, the transformation is a reusable element. As such, it can be identified to transform one message type
+    to another and then be used wherever needed in mediating messages between a sending and receiving service. Note that,
+    although the UML does provide a set of actions for navigating, reading, and updating a structure, these are relatively
+    complex and may prove too hard to use in defining transforms. It is expected that the transform will either link to a
+    more compact representation (consider the XSL/T language) or a new way of expressing UML actions needs to be provided.
+</p>
+<p>
+    Data mediation can also be treated as a concrete pattern of service iteration. For example, there is an explicit
+    mediation service responsible for the implementation of one or more data transformations. In this case, the mediator
+    has to respond to messages sent by the consumer, transform the message, and pass on to the service, as shown below.
+</p>
+<p align="center">
+    <img height="150" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-04.gif"     width="326" border="0" />
+</p>
+<h3>
+    <a id="Protocol_Mediation" name="Protocol_Mediation">Protocol Mediation on Service Gateways</a>
+</h3>
+<p>
+    Mediation of protocol on the other hand is well understood and supported explicitly in the model. As the protocol
+    information is specified as the binding for a service channel, it is possible to introduce either additional &lt;&lt;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_service_1EE4C96C.html" guid="{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}">Service</a>&gt;&gt; or &lt;&lt;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_gtway_4D9ADED2.html" guid="{B0BF4414-0382-4605-9EE9-82F0DEC7292C}">Service Gateway</a>&gt;&gt; model elements that alter the protocol
+    specification. For example, in the following composite structure diagram you see two partitions, one for Web-facing
+    services and one for internal services, and there is a service channel between the partitions with a binding of
+    "HTTP-SOAP", something that is common for Web-facing services.
+</p>
+<p align="center">
+    <img height="125" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-01.gif"     width="203" border="0" />
+</p>
+<p>
+    The issue is that, to support the required level of performance and other non-functional requirements, all
+    communication within the internal partition takes place over platform-specific protocols. The following diagram shows
+    how a service is connected to the service gateway "Port : ISvcTwo" using the Java RMI protocol, but how is it then that
+    the Web partition connects to the same gateway using HTTP-SOAP?
+</p>
+<p align="center">
+    <img height="132" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-02.gif"     width="348" border="0" />
+</p>
+<p>
+    The answer is that the service gateway itself can mediate the protocol by converting message structures and invocations
+    from one format to another. This is common functionality usually provided by middleware such as Object Request Brokers
+    (ORBs) or Message Brokers. In fact, it would be possible to generate from the model above to such middleware if
+    required, or to reify "Port : ISvcTwo" as a service in its own right which takes calls from the Web partition and
+    resends them to the enclosed services.
+</p>
+<p>
+    Again, it is possible for the mediation to be modeled explicitly as a service, rather than a service gateway, that
+    exposes the correct interface with the consumer-side binding and delegates implementation to the provider service with
+    a different binding.
+</p>
+<h3>
+    <a id="Invocation_Mediation" name="Invocation_Mediation">Invocation Mediation using Service Composition</a>
+</h3>
+<p>
+    As we described in the introduction, it is common to define a structure where one service is dependent on another
+    service for some operation.However, the actual service which will be called for any particular request is dependent on
+    details embedded in the request, who the requester is, and business rules applied using this information. The commonly
+    given example for this is a customer request, the receiving service may choose one of two implementations based on the
+    level of the customer. For example, customers who are known to spend more money might get preferential treatment.
+</p>
+<p align="center">
+    <img height="109" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-03.gif"     width="157" border="0" />
+</p>
+<p>
+    As we described earlier, it is important in this kind of mediation to try to externalize the rules used to choose
+    between one or more providers of the actual operation implementation. In the diagram above, we show this as a rule
+    component attached to the mediating service. Obviously it is possible to build the solution as a set of services where
+    the mediator, rules, and all implementers are separate services. This can be seen below.
+</p>
+<p align="center">
+    <img height="245" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-05.gif"     width="285" border="0" />
+</p>
+<p>
+    As you can see, the mediation component owns not only its realized service specification, but also a service
+    specification required to be implemented by all the services it mediates. This allows us to define both the composite
+    structure of the service (shown above) and the dynamic behavior shown below. Note that in the structure above, the part
+    representing the mediated services is denoted by the required interface and shown with an unbounded multiplicity.
+</p>
+<p align="center">
+    <img height="189" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/resources/soa_svce_mediation-06.gif"     width="405" border="0" />
+</p>
+<p>
+    Again, it is possible that this kind of content-based or rule-based routing of messages can be accomplished by the
+    middleware platform chosen as part of the solution architecture.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

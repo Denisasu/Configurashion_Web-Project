@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Сборка модулей J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="assembling_j2ee_modules" name="uma.name">
+<meta content="Сборка модулей J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.7932077950837037E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.7932077950837037E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Сборка модулей J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом разделе рассматривается сборка модулей J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/integrate_subsystem_E8F878D6.html" guid="{58FF0476-120F-411A-AD8C-16573032BE91}">Интегрирование подсистемы</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Введение
+</h3>
+<p>
+    Сборка <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">модуля
+    J2EE</a> приводит к созданию следующих&nbsp;<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">элементов реализации</a>:
+</p>
+<ul>
+    <li>
+        Архив J2EE (файлы WAR, EJB-JAR и JAR) и его
+    </li>
+    <li>
+        Файлы описания (файлы XML), описывающие содержимое архива и предполагаемый способ функционирования его компонентов
+        в контейнере развертывания
+    </li>
+</ul>
+<p>
+    Дополнительная информация о модулях J2EE приведен в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">Указания для рабочего продукта: модуль J2EE</a>.
+</p>
+<h3>
+    <a id="Reusable_Components" name="Defining_the_Archive"></a>Определение архива
+</h3>
+<p>
+    На этом шаге провайдер компонентов приложения идентифицирует компоненты, подлежащие упаковке в модуль.
+</p>
+<p>
+    Для разных целей могут создаваться разные архивы. Например, отдельные архивы могут существовать для тестирования,
+    отладки или доставки в различные "рабочие" конфигурации развертывания. Архивы тестирования будут содержать классы
+    тестирования и классы, скомпонованные с флагами отладки, в то время как рабочие архивы не будут содержать классы
+    тестирования и не будут компоноваться с флагами отладки. Предполагаемый контекст собираемого архива влияет на
+    настраиваемое рабочее пространство сборки.
+</p>
+<h3>
+    Определение файлов описания
+</h3>
+<p>
+    Ключевой этап в сборке модуля J2EE - определение файла описания. Большая часть необходимой информации должна была быть
+    собрана во время проектирования каждого компонента, поэтому определение файла описания в основном заключается в
+    согласовании результатов проектирования. В средствах автоматизированного проектирования могут быть предусмотрены
+    инструменты создания файла описания.
+</p>
+<p>
+    Каждый архив содержит стандартный файл описания J2EE; кроме того, он может содержать файлы описания, поставляемые
+    конкретными вендорами. Стандартные файлы описания, ejb-jar.xml для EJB-JAR и web.xml для WAR, содержат разделы, которые
+    необходимо заполнить при тестировании и прочих "нерабочих" типах развертывания, а также раздел, который будет
+    подготовлен окончательным ассемблером приложений для рабочего развертывания.
+</p>
+<p>
+    Каждый файл описания содержит информацию, предназначенную для провайдеров компонентов приложения, а также ассемблеров
+    приложения. Например, файл ejb-jar.xml включает три основных раздела (применительно к обсуждаемой теме): <span     style="FONT-FAMILY: monospace">&lt;enterprise-beans&gt;...</span><span     style="FONT-FAMILY: monospace">&lt;/enterprise-beans&gt;, &lt;relationships&gt;...&lt;/relationships&gt;</span> и <span     style="FONT-FAMILY: monospace">&lt;assembly-descriptor&gt;...</span><span     style="FONT-FAMILY: monospace">&lt;/assembly-descriptor&gt;</span>. Провайдер компонентов&nbsp;приложения определяет
+    свойства объектов EJB, например поля CMP, в разделе <span     style="FONT-FAMILY: monospace">&lt;enterprise-beans&gt;...</span><span     style="FONT-FAMILY: monospace">&lt;/enterprise-beans&gt;</span>. Провайдер компонентов приложения также определяет
+    необязательные взаимосвязи между объектами EJB в разделе <span     style="FONT-FAMILY: monospace">&lt;relationships&gt;...&lt;/relationships&gt;</span>&nbsp;. В разделе <span     style="FONT-FAMILY: monospace">&lt;assembly-descriptor&gt;...</span><span     style="FONT-FAMILY: monospace">&lt;/assembly-descriptor&gt;</span>&nbsp; определяются транзакции, роли защиты, права
+    доступа методов и т.п. Обычно этот раздел используется только ассемблером приложения. Ассемблер может изменить
+    содержимое двух других разделов, но это встречается нечасто. Ситуация с архивами WAR аналогична. Дополнительная
+    информация о сборке приложений приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_applications_38E5D5D5.html" guid="3.347498143656868E-305">Указания: сборка приложений J2EE</a>.
+</p>
+<p>
+    Если во время проектирования вы определили отображения между таблицами баз данных в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">модели
+    данных</a> и сущностными объектами EJB постоянного хранения, управляемого контейнером (CMP), то эти отображения должны
+    быть отражены в директивах отображения в дескрипторах, поставляемых конкретными вендорами (директивы отображения не
+    входят в стандартный дескриптор EJB). Дополнительная информация об отображении сущностных объектов EJB CMP в таблицы
+    баз данных приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_entity_beans_7CD45D28.html" guid="5.953653009453999E-307">Технология: проектирование сущностных объектов EJB</a>.
+</p>
+<p>
+    Если несколько компонентов упаковываются в один и тот же архив (см. <a href="#Defining_the_Archive">Этап: определение
+    архива</a>), то провайдер компонентов приложений должен интегрировать содержимое их файлов описания. Например, при
+    объединении объектов EJB в один EJB-JAR провайдер компонентов приложения должен согласовать информацию в файлах
+    описания, например роли защиты и перекрестные ссылки.
+</p>
+<h3>
+    Проверка архива
+</h3>
+<p>
+    Настоятельно рекомендуется проверять содержимое архива перед началом развертывания, поскольку скрытые ошибки, особенно
+    в серверной части приложения, могут приводить к сообщениям о недоступности или отсутствии компонентов. Например, для
+    компонентов, упакованных в архив, не допускается совпадение имен JNDI.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

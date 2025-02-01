@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту: Performing Use-Case Analysis Using Rational Software Development Platform</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="performing_use-case_analysis_using_rsa" name="uma.name">
+<meta content="Performing Use-Case Analysis Using Rational Software Development Platform" name="uma.presentationName">
+<meta name="element_type" content="tool_mentor">
+<meta content="" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{0505E61B-4D9C-455D-AB61-854EE8F69094}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту: Performing Use-Case Analysis Using Rational Software Development Platform</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This tool mentor describes how to perform use case analysis using the SDP modeling environment.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Overview
+</h3>
+<p>
+    This tool mentor assumes that a Design Model and Use-Case Model have been created in accordance with the&nbsp;<a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>. It also assumes that the Use-Case Model has been
+    populated with actors and use cases by following <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">Find
+    Actors and Use Cases</a>.
+</p>
+<p>
+    In this tool mentor, the following steps are performed for each use case in the current iteration:
+</p>
+<ul>
+    <li>
+        <a href="#Create Use-Case Realization">Create the Use-Case Realization</a>
+    </li>
+    <li>
+        <a href="#Supplement the use-case descriptions">Supplement the Use-Case Descriptions</a>
+    </li>
+    <li>
+        <a href="#Find Classes from Use-Case Behavior">Find Analysis Classes from Use-Case Behavior</a>
+    </li>
+    <li>
+        <a href="#Distribute behavior to analysis classes">Distribute Behavior to Analysis Classes</a>
+    </li>
+    <li>
+        <a href="#Describe responsibilities">Describe Responsibilities</a>
+    </li>
+    <li>
+        <a href="#Describe attributes and associations">Describe Attributes and Associations</a>
+    </li>
+</ul>
+<p>
+    The following steps are performed once per iteration:
+</p>
+<ul>
+    <li>
+        <a href="#Reconcile the Use-Case Realizations">Reconcile the Use-Case Realizations</a>
+    </li>
+    <li>
+        <a href="#Qualify Analysis Mechanisms">Qualify Analysis Mechanisms</a>
+    </li>
+    <li>
+        <a href="#Establish Traceability">Establish Traceability</a>
+    </li>
+    <li>
+        <a href="#Review the Results">Review the Results</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Additional Tool Information</a>
+</p>
+<h3>
+    <a id="Create Use-Case Realization" name="Create Use-Case Realization">Create the Use-Case Realization</a>
+</h3>
+<p>
+    For each use case to be analyzed:
+</p>
+<ol>
+    <li>
+        Navigate to the package in which the use-case realizations are to be created. See <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>.
+    </li>
+    <li>
+        Add a UML Collaboration to that package to represent the use case realization. Give it the same name as the use
+        case you are realizing. Optionally assign to it the UML Keyword "Use Case Realization".
+    </li>
+    <li>
+        In the package where you created the use case realization, create a free form diagram. Drag the use case
+        realization onto it. Now drag the use case itself (from the use case model) onto the diagram. Draw a realization
+        relationship from the use case realization to the use case. At this point, the traceability semantics have been
+        established. You may now discard the free-form diagram if you wish. From this point forward you will be able to use
+        Topic Diagrams and Traceability Analysis features to examine the derivation and refinement relationships within
+        your models.
+    </li>
+</ol>
+<h3>
+    <a id="Supplement the use-case descriptions" name="Supplement the use-case descriptions">Supplement the Use-Case
+    Descriptions</a>
+</h3>
+<p>
+    If the use-case description needs to be supplemented with additional internal behavioral descriptions, this can be done
+    by adding to an existing use-case description created by following the steps outlined in <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/detail_a_use_case_D9BECBF4.html" guid="{536BC669-A8FB-426D-88FF-CBEA806A9066}">Detail a Use Case</a>. If the internal behavior of the system bears
+    little resemblance to its external behavior, a completely separate description may be warranted. In this case, attach a
+    separate use-case specification document (see <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">Artifact:
+    Use Case</a> for the template) to the collaboration , or if an external (linked) document is not desired and the
+    description can be concise, capture it in the model documentation of the collaboration.&nbsp; See <img height="16"     alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Linking Model Elements to External
+    Files</i>.
+</p>
+<h3>
+    <a id="Find Classes from Use-Case Behavior" name="Find Classes from Use-Case Behavior">Find Analysis Classes from
+    Use-Case Behavior</a>
+</h3>
+<ol>
+    <li>
+        Navigate to the package that will contain the analysis classes. See <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>.
+    </li>
+    <li>
+        Create one or more class diagrams to capture the analysis classes. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adding Class Diagrams to Model Elements</i>.
+    </li>
+    <li>
+        Add the analysis classes. See <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Adding Class Diagrams to Model Elements</i>.
+    </li>
+    <li>
+        Assign analysis class stereotypes as appropriate. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Applying Stereotypes to Model Elements</i>.
+    </li>
+    <li>
+        Add a brief description to each class. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documenting Model Elements</i>.
+    </li>
+    <li>
+        Optionally associate a document with each class. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Linking Model Elements to External Files</i>.
+    </li>
+</ol>
+<p>
+    For more information, refer to the <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Modeling Static Structure with Class Diagrams</i> topic in the online Help.
+</p>
+<h3>
+    <a id="Distribute behavior to analysis classes" name="Distribute behavior to analysis classes">Distribute Behavior to
+    Analysis Classes</a>
+</h3>
+<ol>
+    <li>
+        Navigate to the package in which the analysis-level use-case realization (a UML Collaboration) was created.
+    </li>
+    <li>
+        For each named sub-flow (scenario) of the use case, select the use-case realization (i.e. the Collaboration) and
+        add a Sequence Diagram to it. This will also result in a UML Interaction being added to the Collaboration. Name
+        both the Interaction and the Sequence Diagram to match the name you assigned to the use case flow in the use case
+        model. See <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Creating
+        UML Sequence Diagrams.</i>
+    </li>
+    <li>
+        In the model documentation for the Interaction, type a brief description of the scenario that the sequence diagram
+        depicts. Also copy and paste this description to the model documentation of the sequence diagram itself. See <img         height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documenting Model
+        Elements</i>.
+    </li>
+    <li>
+        Drag and drop actors (from the use case model) and analysis classes onto the diagram to create objects for
+        interaction. Or as needed, create new analysis classes as participants in the interaction. See <img height="16"         alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Sequence Diagrams</i>.
+    </li>
+    <li>
+        Add messages between the objects. Semantically speaking, these messages are instance specifications of operations
+        so you will map them to existing operations or will create new operations as needed. See <img height="16"         alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Sequence Diagrams</i>.
+    </li>
+    <li>
+        Describe each message (the element of the Interaction) in its model documentation field. See <img height="16"         alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documenting Model Elements</i>.
+    </li>
+    <li>
+        To describe how the object behaves when it receives the message, assign an operation to the message. (If the
+        operation does not exist, add one to the class as described under <a href="#Describe responsibilities">Describe
+        Responsibilities</a> below, and then assign the operation to the message.) Describe each operation (the element of
+        the Analysis Class) in its model documentation field.
+    </li>
+    <li>
+        Define the signatures of any newly created operations.
+    </li>
+</ol>
+<p>
+    For more information, refer to the following topics in the online Help:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modeling Static
+        Structure with Class Diagrams</i>
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Sequence
+        Diagrams</i>
+    </li>
+</ul>
+<h3>
+    <a id="Describe responsibilities" name="Describe responsibilities">Describe Responsibilities</a>
+</h3>
+<ol>
+    <li>
+        Describe responsibilities of the class by adding operations. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Managing Attributes and Operations in Classifiers</i>.
+    </li>
+    <li>
+        Add a description to each operation. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documenting Model Elements</i>.
+    </li>
+</ol>
+<h3>
+    <a id="Describe attributes and associations" name="Describe attributes and associations">Describe Attributes and
+    Associations</a>
+</h3>
+<p>
+    Use the following steps below to describe attributes and associations.
+</p>
+<h4>
+    <a id="Define Attributes" name="Define Attributes">Define Attributes</a>
+</h4>
+<p>
+    The model documentation field of each attribute should describe what information is to be stored in the attribute. This
+    can be optional when the nature of the information can be made obvious by providing a precise descriptive name for the
+    attribute. Specify multiplicity on each attribute.
+</p>
+<p>
+    See the <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adding
+    Attributes to Classifiers in Diagrams</i> topic in the online Help.<br />
+</p>
+<h4>
+    <a id="Establish associations between analysis classes" name="Establish associations between analysis classes">Establish Associations Between Analysis Classes</a>
+</h4>
+<ol>
+    <li>
+        Navigate to each use-case realization, and add a class diagram to show the participants in the use-case
+        realization; optionally, you can name it Participants. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adding Class Diagrams to Model Elements</i>.
+    </li>
+    <li>
+        Populate the diagram with all the classes that participate in the realization. Discover which classes these are, by
+        examining the lifelines in the sequence diagrams you created previously.
+    </li>
+    <li>
+        With the classes placed on the diagram, show any existing associations among them - see <img height="16"         alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Relationships</i>.
+    </li>
+    <li>
+        Add new association relationships between classes as appropriate. Examination of the sequence diagrams of the use
+        case realization will reveal which classes talk to each other, and what types are passed among them as message
+        parameters. This information will suggest what associations should exist, and in some cases will suggest other (new
+        or existing) classes that should be added to the Participants diagram.
+    </li>
+    <li>
+        Specify multiplicity on each association end. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Setting the&nbsp;Multiplicity Property</i>.
+    </li>
+    <li>
+        Specify navigability on each association end. Where multiplicity is greater than 1, and you anticipate that a
+        specialized type of container class will be used to hold the collection of source class instances, make a note of
+        it either in the attribute's model documentation field or in a note on the Participants diagram. See <img         height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Directed Association
+        Relationships</i>.
+    </li>
+</ol>
+<h4>
+    <a id="Describe event dependencies between analysis classes" name="Describe event dependencies between analysis classes">Describe Event Dependencies Between Analysis Classes</a>
+</h4>
+<p>
+    Give a name or stereotype the associations to indicate event dependencies. See <img height="16" alt="help book icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Relationships</i> and <img height="16" alt="help book icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Applying Stereotypes to Model Elements</i>.
+</p>
+<h3>
+    <a id="Reconcile the Use-Case Realizations" name="Reconcile the Use-Case Realizations">Reconcile the Use-Case
+    Realizations</a>
+</h3>
+<p>
+    Examine the analysis classes and their associations. Identify and resolve inconsistencies, and remove any duplicates.
+</p>
+<h3>
+    <a id="Qualify Analysis Mechanisms" name="Qualify Analysis Mechanisms">Qualify Analysis Mechanisms</a>
+</h3>
+<p>
+    The analysis mechanisms used by a class and their associated characteristic do not need to be captured in a formal way.
+    A note attached to a diagram or an extension to the description of the class (see <img height="16" alt="help book icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documenting Model Elements</i> and <img height="16"     alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adding Notes to Shapes</i>) is
+    sufficient to convey the information.
+</p>
+<h3>
+    <a id="Establish Traceability" name="Establish Traceability">Establish Traceability</a>
+</h3>
+<p>
+    Add traceability dependencies between the Analysis/Design-Model elements and other models, as specified in project
+    guidelines. For example, there may be a separate business model, conceptual data model, or model of user interface
+    screens that you wish to trace analysis classes to. To do this:
+</p>
+<ol>
+    <li>
+        Create a diagram for Traceability.
+    </li>
+    <li>
+        Drag and drop elements to be traced onto the diagram.
+    </li>
+    <li>
+        Add the traceability dependencies (abstraction dependencies optionally stereotyped &lt;&lt;trace&gt;&gt;). See <img         height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Abstraction
+        Relationships</i>
+    </li>
+    <li>
+        Generate a traceability report: model elements that have trace relationships, including implicit relationships, to
+        and from implementations are displayed in the Model Report view. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Traceability Relationships</i>
+    </li>
+</ol>
+<h3>
+    <a id="Review the Results" name="Review the Results">Review the Results</a>
+</h3>
+<p>
+    It may be helpful to publish any models to html format. Also note that diagrams can be copied to Microsoft Word and
+    other programs.
+</p>
+<p>
+    For more information, refer to <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Publishing Models</i> and to the <img height="16" alt="help book icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Publishing a Model to Web</i>&nbsp;tutorial.
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Additional Tool Information</a>
+</h3>
+<p>
+    Tutorials:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Introduction to
+        Modeling Perspective</i>&nbsp;
+    </li>
+</ul>
+<p>
+    Samples:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>UML Models - Simple
+        UML Model</i>&nbsp;
+    </li>
+</ul><br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Дополнительные сведения</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Руководства по инструментам</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/performing_use-case_analysis_using_rsa_ext_7C05A1BB.html" guid="_VoY0QK4LEdqFg48R_ivTjA">Performing Use-Case Analysis Using Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/performing_use-case_analysis_using_rsm_97705F31.html" guid="_FXX9oMTlEdqXoNSl7ytDxQ">Performing Use-Case Analysis Using Rational Software Modeler</a>
+</li>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/performing_use-case_analysis_using_rsd_4917F92.html" guid="_TAoH0K4LEdqFg48R_ivTjA">Performing Use-Case Analysis Using Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

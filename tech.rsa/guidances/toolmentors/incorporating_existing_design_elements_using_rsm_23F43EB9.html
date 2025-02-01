@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту: Incorporating Existing Design Elements Using Rational Software Modeler</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="incorporating_existing_design_elements_using_rsm" name="uma.name">
+<meta content="Incorporating Existing Design Elements Using Rational Software Modeler" name="uma.presentationName">
+<meta content="Tool:rsa_rational_software_modeler:Rational Software Modeler" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Software Modeler" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_tOn8UMThEdqXoNSl7ytDxQ", "_u5yWQMTkEdqXoNSl7ytDxQ"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_tOn8UMThEdqXoNSl7ytDxQ", "_u5yWQMTkEdqXoNSl7ytDxQ"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_tOn8UMThEdqXoNSl7ytDxQ", "_u5yWQMTkEdqXoNSl7ytDxQ"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_u5yWQMTkEdqXoNSl7ytDxQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту: Incorporating Existing Design Elements Using Rational Software Modeler</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This tool mentor describes how to incorporate exisiting design elements using the RSM modeling environment.</td>
+</tr>
+<tr>
+<td>Инструмент: <a href="./../../../tech.rsa/tools/rsa_rational_software_modeler_E16B079.html" guid="_tOn8UMThEdqXoNSl7ytDxQ">Rational Software Modeler</a> 
+<br>Расширяет: <a href="./../../../tech.rsa/guidances/toolmentors/incorporating_existing_design_elements_using_rsa_79ECE8E7.html" guid="{292382F9-F514-4B15-BD97-8D43953CB551}">Incorporating Existing Design Elements Using Rational Software Development Platform</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">Объединение существующих структурных элементов</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Overview
+</h3>
+<p>
+    The following steps are performed in this tool mentor:
+</p>
+<ul>
+    <li>
+        <a href="#Identify Reuse Opportunities">Identify Reuse Opportunities</a>
+    </li>
+    <li>
+        <a href="#Reverse Engineer Components and Databases">Reverse-Engineer Components and Databases</a>
+    </li>
+    <li>
+        <a href="#Update the Organization of the Design Model">Update the Organization of the Design Model</a>
+    </li>
+    <li>
+        <a href="#Update the Logical View">Update the Logical View</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Additional Tool Information</a>
+</p>
+<h3>
+    <a id="Identify Reuse Opportunities" name="Identify Reuse Opportunities">Identify Reuse Opportunities</a>
+</h3>
+<p>
+    Look for existing subsystems or components that offer similar interfaces. Some assets may have been packaged for
+    intentional reuse using the Reusable Asset Specification (RAS). If created&nbsp;within the tool, such assets can be
+    browsed and loaded. See <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Packaging Assets for Reuse</i> in the online Help.
+</p>
+<h3>
+    <a id="Reverse Engineer Components and Databases" name="Reverse Engineer Components and Databases">Reverse-Engineer
+    Components and Databases</a>
+</h3>
+<p>
+    Note: some of the tool capabilities mentioned in this section are not supported in RSM.
+</p>
+<p>
+    For assets that do not include a model, it may be useful to reverse engineer a model to better understand the design.
+    Some of these components could be discovered using the code visualization and the pattern/anti-pattern detection
+    capabilities which are part of the support for Architectural Analysis. If the asset proves to be usable, the diagrams
+    will be the base for building or generating new model elements and the asset might qualify as a RAS candidate. See the
+    <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/guidelines/architectural_discovery,_analysis_and_control_2153BFC.html" guid="2.843707701997842E-305">Architectural Discovery, Analysis and Control</a> guidelines.
+</p>
+<p>
+    For an asset that your company controls, there may be opportunities to make minor changes to a candidate interface
+    which will improve its conformance to the desired interface. For assets that your company does not control, you can
+    create adapter or bridge design elements that map your desired interface onto interfaces provided by the assets reused.
+    See <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identify Design Elements</a> for guidelines on creating and modifying
+    interfaces and classes.
+</p>
+<h3>
+    <a id="Update the Organization of the Design Model" name="Update the Organization of the Design Model">Update the
+    Organization of the Design Model</a>
+</h3>
+<p>
+    Reorganize the design elements into packages as necessary.&nbsp; Refer to the white paper: <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a> for more guidance on organizing the design model.
+</p>
+<h3>
+    <a id="Update the Logical View" name="Update the Logical View">Update the Logical View</a>
+</h3>
+<p>
+    If there is a separate logical view, it needs to be maintained. See the white paper <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>.
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Additional Tool Information</a>
+</h3>
+<p>
+    Tutorials:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Apply
+        a&nbsp;Pattern</i>
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />Create
+        <i>a&nbsp;Pattern</i>
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" />Import<i>&nbsp;a&nbsp;RAS</i> Asset
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" />Export<i>&nbsp;a&nbsp;RAS</i> Asset
+    </li>
+</ul>
+<p>
+    Samples:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>RAS Assets - RAS
+        Asset to Import/Export</i>
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Patterns - Simple
+        UML Model</i>&nbsp;
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Service Component Patterns</title>
+<meta content="Guideline" name="uma.type">
+<meta content="service_component_patterns" name="uma.name">
+<meta content="Service Component Patterns" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i99p8OBoEe-aS_x8ARA3yA", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i_Kj0OBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_jC070OBoEe-aS_x8ARA3yA", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jFRy4OBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_jjZSQOBoEe-aS_x8ARA3yA", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_kATQsOBoEe-aS_x8ARA3yA", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{447385A0-E565-4C87-A082-402AF21CA088}", "_kS-8IOBoEe-aS_x8ARA3yA", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lB0YEOBoEe-aS_x8ARA3yA", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lCgUkOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_lEvJMOBoEe-aS_x8ARA3yA", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lGIQUOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_lMCrEOBoEe-aS_x8ARA3yA", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lc2uQOBoEe-aS_x8ARA3yA", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_ldiqwOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lfZr8OBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{447385A0-E565-4C87-A082-402AF21CA088}", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_OjBb4Ew_EduGSMz-5zscXg", "_lmOFoOBoEe-aS_x8ARA3yA", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{447385A0-E565-4C87-A082-402AF21CA088}", "_lscpcOBoEe-aS_x8ARA3yA", "_p_6wsExREdumvs0NuKFubw"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_d5dewE7OEduvcvbnLvkXhA", "_p_6wsExREdumvs0NuKFubw"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_p_6wsExREdumvs0NuKFubw"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Service Component Patterns</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline demonstrates a set of patterns that can be used in the development of Service Components in the realization of services. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_component_specification_6BB8DC55.html" guid="_OjBb4Ew_EduGSMz-5zscXg">Component Specification (SOA)</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_component_E259F3CC.html" guid="{447385A0-E565-4C87-A082-402AF21CA088}">Service Component</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Introduction
+</h3>
+<p>
+    In decomposing a service component into its constituent functional and technical components, we have delegated the
+    functionality provided by the service component to fulfill the subsystem’s functional responsibilities. Functional
+    components supply the business functionality required, while technical components provide generic functionality such as
+    authentication, error handling, auditing, logging, etc which are operational and non-functional oriented.
+</p>
+<p>
+    A service model is a design-time artifact. As such, it does not deal directly with the implementation of services.
+    However, the actual implementation of a service or set of services is strictly performed by a service component's
+    realization of a service specification. The service specification provides the implementation contract; the technology
+    or techniques used to implement the service are irrelevant as long as the contract is fulfilled. In the concept <a class="elementlinkwithusertext" href="./../../../soa.rup_soma/guidances/concepts/service-oriented_architecture_8328ABAD.html" guid="8.613638237693525E-307"><em>Service-Oriented Architecture</em></a>, we introduced the following picture
+    demonstrating the relationship between the services we identify and the components and objects that provide the
+    implementation of these services.
+</p>
+<p align="center">
+    &nbsp;<img height="241" alt="Diagram described in associated text" src="./../../../soa.rup_soma/guidances/concepts/resources/co_soa_soa-01.gif"     width="241" />
+</p>
+<p>
+    In this way, we can see how the RUP <i><a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Design
+    Model</a></i> can be used to capture the design of the component and object layers, with implementation models and
+    artifacts capturing details of the object layer and associated implementation and deployment artifacts. Important
+    aspects of the relationship between the <i><a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Service Model</a></i> and the component design model are that the set of
+    service specifications represent contracts that must be fulfilled, operations identified on specifications must be
+    implemented as-is, and that consumers of services are using this same model to understand the interface and behavior of
+    the services they expect to use. As such, there is a direct and in general a one-to-one relationship between the
+    service specification and some implementation artifact that acts as the initial implementation entry point for the
+    service.
+</p>
+<p>
+    For example, consider the following diagram of a service provider showing the details of model elements used in its
+    definition.
+</p>
+<p align="center">
+    <img height="139" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-02.gif"     width="246" border="0" />
+</p>
+<p>
+    The key to the use of the service component is that it should be directly traceable to the service model. The easiest
+    way to accomplish this is to make use of the fact that the service specification element is a UML Interface that can be
+    realized by the service component, thus ensuring its conformance to the structural specification. In this way we would
+    get the following result:
+</p>
+<p align="center">
+    <img height="74" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-03.gif"     width="406" border="0" />
+</p>
+<p>
+    It is now the responsibility of the component implementer to define a set of components and classes that provide the
+    behavior of the resulting component.
+</p>
+<h3>
+    Kinds of Service Components
+</h3>
+<h4>
+    Functional Components
+</h4>
+<p>
+    The composition of these functional components into a larger-grained service component is not merely structural; it
+    also involves the definition of flow, that is, the collaboration of the functional components to provide functionality
+    to support the business processes. As we have seen earlier, the functionality of these business-related components is
+    enabled through the services (implemented by the component’s finer level object or legacy system structure) defined.
+</p>
+<p>
+    It is important to note that this step includes traditional OOAD activities. We have a focused and well-partitioned
+    scope to direct the object design. In traditional object-oriented design, we tend to create larger more dependent
+    object graphs, whereas if subsystem analysis follows the identification of functional areas within the business, we
+    have a very clearly defined scope to focus on and direct our design energies towards. These results in a set of more
+    loosely coupled object models (class diagrams and sequence diagrams triggered by system use cases).
+</p>
+<h4>
+    Technical components
+</h4>
+<p class="MsoNormal" style="MARGIN: 6pt 0in">
+    <span style="mso-bidi-font-style: italic">The composition of technical components into larger-grained service
+    components occurs in the same fashion as functional components.</span> <span     style="mso-bidi-font-style: italic">Technical components such as authentication, logging and reporting may be used
+    across business processes. <span style="mso-spacerun: yes">&nbsp;</span>These common components are needed to form the
+    infrastructure to support the functional components. <span style="mso-spacerun: yes">&nbsp;</span>One of the key
+    variations across business processes is due to business rules as shown below&nbsp;in figure "Enterprise Component
+    Pattern".</span> <span style="mso-bidi-font-style: italic">These variations are typically captured during
+    Variation-Oriented Design.</span>
+</p>
+<h3>
+    Service Component Patterns
+</h3>
+<p>
+    Having said that the service component simply realizes the service specification does not provide the implementer with
+    much assistance in going from a coarse-grained service definition to a set of fine-grained implementation classes and
+    artifacts required to provide the behavior of the service. In this regard, it is common to rely on patterns that
+    provide structure to the resulting service component, either as a starting framework or specific patterns to address
+    particular policy requirements.
+</p>
+<p>
+    Pattern choice, driven by NFR, architecture [more]
+</p>
+<p>
+    Note that the additional stereotypes introduced here are described in the <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_component_E259F3CC.html" guid="{447385A0-E565-4C87-A082-402AF21CA088}">Artifact: Service Component</a>.
+</p>
+<h4>
+    Base Service Component Pattern
+</h4>
+<p>
+    In defining the initial structure of a service, the following pattern is provided as a starting point for customization
+    and completion.
+</p>
+<p align="center">
+    <img height="106" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-04.gif"     width="578" border="0" />
+</p>
+<p>
+    The elements of the pattern are:
+</p>
+<ul>
+    <li>
+        <b>Facade Component</b>; the facade realizes the same interface as the service component itself and provides basic
+        capabilities for message validation before passing the request on to the per-operation components for execution. In
+        this case we stereotype the component as &lt;&lt;facade&gt;&gt; for clarification.
+    </li>
+    <li>
+        <b>Per-Operation Component</b>; given the granularity of services, it is useful in most cases to have a separate
+        component/class for the implementation of each operation provided by the service.
+    </li>
+</ul>
+<p>
+    The following demonstrates the composite structure view of this pattern. In this case, the facade is delegated to by
+    the service component itself. As such, consumers calling operations on the service component are actually serviced by
+    the facade component. Note that it would be possible to use UML 2.0 ports as well to expose the interfaces and make
+    this delegation explicit using connectors.
+</p>
+<p align="center">
+    <img height="119" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-05.gif"     width="274" border="0" />
+</p>
+<h4>
+    Single Operation Service Component Pattern
+</h4>
+<p>
+    In some cases where services are identified in the Service Model with multiple operations, it is more appropriate to
+    implement the operations individually as stand-alone services separating the logical service and physical service
+    views. Such a pattern has advantages in terms of flexibility of sourcing, high availability, versioning, and evolution
+    but does lose the notion of an interface to a service as a set of related operations.
+</p>
+<p>
+    Modeling service components according to this pattern has a single &lt;&lt;Service Component&gt;&gt; realizing a single
+    interface with a single operation, all named according to common conventions and demonstrated below.
+</p>
+<p align="center">
+    <img height="113" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-12.gif"     width="394" border="0" />
+</p>
+<p>
+    In this case, as we mentioned, there is no direct realization of the original service specification by any one element
+    in the pattern above. Therefore, it seems worthwhile to introduce an element in the model that can provide traceability
+    back to the service specification. In the example below, we have introduced a component, stereotyped
+    &lt;&lt;subsystem&gt;&gt; that is noted as implementing the service specification and also owning the elements
+    described above.
+</p>
+<p align="center">
+    <img height="49" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-11.gif"     width="326" border="0" />
+</p>
+<p>
+    This pattern also does not introduce the &lt;&lt;facade&gt;&gt; component because consumers of the services are
+    responsible for identifying the services they use.
+</p>
+<h4>
+    Mediated Operation Pattern
+</h4>
+<p>
+    Where there is the possibility that a service consumer's request may be routed to one of a selection of operation
+    components for execution, it is possible to extend the pattern with a mediator to route these messages, as shown below.
+    Note we stereotype the component/class as &lt;&lt;mediator&gt;&gt; for clarification. The exact mechanism used for
+    mediation is undefined. A static set of implementations could be known ahead of time, a registry of some sort could
+    also be used to map to the particular implementation based on the consumer, content of the request message, and so
+    forth. This pattern is not intended for use with the single-operation pattern shown above.
+</p>
+<p align="center">
+    <img height="144" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-06.gif"     width="390" border="0" />
+</p>
+<p>
+    This also affects the composite structure view of the service component; as shown below, the mediator connection is
+    shown from the facade which uses it to direct calls to the operation components.
+</p>
+<p align="center">
+    <img height="177" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-07.gif"     width="285" border="0" />
+</p>
+<p>
+    If a registry, external to the mediator itself, is used, it is not necessarily possible to show static usage
+    dependencies from the mediator to the operation components or connectors between parts in the composite structure
+    diagram. So, how can we model a dependency from the mediator to the mediated operation components? In the following
+    diagram, we have introduced an interface to be implemented by each operation component. We can then model the usage
+    from the mediator to the interface, as shown below.
+</p>
+<p align="center">
+    <img height="74" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-09.gif"     width="550" border="0" />
+</p>
+<p>
+    We also change the relationship in the composite structure diagram, including a new part typed by the interface, and
+    denote the multiplicity between the mediator and operation components on the connector, as shown below.
+</p>
+<p align="center">
+    <img height="176" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-10.gif"     width="282" border="0" />
+</p>
+<h4>
+    Data Access Components
+</h4>
+<p>
+    Additionally, where service operations share common data requirements, it may be useful to highlight the specific
+    components providing data management capabilities to the implementation. Note we stereotype the component/class as
+    &lt;&lt;data access&gt;&gt; for clarification.
+</p>
+<p align="center">
+    <img height="106" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/guidelines/./resources/soa_svce_components-08.gif"     width="534" border="0" />
+</p>
+<h3>
+    The Enterprise Component Pattern
+</h3>
+<p>
+    The Enterprise Component Pattern below shows the service component acting as a facade for the underlying functional and
+    technical components. Services are exposed on the edge of the service component at the component facade. Requests for
+    services on the facade are forwarded to a mediator which then routes the message to the appropriate functional or
+    technical component.
+</p>
+<p align="center">
+    <img height="347" alt="Diagram described in associated text" src="./../../../soa.rup_soma/guidances/guidelines/./resources/technique_fig57.gif" width="568" />
+</p>
+<p align="center">
+    <font size="-2"><strong>Enterprise Component Pattern</strong></font>
+</p>
+<p>
+    The dependencies and needs of the functional components to the technical components, for the Rent-a-car example, are
+    depicted below.
+</p>
+<p align="center">
+    <img height="388" alt="Diagram described in associated text" src="./../../../soa.rup_soma/guidances/guidelines/./resources/technique_fig58.gif" width="482" />
+</p>
+<p align="center">
+    <font size="-2"><strong><em>Rent-a-car</em> reservation service component using the enterprise component
+    pattern</strong></font>
+</p>
+<p>
+    The collection of subsystem component models is gathered into the functional component model which shows the reliance
+    of the functional components on the technical components, and the inter-relationships between the functional components
+    themselves. Leaf-level sub-processes that are assigned to the subsystem facade need to be specified as services the
+    subsystem will provide. These sub-processes are supported and implemented through a finer grained set of system use
+    cases encapsulated within the structure of the subsystem. The functional components are relied upon for the realization
+    of the use cases. In turn the functional components depend on the technical components and utilities for their
+    infrastructure needs.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

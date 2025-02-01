@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту: Identifying Design Elements Using Rational Software Modeler</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="identifying_design_elements_using_rsm" name="uma.name">
+<meta content="Identifying Design Elements Using Rational Software Modeler" name="uma.presentationName">
+<meta content="Tool:rsa_rational_software_modeler:Rational Software Modeler" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Software Modeler" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_tOn8UMThEdqXoNSl7ytDxQ", "_VbKm0MTkEdqXoNSl7ytDxQ"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_tOn8UMThEdqXoNSl7ytDxQ", "_VbKm0MTkEdqXoNSl7ytDxQ"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_tOn8UMThEdqXoNSl7ytDxQ", "_VbKm0MTkEdqXoNSl7ytDxQ"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_VbKm0MTkEdqXoNSl7ytDxQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту: Identifying Design Elements Using Rational Software Modeler</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This tool mentor describes how to identify design elements using the RSM modeling environment.</td>
+</tr>
+<tr>
+<td>Инструмент: <a href="./../../../tech.rsa/tools/rsa_rational_software_modeler_E16B079.html" guid="_tOn8UMThEdqXoNSl7ytDxQ">Rational Software Modeler</a> 
+<br>Расширяет: <a href="./../../../tech.rsa/guidances/toolmentors/identifying_design_elements_using_rsa_6663BD29.html" guid="{7BAF7101-8949-44C3-A3FA-B9CFBBDCFA63}">Identifying Design Elements Using Rational Software Development Platform</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Определение элементов проекта</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Overview
+</h3>
+<p>
+    In the tool mentor, the following steps are performed for the use cases to be designed in the current iteration:
+</p>
+<ul>
+    <li>
+        <a href="#Identify and Specify Events/Triggers">Identify Events/Triggers and Signals</a>
+    </li>
+    <li>
+        <a href="#Identify Classes, Active Classes and Subsystems/Components">Identify Classes, Active Classes
+        and Subsystems</a>
+    </li>
+    <li>
+        <a href="#Identify Interfaces">Identify Subsystem Interfaces</a> &nbsp;
+    </li>
+    <li>
+        <a href="#Identify Capsule Protocols">Identify Capsule Protocols</a> &nbsp;
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Additional Tool Information</a>
+</p>
+<p>
+    Architecturally significant design elements may be documented in a separate Logical View, that is maintained as design
+    elements are identified. The general recommendation is to use &lt;&lt;perspective&gt;&gt; packages. See <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a> for more information on this topic.
+</p>
+<h3>
+    <a id="Identify and Specify Events/Triggers" name="Identify and Specify Events/Triggers">Identify Events and
+    Signals</a>
+</h3>
+<p>
+    The characteristics of events, also called triggers in UML 2.0 should be captured as needed to drive the identification
+    of the design elements that handle them. This information can be captured informally, such as in a separate document,
+    rather than as part of a model.
+</p>
+<p>
+    Asynchronous communication events can be modeled as signals to express the data that they carry, or to express
+    relationships between signals, such as a generalization relationship. The following substeps describe how to model
+    signals:
+</p>
+<ol>
+    <li>
+        Create class diagrams as needed. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adding Class Diagrams to Model Elements</i>.
+    </li>
+    <li>
+        Add signals. See <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Creating and Modifying Class Diagrams</i>.
+    </li>
+    <li>
+        Add a brief description to each design element. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documenting Model Elements</i>.
+    </li>
+    <li>
+        Add generalization relationships between signals, if applicable. &nbsp;
+    </li>
+</ol>
+<p>
+    For more information about class diagrams, see <img height="16" alt="help book icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modeling Static Structure&nbsp;by&nbsp;Using&nbsp;Class
+    Diagrams</i>.
+</p>
+<h3>
+    <a id="Identify Classes, Active Classes and Subsystems/Components" name="Identify Classes, Active Classes and Subsystems/Components">Identify Classes, Active Classes and Subsystems</a>
+</h3>
+<p>
+    Design elements are generally created in the following three ways:
+</p>
+<ul>
+    <li>
+        Expanding a pattern
+    </li>
+    <li>
+        Modeling
+    </li>
+    <li>
+        Coding and reverse engineering&nbsp;
+    </li>
+</ul>
+<p>
+    These approaches are explained in the sections that follow.
+</p>
+<h4>
+    Expanding a Pattern
+</h4>
+<p>
+    A&nbsp;pattern is a special kind of transformation that is optimized for interactive, piece-wise elaboration, primarily
+    in a single meta-model and within the same level of abstraction, and often within the same model. For more information,
+    refer to <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Analysis Mechanisms</a>.
+</p>
+<p>
+    See <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Authoring
+    Patterns</i> and <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Applying Patterns</i> in the online Help.
+</p>
+<h4>
+    Modeling
+</h4>
+<p>
+    This tool supports a model-driven approach to software development (see <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Model
+    Driven Development and Model Driven Architecture</a> and <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Analysis
+    Mechanisms</a>), wherein you construct a set of models that eventually includes a design model and generate
+    implementation artifacts such as 3GL code, descriptors, etc. These are derived from the design model using
+    Transformations. In some cases the code-generating Transformations will take analysis classes as inputs, but primarily
+    they will be driven by design elements. For more information, see: <img height="16" alt="help book icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Applying Transformations.</i>
+</p>
+<p>
+    In a traditional development approach you will create class diagrams in the Design Model to capture design elements. If
+    you decide to maintain the analysis classes, then you may want to establish traceability by using "trace" dependencies
+    to the analysis classes.
+</p>
+<ol>
+    <li>
+        Create class diagrams as needed. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adding Class Diagrams to Model Elements</i> .
+    </li>
+    <li>
+        Add subsystems and classes. See <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Creating and Modifying Class Diagrams</i> .
+    </li>
+    <li>
+        Add a brief description to each design element. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documenting Model Elements</i> .
+    </li>
+    <li>
+        (optional) Add traceability to analysis classes by using "trace" dependencies from your design elements to the
+        analysis classes on which they were based.See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Abstraction Relationships in UML Modeling</i>.
+    </li>
+    <li>
+        Organize the design elements into subsystems and packages.&nbsp;Refer to the white paper <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>.
+    </li>
+</ol>
+<p>
+    For more information about class diagrams, see <img height="16" alt="help book icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Modeling Static Structure with Class Diagrams</i> .
+</p>
+<h4>
+    Coding and Reverse Engineering
+</h4>
+<p>
+    Note:&nbsp;some of&nbsp;the tool capabilites mentioned in this section are not supported in RSM.
+</p>
+<p>
+    A different approach is a "code first" approach: the code is the main driver either because already exists (for example
+    in a non-greenfield development cycle) or the team needs to tackle some specific project risks by coding a prototype to
+    validate a complex concept. As part of the support for Architecture Discovery and Recovery (see the <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/guidelines/architectural_discovery,_analysis_and_control_2153BFC.html" guid="2.843707701997842E-305">Architectural Discovery, Analysis and Control</a> guidelines), the tool's code
+    visualization capability can automatically populate topic diagrams, such as package structure, class internals,
+    inheritance trees, and collaborations. The goal of this task is not only to understand the existing code, but also to
+    extract a model of the application, which could be used in conjunction with other specific models to generate the new
+    version of the application, by using transformations.
+</p>
+<p>
+    Once you have generated or composed a UML diagram of existing code, you have these options for leveraging the code
+    depictions as part of your design model:
+</p>
+<ul>
+    <li>
+        Harvest a UML depiction of a code element into your design model, as a true semantic model element. This creates a
+        new UML element in the design model that has no connection to the code item that was harvested. It does however
+        have properties (for instance attributes and operations) that reflect the properties of the harvested code item.
+        Because it is a true UML semantic element, new code can be generated from it (in other words it has the same status
+        within the design model as any design element that was defined through the greenfield modeling process described
+        previously earlier.)
+    </li>
+    <li>
+        Place a visual reference to the code element into a diagram that resides within your design model. This reference
+        itself has no semantic meaning within the design model, and no new code will be generated from it. It is, as its
+        name implies, just a reference to the actual code element. However, you can draw relationships between the code
+        reference and the semantic design elements in the design model. Those relationships do have semantic meaning within
+        the design model and they do affect code generation.
+    </li>
+</ul>
+<p>
+    For more information, refer to <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Modeling Static Structure with Class Diagrams</i> in the online Help.
+</p>
+<h3>
+    <a id="Identify Interfaces" name="Identify Interfaces">Identify Subsystem Interfaces</a>
+</h3>
+<p>
+    The following steps apply to large-granularity subsystems:
+</p>
+<ol>
+    <li>
+        For each subsystem, identify a set of candidate interfaces. If you previously created analysis classes, and did
+        analysis-level use case realizations, you will now decide how those operations are to be grouped together and
+        exposed as the interfaces of particular components or services. Add interfaces to an existing component diagram, or
+        create new component diagrams as needed. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adding Interfaces to Modeling Diagrams</i>.
+    </li>
+    <li>
+        Add interface dependencies.&nbsp;
+    </li>
+    <li>
+        Map subsystems to interfaces by adding a realization relationship from the subsystem to the interface.
+    </li>
+    <li>
+        Document the interface, including required behavior. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documenting Model Elements</i> .
+    </li>
+    <li>
+        Add operations to the interface. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adding Operations to Classifiers in Diagrams</i> .
+    </li>
+    <li>
+        Add a description to each operation. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Documenting Model Elements</i> .
+    </li>
+    <li>
+        Add parameters to each operation. See <img height="16" alt="help book icon"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Adding Operations to Classifiers in Diagrams</i> .
+    </li>
+    <li>
+        Organize the interfaces into packages.&nbsp;
+    </li>
+</ol>
+<p>
+    In UML 2.0 subsystems are large components and could be represented as structured classes with ports and/or interfaces.
+    See the on-line help specific UML 2.0 topics.&nbsp;
+</p>
+<h3>
+    <a id="Identify Capsule Protocols" name="Identify Capsule Protocols">Identify Capsule Protocols</a>
+</h3>
+<p>
+    Capsule and protocol modeling are not supported.
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Additional Tool Information</a>
+</h3>
+<p>
+    Tutorials:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Apply
+        a&nbsp;Pattern</i>
+    </li>
+</ul>
+<p>
+    Samples:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Patterns - Simple
+        UML Model</i>&nbsp;
+    </li>
+</ul><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

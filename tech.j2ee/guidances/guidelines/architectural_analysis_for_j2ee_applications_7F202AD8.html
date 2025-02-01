@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Архитектурный анализ приложений J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="architectural_analysis_for_j2ee_applications" name="uma.name">
+<meta content="Архитектурный анализ приложений J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.041153751920514E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.041153751920514E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Архитектурный анализ приложений J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом разделе рассматриваются некоторые технологии J2EE, которые должен учитывать архитектор программного обеспечения. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">Архитектурный анализ</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    С помощью <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">архитектурного анализа</a> <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">архитектор программного обеспечения</a> определяет, как наилучшим образом
+    использовать технологии, представленные в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Java 2 Platform Enterprise Edition (J2EE) - Обзор</a>, чтобы удовлетворить функциональным
+    и нефункциональным требованиям системы. В этом разделе рассматриваются некоторые из этих технологий.
+</p>
+<h3>
+    <a id="J2EE_Deployment_Configurations" name="J2EE_Deployment_Configurations"></a>Конфигурации развертывания J2EE
+</h3>
+<p>
+    J2EE поддерживает несколько <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/j2ee_deployment_configurations_C0F819AF.html" guid="7.671163061311939E-306">конфигураций развертывания J2EE</a>. Выбор&nbsp;конкретной&nbsp;конфигурации
+    развертывания играет важную роль в архитектурном анализе, поскольку закладывает фундамент, на котором будет основана
+    начальная архитектура.
+</p>
+<p>
+    Выбор конфигурации развертывания J2EE определяет начальную <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_deployment_model_57DF1DF5.html" guid="{5981B6BE-2FD1-4984-AA94-2F7428439BA6}">модель развертывания</a>. Выбранная&nbsp;конфигурация развертывания J2EE
+    определяет конфигурацию физических узлов (т.е. компьютеров) и логических узлов (<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">контейнеров J2EE</a>). Именно&nbsp;на этом этапе вы решаете, будете ли вы применять
+    отдельный Web-сервер и EJB-сервер и будут ли ваши клиенты браузерами, использующими HTTP, или "толстыми"
+    приложениями-клиентами.
+</p>
+<p>
+    У каждой из этих конфигураций развертывания свои характеристики, поэтому выбор следует делать с учетом нескольких
+    факторов. В частности, при выборе конфигурации развертывания следует учесть обслуживаемость (как изолировать изменения
+    на одном уровне, чтобы они не влияли на другие уровни; насколько легко развернуть обновления?), производительность и
+    масштабируемость (насколько легко добавлять компьютерные ресурсы?), надежность (что произойдет в случае сбоя одного из
+    ресурсов?).
+</p>
+<p>
+    Выбор конфигурации развертывания влияет и на другие архитектурные решения относительно архитектурных механизмов,
+    которые необходимо определить, параллелизма приложений (см. <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Задача: описать архитектуру среды выполнения</a>) и распределения
+    приложений (см. <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">Задача: описать распределение</a>). &nbsp;
+</p>
+<h3>
+    <a id="J2EE_Mechanisms" name="J2EE_Mechanisms"></a>Механизмы J2EE
+</h3>
+<p>
+    в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Java 2 Platform Enterprise Edition (J2EE) - Обзор</a> описаны несколько механизмов,
+    поддерживающих разработку многоуровневых систем предприятия (постоянное хранение, межпроцессная связь, управление
+    транзакциями, защита и т.п.).&nbsp;Во время проведения архитектурного анализа архитектор программного обеспечения
+    определяет, что необходимо скомпоновать, в дополнение к тому, что будет предоставлено платформой J2EE.
+</p>
+<p>
+    Важный аспект проектирования распределенных приложений - эффективное управление состоянием приложения. Обзор некоторых
+    наиболее распространенных принципов и механизмов управления состоянием приложения J2EE, используемых во время
+    проектирования, приведен в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Указания: проектирование состояния приложений J2EE</a>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

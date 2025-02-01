@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту: Развертывание модулей и приложений J2EE с помощью Rational XDE Developer - Java Platform Edition</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="deploying_j2ee_mods_and_apps" name="uma.name">
+<meta content="Развертывание модулей и приложений J2EE с помощью Rational XDE Developer - Java Platform Edition" name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{709B15F1-BB9D-4379-920E-5A6E7DB36536}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{709B15F1-BB9D-4379-920E-5A6E7DB36536}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{709B15F1-BB9D-4379-920E-5A6E7DB36536}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{709B15F1-BB9D-4379-920E-5A6E7DB36536}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{709B15F1-BB9D-4379-920E-5A6E7DB36536}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту: Развертывание модулей и приложений J2EE с помощью Rational XDE Developer - Java Platform Edition</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этой памятке по инструменту описано развертывание автономных модулей J2EE и приложений J2EE в Rational XDE. </td>
+</tr>
+<tr>
+<td>Инструмент: <a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Назначение
+</h3>
+<p>
+    В этой памятке по инструменту описано развертывание автономных&nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">Модулей J2EE</a>s и <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">Приложений J2EE</a> с помощью Rational XDE. Процедура развертывания зависит от
+    приложения и среды и обычно требует применения инструментов вендора. В этой памятке по инструменту описаны способы
+    установки, настройки и запуска приложения с помощью Rational XDE. Дополнительная информация приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/deploying_j2ee_modules_and_applications_62A4A967.html" guid="5.3908533897796765E-306">Рекомендация: Развертывание модулей и приложений J2EE</a>.
+</p>
+<h4>
+    Обзор
+</h4>
+<p>
+    XDE предоставляет средства автоматической настройки модулей и приложений J2EE, которые подлежат развертыванию в
+    определенной среде.
+</p>
+<p>
+    В этой памятке по инструменту предполагается, что архивы и их модели развертывания, содержащие XDE, уже созданы, и что
+    архивы уже привязаны к узлам. Дополнительная информация приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/toolmentors/assembling_j2ee_mods_and_apps_729DC5B.html" guid="{3B38F989-686C-4AC9-91EE-981F90D75F0D}">Памятка по инструменту: Компоновка модулей и приложений J2EE с помощью
+    Rational XDE Developer - Java Platform Edition</a>.
+</p>
+<p>
+    В этой памятке по инструменту предусмотрены следующие шаги:
+</p>
+<ul>
+    <li>
+        <a href="#Deploying_the_J2EE_Application">Развертывание приложения J2EE</a>
+    </li>
+    <li>
+        <a href="#Configuring_the_J2EE_Application">Настройка приложения J2EE</a>
+    </li>
+    <li>
+        <a href="#Launching_the_J2EE_Application">Запуск приложения J2EE</a>
+    </li>
+</ul>
+<p>
+    Ссылки на разделы Web-справки Rational XDE&trade; помечены значком <img height="16" alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" />.
+</p>
+<h3>
+    Развертывание приложения J2EE
+</h3>
+<p style="COLOR: rgb(0,0,0)">
+    Некоторые виды настройки, выполняемой до установки (например, настройку файлов описания), можно выполнять в моделях
+    развертывания XDE (либо путем создания новых моделей, оставляя исходные модели без изменений, либо редактируя исходные
+    модели). Дополнительная информация об изменении свойств файлов описания с помощью моделей развертывания XDE приведена в
+    разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/toolmentors/assembling_j2ee_mods_and_apps_729DC5B.html" guid="{3B38F989-686C-4AC9-91EE-981F90D75F0D}">Памятка по инструменту: Компоновка модулей и приложений J2EE с помощью
+    Rational XDE Developer - Java Platform Edition</a>.
+</p>
+<p>
+    После настройки моделей развертывания можно развернуть приложение из модели развертывания EAR. Можно развернуть только
+    один файл EAR или все файлы EAR, привязанные к конкретному узлу. Дополнительная информация приведена в разделе <img     alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Развертывание приложений Java</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j","j_o_deploying_java_apps.htm");-->.
+</p>
+<p>
+    Файл описания или архив можно экспортировать из любой модели развертывания. Экспортирование файла описания применяется
+    для отладки, а также для определения связи между моделью и файлом описания. Экспортирование архивов позволяет
+    развертывать автономные архивы и использовать инструменты развертывания серверов приложений, не поддерживаемые средой
+    XDE. Дополнительная информация приведена в разделе <img alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Развертывание приложений Java</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_c_java_app_deploy.htm");-->. См. также раздел <img     alt="справка" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Создание файлов описания EJB</i> 
+    <!-- Removed Javascript - ReferenceHelpTopic(sMsg,"j2ee","jee_t_create_gen_depl_descr.htm");-->.
+</p>
+<h3>
+    Настройка приложения J2EE
+</h3>
+<p style="COLOR: rgb(0,0,0)">
+    Для правильной работы приложения может потребоваться дополнительная настройка сервера приложений, например, связывание
+    базы данных и настройка доступа к общим библиотекам, которые не в входят в EAR. Эти операции можно выполнить с помощью
+    административной консоли сервера.
+</p>
+<h3>
+    Запуск приложения J2EE
+</h3>
+<p>
+    После развертывания приложения выполните инструкции вендора сервера по запуску приложения. Во многих случаях серверы,
+    работающие в режиме отладки и тестирования, автоматически идентифицируют новое приложение и немедленно принимают его
+    для тестирования.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

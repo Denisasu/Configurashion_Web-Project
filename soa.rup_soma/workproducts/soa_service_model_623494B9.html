@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Артефакт: Service Model</title>
+<meta content="Artifact" name="uma.type">
+<meta content="soa_service_model" name="uma.name">
+<meta content="Service Model" name="uma.presentationName">
+<meta content="@Type:@Name:@DisplayName" name="uma.category">
+<meta content="WorkProductType:model:Модель" name="uma.category">
+<meta content="Artifact" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i99p8OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i_Kj0OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_jC070OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}", "_kSBS0OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "_kSOHIOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{95AA7C70-6259-4627-B705-6A67E33A47BC}", "_kShCEOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{9BBBE5B0-4D39-4555-9E20-0ADBD8327D29}", "_kTKiUOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{B0BF4414-0382-4605-9EE9-82F0DEC7292C}", "_kTWvkOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{C302AF5A-1591-4F26-94E5-C412866553BF}", "_kTiVwOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{8427751F-3C14-4CEB-9816-5112BDB91EED}", "_kTvKEOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{20F06B5E-95D5-422C-AB68-7C213D28533A}", "_kT4UAOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lB0YEOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lCgUkOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_lEvJMOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lc2uQOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_ldiqwOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_TraT8FHPEdumTu7t35vA-A", "_llgT8OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_TraT8FHPEdumTu7t35vA-A", "_llmakOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_OjBb4Ew_EduGSMz-5zscXg", "_lmGJ0OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_XHRjoEw5EduGSMz-5zscXg", "_lmXPkOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_I7P6gCwTEduKcvYAyaKSaA", "_lmqKgOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_am-VYCwTEduKcvYAyaKSaA", "_lm_hsOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_am-VYCwTEduKcvYAyaKSaA", "_lnEaMOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_mJtYwCwTEduKcvYAyaKSaA", "_lnVf8OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_mJtYwCwTEduKcvYAyaKSaA", "_lnaYcOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_xQpQ8CwTEduKcvYAyaKSaA", "_ln3rcOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_xQpQ8CwTEduKcvYAyaKSaA", "_ln9LAOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_6zx0ECwTEduKcvYAyaKSaA", "_loPe4OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_6zx0ECwTEduKcvYAyaKSaA", "_loVlgOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_GkKR4CwUEduKcvYAyaKSaA", "_lomrQOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_GkKR4CwUEduKcvYAyaKSaA", "_losK0OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_ObqZoCwUEduKcvYAyaKSaA", "_lo9QkOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_ObqZoCwUEduKcvYAyaKSaA", "_lpBiAOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_mHhK8CwUEduKcvYAyaKSaA", "_lpRZoOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_mHhK8CwUEduKcvYAyaKSaA", "_lpW5MOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}", "_lplisOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}", "_lptegOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "{FACE1697-1CB6-4F57-8B39-ED507BE7006F}", "_lqBAgOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_IM79YE7NEduvcvbnLvkXhA", "_V6uMMCwUEduKcvYAyaKSaA", "_lqh94OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{E24679B7-19F1-483B-A1F1-578839C43888}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Артефакт: Service Model</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../soa.rup_soma/workproducts/resources/soa_svc_model_48.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">The service model is a model of the core elements of a Service Oriented Architecture (SOA). The service model is used as an essential input to tasks in implementation and testing.</td>
+</tr>
+<tr>
+<td>Домены: <a href="./../../core.base_rup/domains/analysis_and_design_BD3BBB1D.html" guid="_kjFBYN7HEdm8G6yT7-Wdqw">Анализ и проектирование</a>
+<br>Типы рабочих продуктов: <a href="./../../core.base_rup/workproducttypes/model_C75A0621.html" guid="_mTMIkN7REdmjRZts2c4ZjQ">Модель</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Назначение</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_service_model__artifact_definition" name="XE_service_model__artifact_definition"></a><a id="Purpose" name="Purpose"></a> 
+<p>
+    The service model is an abstraction of the IT services implemented within an enterprise and supporting the development
+    of one or more service-oriented solutions. It is used to conceive and document the design of the software services. It
+    is a comprehensive, composite work product encompassing all services, providers, specifications, partitions, messages,
+    collaborations, and the relationships between them.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Содержащиеся артефакты</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_svce_model_message_BE931590.html" guid="{DD9F96C3-4D00-4441-951E-2674B9AEE1C6}">Message</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_svce_model_service_1EE4C96C.html" guid="{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}">Service</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_chan_BB29CCA8.html" guid="{95AA7C70-6259-4627-B705-6A67E33A47BC}">Service Channel</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_collab_76358B24.html" guid="{9BBBE5B0-4D39-4555-9E20-0ADBD8327D29}">Service Contract</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_gtway_4D9ADED2.html" guid="{B0BF4414-0382-4605-9EE9-82F0DEC7292C}">Service Gateway</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_partn_DC19AD3F.html" guid="{C302AF5A-1591-4F26-94E5-C412866553BF}">Service Partition</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_provider_C00D3410.html" guid="{8427751F-3C14-4CEB-9816-5112BDB91EED}">Service Provider</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}">Service Specification</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Роли</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Ответственный:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Проектировщик</a>
+</li>
+<li>
+<a href="./../../core.base_rup/roles/rup_capsule_designer_F3E66EDF.html" guid="{86253FE7-0036-4D14-8BD7-C18CE86A5E14}">Проектировщик капсул</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Изменен:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Проектировщик</a>
+</li>
+<li>
+<a href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Разработчик архитектуры</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Задачи</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Вход для:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_qualification_E0D920A6.html" guid="_mHhK8CwUEduKcvYAyaKSaA">Apply Services Litmus Tests</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_identification_rules_DAB02396.html" guid="_6zx0ECwTEduKcvYAyaKSaA">Business Rule Analysis</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_construct_arch_proof_F12BF33D.html" guid="_XHRjoEw5EduGSMz-5zscXg">Construct Architectural Proof-of-Concept (SOA)</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_identification_data_1AFDAC0A.html" guid="_mJtYwCwTEduKcvYAyaKSaA">Data Model Analysis</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_realization_66984C2B.html" guid="_V6uMMCwUEduKcvYAyaKSaA">Document Service Realization Decisions</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_identification_legacy_CF2A5A41.html" guid="_xQpQ8CwTEduKcvYAyaKSaA">Existing Asset Analysis</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_goal_service_assignment_46A9906C.html" guid="_I7P6gCwTEduKcvYAyaKSaA">Identify and Associate Services to Goals</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_message_design_D1BA096D.html" guid="_ObqZoCwUEduKcvYAyaKSaA">Message Design</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_specification_AB6BA763.html" guid="{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}">Service Specification</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">Объединение существующих структурных элементов</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Определение механизмов проектирования</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Определение элементов проекта</a>
+</li>
+</ul>
+<br>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_identification_bp_D5A863FB.html" guid="_am-VYCwTEduKcvYAyaKSaA">Business Process Analysis</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_identification_uc_F1F4D8B7.html" guid="_GkKR4CwUEduKcvYAyaKSaA">Business Use Case Analysis (SOA)</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_component_specification_6BB8DC55.html" guid="_OjBb4Ew_EduGSMz-5zscXg">Component Specification (SOA)</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/identify_commonality_and_variability_A1570EDC.html" guid="_TraT8FHPEdumTu7t35vA-A">Identify Commonality and Variability</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_subsystem_design_B9BB36BD.html" guid="{FACE1697-1CB6-4F57-8B39-ED507BE7006F}">Subsystem Design (SOA)</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Выход из:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_qualification_E0D920A6.html" guid="_mHhK8CwUEduKcvYAyaKSaA">Apply Services Litmus Tests</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_identification_bp_D5A863FB.html" guid="_am-VYCwTEduKcvYAyaKSaA">Business Process Analysis</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_identification_rules_DAB02396.html" guid="_6zx0ECwTEduKcvYAyaKSaA">Business Rule Analysis</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_identification_uc_F1F4D8B7.html" guid="_GkKR4CwUEduKcvYAyaKSaA">Business Use Case Analysis (SOA)</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_identification_data_1AFDAC0A.html" guid="_mJtYwCwTEduKcvYAyaKSaA">Data Model Analysis</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_identification_legacy_CF2A5A41.html" guid="_xQpQ8CwTEduKcvYAyaKSaA">Existing Asset Analysis</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/identify_commonality_and_variability_A1570EDC.html" guid="_TraT8FHPEdumTu7t35vA-A">Identify Commonality and Variability</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_message_design_D1BA096D.html" guid="_ObqZoCwUEduKcvYAyaKSaA">Message Design</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/tasks/soa_service_specification_AB6BA763.html" guid="{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}">Service Specification</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">Объединение существующих структурных элементов</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">Определение механизмов проектирования</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Определение элементов проекта</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Иллюстрации	</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Шаблоны</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/templates/soa_service_model_uml_73836D53.html" guid="_-bpYcE3aEdupj44ytPg0iA">Service Model in UML</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/guidances/templates/soa_service_model_doc_950782A6.html" guid="_ZYHekE3eEduBbftZUgDxnQ">Service Model in Word</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Отчеты</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/reports/service_dependencies_D8D49422.html" guid="1.2262765587812462E-305">Service Dependencies</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/guidances/reports/service_portfolio_6DB30D0E.html" guid="1.0870125010094147E-305">Service Portfolio</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Примеры</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/examples/soa_model_example_8A7D985C.html" guid="1.6487122362967558E-307">Service-Oriented Architecture (SOA) Model Example</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Доводка</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Опции представления</th><td class="sectionTableCell">UML Representation: <br />
+<br />
+Model, stereotyped as &lt;&lt;Service Model&gt;&gt;.&nbsp; <br />
+<br />
+<a id="Tailoring" name="Tailoring"></a> 
+<p>
+    The service model can be used for different levels of scope:
+</p>
+<ul>
+    <li>
+        Service-scoped development where the scope of the project is to develop the service independently (as much as
+        possible) from other services. The modeling would therefore encompass the use cases, architecture, design and
+        implementation models as a vertical slice for the one service.
+    </li>
+    <li>
+        Project-scoped development where a project involves the specification of a number of services in support of a set
+        of application requirements, in this case the scope is broadened to the application level and may involve a number
+        of services. In effect there is a set of application level models for use cases and architecture and then a set of
+        service specific design and implementation models.
+    </li>
+    <li>
+        Enterprise-scoped development, or service portfolio management, where the scope is only to capture the service
+        specifications and logical partitioning but at an enterprise-wide scope. This allows designers and architects to
+        make wide ranging decisions about the entire portfolio, yet separate projects are required to develop the design
+        and implementation models for the identified services (and client applications).
+    </li>
+</ul>
+<p>
+    For more information see the concept <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/reports/service_portfolio_6DB30D0E.html" guid="1.0870125010094147E-305">Service
+    Portfolio</a></i> and the activity <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/tasks/soa_service_specification_AB6BA763.html" guid="{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}">Service Design</a></i>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Дополнительные сведения</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Справочные таблицы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/checklists/soa_service_model_E7C97D46.html" guid="_Lw5NMDL-EduWI_fHNNtVQA">Service Model</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Концепции</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../extend.bus_model/guidances/concepts/business_process_decomposition_C9A38841.html" guid="_vHtFUC7CEdu64PK-GeN94Q">Business Process Decomposition</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/guidances/concepts/service_portfolio_52FD64AC.html" guid="1.851952881072508E-305">Service Portfolio</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

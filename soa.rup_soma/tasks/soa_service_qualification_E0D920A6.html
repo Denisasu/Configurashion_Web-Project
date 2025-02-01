@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Задача: Apply Services Litmus Tests</title>
+<meta content="Task" name="uma.type">
+<meta content="soa_service_qualification" name="uma.name">
+<meta content="Apply Services Litmus Tests" name="uma.presentationName">
+<meta content="Discipline:rup_analysis_design_discipline:Анализ и проектирование" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i9UwwOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jEoSoOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt62NnmEdmO6L4XMImrsA", "_jWyZoOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "_hi9GcCzLEdunTsKJjZp1Kg", "_jf4rQOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "_hi9GcCzLEdunTsKJjZp1Kg", "_jf88sOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_jgehIOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_jgrVcOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "_hi9GcCzLEdunTsKJjZp1Kg", "_j-jkQeBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "_hi9GcCzLEdunTsKJjZp1Kg", "_j-kyYOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_j-1REOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_j-_CEOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lBxUwOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lF608OBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_ydt62NnmEdmO6L4XMImrsA", "_lJqsgOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "_hi9GcCzLEdunTsKJjZp1Kg", "_lKX3IOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "_hi9GcCzLEdunTsKJjZp1Kg", "_lKZFQOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lKo84OBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lKyG0OBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lczD4OBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lfLpgOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "_hi9GcCzLEdunTsKJjZp1Kg", "_lsQcMOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "_hi9GcCzLEdunTsKJjZp1Kg", "_lsRDQOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lstIIOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_ls2SEOBoEe-aS_x8ARA3yA", "_mHhK8CwUEduKcvYAyaKSaA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_mHhK8CwUEduKcvYAyaKSaA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Задача: Apply Services Litmus Tests</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This task describes the requirement to qualify candidate services to ensure those that are developed further actually meet the needs of the business.</td>
+</tr>
+<tr>
+<td>Дисциплины: <a href="./../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">Анализ и проектирование</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Роли</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Основной исполнитель:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Разработчик архитектуры</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Дополнительные исполнители:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Проектировщик</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Входы</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Обязательный:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Service Model</a>
+</li>
+</ul>
+<ul></ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Необязательный:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/workproducts/goal_service_model_51A34A3.html" guid="_hi9GcCzLEdunTsKJjZp1Kg">Goal-Service Model</a>
+</li>
+</ul>
+<ul></ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Выходы</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/workproducts/goal_service_model_51A34A3.html" guid="_hi9GcCzLEdunTsKJjZp1Kg">Goal-Service Model</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Service Model</a>
+</li>
+</ul>
+<ul></ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    Once candidate services have been selected and documented in the (categorized) Service Portfolio, we then need to
+    determine which ones should be exposed as services. Although, in theory, any candidate service could be exposed by
+    exporting its interface as a service description, not every candidate service <i>should</i> be. It may not be
+    economically and practically (non-functional requirements may be compromised) feasible to do so. In particular, the
+    naive decision to expose "all methods from all classes" will result in an overwhelming and often unmanageable number of
+    services leading to the "Service Proliferation Syndrome". This creates huge performance and service management
+    problems, not to mention the fact that we may be giving away the company's intellectual capital. Moreover, we must
+    remember that <i>there is a cost associated with every service we choose to expose</i>: the funding, governance and the
+    underlying infrastructure (its security, performance, management) of the service and the components that will implement
+    them must be taken into account.
+</p>
+<p>
+    Therefore, some criteria are needed to help decide whether to expose a service and most importantly, whether to fund
+    the creation of the service component that will provide the functionality of the service as well as the maintenance,
+    monitoring, security, performance and other service level agreements of the service.&nbsp;
+</p>
+<h4>
+    Service Litmus Tests
+</h4>
+<p>
+    Project experiences indicate a set of criteria in the form of the <i>Service Litmus Test</i> can and should be used to
+    filter the collections of candidate services. This metaphor is used to denote a set of tests, that when applied, will
+    determine if a given service should be eligible for exposure using a service description. These tests are employed
+    together and help answer questions such as: From the list of candidate services, which ones should be exposed? And
+    thus, which ones should we fund? Which ones have business value?
+</p>
+<p>
+    On the one extreme, every business use case might be considered to be a candidate service. On the other, only a few
+    services are selected for exposure. Applying the Service Litmus Test usually gives something in the middle: a
+    manageable set of services that the business wants to expose and that can later be used within compositions.
+</p>
+<p>
+    Candidate services that pass all of the Service Litmus Tests should then be exposed as services in the SOA. There may
+    be candidate services that did not pass the Service Litmus Test but which are still implemented as services. Service
+    Litmus Test is an aid to determine which services to expose; if a business chooses to expose candidate services that
+    did not pass the Service Litmus Test, the implication is that benefits associated with a SOA will not be realized.
+</p>
+<p>
+    Candidate services that do not meet the Service Litmus Test will have to be implemented in some fashion as they are
+    required to fulfill business needs. They may be implemented as methods on service components and will not require the
+    generation of WSDL or other forms of service definitions; or they may be used as non-exposable entities.
+</p>
+<h4>
+    Considerations
+</h4>
+<p>
+    Application of Service Litmus Tests is an iterative process. For the first phase of elaboration, decisions should be
+    made based on current knowledge. Service Litmus Tests should then be revisited as more information is obtained
+    throughout the design process.
+</p>
+<p>
+    Service Litmus Tests for each candidate service should be applied and reviewed with the appropriate Subject Matter
+    Experts or Stakeholders.
+</p>
+<p>
+    Reviewing results of the Service Litmus Tests are a useful way to track the appropriateness of the criteria and service
+    granularity. For example, if too many candidate services are passing a particular test, that test definition may be too
+    broad or the service level granularity may be appropriate.
+</p>
+<p>
+    A service may fail one or more of the Service Litmus Tests but may still be exposed due to some project specific
+    decision (business or IT). This is ok. There may be an architectural or business decision made to expose a service
+    despite the Service Litmus Tests.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Шаги</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading">Ensure Service is Business Aligned</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    The first test of a service is about its Business Alignment. If the service is not traceable back to a business task or
+    goal, it may not yield benefits required for SOA implementation. The following questions, if all are answered
+    positively, mean the service is aligned with the business.
+</p>
+<ul>
+    <li>
+        Does the service provide a required business functionality that supports business processes and goals? (see <a class="elementLinkWithUserText" href="./../../soa.rup_soma/tasks/soa_service_identification_bp_D5A863FB.html" guid="_am-VYCwTEduKcvYAyaKSaA">Task: Business Process Analysis</a> )
+    </li>
+    <li>
+        Is the business willing to fund the service through its lifecycle: provisioning, management, governance and
+        maintenance?
+    </li>
+    <li>
+        Is the business willing to share the service internally or externally with clients or business partners? For
+        example, implications may be additional costs, business secrets, security, etc.
+    </li>
+    <li>
+        Are there existing or future opportunities within the enterprise to reuse the service?
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Ensure Service is Composable</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Composability is defined as an attribute that enables the service to participate in a service composition. Applications
+    can be created using both types of composition.
+</p>
+<ul>
+    <li>
+        Does the service meet the required Quality of Service attributes as defined in the composition's Non-Functional
+        Requirements?
+    </li>
+    <li>
+        Is the service stateless? (see <a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/guidelines/state_management_for_services_E4156B50.html" guid="4.2228409903513537E-306">Guideline: State Management for Services</a>)
+    </li>
+    <li>
+        Is the service self-contained? Can the service be deployed independently to meet a business goal although it may
+        cooperate with other services at run-time to perform business processes? There are no implicit dependencies of the
+        service on other embedded functionality. All dependent services are either replaceable or self-contained.
+    </li>
+    <li>
+        Is the service’s implementation technology neutral? Technology neutral means that the service does not impose
+        support of non-standard (and unknown to the consumer) protocols or devices, for example, the constituent component
+        requires intervention through a non-standard application interface.<br />
+         <em>This test applies only when the service is deployed in the consumer’s environment. For example: A business
+        provides an image retrieval service to its customers. It can provide this capability to its subscribed customers
+        via a web service. Alternatively, the business can hand over to its customer the image retrieval capability exposed
+        as a web service, and a collection of images. Here, the customer will be burdened by the implementation of the
+        technology search.</em>
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Ensure Service has External Description</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    The most basic property of a service is that it has an externalized service description. The externalized service
+    description may either be that is either generated automatically via tools or manually
+</p>
+<ul>
+    <li>
+        Does the service have an externalized service description that is distinct and separate from the underlying
+        physical implementation? A current example of this is WSDL.
+    </li>
+    <li>
+        Can the service be discovered and bound using the service description?
+    </li>
+    <li>
+        Does the service description contain meta-data about itself? That is, the service description must be
+        self-sufficient, containing or referencing all of the information necessary to understand the message exchange
+        between consumer and provider of a service.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Ensure Service is Reusable</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Can this service be used by the business stakeholder within all processes where its function is required?
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Ensure Service is Technically Feasible</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    Technical Feasibility ensures that the service can actually be realized (implemented and deployed) according to
+    functional and non-functional requirements using available technologies.
+</p>
+<ul>
+    <li>
+        Is the implementation and management effort for the service reasonable and readily achievable given either the
+        requirements or infrastructure of the implementation?<br />
+         <em>This is done after Realization's Technical Feasibility Exploration</em>
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

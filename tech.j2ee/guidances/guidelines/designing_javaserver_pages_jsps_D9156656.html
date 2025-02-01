@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Проектирование страниц JSP </title>
+<meta content="Guideline" name="uma.type">
+<meta content="designing_javaserver_pages_jsps" name="uma.name">
+<meta content="Проектирование страниц JSP " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.2384712199461326E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.2384712199461326E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Проектирование страниц JSP </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом разделе рассматривается проектирование страниц JSP для приложения J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Проектирование классов</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    Этот раздел посвящен проектированию страниц JSP. Дополнительная информация о страницах JSP, в частности, указания по их
+    идентификации и моделированию, приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/javaserver_page_jsp_C204C841.html" guid="2.5833499297818664E-306">Указания для рабочего продукта: страницы JSP</a>.
+</p>
+<h3>
+    <a id="Session State" name="Session State"></a>Состояние сеанса
+</h3>
+<p>
+    Данные о состоянии сеанса, контролируемые или применяемые страницей JSP, должны быть задокументированы в проекте JSP.
+    Указания по работе с состоянием сеанса приведены в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Технология: проектирование состояния для приложений J2EE</a>.
+</p>
+<h3>
+    <a id="JSP_context" name="JSP_context"></a>Контекст сервлета
+</h3>
+<p>
+    Любые взаимодействия с контекстом сервлета должны быть задокументированы в проекте JSP. Контекст сервлета - это данные,
+    глобальные относительно приложения, поэтому с ними следует обращаться осторожно. Дополнительная информация об этом
+    механизме приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Технология: проектирование состояния для приложений J2EE</a>.
+</p>
+<h3>
+    <a id="Granularity" name="Granularity"></a>Уровень детализации и ответственность
+</h3>
+<p>
+    Вы должны минимизировать объем кода на Java в странице JSP, чтобы улучшить обслуживаемость и возможность повторного
+    использования, а также упростить код. Это позволит проектировщикам презентаций работать только с проектом страницы, не
+    обращаясь к коду на Java. Для&nbsp;решения этой задачи воспользуйтесь объектами JavaBean и библиотеками
+    пользовательских тегов.
+</p>
+<p>
+    JSP предоставляет специальные теги вызова объектов JavaBean. Пользовательские теги позволяют применять более простой
+    интерфейс тегов с атрибутами для доступа к объектам JavaBean.
+</p>
+<p>
+    Общую управляющую логику следует переместить в сервлеты, а бизнес-логику - в объекты JavaBean (или EJB).
+</p>
+<p>
+    Рекомендуется с помощью JavaScript выполнять простую проверку входных данных на клиенте, во избежание перегруженности
+    сети из-за возврата запроса серверу.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

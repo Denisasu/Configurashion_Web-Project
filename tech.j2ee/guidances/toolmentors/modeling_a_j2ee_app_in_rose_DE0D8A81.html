@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту: Моделирование структуры приложения J2EE в Rational Rose</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="modeling_a_j2ee_app_in_rose" name="uma.name">
+<meta content="Моделирование структуры приложения J2EE в Rational Rose" name="uma.presentationName">
+<meta content="Tool:rup_rose_classic:Rational Rose" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Rose" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{E2D2968D-F30B-4C0B-9006-E72B96A846FF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{E2D2968D-F30B-4C0B-9006-E72B96A846FF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{E2D2968D-F30B-4C0B-9006-E72B96A846FF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{E2D2968D-F30B-4C0B-9006-E72B96A846FF}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{E2D2968D-F30B-4C0B-9006-E72B96A846FF}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту: Моделирование структуры приложения J2EE в Rational Rose</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этой памятке по инструменту описан процесс моделирования структуры приложения J2EE с помощью Rational Rose. </td>
+</tr>
+<tr>
+<td>Инструмент: <a href="./../../../core.base_rup/tools/rup_rose_classic_20F2524D.html" guid="{06FB737B-5D74-4C3B-98F4-36153CFB2E34}">Rational Rose</a> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Проектирование классов</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    Назначение
+</h3>
+<p>
+    При проектировании компонентов J2EE в среде J2EE эти компоненты будут представлены в виде классов Rose и кооперации
+    классов. &nbsp;
+</p>
+<p>
+    Обычно в приложении J2EE применяется реляционная база данных. Для этой базы данных разработчик проектирует Модель
+    данных, которая будет представлена в Rose с помощью Rose Data Modeler.&nbsp;
+</p>
+<p>
+    Для моделирования приложения J2EE в Rose выполните следующие шаги:<br />
+</p>
+<ul>
+    <li>
+        <p>
+            <a href="#_Toc498225359">Настройка Rational Rose для проекта J2EE</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#Organize the Design Model">Планирование модели проектирования</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#Model Java Beans and Java classes">Моделирование объектов JavaBean и классов Java</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#Model EJBs">Моделирование объектов EJB</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#_Toc498225372">Моделирование уровня пользовательского интерфейса</a>
+        </p>
+    </li>
+</ul>
+<p>
+    Дополнительная информация о J2EE приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Концепция: Обзор J2EE (Java 2 Platform Enterprise Edition)</a>. &nbsp;
+</p>
+<p>
+    Общая информация о процессе разработки компонентов с помощью платформы J2EE приведена в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/developing_component_solutions_B14102ED.html" guid="1.8809435842664573E-305">Концепция: Решения по разработке компонентов</a> .
+</p>
+<p>
+    См. также:
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/web_architecture_patterns_49E51CA1.html" guid="5.037070740002309E-305">Концепция: Шаблоны архитектуры Web</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_model_A82D7B3E.html" guid="2.3158107674855575E-306">Руководство: Модель проектирования</a>
+    </li>
+</ul>
+<h3>
+    <a id="_Toc498225359" name="_Toc498225359">Настройка Rational Rose для проекта J2EE</a>
+</h3>
+<p>
+    Настройте программу Rational Rose, как указано в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setting_up_for_project_637A2D05.html" guid="{F4DEA91A-7EBD-4853-8517-ACB4ED6FD5AD}">Памятка по инструменту: Подготовка Rational Rose к созданию проекта</a>.
+</p>
+<p>
+    Также подключите встраиваемый модуль Rose Java и настройте параметры проекта.
+</p>
+<p>
+    Дополнительная информация о настройке модуля Rose Java приведена в разделе Web-справки Rational Rose <img height="16"     alt="справка" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />&nbsp;<i>Rose Java &gt;
+    Каким образом &gt; Задать свойства проекта</i>.<br />
+</p>
+<h3>
+    <a id="Organize the Design Model" name="Organize the Design Model">Планирование модели проектирования</a>
+</h3>
+<ul>
+    <li>
+        <p>
+            <a href="#Create packages and layers in the design model">Создание пакетов и уровней в Модели
+            проектирования</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#Add Java language packages">Добавление пакетов языка Java</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#Add Schemas package">Добавление пакета Схемы</a>&nbsp;&nbsp;
+        </p>
+    </li>
+</ul>
+<h4>
+    <a id="Create packages and layers in the design model" name="Create packages and layers in the design model">Создание
+    пакетов и уровней в Модели проектирования</a>
+</h4>
+<p>
+    В разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/manage_design_model_1D45D75E.html" guid="{BD1DD906-031C-4D8C-8078-87B6869A8C14}">Памятка по инструменту: Управление моделью проектирования с помощью
+    Rational Rose</a> описана процедура создания пакетов и уровней в компоненте <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Продукт
+    работы: Модель проектирования</a>, начиная с шаблона модели RUP, который поставляется вместе с Rose. &nbsp;В этом
+    шаблоне содержится каркас модели проектирования, включая заполнители для пакетов разных типов, подсистем и диаграмм,
+    которые будут созданы в процессе проектирования (<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Задача:
+    Проектирование прецедентов</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Задача:
+    Проектирование классов</a> и <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Задача: subsystem_design_real-time_design</a>). &nbsp; &nbsp;
+</p>
+<p>
+    См. также:
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/layering_FCCD1BDA.html" guid="4.458864982057142E-306">Руководство: Уровни</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">Концепция: Уровни</a>.
+    </li>
+</ul>
+<p>
+    Обратите внимание, что структура пакета в компоненте <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Продукт
+    работы: Модель проектирования</a> может не совпадать со структурой пакета в компоненте <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">Продукт работы: Модель реализации</a>. При прямом проектировании классов
+    Java структура их пакета определяется на основе структуры пакетов в Модели реализации.
+</p>
+<p>
+    <img height="16" alt="справка" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+    &nbsp;Дополнительная информация о пакетах приведена в разделе Web-справки Rational Rose <i>Пакет</i>.
+</p>
+<h4>
+    <a id="Add Java language packages" name="Add Java language packages">Добавление пакетов языка Java</a>
+</h4>
+<p>
+    Для получения доступа к службам платформы J2EE ("системный уровень") к Java и J2EE нужно добавить пакеты языка Java.
+    Эти пакеты используются при создании в модели собственных классов. Например, для определения операции, которая
+    возвращает класс String на языке Java, в модели необходимо установить пакет java.lang языка Java, в котором содержится
+    класс String.
+</p>
+<p>
+    &nbsp;Дополнительная информация приведена в разделах Web-справки Rational Rose:
+</p>
+<ul>
+    <li>
+        <p>
+            <img height="16" alt="справка" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+            <i>Rose Java &gt; Концепции &gt; Работа со средами Java</i>
+        </p>
+    </li>
+    <li>
+        <p>
+            <img height="16" alt="справка" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"             border="0" />&nbsp; <i>Rose Java &gt; Каким образом &gt; Загрузить в модель библиотеки классов Java</i>
+        </p>
+    </li>
+</ul>
+<h4>
+    <a id="Add Schemas package" name="Add Schemas package">Добавление пакета Схемы</a>
+</h4>
+<p>
+    Пакет Схемы содержит проекты таблиц баз данных приложения. &nbsp;Дополнительная информация приведена в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/modeling_and_designing_databases_C61A6907.html" guid="{C1A09291-4091-4300-AF91-B7715DE432F9}">Памятка по инструменту: Проектирование и моделирование баз данных с
+    помощью Rational Rose Data Modeler</a>.
+</p>
+<h3>
+    <a id="Model Java Beans and Java classes" name="Model Java Beans and Java classes">Моделирование объектов JavaBean и
+    классов Java</a>
+</h3>
+<p>
+    В этом разделе не содержится информация о моделировании объектов EJB (см. раздел <a href="#Model EJBs">Моделирование
+    объектов EJB</a>) и о моделировании классов представления, например, страниц HTML и JSP (см. раздел <a href="#_Toc498225372">Моделирование уровня представления</a>).
+</p>
+<p>
+    В этом разделе также нет инструкций по моделированию остальных объектов JavaBean и классов Java (например, служебных
+    классов) для любых приложений Java. Дополнительная информация приведена в следующих разделах:
+</p>
+<ul>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Задача: Проектирование прецедентов</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Задача: Проектирование классов</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Задача: Проектирование подсистем</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_model_A82D7B3E.html" guid="2.3158107674855575E-306">Руководство: Модель проектирования</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/manage_class_E87F7860.html" guid="{234EB01D-88DF-4EBC-B806-CAA81CD2BF13}">Памятка по инструменту: Управление классами с помощью Rational
+            Rose</a>
+        </p>
+    </li>
+</ul>
+<h3>
+    <a id="Model EJBs" name="Model EJBs">Моделирование объектов EJB</a>
+</h3>
+<p>
+    Дополнительная информация об объектах EJBs приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Руководство: Объект EJB (Enterprise JavaBean)</a>.
+</p>
+<p>
+    Ниже перечислены шаги для моделирования объекта EJB в Rose:
+</p>
+<ul>
+    <li>
+        <p>
+            <a href="#Create a Design Subsystem for the EJB">Создание подсистемы проектирования для объекта
+            EJB</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#Determine">Определение типа объекта EJB и структуры его хранилища</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#UseRoseJ">Создание классов объекта EJB 1.1 с помощью Rose Java</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#Model the classes? relationships">Моделирование классов: Взаимосвязи</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#Model the classes? interactions">Моделирование классов: Взаимодействие</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#Model EJB persistence">Моделирование хранилища объекта EJB</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#_Toc498225366">Моделирование транзакций</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#_Toc498225366">Моделирование защиты</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#_Toc498225370">Компоненты прямого проектирования EJB</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a href="#_Toc498225371">Компоненты обратного проектирования EJB</a>
+        </p>
+    </li>
+</ul>
+<h4>
+    <a id="Create a Design Subsystem for the EJB" name="Create a Design Subsystem for the EJB">Создание подсистемы
+    проектирования для объекта EJB</a>
+</h4>
+<p>
+    В общем случае объекты EJB группируются в подсистемы проектирования. &nbsp;
+</p>
+<p>
+    Подсистемы проектирования используются для сохранения параметров поведения в "пакете", который предоставляет явный и
+    формальный интерфейсы и не выводит (по соглашению) свое содержимое. &nbsp;
+</p>
+<p>
+    Дополнительная информация о создании подсистем проектирования приведена в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/manage_subsystems_CE198D48.html" guid="{6943FA40-808B-4E3E-94FE-D7843FA59E91}">Памятка по инструменту: Управление подсистемами с помощью Rational
+    Rose</a>.
+</p>
+<h4>
+    <a id="Determine" name="Determine">Определение типа объекта EJB и структуры его хранилища</a>
+</h4>
+<p>
+    Перед созданием в Rose объекта EJB необходимо определить его тип: сущностный объект, сеансовый объект или принимающий
+    объект. Для сущностного объекта нужно выбрать постоянное соединение, управляемое контейнером (CMP) или постоянное
+    соединение, управляемое EJB (BMP). Для сеансового объекта нужно определить его тип: с сохранением или без сохранения
+    состояния.
+</p>
+<p>
+    См. раздел <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Руководство: Объект EJB (Enterprise JavaBean)</a>.
+</p>
+<h4>
+    <a id="UseRoseJ" name="UseRoseJ">Создание классов объекта EJB с помощью Rose Java</a>
+</h4>
+<p>
+    Rose Java предоставляет набор окон для создания в Rose классов объектов EJB и управления этими классами.
+</p>
+<p>
+    &nbsp; <img height="16" alt="справка" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+    &nbsp;Дополнительная информация приведена в разделе Web-справки Rational Rose <i>Rose Java &gt; Каким образом &gt;
+    Работать с объектами EJB и сервлетами</i>. &nbsp;
+</p>
+<p>
+    С помощью Rose Java можно выполнять следующие операции:
+</p>
+<ul>
+    <li>
+        <p>
+            создавать объекты EJB с самого начала
+        </p>
+    </li>
+    <li>
+        <p>
+            преобразовывать существующие в модели классы в EJB - Rose Java преобразовывает существующий класс в удаленный
+            интерфейс EJB и создает новые классы для домашнего интерфейса и класса JavaBean&nbsp;
+        </p>
+    </li>
+    <li>
+        <p>
+            добавлять к EJB методы поиска
+        </p>
+    </li>
+    <li>
+        <p>
+            добавлять в стандартный интерфейс любые методы рабочего цикла и агента поиска, заданные в классе реализации
+            объекта JavaBean
+        </p>
+    </li>
+    <li>
+        <p>
+            обновлять свойства класса объекта EJB (например, изменять имя стандартного интерфейса), свойства хранилища
+            (отдать его под управление объекта JavaBean или контейнера) и свойства файла описания (поля, управляемые
+            контейнером или записи среды).
+        </p>
+    </li>
+</ul>
+<p>
+    В состав сущностного или сеансового объекта JavaBean, созданного с помощью Rose Java входят следующие элементы:
+</p>
+<ul>
+    <li>
+        <p>
+            класс стандартного интерфейса
+        </p>
+    </li>
+    <li>
+        <p>
+            класс удаленного интерфейса
+        </p>
+    </li>
+    <li>
+        <p>
+            класс объекта JavaBean
+        </p>
+    </li>
+    <li>
+        <p>
+            свойства, определяющие базовый файл описания ejb-jar.xml объекта EJB; этот файл сохраняется в свойствах класса
+            объекта EJB
+        </p>
+    </li>
+    <li>
+        <p>
+            операции и атрибуты, необходимые для спецификации объекта EJB (например, методы обратного вызова), создаются в
+            стандартном интерфейсе, удаленном интерфейсе и классе JavaBean
+        </p>
+    </li>
+</ul>
+<p>
+    Эти классы, созданные утилитой Rose Java EJB, моделируются в соответствии с преобразованием, определенным в стандарте
+    Sun <i>JSR-000026 UML/EJB Mapping Specification</i>.&nbsp;<img height="16" alt="значок справки" hspace="0"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> Дополнительная информация приведена в разделе
+    Web-справки Rational Rose <i>Rose Java &gt; Концепции &gt; О поддержке платформы Java 2, Enterprise Edition
+    (J2EE)</i>.&nbsp;
+</p>
+<p>
+    Дополнительная информация о спецификациях объекта EJB 1.1 или 2.0 приведены на Web-сайте <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a> по ссылкам <b>Docs & Training &gt; Java 2 Platform, Enterprise Edition
+    &gt; Enterprise JavaBeans Specification</b>.
+</p>
+<h4>
+    <a id="_Toc498225365" name="_Toc498225365">Добавление операций и атрибутов</a>
+</h4>
+<p>
+    После создания классов EJB можно добавить операции (например, бизнес-методы) и атрибуты.
+</p>
+<p>
+    Rose Java предоставляет набор окон для создания в Rose классов объектов EJB и управления этими классами.
+</p>
+<p>
+    &nbsp; <img height="16" alt="справка" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+    &nbsp;За информацией обратитесь к разделу Web-справки Rational Rose <i>Rose Java &gt; Каким образом &gt; Работать с
+    объектами EJB и сервлетами</i> <i>&gt; Добавление методов в класс объекта JavaBean</i> topic in the Rational Rose
+    online help.
+</p>
+<p>
+    Дополнительная информация по добавлению операций и атрибутов приведена в следующих разделах:
+</p>
+<ul>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Задача: Проектирование классов</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/manage_class_E87F7860.html" guid="{234EB01D-88DF-4EBC-B806-CAA81CD2BF13}">Памятка по инструменту: Управление классами с помощью Rational
+            Rose</a>
+        </p>
+    </li>
+</ul>
+<h4>
+    <a id="Model the classes? relationships" name="Model the classes? relationships">Моделирование классов:&nbsp;
+    Взаимосвязи</a>
+</h4>
+<p>
+    Диаграммы классов создаются как часть задачи <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Задача: Проект
+    класса</a>, в которой вы моделируете взаимосвязи (такие как связи, зависимости и отношения наследования) между
+    классами.
+</p>
+<p>
+    Шаблон модели Rational Unified Process Rose, предоставленный Rose, предлагает начальную структуру диаграммы класса,
+    которую необходимо создать.
+</p>
+<p>
+    Дополнительная информация о моделировании взаимосвязей между классами приведена в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Задача: Проектирование классов</a>.
+</p>
+<h4>
+    <a id="Model the classes? interactions" name="Model the classes? interactions">Моделирование
+    классов:&nbsp;Взаимодействие</a>
+</h4>
+<p>
+    В процессе задачи <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Задача: Эскиз прецедента</a> вы создаете сообщения диаграмм схем связей,
+    которые затем используются для описания взаимодействий между объектами. Создайте диаграммы схем связей для описания
+    главного и альтернативного потоков событий для каждой реализации прецедента в модели проекта. &nbsp;
+</p>
+<p>
+    Проектировщик объекта EJB может использовать диаграмму схемы связей в следующих целях:
+</p>
+<ul>
+    <li>
+        <p>
+            добавление операций и аргументов классов, участвующих во взаимодействии
+        </p>
+    </li>
+    <li>
+        <p>
+            документирование операций, которые будут вызываться классом в процессе взаимодействия
+        </p>
+    </li>
+    <li>
+        <p>
+            документирование действий объекта при получении сообщения, например, с помощью прикрепления сценария к
+            сообщению. <img height="16" alt="значок справки" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif"             width="16" border="0" /> &nbsp;Дополнительная информация приведена в разделе справки <i>Rational Rose &gt; Как
+            &gt; Создать и работать в модели &gt; Использование сценариев в диаграммах схемы связей</i><i>.</i>
+        </p>
+    </li>
+</ul>
+<p>
+    См. также:
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Задача: Проектирование прецедентов</a> - Описание взаимодействия
+        между объектами проектирования.
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/sequence_diagram_AFA76EBB.html" guid="3.211008403369512E-306">Руководство: Диаграмма Схема связей</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/manage_sequence_diagrams_C11A1E78.html" guid="{70C1E98C-D6AC-4278-8554-1E000AF5A57D}">Памятка по инструменту: Управление диаграммами схем связей с помощью
+        Rational Rose</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Руководство: Идентификация объектов EJB</a> - Моделирование взаимодействий объектов
+        EJB
+    </li>
+</ul>
+<h4>
+    <a id="Model EJB persistence" name="Model EJB persistence">Моделирование хранилища объекта EJB</a>
+</h4>
+<p>
+    EJB Сущность представляет объектно-ориентированное представление постоянных данных приложения. &nbsp; Моделирование
+    класса EJB как сущности и маркировка класса как Persistent указывает на то, что <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">Роль:
+    Проектировщику базы данных</a> потребуется преобразовать объект EJB в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Модель
+    данных</a> при выполнении задачи <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">Задача:
+    Проектировка базы данных</a>.
+</p>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">Роль: Проектировщик базы данных</a> создает модель данных приложения при
+    выполнении задачи <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">Задача: Проектировка базы данных</a>.
+</p>
+<p>
+    Rose предоставляет поддержку проектировки базы данных с помощью утилиты Rational Rose Data Modeler, которая позволяет
+    преобразовывать постоянные классы модели объекта в модель данных и наоборот.
+</p>
+<p>
+    Преобразование классов модели объекта в таблицы модели данных документируется в поле <i>Преобразовано из</i>
+    спецификации Rose таблиц модели данных.
+</p>
+<p>
+    См. также разделы <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">Продукт работы: Модель данных</a> и <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">Руководство: Модель
+    данных</a>
+</p>
+<p>
+    Дополнительная информация о программе Rose Data Modeler приведена в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/modeling_and_designing_databases_C61A6907.html" guid="{C1A09291-4091-4300-AF91-B7715DE432F9}">Памятка по инструменту: Проектирование и моделирование баз данных с
+    помощью Rational Rose Data Modeler</a>.
+</p>
+<h5>
+    Замечания по моделированию сеансовых объектов EJB
+</h5>
+<p>
+    Объекты JavaBean сеанса могут записывать и читать данные - смотрите <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_enterprise_javabeans_ejbs_1F6B0E88.html" guid="2.8082009592332426E-306">Руководство: Проектирование объектов Enterprise JavaBean (EJB)</a> - Прямой доступ в
+    сравнении с сущностными объектами EJB.&nbsp;&nbsp;
+</p>
+<p>
+    В такой ситуации следует использовать классы объектов доступа к данным (DAO) для разделения сведений о соединении с
+    базой данных EJB и доступа с помощью интерфейса javax.sql.&nbsp;
+</p>
+<h5>
+    Замечания по моделированию сущностных объектов EJB, управляемых объектами JavaBean
+</h5>
+<p>
+    Сущностные объекты JavaBean читают и записывают таблицы базы данных с помощью API JDBC. Используйте классы DAO для
+    разделения сведений о соединении с базой данных EJB и доступа с помощью интерфейса javax.sql.&nbsp;
+</p>
+<h5>
+    Замечания по моделированию сущностных объектов EJB, управляемых контейнером
+</h5>
+<p>
+    Нет необходимости проектировать классы DAO для сущностного EJB, управляемого контейнером, поскольку его хранилище
+    управляется контейнером EJB.
+</p>
+<h4>
+    <a id="_Toc498225366" name="_Toc498225366">Моделирование транзакций</a>
+</h4>
+<p>
+    Транзакции определяют набор <b>атомарных</b> вызовов операций, который или выполняется целиком, или не выполняется ни
+    один из вызовов этого набора. В контексте хранилища транзакция определяет набор изменений для набора объектов, который
+    также может быть выполнен только целиком. Транзакции обеспечивают непротиворечивость, переводя набор объектов из одного
+    согласованного состояния в другое.
+</p>
+<p>
+    Общая информация об управлении транзакциями приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Концепция: Обзор J2EE (Java 2 Platform Enterprise Edition)</a> - Управление транзакциями.
+</p>
+<p>
+    Создайте модель транзакций EJB, как это описано в <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Задача:
+    проектирование прецедентов</a> - Моделирование транзакций.&nbsp; Во время реализации вы решаете на основании своей файл
+    модели, как разделять транзакции: декларативно - в файле описания, определяя атрибут транзакции метода EJB как
+    Required, RequiresNew, NotSupported, Supports, Mandatory или Never, - или программно, т.е с помощью API Java
+    Transaction.
+</p>
+<h4>
+    <a id="_Toc498225367" name="_Toc498225367">Моделирование защиты</a>
+</h4>
+<p>
+    Определите в проекте, может ли защита приложения управляться декларативно, с помощью ролей защиты и прав доступа в
+    файле описания EJB, или программно, с помощью API защиты J2EE.
+</p>
+<p>
+    Используйте диаграммы схем связей для рассмотрения сценариев защиты. Если необходимо, снабдите комментариями диаграммы
+    схем связей для документирования требований к защите.
+</p>
+<p>
+    Общая информация об управлении защитой приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307">Концепция: Обзор J2EE (Java 2 Platform Enterprise Edition)</a> - Управление защитой.
+</p>
+<h4>
+    <a id="_Toc498225370" name="_Toc498225370">Компонент прямого проектирования EJB</a>
+</h4>
+<p>
+    Генерация классов Java EJB методом прямого проектирования осуществляется с помощью Rose Java, как это описано в <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/generating_elements_F992DEA8.html" guid="{EE8B53A9-8501-459E-90CC-990B25068DFA}">Наставник по инструменту: Генерация элементов из модели с помощью
+    Rational Rose</a>. Файл описания EJB ejb-jar.xml будет сгенерирован автоматически в результате прямого проектирования
+    класса bean-объекта EJB.
+</p>
+<h4>
+    <a id="_Toc498225371" name="_Toc498225371">Компоненты обратного проектирования EJB</a>
+</h4>
+<p>
+    Можно применить обратное проектирование к существующему EJB с помощью Rose Java, как это описано в <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/reverse_engineer_code_D4050BB0.html" guid="{D674D96E-1A37-48D1-B120-6145C9802E3E}">Наставник по инструменту: Обратное проектирование с помощью Rational
+    Rose</a>. Необходимо создать с помощью обратного проектирования файл .jar, содержащий классы EJB и файл описания, так
+    чтобы Rose Java могла определить, какие взаимосвязи между классами (например, какой класс является домашним
+    интерфейсом) были созданы при обратном проектировании. &nbsp;
+</p>
+<h3>
+    <a id="_Toc498225372" name="_Toc498225372">Моделирование уровня пользовательского интерфейса</a>
+</h3>
+<p>
+    Создайте модель уровня Пользовательский интерфейс приложения J2EE как для web-приложения. В общем случае, стереотипы
+    &lt;&lt;пограничных&gt;&gt; классов анализа являются подходящими кандидатами для классов и коопераций классов на уровне
+    Пользовательский интерфейс. Пограничные классы могут быть реализованы, например, в виде страниц JSP, сервлетов, страниц
+    HTML или автономных клиентов Java, в зависимости от проекта.
+</p>
+<p>
+    Дополнительная информация приведена в следующих разделах:&nbsp;
+</p>
+<ul>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/modeling_web_application_architectures_with_uml_54011136.html" guid="_TACPgEWgEdqT6eCCQuiftQ">Официальный документ: Моделирование архитектуры web-приложений с помощью
+            UML</a>&nbsp;
+        </p>
+    </li>
+    <li>
+        <p>
+            <img height="16" alt="значок справки" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"             border="0" /> &nbsp;Раздел <i>RoseWeb Modeler &gt; Концепции</i> в электронной справке Rational Rose
+        </p>
+    </li>
+    <li>
+        <p>
+            Моделирование web-приложений с помощью UML на сайте <a href="http://www.rational.com/products/whitepapers/100462.jsp" target="_blank">http://www.rational.com/products/whitepapers/100462.jsp</a>
+        </p>
+    </li>
+</ul>
+<p>
+    Связанные действия:
+</p>
+<ul>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Задача: Проектирование прецедентов</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Задача: Проектирование подсистем</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Задача: Проектирование классов</a>
+        </p>
+    </li>
+</ul>
+<p>
+    См. также:
+</p>
+<ul>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/web_architecture_patterns_49E51CA1.html" guid="5.037070740002309E-305">Концепция: Шаблоны архитектуры Web</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">Концепция: Разбиение на уровни</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/building_web_applications_with_the_uml_922EDDA8.html" guid="4.559124609104376E-305">Руководство: Построение web-приложений с помощью UML</a>
+        </p>
+    </li>
+    <li>
+        <p>
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_model_A82D7B3E.html" guid="2.3158107674855575E-306">Руководство: Модель проектирования</a>
+        </p>
+    </li>
+</ul>
+<h4>
+    Прямое и обратное проектирование классов оформления
+</h4>
+<p>
+    Классы оформления можно создать с помощью прямого и обратного проектирования. Rose Java поддерживает:
+</p>
+<ul>
+    <li>
+        <p>
+            Обратное проектирование web-приложений (.war). <img height="16" alt="значок справки" hspace="0"             src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />&nbsp;Дополнительная информация приведена в
+            разделе Web-справки Rational Rose <i>Rose Java &gt; Каким образом &gt; Произвести обратное проектирование из
+            &nbsp; Источника Java в Rose&nbsp;</i>.
+        </p>
+    </li>
+    <li>
+        <p>
+            Создание нового класса сервлета с помощью соответствующих методов. &nbsp; <img height="16" alt="справка"             hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> Дополнительная информация
+            приведена в разделе Web-справки Rational Rose <i>Rose Java &gt; Каким образом &gt; Работать с объектами EJB и
+            сервлетами</i>.
+        </p>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Концепция: Service Composition and Choreography</title>
+<meta content="Concept" name="uma.type">
+<meta content="service_composition_and_choreography" name="uma.name">
+<meta content="Service Composition and Choreography" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i99p8OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i_Kj0OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_jC070OBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_jgOCcOBoEe-aS_x8ARA3yA", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_j-pD0OBoEe-aS_x8ARA3yA", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "_kSXREOBoEe-aS_x8ARA3yA", "7.723783423994501E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "7.723783423994501E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lB0YEOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lCgUkOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_lEvJMOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lKd9wOBoEe-aS_x8ARA3yA", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lc2uQOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_ldiqwOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}", "_lpy-EOBoEe-aS_x8ARA3yA", "7.723783423994501E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_IM79YE7NEduvcvbnLvkXhA", "_V6uMMCwUEduKcvYAyaKSaA", "_lqs9AOBoEe-aS_x8ARA3yA", "7.723783423994501E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lsiJAOBoEe-aS_x8ARA3yA", "{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}", "7.723783423994501E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_WdljEE7OEduvcvbnLvkXhA", "7.723783423994501E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.723783423994501E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Концепция: Service Composition and Choreography</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This concept describes the ways services may be combined to yield composite and collaborative structures which provide new higher-level, business-oriented services.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_service_realization_66984C2B.html" guid="_V6uMMCwUEduKcvYAyaKSaA">Document Service Realization Decisions</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/soa_svce_model_service_1EE4C96C.html" guid="{FF65B0A2-6C53-4F01-9727-AACDB0D542C8}">Service</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_service_specification_AB6BA763.html" guid="{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}">Service Specification</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction">Introduction</a>
+</h3>
+<p>
+    One key aspect of Service-Oriented Architecture (SOA) is that services be composable, which means that a new service is
+    often composed as a collaboration between a set of existing services. In many respects this is true of existing
+    component-based and object-oriented techniques, except that certain capabilities in the middleware being used to
+    develop service-oriented solutions allows the direct execution of these collaborations through standards such as
+    <i>Business Process Execution Language for Web Services</i> (BPEL4WS, WS-BPEL or just BPEL). It is this ability to
+    compose services structurally, that is to define the usage dependencies between services, and also to compose services
+    behaviorally that makes a services-based architecture and IT strategy attractive to so many organizations.
+</p>
+<p>
+    More and more organizations are realizing the need for increased agility in their ability to respond to changing
+    business environments, whether it's the pressure of globalization, new markets and channels, or simply new competitors
+    using technology more efficiently. These organizations are looking towards service-oriented development and
+    service-oriented solutions as a way to organize their IT assets to address current requirements and provide an
+    infrastructure of business-aligned functions that can be reused, reconfigured, and recombined efficiently and
+    effectively to address future requirements.
+</p>
+<p>
+    Another aspect of the ability to compose services in this manner is that it provides a flexible way to incorporate
+    existing IT assets into new solutions in the same manner as newer assets. For example, existing assets, even those
+    developed for mainframe platforms and similar, can be exposed as services with some middleware products and integrated
+    in the same way as new services developed using J2EE, IBM WebSphere or Microsoft .NET. Unfortunately, most existing
+    assets tend not to be developed with interfaces that adhere to much of the guidance we would use for new services. As
+    such, it is useful to create composite services that do not just wrap these existing services, but rather provide
+    different, more business-aligned interfaces that leverage the existing functions by aggregating and choreographing them
+    to provide the higher-level capability.
+</p>
+<h4>
+    Service Choreography
+</h4>
+<p>
+    Let us look briefly at the term <i>Choreography</i>. This is the term used in many middleware products to denote the
+    managed execution of some script denoting a process flow where the participants are services and the tasks are message
+    exchanges. In some products, the term <i>Orchestration</i> is used. While some industry analysts and technologists
+    describe differences in the meaning of the words and how these terms are used in standards, for most users the
+    differences are much less interesting than the similarities.
+</p>
+<p>
+    In terms of standards, a common way to represent the choreography of Web Services was late in coming, after most of the
+    leading middleware vendors introduced proprietary solutions. The current industry standard is the Business Process
+    Execution Language for Web Services (BPEL4WS or BPEL). For more information on BPEL4WS, see the <i><a href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=wsbpel">OASIS WSBPEL site</a></i> or the <i><a href="http://www.ibm.com/developerworks/library/specification/ws-bpel/">IBM BPEL site</a></i>.
+</p>
+<h3>
+    <a id="Composite_Structures" name="Composite_Structures">Services as Composite Structures</a>
+</h3>
+<p>
+    Services can easily be developed upon the functions provided by other services in a recursive manner, as shown in the
+    diagram below, where services can identify those services they rely upon. In this case, a composite service is using
+    the order entry and Electronic Data Interchange (EDI) gateway services. Composite services are often used where the
+    usual factoring of service capabilities identifies common functions that may be provided in more than one circumstance.
+    For some services, where the role is more to provide infrastructure capabilities (such as the EDI service below), this
+    is relatively easy to identify. In other cases, detailed service collaborations will identify the need to split a
+    candidate service into more than one actual service.
+</p>
+<p align="center">
+    <img height="144" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/concepts/resources/co_soa_choreography-06.gif"     width="287" border="0" />
+</p>
+<p>
+    One important use of composite services is in the provision of functions realized by existing (legacy) assets. In most
+    cases, such capabilities will be accessed via connectors or APIs provided by the asset itself and a new service will be
+    developed which relies on these assets for some logic. On the other hand, to allow the aggregate component to evolve
+    more flexibly and to allow the existing asset to be swapped out in the future for a different implementation, an
+    alternative strategy can be used. In this case, each existing function is exposed as an independent service, these
+    services are then used by the composite service allowing for both the existing asset, and the composite services to
+    evolve independently.
+</p>
+<p>
+    Another use of composite services is where the set of actual services leveraged by a composite service are not known in
+    advance. For example, in the case of an order management service we might identify the need to separate out the order
+    validation as a separate set of independent business rule services such that new rules can be added at a future date.
+    This is related to the topic of service mediation (see <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/guidances/guidelines/service_mediation_2F2C4C02.html" guid="2.5614739075754752E-306">Guideline: Service Mediation</a>).
+</p>
+<p>
+    Obviously such a approach has benefits but it also has drawbacks. If the low-level service may only be exposed via
+    Internet protocols such as SOAP/HTTP, it is likely to be less reliable and have poorer performance than if accessed via
+    a native API or connector. These tradeoffs have to be a part of the general set of architectural decisions made and
+    documented as part of any service design.
+</p>
+<p>
+    For more information on both existing asset access and the relationship between candidate and actual services see the
+    <a class="elementLinkWithUserText" href="./../../../soa.rup_soma/capabilitypatterns/existing_asset_analysis_4B247136.html" guid="_7ZObICxuEdupJ8eX04kqLQ">Activity: Existing Asset Analysis</a>.
+</p>
+<h3>
+    <a id="Service_Collaborations" name="Service_Collaborations">Service Collaborations</a>
+</h3>
+<p>
+    In modeling the behavior of composite services we use the notion of a&nbsp;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_collab_76358B24.html" guid="{9BBBE5B0-4D39-4555-9E20-0ADBD8327D29}">Artifact: Service Contract</a> during the identification and design
+    phases.
+</p>
+<ul>
+    <li>
+        During the&nbsp;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/capabilitypatterns/existing_asset_analysis_4B247136.html" guid="_7ZObICxuEdupJ8eX04kqLQ">Activity: Existing Asset Analysis</a>, we use the collaboration as a tool to
+        describe the roles and responsibilities of candidate services. For example, we might identify the need for separate
+        order validation and order management services, but how do they communicate, and what information are they
+        responsible for? A service collaboration is used as a tool to describe this communication and we can identify
+        required message exchanges from the resulting model.
+    </li>
+    <li>
+        During the&nbsp;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/tasks/soa_service_specification_AB6BA763.html" guid="{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}">Task: Service Specification</a>, we use the collaboration to define
+        the concrete behavior of a given service or operation on a service. For example, the order validation example above
+        could be described concretely as a set of messages sent to a set of validation rule services.
+    </li>
+</ul>
+<p>
+    In this way, we can see that a Service Collaboration in the service-design task is directly related to the notion of
+    choreography in web services terms. It represents a configurable, externalized flow description sequencing a set of
+    message exchanges between services. In most middleware implementing choreography, the flow is described in an XML
+    language such as BPEL. Such a language could be generated from the service collaboration described in the&nbsp;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Artifact: Service Model</a> when the flow itself is described with UML
+    2.0 Activities or Interactions.
+</p>
+<p>
+    The Collaboration is comprised of a composite structure providing the view of the collaborators and their connections
+    as well as a behavior denoting the messages exchanged and their sequencing. The diagram above showing a
+    CompositeProvider demonstrated a composite structure, as does the Order Validation picture below.
+</p>
+<p align="center">
+    <img height="170" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/concepts/resources/co_soa_choreography-07.gif"     width="531" border="0" />
+</p>
+<p>
+    This is not the structure of the validation provider itself, but the structure of the service collaboration, as shown
+    in the diagram below.
+</p>
+<p align="center">
+    <img height="234" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/concepts/resources/co_soa_choreography-09.gif"     width="496" border="0" />
+</p>
+<h4>
+    Specifying Service Behavior
+</h4>
+<p>
+    As stated above, it is most common to use either UML 2.0 Activities or Interactions, specifically Sequence Diagrams, to
+    describe the flow of messages between services in a collaboration. The diagram below is a UML 2.0 Activity Diagram
+    demonstrating the behavior of the order validation service. For a given order, the validation registry service provides
+    a list of actual validation operations to call.
+</p>
+<p align="center">
+    <img height="310" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/concepts/resources/co_soa_choreography-08.gif"     width="458" border="0" />
+</p>
+<p>
+    Note that such behavior can be identified for a complete service or on a per-operation basis depending on the needs of
+    the service. In this case, the Activity within the Collaboration is related to the Validate() operation (via the
+    specification/method association in UML 2.0).
+</p>
+<h4>
+    Specifying Service Bindings
+</h4>
+<p>
+    As we saw above, the bindings (actual physical protocols and message encodings) used to communicate between services
+    are identified as a property of the&nbsp;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_chan_BB29CCA8.html" guid="{95AA7C70-6259-4627-B705-6A67E33A47BC}">Artifact: Service Channel</a> in the composition view. Actual bindings
+    used between services have significant impact on non-functional requirements such as performance, reliability, and
+    security. So, the available choices should be documented with the consequences of each identified within the overall
+    system architecture. For example, it may be that one use of&nbsp;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_partn_DC19AD3F.html" guid="{C302AF5A-1591-4F26-94E5-C412866553BF}">Artifact: Service Partition</a> is to represent allowable or required
+    binding between services within the partition - a common requirement being that services within some logical
+    <i>zone</i> communicate using high-performance, yet proprietary binding whereas communication with services outside of
+    the <i>zone</i> use lower performance but standardized bindings.
+</p>
+<p>
+    People often wonder if capabilities required for Web service performance, reliability, and scalability can be provided
+    by an architecture based on HTTP and SOAP, which are inherently slow and unreliable. First, "slow and unreliable" must
+    be defined, then it must be realized that even reliable transports rely on unreliable means. For example, when using
+    SOAP over HTTP, it is always possible to build application-level protocols and interactions that provide additional
+    capabilities for message acknowledgements and security. However, if one considers that certain services communicate
+    within the same security or application context, we might consider using different means than HTTP.
+</p>
+<p>
+    It is very important to realize that even though Web services present a simple model and a set of simple, flexible
+    protocols, you are not restricted to these choices. Just as WSDL already has bindings for both SOAP and HTTP GET/PUT,
+    it is important to provide requestors with additional choices. For example, a single service may expose a message using
+    a message-queue binding and a SOAP binding so the requestor can choose the more appropriate binding to use. In this
+    case, the provider may also provide incentives such as a guaranteed service level if the message queue is used but no
+    service guarantees for an HTTP conversation.
+</p>
+<p>
+    Taking the order validation example above, we can see how the bindings are associated with the stereotype&nbsp;<a class="elementLinkWithUserText" href="./../../../soa.rup_soma/workproducts/soa_svce_model_svce_chan_BB29CCA8.html" guid="{95AA7C70-6259-4627-B705-6A67E33A47BC}">Artifact: Service Channel</a> and visualized on the diagram below.
+</p>
+<p align="center">
+    <img height="113" alt="Diagram is described in the textual content." src="./../../../soa.rup_soma/guidances/concepts/resources/co_soa_choreography-10.gif"     width="416" border="0" />
+</p>
+<p>
+    When architecting and designing enterprise-scale solutions, we must always remember the functional and nonfunctional
+    requirements and ensure that the correct trade-offs and decisions are made to support the business goals.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

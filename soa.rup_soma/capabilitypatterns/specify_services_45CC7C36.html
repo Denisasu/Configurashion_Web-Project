@@ -1,0 +1,667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Шаблон возможностей: Service Specification</title>
+<meta content="CapabilityPattern" name="uma.type">
+<meta content="specify_services" name="uma.name">
+<meta content="Service Specification" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_6Jd70DtdEdqPaeZADstHAA&path=_6Jd70DtdEdqPaeZADstHAA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  defaultQueryStr, false, true, true);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div autoWrap="true">
+<div id="page-guid" value="_6Jd70DtdEdqPaeZADstHAA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Шаблон возможностей: Service Specification</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/capabilitypattern.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This capability pattern provides service behavior specifications and identifies service providers and partitions.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="middle">
+<td class="tab" width="10"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td><td class="tab" nowrap><a id="TAB_Description" class="tab" href="./../../soa.rup_soma/capabilitypatterns/specify_services_45CC7C36.html_desc.html">Описание</a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_a.gif"></td><td class="activeTab" nowrap><span style="white-space:nowrap;">Структура работы</span></td><td width="1"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-a_i.gif"></td><td class="tab" nowrap><a id="TAB_TBS" class="tab" href="./../../soa.rup_soma/capabilitypatterns/specify_services_45CC7C36.html_tbs.html"><span style="white-space:nowrap;">Распределение групп</span></a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap><a id="TAB_WPBS" class="tab" href="./../../soa.rup_soma/capabilitypatterns/specify_services_45CC7C36.html_wpbs.html"><span style="white-space:nowrap;">Использование рабочего продукта</span></a></td><td width="21"><img title="" alt="" height="17" width="21" src="./../../images/tab_end-i.gif"></td><td width="50%"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td colspan="2"><img title="" alt="" height="2" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space_middle.gif"></td><td class="activeTab"><img title="" alt="" height="2" width="10" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space.gif"></td><td colspan="5"><img title="" alt="" height="2" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="10"><img title="" alt="" height="5" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="sectionHeading">Поток операций</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td align="left" colspan="2" class="sectionTableSingleCell">
+<p></p>
+<img diagramType="Activity" border="0" id="diagram_Activity" src="./../../soa.rup_soma/capabilitypatterns/resources/specify_services_45CC7C36_Activity.jpeg" alt="Диаграмма операций: Service Specification" title="Диаграмма операций: Service Specification" usemap="#Activity_specify_services"><map name="Activity_specify_services">
+<area href="./../../soa.rup_soma/capabilitypatterns/soa_specify_services_D308DA60.html" relpath=",_zL1rsEn2EduC74V7YHXTOQ" alt="Perform Service Specification" title="Perform Service Specification" coords="69, 96, 220, 149" shape="rect" guid="_zL1rsEn2EduC74V7YHXTOQ"></area>
+<area href="./../../soa.rup_soma/capabilitypatterns/soa_subsystem_analysis_40CEBC0B.html" relpath=",_WjrjAEn3EduC74V7YHXTOQ" alt="Perform Subsystem Analysis" title="Perform Subsystem Analysis" coords="252, 96, 399, 149" shape="rect" guid="_WjrjAEn3EduC74V7YHXTOQ"></area>
+<area href="./../../soa.rup_soma/capabilitypatterns/perform_component_specification_35965214.html" relpath=",__dhMkE-EEdu0EMZ-3o0kDQ" alt="Perform Component Specification" title="Perform Component Specification" coords="432, 98, 600, 151" shape="rect" guid="__dhMkE-EEdu0EMZ-3o0kDQ"></area>
+</map>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Структура</div>
+<div class="sectionContent">
+<div id="treeContent"></div>
+<script language="JavaScript">
+contentPage.processPage.treeTable.data = {
+title: "Структура", summary: "Структура", 
+columns: [
+["presentation_name", "Элемент структуры"],
+["steps", "Шаги"],
+["id", "Индекс"],
+["predecessors", "Предшественники"],
+["model_info", "Сведения о модели"],
+["type", "Тип"],
+["is_planned", "Запланированный"],
+["is_repeatable", "Повторяющийся"],
+["has_multiple_occurrences", "Несколько вхождений"],
+["is_ongoing", "Выполняющийся"],
+["is_event_driven", "Управляется событиями"],
+["is_optional", "Необязательный"],
+["teams", "Группа"]],
+rows: [
+		
+{id: "768aa154", parentId: "", relPath: ",_zL1rsEn2EduC74V7YHXTOQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "1", prefix: "", name: "soa_specify_services", title: "Perform Service Specification", url: "./../../soa.rup_soma/capabilitypatterns/soa_specify_services_D308DA60.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+	
+		
+		
+{id: "32a8a6de", parentId: "768aa154", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_iSjHME-EEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "2", prefix: "", name: "soa_service_qualification", title: "Apply Services Litmus Tests", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_qualification_627E9310.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "45b01fe6", parentId: "32a8a6de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_iSjHME-EEdu0EMZ-3o0kDQ,_MZwFoUn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architect", title: "Software Architect", url: "./../../soa.rup_soma/capabilitypatterns/rup_software_architect_2D0E0C1E.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "1001781c", parentId: "32a8a6de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_iSjHME-EEdu0EMZ-3o0kDQ,_MZwFoEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_designer", title: "Designer", url: "./../../soa.rup_soma/capabilitypatterns/rup_designer_22702C0E.html", 
+	predecessors: "", info: "Дополнительный исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "4cd61d3e", parentId: "32a8a6de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_iSjHME-EEdu0EMZ-3o0kDQ,_MZwFpUn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Service Model", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_F19FEE3D.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "3b90b32", parentId: "32a8a6de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_iSjHME-EEdu0EMZ-3o0kDQ,_iS1bEE-EEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "goal_service_model", title: "Goal-Service Model", url: "./../../soa.rup_soma/capabilitypatterns/goal_service_model_8E34B48B.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "4d018c46", parentId: "32a8a6de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_iSjHME-EEdu0EMZ-3o0kDQ,_iS1bEE-EEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "goal_service_model", title: "Goal-Service Model", url: "./../../soa.rup_soma/capabilitypatterns/goal_service_model_8E34B48B.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "2ab4c712", parentId: "32a8a6de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_iSjHME-EEdu0EMZ-3o0kDQ,_MZwFpUn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Service Model", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_F19FEE3D.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "1d8c71de", parentId: "768aa154", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "3", prefix: "", name: "soa_service_specification", title: "Service Specification", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_specification_907039BC.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "c29d8920", parentId: "1d8c71de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ,_MZwFoEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_designer", title: "Designer", url: "./../../soa.rup_soma/capabilitypatterns/rup_designer_22702C0E.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "b6d2c2c8", parentId: "1d8c71de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ,_MZwFoUn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architect", title: "Software Architect", url: "./../../soa.rup_soma/capabilitypatterns/rup_software_architect_2D0E0C1E.html", 
+	predecessors: "", info: "Дополнительный исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "5a8c2332", parentId: "1d8c71de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ,_MZwFokn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Design Model", url: "./../../soa.rup_soma/capabilitypatterns/rup_design_model_1BA72034.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "7ae891f4", parentId: "1d8c71de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ,_MZwFpUn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Service Model", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_F19FEE3D.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "21e5b2fc", parentId: "1d8c71de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ,_MZwFo0n3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architecture_document", title: "Software Architecture Document", url: "./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_8480F5F9.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "1a91ec9c", parentId: "1d8c71de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ,_MZwFpEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_supplementary_specification", title: "Supplementary Specifications", url: "./../../soa.rup_soma/capabilitypatterns/rup_supplementary_specification_E7020E2D.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "b6d068c8", parentId: "1d8c71de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ,_MZwFpkn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_specific_guidelines", title: "Project-Specific Guidelines", url: "./../../soa.rup_soma/capabilitypatterns/rup_project_specific_guidelines_E0390253.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "9ff5a8bc", parentId: "1d8c71de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ,_MZwFokn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Design Model", url: "./../../soa.rup_soma/capabilitypatterns/rup_design_model_1BA72034.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "571cf80a", parentId: "1d8c71de", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ,_MZwFpUn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Service Model", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_F19FEE3D.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "f408dafa", parentId: "768aa154", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_P5_SMEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "4", prefix: "", name: "soa_service_message_design", title: "Message Design", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_message_design_8300B60D.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "bb43e1c0", parentId: "f408dafa", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_P5_SMEn3EduC74V7YHXTOQ,_MZwFoEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_designer", title: "Designer", url: "./../../soa.rup_soma/capabilitypatterns/rup_designer_22702C0E.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "cb1cc42a", parentId: "f408dafa", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_P5_SMEn3EduC74V7YHXTOQ,_P6LfcEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_database_designer", title: "Database Designer", url: "./../../soa.rup_soma/capabilitypatterns/rup_database_designer_86C5727E.html", 
+	predecessors: "", info: "Дополнительный исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "ea1642ec", parentId: "f408dafa", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_P5_SMEn3EduC74V7YHXTOQ,_MZwFoUn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architect", title: "Software Architect", url: "./../../soa.rup_soma/capabilitypatterns/rup_software_architect_2D0E0C1E.html", 
+	predecessors: "", info: "Дополнительный исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "6ccfe24", parentId: "f408dafa", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_P5_SMEn3EduC74V7YHXTOQ,_MZwFpUn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Service Model", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_F19FEE3D.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "41983d7c", parentId: "f408dafa", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_P5_SMEn3EduC74V7YHXTOQ,_P6XssEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_model", title: "Analysis Model", url: "./../../soa.rup_soma/capabilitypatterns/rup_analysis_model_1D2097AF.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "cf7a51f4", parentId: "f408dafa", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_P5_SMEn3EduC74V7YHXTOQ,_P6XssUn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_data_model", title: "Data Model", url: "./../../soa.rup_soma/capabilitypatterns/rup_data_model_27BE77BF.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "b8d77492", parentId: "f408dafa", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_P5_SMEn3EduC74V7YHXTOQ,_MZwFpUn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Service Model", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_F19FEE3D.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "9502d9fc", parentId: "768aa154", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_TO-4EEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "5", prefix: "", name: "sec_identify_security_patterns", title: "Identify Security Patterns", url: "./../../soa.rup_soma/capabilitypatterns/sec_identify_security_patterns_9AD3C9BE.html", 
+	predecessors: "3", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "d56918a2", parentId: "9502d9fc", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_TO-4EEn3EduC74V7YHXTOQ,_TPLFUEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "sec_security_architect", title: "Security Architect", url: "./../../soa.rup_soma/capabilitypatterns/sec_security_architect_731EB642.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "c74e76f6", parentId: "9502d9fc", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_TO-4EEn3EduC74V7YHXTOQ,_MZwFo0n3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architecture_document", title: "Software Architecture Document", url: "./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_8480F5F9.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "5e486f0e", parentId: "9502d9fc", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_TO-4EEn3EduC74V7YHXTOQ,_TPXSkEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_architectural_proof_of_concept", title: "Architectural Proof-of-Concept", url: "./../../soa.rup_soma/capabilitypatterns/rup_architectural_proof_of_concept_A4E5282D.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "5110d558", parentId: "9502d9fc", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_TO-4EEn3EduC74V7YHXTOQ,_TPXSkUn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_reference_architecture", title: "Reference Architecture", url: "./../../soa.rup_soma/capabilitypatterns/rup_reference_architecture_AF83083D.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "f03a2f6e", parentId: "9502d9fc", relPath: ",_zL1rsEn2EduC74V7YHXTOQ,_TO-4EEn3EduC74V7YHXTOQ,_MZwFo0n3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architecture_document", title: "Software Architecture Document", url: "./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_8480F5F9.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "54c43910", parentId: "", relPath: ",_WjrjAEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "6", prefix: "", name: "soa_subsystem_analysis", title: "Perform Subsystem Analysis", url: "./../../soa.rup_soma/capabilitypatterns/soa_subsystem_analysis_40CEBC0B.html", 
+	predecessors: "1", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+	
+		
+		
+{id: "4c6adada", parentId: "54c43910", relPath: ",_WjrjAEn3EduC74V7YHXTOQ,_WhgqgUxBEduGSMz-5zscXg", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "7", prefix: "", name: "soa_subsystem_design", title: "Subsystem Design (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_subsystem_design_F5793D14.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "b5dd5226", parentId: "4c6adada", relPath: ",_WjrjAEn3EduC74V7YHXTOQ,_WhgqgUxBEduGSMz-5zscXg,_kocBwUn4EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_designer", title: "Designer", url: "./../../soa.rup_soma/capabilitypatterns/rup_designer_2862431E.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "d6fd7a2e", parentId: "4c6adada", relPath: ",_WjrjAEn3EduC74V7YHXTOQ,_WhgqgUxBEduGSMz-5zscXg,_Whs3wkxBEduGSMz-5zscXg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_analysis_model", title: "Business Analysis Model", url: "./../../soa.rup_soma/capabilitypatterns/rup_business_analysis_model_3982D2D0.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "25b91288", parentId: "4c6adada", relPath: ",_WjrjAEn3EduC74V7YHXTOQ,_WhgqgUxBEduGSMz-5zscXg,_koiIYEn4EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_subsystem", title: "Design Subsystem", url: "./../../soa.rup_soma/capabilitypatterns/rup_design_subsystem_221F95ED.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "e1e4d13c", parentId: "4c6adada", relPath: ",_WjrjAEn3EduC74V7YHXTOQ,_WhgqgUxBEduGSMz-5zscXg,_Whs3w0xBEduGSMz-5zscXg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_interface", title: "Interface", url: "./../../soa.rup_soma/capabilitypatterns/rup_interface_A25CA895.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "defb2052", parentId: "4c6adada", relPath: ",_WjrjAEn3EduC74V7YHXTOQ,_WhgqgUxBEduGSMz-5zscXg,_Whs3xkxBEduGSMz-5zscXg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "database_migration_specification", title: "Data Migration Specification", url: "./../../soa.rup_soma/capabilitypatterns/database_migration_specification_FE14B4EF.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "60504502", parentId: "4c6adada", relPath: ",_WjrjAEn3EduC74V7YHXTOQ,_WhgqgUxBEduGSMz-5zscXg,_Whs3xUxBEduGSMz-5zscXg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Design Model", url: "./../../soa.rup_soma/capabilitypatterns/rup_design_model_F7BA0D9.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "1f3c9b1a", parentId: "4c6adada", relPath: ",_WjrjAEn3EduC74V7YHXTOQ,_WhgqgUxBEduGSMz-5zscXg,_Whs3xExBEduGSMz-5zscXg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_specific_guidelines", title: "Project-Specific Guidelines", url: "./../../soa.rup_soma/capabilitypatterns/rup_project_specific_guidelines_4DDC0C9.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "3a5d3c26", parentId: "4c6adada", relPath: ",_WjrjAEn3EduC74V7YHXTOQ,_WhgqgUxBEduGSMz-5zscXg,_Whs3wUxBEduGSMz-5zscXg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Service Model", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_4AE9BEBA.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "c694eb5c", parentId: "4c6adada", relPath: ",_WjrjAEn3EduC74V7YHXTOQ,_WhgqgUxBEduGSMz-5zscXg,_Whs3xUxBEduGSMz-5zscXg", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Design Model", url: "./../../soa.rup_soma/capabilitypatterns/rup_design_model_F7BA0D9.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "40623850", parentId: "", relPath: ",__dhMkE-EEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "8", prefix: "", name: "perform_component_specification", title: "Perform Component Specification", url: "./../../soa.rup_soma/capabilitypatterns/perform_component_specification_35965214.html", 
+	predecessors: "6", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+	
+		
+		
+{id: "4a0af558", parentId: "40623850", relPath: ",__dhMkE-EEdu0EMZ-3o0kDQ,_FEZVgE-FEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "9", prefix: "", name: "soa_component_specification", title: "Component Specification (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_component_specification_63B8F64A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,false]},
+	
+		
+		
+{id: "4375e9f0", parentId: "4a0af558", relPath: ",__dhMkE-EEdu0EMZ-3o0kDQ,_FEZVgE-FEdu0EMZ-3o0kDQ,_FEfcIE-FEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_designer", title: "Designer", url: "./../../soa.rup_soma/capabilitypatterns/rup_designer_A7DD79E9.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "3eff929e", parentId: "4a0af558", relPath: ",__dhMkE-EEdu0EMZ-3o0kDQ,_FEZVgE-FEdu0EMZ-3o0kDQ,_FEfcIU-FEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementer", title: "Implementer", url: "./../../soa.rup_soma/capabilitypatterns/rup_implementer_B27B59F9.html", 
+	predecessors: "", info: "Дополнительный исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "dec3ef4a", parentId: "4a0af558", relPath: ",__dhMkE-EEdu0EMZ-3o0kDQ,_FEZVgE-FEdu0EMZ-3o0kDQ,_FEliwE-FEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_subsystem", title: "Design Subsystem", url: "./../../soa.rup_soma/capabilitypatterns/rup_design_subsystem_39DD6C3B.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "90462a26", parentId: "4a0af558", relPath: ",__dhMkE-EEdu0EMZ-3o0kDQ,_FEZVgE-FEdu0EMZ-3o0kDQ,_FEliwU-FEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "soa_svce_component", title: "Service Component", url: "./../../soa.rup_soma/capabilitypatterns/soa_svce_component_447B4C4B.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "b5a4f41e", parentId: "4a0af558", relPath: ",__dhMkE-EEdu0EMZ-3o0kDQ,_FEZVgE-FEdu0EMZ-3o0kDQ,_FEliwk-FEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Service Model", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_33146061.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "69e379b2", parentId: "4a0af558", relPath: ",__dhMkE-EEdu0EMZ-3o0kDQ,_FEZVgE-FEdu0EMZ-3o0kDQ,_FEliwU-FEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "soa_svce_component", title: "Service Component", url: "./../../soa.rup_soma/capabilitypatterns/soa_svce_component_447B4C4B.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "b6ea394e", parentId: "", relPath: ",_qjHAEDtfEdqiLpazHY56rQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_designer", title: "Designer", url: "./../../soa.rup_soma/capabilitypatterns/rup_designer_E3536B87.html", 
+	predecessors: "", info: "", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "74aea1bc", parentId: "b6ea394e", relPath: ",_qjHAEDtfEdqiLpazHY56rQ,_qkcc0DtfEdqiLpazHY56rQ", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "soa_service_model", title: "Service Model", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_model_8EA76C24.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "237e5cb6", parentId: "", relPath: ",_BJ2OsC1bEdudYLeyb_y9tw", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_software_architect", title: "Software Architect", url: "./../../soa.rup_soma/capabilitypatterns/rup_software_architect_E1DCA23A.html", 
+	predecessors: "", info: "", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "e85e2d7c", parentId: "237e5cb6", relPath: ",_BJ2OsC1bEdudYLeyb_y9tw,_CPXsUC1bEdudYLeyb_y9tw", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_analysis_model", title: "Analysis Model", url: "./../../soa.rup_soma/capabilitypatterns/rup_analysis_model_F8DB2F7B.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "9332ff3a", parentId: "237e5cb6", relPath: ",_BJ2OsC1bEdudYLeyb_y9tw,_UleycDx5EduNwuGvuWPNZA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_architectural_proof_of_concept", title: "Architectural Proof-of-Concept", url: "./../../soa.rup_soma/capabilitypatterns/rup_architectural_proof_of_concept_21772594.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "e1aa363a", parentId: "237e5cb6", relPath: ",_BJ2OsC1bEdudYLeyb_y9tw,_baZY8CxsEdupJ8eX04kqLQ", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "Design Model", url: "./../../soa.rup_soma/capabilitypatterns/rup_design_model_33596E2D.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "76ce558a", parentId: "237e5cb6", relPath: ",_BJ2OsC1bEdudYLeyb_y9tw,_UleycTx5EduNwuGvuWPNZA", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_reference_architecture", title: "Reference Architecture", url: "./../../soa.rup_soma/capabilitypatterns/rup_reference_architecture_2C1505A4.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "28cb174c", parentId: "237e5cb6", relPath: ",_BJ2OsC1bEdudYLeyb_y9tw,_baZY8SxsEdupJ8eX04kqLQ", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architecture_document", title: "Software Architecture Document", url: "./../../soa.rup_soma/capabilitypatterns/rup_software_architecture_document_3DF74E3D.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "e014f67a", parentId: "", relPath: ",_CPRlsC1bEdudYLeyb_y9tw", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_database_designer", title: "Database Designer", url: "./../../soa.rup_soma/capabilitypatterns/rup_database_designer_F47FFC9C.html", 
+	predecessors: "", info: "", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "30c0ee42", parentId: "e014f67a", relPath: ",_CPRlsC1bEdudYLeyb_y9tw,_CPdy8C1bEdudYLeyb_y9tw", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_data_model", title: "Data Model", url: "./../../soa.rup_soma/capabilitypatterns/rup_data_model_61E8E8F2.html", 
+	predecessors: "", info: "Ответственный за", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+]};
+				</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

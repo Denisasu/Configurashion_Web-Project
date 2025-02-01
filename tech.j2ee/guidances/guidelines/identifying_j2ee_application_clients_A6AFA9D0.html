@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация:  Идентификация клиентских приложений J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_j2ee_application_clients" name="uma.name">
+<meta content=" Идентификация клиентских приложений J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.2221823675598937E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.2221823675598937E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация:  Идентификация клиентских приложений J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждается, как определить и смоделировать клиентские приложения J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Определение элементов проекта</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    Введение
+</h2>
+<p>
+    Это руководство посвящено идентификации клиентских приложений. Дополнительное руководство о клиентских приложениях
+    предоставлено в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_client_3499CC99.html" guid="8.333388171077014E-306">Руководство по рабочему продукту: Клиентские приложения</a>.
+</p>
+<h2>
+    Идентификация клиентских приложений
+</h2>
+<p>
+    Клиентские приложения обычно идентифицируются как часть определения общей архитектуры распределенного приложения J2EE.
+    Клиентское приложение определяется при потребности в автономном приложении для настольной системы. Некоторые типичные
+    примеры:
+</p>
+<ul>
+    <li>
+        приложения для администрирования систем или приложений J2EE
+    </li>
+    <li>
+        приложения "толстого" клиента, которые требуют более высокой степени управления действиями пользователя, чем это
+        возможно обеспечить с помощью web-интерфейса
+    </li>
+</ul>
+<h3>
+    Сравнение автономных и клиентских приложений J2EE
+</h3>
+<p>
+    В общем случае, клиентское приложение J2EE более предпочтительно, чем автономное приложение Java, по следующим
+    причинам:
+</p>
+<ul>
+    <li>
+        Клиентское приложение J2EE имеет доступ к службам идентификации J2EE. Это избавляет от разработки уникального кода
+        идентификации, например, для входа в систему.
+    </li>
+    <li>
+        Поскольку автономное приложение Java может получать доступ к объектам EJB с помощью поиска его имени посредством
+        JNDI, оно должно знать имя JNDI bean-объекта. Клиентское приложение J2EE может использовать разные имена и
+        преобразовывать их в объекты EJB с помощью файла описания.
+    </li>
+    <li>
+        Клиентские приложения J2EE более портативны, чем автономные клиентские приложения Java, и они могут быть развернуты
+        в любой среде, совместимой с J2EE.<br />
+    </li>
+</ul>
+<h3>
+    Моделирование клиентских приложений
+</h3>
+<p>
+    Так как клиентское приложение является основным логическим компонентом системы, мы рекомендуем рассматривать его как <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Рабочий продукт: Подсистема проекта</a> и моделировать соответствующим
+    образом. То есть, моделируйте его как подсистему UML со стереотипом &lt;&lt;ApplicationClient&gt;&gt;, который
+    заключает в себе все характеристики клиентского приложения.<br />
+</p>
+<p>
+    Так как клиентское приложение является параллельно исполняемой программой, оно может также появляться в Представлении
+    процесса и Представлении проекта. См. <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_the_run-time_architecture_for_j2ee_applications_58C0C0A2.html" guid="1.7390519818410197E-305">Руководство: Описание динамической архитектуры приложений J2EE</a> и <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_distribution_for_j2ee_applications_93B5A232.html" guid="2.0306406686133254E-306">Руководство: Описание распределенных приложений J2EE</a>.
+</p>
+<p>
+    Общее руководство по моделированию внутренних компонентов Подсистемы проекта находится в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Рабочий продукт: Подсистема проекта</a> и связанных с ним руководствах.
+    Клиентские приложения могут быть развернуты с помощью Модуля J2EE. Более подробная информация находится в разделе
+    &nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">Руководство: Модуль J2EE</a>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

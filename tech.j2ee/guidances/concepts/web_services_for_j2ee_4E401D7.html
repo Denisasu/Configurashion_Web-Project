@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Концепция: Web-службы J2EE </title>
+<meta content="Concept" name="uma.type">
+<meta content="web_services_for_j2ee" name="uma.name">
+<meta content="Web-службы J2EE " name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jIamcOBoEe-aS_x8ARA3yA", "1.2274284020937826E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "1.2274284020937826E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lI0_AOBoEe-aS_x8ARA3yA", "1.2274284020937826E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_liGaoOBoEe-aS_x8ARA3yA", "1.2274284020937826E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.2274284020937826E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Концепция: Web-службы J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Этот раздел содержит обзор Web-служб J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Разработчик архитектуры</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Что такое Web-служба J2EE?
+</h3>
+<p>
+    Архитектура Web-службы состоит из трех основных элементов: реестра службы, провайдера службы и инициатора службы. Схема
+    взаимодействия этих трех элементов приведена на рисунке 1.
+</p>
+<p align="center">
+    <img height="339" alt="Архитектура Web-службы" src="./../../../tech.j2ee/guidances/concepts/resources/service_arch.gif" width="487" /><br />
+     Рисунок 1: <s>-</s> архитектура Web-службы
+</p>
+<p>
+    Провайдер службы начинает свою работу с определения интерфейса службы с помощью абстрактного документа Описание службы,
+    используя Язык описания Web-служб (WSDL). Это абстрактное описание связывается с транспортным протоколом и кодировкой,
+    а также с адресом в конкретном определении службы, чтобы определить конкретный экземпляр службы, называемый также
+    <i>конечной точкой службы</i>, или <i>портом</i>. Это конкретное описание можно затем опубликовать в реестре службы,
+    таком как Universal Description, Discovery and Integration (UDDI), сделав его доступным любому инициатору службы. С
+    помощью этого описания инициатор службы выбирает и применяет конкретную реализацию службы для Web-службы.
+</p>
+<p>
+    Web-служба J2EE состоит из набора таких портов, работающих в контейнере. Контейнер служит посредником при доступе к
+    службе и предоставляет среду выполнения.
+</p>
+<p>
+    Клиентом Web-службы может быть другая Web-служба, любой компонент J2EE или произвольное приложение Java. Использовать
+    Web-службы могут и другие приложения, не являющиеся приложениями Java или Web.
+</p>
+<h3>
+    Панель клиента Web-службы
+</h3>
+<p>
+    Панель клиента Web-службы предоставляется провайдером портов (провайдером службы) и контейнером. Как показано на
+    рисунке 2 ниже (серым цветом), клиентская панель состоит из интерфейса службы и интерфейса конечной точки службы.
+</p>
+<p align="center">
+    <img height="217" alt="Панель клиента Web-службы" src="./../../../tech.j2ee/guidances/concepts/resources/client_view.gif" width="487" /><br />
+     Рисунок 2: <s>-</s> панель клиента Web-службы
+</p>
+<p align="left">
+    Для обращения к порту Web-службы клиент сначала находит интерфейс службы с помощью API JNDI. С помощью интерфейса
+    службы клиент находит методы для доступа к порту и реализации Web-службы через интерфейс конечной точки службы. В
+    панели клиента порт считается объектом без сохранения состояния.
+</p>
+<p align="left">
+    Интерфейсы службы и конечной точки службы определяются спецификацией JAX-RPC; однако характеристики интерфейса службы
+    определяются документом Описание службы WSDL, предоставляемым провайдером Web-службы.
+</p>
+<h3>
+    Панель сервера Web-службы
+</h3>
+<p>
+    В панели сервера Web-службы отображается реализация бизнес-логики службы. В соответствии с правилами J2EE 1.4, конечная
+    точка Web-службы может быть реализована на основе одного из следующих подходов:
+</p>
+<ul>
+    <li>
+        С помощью сеансового объекта EJB без сохранения состояния, как указано в спецификациях <a href="http://www.jcp.org/en/jsr/detail?id=109" target="_blank">JSR 109</a> и <a href="http://java.sun.com/products/ejb/docs.html" target="_blank">EJB 2.1</a>&nbsp;
+    </li>
+    <li>
+        С помощью сервлета, как указано в <a href="http://java.sun.com/webservices/jaxrpc/index.jsp" target="_blank">JAX-RPC</a>
+    </li>
+</ul>
+<p>
+    Дополнительная информация об этих двух подходах приведена в разделе <b><a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_session_beans_5E45D5DA.html" guid="6.241144674389355E-307">Указания: идентификация сеансовых объектов EJB</a></b> для конечной точки на базе
+    сеансовых объектов EJB и разделе <b><a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_servlets_951FE427.html" guid="6.749276633239724E-306">Указания: идентификация сервлетов</a></b> для конечной точки на базе сервлетов.
+</p>
+<h3>
+    Справочники
+</h3>
+<p>
+    Основным справочником для этой страницы служит спецификация &nbsp;<a href="http://www.jcp.org/en/jsr/detail?id=109" target="_blank">Web Services for J2EE (JSR 109)</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

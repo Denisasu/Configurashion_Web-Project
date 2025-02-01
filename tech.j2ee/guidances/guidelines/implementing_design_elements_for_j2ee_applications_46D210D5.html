@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация:  Проектирование элементов проекта для приложений J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="implementing_design_elements_for_j2ee_applications" name="uma.name">
+<meta content=" Проектирование элементов проекта для приложений J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.693634112172613E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.693634112172613E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация:  Проектирование элементов проекта для приложений J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждается, как разработать исходный код для любого из компонентов J2EE (включая аплеты, клиентские приложения, web-компоненты и объекты EJB). </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_component_AE366827.html" guid="{3293F4F7-EFCD-4476-BFF1-81AC3812B512}">Элементы проекта реализации</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h2>
+<p>
+    В этом руководстве обсуждается способы <a href="#DevelopingJ2EESourceCode">разработки исходного кода</a> для любого из
+    компонентов J2EE (включая аплеты, клиентские приложения, web-компоненты и объекты EJB).
+</p>
+<p>
+    Результирующие компоненты J2EE будут упакованы в Модули J2EE в процессе интеграции. Более подробная информация
+    находится в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_modules_17925A58.html" guid="3.7932077950837037E-305">Руководство: Сборка модулей J2EE</a>.
+</p>
+<h2>
+    <a id="DevelopingJ2EESourceCode" name="DevelopingJ2EESourceCode"></a>Разработка исходного кода J2EE
+</h2>
+<p>
+    Исходный код J2EE включает в себя исходный код всех компонентов J2EE (включая аплеты, клиентские приложения,
+    web-компоненты и объекты EJB), а также исходный код стандартных классов Java и объектов JavaBean. В частности, для
+    приложений J2EE могут быть созданы следующие <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Рабочий продукт: Элементы реализации</a>:
+</p>
+<ul>
+    <li>
+        Исходные файлы (такие как страницы JSP, статические файлы HTML, файлы изображений, файлы Java)
+    </li>
+    <li>
+        Скомпилированные файлы (файлы байткода Java)
+    </li>
+</ul>
+<p>
+    Реализация компонента J2EE включает в себя конкретизацию проекта, в том числе, интерфейсов, определений типов и
+    вспомогательных классов. Процесс этого по существу такой же, как и для проекта, но результаты должны быть завершены на
+    том же уровне, что и операции, чтобы позволить выполнение и тестирование компонента.
+</p>
+<h2>
+    <a id="ModelingGuidelines" name="ModelingGuidelines"></a>Руководство по моделированию
+</h2>
+<p>
+    При моделировании реализации J2EE могут быть использованы все те же конструкции, что и в Модели проекта, но также можно
+    включить диаграммы, показывающие реализацию в терминах <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Рабочий продукт: Элемент реализации</a> (например, файлы .java или
+    скомпилированные файлы .class).
+</p>
+<p>
+    Однако, в общем случае, большинство файлов реализации не моделируются, если средством проектирования полного обхода не
+    предоставлена некоторая поддержка или не нужно показать некоторые неочевидные взаимосвязи. Причина этого состоит в том,
+    что взаимосвязи часто являются явными. Обычно существует один файл .java для каждого интерфейса или класса Java, и один
+    скомпилированный файл .class для каждого файла .java. Таким образом, моделирование этих файлов не очень интересно.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

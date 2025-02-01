@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация:  Идентификация объектов EJB</title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_enterprise_javabeans_ejbs" name="uma.name">
+<meta content=" Идентификация объектов EJB" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "9.931732120190802E-307"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.931732120190802E-307"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация:  Идентификация объектов EJB</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждается, как определить и смоделировать объекты EJB для приложения J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Определение элементов проекта</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h2>
+<p>
+    Это руководство посвящено идентификации объектов EJB. Дополнительное руководство об объектах EJB предоставлено в
+    разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Руководство: Объект EJB</a>
+</p>
+<h2>
+    <a id="Guidelines" name="Guidelines"></a>Идентификация объектов EJB
+</h2>
+<p>
+    Обычно объекты EJB используются для реализации бизнес-объектов на стороне сервера, которые требуют поддержки
+    транзакций, защиты и удаленного доступа или работают с общими данными (например, изменяют информацию о счете).
+</p>
+<p>
+    Объекты EJB часто идентифицируются во время идентификации классов проекта из <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">Рабочий продукт: Класс анализа</a>. Классы управления являются
+    подходящими кандидатами для bean-объектов сеанса, потому что bean-объекты сеанса приспособлены для предоставления
+    управляющей логики. Сущностные классы являются подходящими кандидатами для bean-объектов сущностей, потому что они
+    приспособлены для хранения данных.
+</p>
+<p>
+    Обратитесь также к следующим более специальным руководствам:
+</p>
+<ul type="disc">
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_session_beans_5E45D5DA.html" guid="6.241144674389355E-307">Идентификация bean-объектов сеанса</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_entity_beans_F497D4.html" guid="4.3141371110020564E-306">Идентификация bean-объектов сущностей</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_message-driven_beans_63C9FE78.html" guid="1.4428031829474456E-305">Идентификация bean-объектов, управляемых сообщениями</a>
+    </li>
+</ul>
+<h4>
+    <a id="Comparing_Session,_Message-Driven,_and_Entity_EJBs" name="Comparing_Session,_Message-Driven,_and_Entity_EJBs"></a>Сравнение bean-объектов сеанса, сущности и управляемых
+    сообщениями
+</h4>
+<p>
+    Обобщая некоторые из названных руководств, эта таблица определяет роли, которые играют различные объекты EJB, способ
+    доступа к ним и природу их состояния.
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="col1" width="15%">
+                    &nbsp;
+                </th>
+                <th id="col2" width="30%">
+                    Сеанс
+                </th>
+                <th id="col3" width="25%">
+                    Управление событиями
+                </th>
+                <th id="col4" width="30%">
+                    Сущность
+                </th>
+            </tr>
+            <tr>
+                <th id="row2" align="left" headers="col1" width="15%">
+                    <p>
+                        Роль
+                    </p>
+                </th>
+                <td headers="col2 row2" width="30%">
+                    <p>
+                        Реализует бизнес-логику, характерную для клиента
+                    </p>
+                </td>
+                <td headers="col3 row2" width="25%">
+                    <p>
+                        Реализует бизнес-логику, характерную для обработки сообщений
+                    </p>
+                </td>
+                <td headers="col4 row2" width="30%">
+                    <p>
+                        Реализует бизнес-логику, характерную для бизнес-сущности
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th id="row3" align="left" headers="col1" width="15%">
+                    <p>
+                        Метод доступа
+                    </p>
+                </th>
+                <td headers="col2 row3" width="30%">
+                    <p>
+                        Единственный клиент для локального и удаленного интерфейсов
+                    </p>
+                </td>
+                <td headers="col3 row3" width="25%">
+                    <p>
+                        Контейнер реализован с помощью интерфейса JMS MessageListener; нет прямого доступа для клиентов
+                    </p>
+                </td>
+                <td headers="col4 row4" width="30%">
+                    <p>
+                        Одновременно существует много клиентов для локального и удаленного интерфейсов
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th id="row4" align="left" headers="col1" width="15%">
+                    <p>
+                        Состояние
+                    </p>
+                </th>
+                <td headers="col2 row4" width="30%">
+                    <p>
+                        Может быть установлено кратковременное диалоговое состояние между клиентом и контейнером
+                    </p>
+                </td>
+                <td headers="col3 row4" width="25%">
+                    <p>
+                        Состояния не сохраняются, но может поддерживаться управление ресурсами в экземпляре
+                    </p>
+                </td>
+                <td headers="col4 row4" width="30%">
+                    <p>
+                        Постоянное состояние сохраняется в базе данных
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h2>
+    <a id="Modeling" name="Modeling"></a>Моделирование объектов EJB
+</h2>
+<p>
+    Объекты EJB моделируются как набор классов стандартных типов. В частности, применяются класс bean-объекта и любые
+    классы интерфейса EJB. Интерфейсы EJB моделируются как классы стереотипов, а не интерфейсы UML, по причинам,
+    обсуждаемым в <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/interfaces_for_j2ee_applications_23711CC0.html" guid="4.292643163694118E-306">Руководство: Интерфейсы для приложений J2EE</a>.
+</p>
+<p>
+    Взаимосвязи между классами bean-объектов и интерфейсами EJB моделируются как зависимости интерфейсов от класса
+    bean-объекта, а не как взаимосвязи реализации. Обычно, Java реализовывает конструктор, представленный как реализация
+    между интерфейсом и классом. Однако, классы EJB не реализовывают своих классов интерфейсов, и поэтому более подходит
+    зависимость. На следующей диаграмме показан пример. Более подробная информацию об этом примере находится в <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_subsystems_for_j2ee_applications_B6B8EE31.html" guid="7.612097453921368E-307">Руководство: Проектирование подсистем для приложений J2EE</a>.
+</p>
+<p align="center">
+    <img height="518" alt="Диаграмма, описанная в сопроводительном тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/ejb_structure.gif"     width="692" />
+</p>
+<p class="picturetext">
+    Пример EJB и класса помощника
+</p>
+<p>
+    Ниже приведены стереотипы UML, применимые для моделирования объектов EJB.
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th align="left" width="35%">
+                    Стереотип
+                </th>
+                <th align="left" width="15%">
+                    Применяется в
+                </th>
+                <th align="left" width="50%">
+                    Определение
+                </th>
+            </tr>
+            <tr>
+                <td width="35%">
+                    <p>
+                        &lt;&lt;EJBSessionHomeInterface&gt;&gt;<br />
+                         &lt;&lt;EJBEntityHomeInterface&gt;&gt;
+                    </p>
+                </td>
+                <td width="15%">
+                    Класс
+                </td>
+                <td width="50%">
+                    Обозначает сеанс или домашний интерфейс сущности соответственно.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &lt;&lt;EJBRemoteInterface&gt;&gt;
+                </td>
+                <td width="15%">
+                    Класс
+                </td>
+                <td width="50%">
+                    Обозначает удаленный интерфейс EJB.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &lt;&lt;EJBLocalInterface&gt;&gt;
+                </td>
+                <td width="15%">
+                    Класс
+                </td>
+                <td width="50%">
+                    Обозначает локальный интерфейс EJB.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &nbsp;
+                </td>
+                <td width="15%">
+                    &nbsp;
+                </td>
+                <td width="50%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &lt;&lt;EJBSession&gt;&gt;
+                </td>
+                <td width="15%">
+                    Класс
+                </td>
+                <td width="50%">
+                    Обозначает класс bean-объекта сеанса EJB.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &lt;&lt;EJBEntity&gt;&gt;
+                </td>
+                <td width="15%">
+                    Класс
+                </td>
+                <td width="50%">
+                    Обозначает класс bean-объекта сущности EJB.
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    &lt;&lt;EJBMessageDriven&gt;&gt;
+                </td>
+                <td width="15%">
+                    Класс
+                </td>
+                <td width="50%">
+                    Указывает, что класс является bean-объектом управляемым сообщениями.
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    EJB обычно сгруппированы в подсистеме вместе с относящимися к ним классами и объектами EJB. Это позволяет разработчику
+    предоставлять представление <i>спецификации</i> объектов EJB, независимое от их реализации, а также группировать их
+    вместе с другими элементами проекта, чтобы обеспечить высокий уровень абстракции. Более подробная информация находится
+    в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_subsystems_for_j2ee_applications_B6B8EE31.html" guid="7.612097453921368E-307">Руководство: Проектирование подсистем для приложений J2EE</a>.
+</p>
+<p>
+    Полный список стереотипов для представления EJB находится в Спецификации преобразования UML/EJB (<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html" guid="1.4494927535802764E-304">RSC01</a>).
+</p>
+<h4>
+    <a id="Modeling_MDBs" name="Modeling_MDBs">Моделирование bean-объектов, управляемых сообщениями</a>
+</h4>
+<p>
+    Смоделируйте зависимости разделов и очередей, к которым подписан bean-объект, управляемой сообщениями. Руководство о
+    моделировании параллельных элементов в приложении J2EE находится в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_the_run-time_architecture_for_j2ee_applications_58C0C0A2.html" guid="1.7390519818410197E-305">Руководство: Описание динамической архитектуры приложений J2EE</a>.
+</p>
+<h4>
+    <a id="Modeling_EJB_Properties" name="Modeling_EJB_Properties">Моделирование свойств EJB</a>
+</h4>
+<p>
+    Такие механизмы, как управляемое контейнером хранилище, транзакции, проверка прав доступа и так далее, могут быть
+    смоделированы как дополнительные свойства класса bean-объекта, или они могут быть просто включены в текстовое описание,
+    связанное с классом bean-объекта.
+</p>
+<p>
+    Используйте диаграммы схем связей для рассмотрения сценариев, используемых этими механизмами.
+</p>
+<h4>
+    <a id="Modeling_EJB_Object_Interactions" name="Modeling_EJB_Object_Interactions">Моделирование взаимодействий объектов
+    EJB</a>
+</h4>
+<p>
+    Диаграммы взаимодействий (диаграммы схем связей и совместной работы) могут быть использованы для представления
+    динамического поведения объектов EJB и взаимодействия объектов, отличных от EJB (включая Web-компоненты и внешние
+    клиентские приложения), с объектами EJB.
+</p>
+<p>
+    Эти диаграммы взаимодействий по существу описаны в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">Задача:
+    Проектирование прецедентов</a>. Взаимодействия могут быть показаны в bean-объекте как <i>черный ящик</i>,
+    взаимодействующий только с интерфейсами EJB. Взаимодействия могут также показывать реализацию bean-объекта с помощью
+    взаимодействий между интерфейсами EJB и классом реализации bean-объекта. Заметьте, что промежуточное взаимодействие с
+    контейнером обычно не показывается.
+</p>
+<p>
+    Bean-объекты, управляемые сообщениями, используют сообщения, поступающие асинхронно из других источников. Можно
+    показать асинхронный поток сообщений непосредственно от поставщика к потребителю, или можно смоделировать взаимосвязь
+    более точно с помощью разделов и очередей.
+</p>
+<p>
+    Пример диаграммы схемы связей, иллюстрирующей взаимодействие класса клиента с интерфейсом EJB, показан на Рисунке 2.
+</p>
+<p style="TEXT-ALIGN: center" align="center">
+    <img id="_x0000_i1026" height="580" alt="Диаграмма, описанная в сопроводительном тексте."     src="./../../../tech.j2ee/guidances/guidelines/resources/external_sequence.gif" width="442" border="0" />
+</p>
+<p style="TEXT-ALIGN: center" align="center">
+    <a id="Figure_2" name="Figure_2"><b><font size="2">Рисунок 2</font></b></a><font size="2"><b>: Взаимодействие класса
+    клиента с интерфейсами EJB</b></font>
+</p>
+<p>
+    На Рисунке 3 показана диаграмма схемы связей, которая подобна приведенной на Рисунке 2, но она показывает
+    взаимодействия с реализацией bean-объекта.
+</p>
+<h5 style="TEXT-ALIGN: center" align="center">
+    <img id="_x0000_i1027" height="538" alt="Диаграмма, описанная в сопроводительном тексте."     src="./../../../tech.j2ee/guidances/guidelines/resources/internal_sequence.gif" width="743" border="0" />
+</h5>
+<p style="TEXT-ALIGN: center" align="center">
+    <a id="Figure_3" name="Figure_3"><b>Рисунок 3</b></a><b>: Пример взаимодействия с реализацией EJB</b>
+</p>
+<h4>
+    <a id="Modeling_Alternatives" name="Modeling_Alternatives">Моделирование альтернатив</a>
+</h4>
+<p>
+    EJB как группировка класса реализации bean-объекта с интерфейсами EJB может быть смоделирован в качестве подсистемы или
+    компонента.
+</p>
+<p>
+    Разработчики могут также моделировать EJB как класс, и создавать стереотипы операций для обозначения, принадлежат ли
+    они "локальным", "удаленным" или "домашним" интерфейсам. Это предоставляет более компактную нотацию по сравнению с
+    другими.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

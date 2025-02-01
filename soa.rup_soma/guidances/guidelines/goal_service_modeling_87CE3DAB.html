@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Goal-Service Modeling</title>
+<meta content="Guideline" name="uma.type">
+<meta content="goal_service_modeling" name="uma.name">
+<meta content="Goal-Service Modeling" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i_Kj0OBoEe-aS_x8ARA3yA", "_hi9GcCzLEdunTsKJjZp1Kg", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jFRy4OBoEe-aS_x8ARA3yA", "_hi9GcCzLEdunTsKJjZp1Kg", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "_hi9GcCzLEdunTsKJjZp1Kg", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "_hi9GcCzLEdunTsKJjZp1Kg", "_jgBOIOBoEe-aS_x8ARA3yA", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "_hi9GcCzLEdunTsKJjZp1Kg", "_j-mAgOBoEe-aS_x8ARA3yA", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lCgUkOBoEe-aS_x8ARA3yA", "_hi9GcCzLEdunTsKJjZp1Kg", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lGIQUOBoEe-aS_x8ARA3yA", "_hi9GcCzLEdunTsKJjZp1Kg", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "_hi9GcCzLEdunTsKJjZp1Kg", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "_hi9GcCzLEdunTsKJjZp1Kg", "_lKaTYOBoEe-aS_x8ARA3yA", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_ldiqwOBoEe-aS_x8ARA3yA", "_hi9GcCzLEdunTsKJjZp1Kg", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lfZr8OBoEe-aS_x8ARA3yA", "_hi9GcCzLEdunTsKJjZp1Kg", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "_hi9GcCzLEdunTsKJjZp1Kg", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_I7P6gCwTEduKcvYAyaKSaA", "_lmz7gOBoEe-aS_x8ARA3yA", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "_hi9GcCzLEdunTsKJjZp1Kg", "_lsSRYOBoEe-aS_x8ARA3yA", "_yVx4gCzNEdunTsKJjZp1Kg"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_d5dewE7OEduvcvbnLvkXhA", "_yVx4gCzNEdunTsKJjZp1Kg"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_yVx4gCzNEdunTsKJjZp1Kg"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Goal-Service Modeling</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This guideline provides additional considerations for modeling the relationship between business goals and supporting services.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/workproducts/goal_service_model_51A34A3.html" guid="_hi9GcCzLEdunTsKJjZp1Kg">Goal-Service Model</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/capabilitypatterns/goal_service_modeling_DD4E7230.html" guid="_6TO11U-AEdu0EMZ-3o0kDQ">Goal-Service Modeling</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/deliveryprocesses/goal_service_modeling_ECAC74E1.html" guid="_Q9SmMU9xEdu0EMZ-3o0kDQ">Goal-Service Modeling</a>
+</li>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_goal_service_assignment_46A9906C.html" guid="_I7P6gCwTEduKcvYAyaKSaA">Identify and Associate Services to Goals</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Scope Considerations
+</h3>
+<p>
+    A single instance of the Goal-Service Model should be created to cover all business domains within the scope of the
+    project. Given that subject matter experts may be experts in a specific business domain, an iterative approach can be
+    used to focus on one domain at a time to make interviews or work sessions more efficient.
+</p>
+<p>
+    During Goal-Service Modeling interview or work sessions, consider the knowledge areas that the subject matter experts
+    can speak to. For example, it may be possible to capture some initial statements of non-functional requirements in
+    parallel with this task. This can provide valuable input into other more detailed requirements gathering sessions.
+</p>
+<h3>
+    Goal Modeling Considerations
+</h3>
+<p>
+    In the same way that&nbsp;goal modeling can be performed either in a UML environment (see <a href="./../../../extend.bus_model/guidances/guidelines/business_goal_CCCB68FF.html" guid="9.06687347922131E-306">Guideline:
+    Business Goal</a>) or in a requirements management environment (such as Rational RequisitePro) the modeling of
+    relationships between services and goals can be performed in either environment. However, it is important to ensure
+    that all leaf-level goals are supported by one or more services and so traceability information is critical. One way to
+    present the model for review is to represent it in a tabular form, as shown below, which clearly identifies any goal
+    unsupported by services.
+</p><br align="center" />
+<br />
+<table cellspacing="2" cellpadding="2" width="80%" border="1">
+    <tbody>
+        <tr>
+            <th scope="col">
+                Goal or sub-goal
+            </th>
+            <th scope="col">
+                KPIs
+            </th>
+            <th scope="col">
+                Metrics
+            </th>
+            <th scope="col">
+                Services
+            </th>
+        </tr>
+        <tr>
+            <td>
+                1. &lt;Goal&gt;
+            </td>
+            <td>
+                &lt;KPI&gt;
+            </td>
+            <td>
+                &lt;Metric&gt;
+            </td>
+            <td>
+                &lt;Service&gt;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                1.1 &lt;Sub-Goal&gt;
+            </td>
+            <td>
+                &lt;KPI&gt;
+            </td>
+            <td>
+                &lt;Metric&gt;
+            </td>
+            <td>
+                &lt;Service&gt;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                1.2 &lt;Sub-Goal&gt;
+            </td>
+            <td>
+                &lt;KPI&gt;
+            </td>
+            <td>
+                &lt;Metric&gt;
+            </td>
+            <td>
+                &lt;Service&gt;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2. &lt;Goal&gt;
+            </td>
+            <td>
+                &lt;KPI&gt;
+            </td>
+            <td>
+                &lt;Metric&gt;
+            </td>
+            <td>
+                &lt;Service&gt;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2.1 &lt;Sub-Goal&gt;
+            </td>
+            <td>
+                &lt;KPI&gt;
+            </td>
+            <td>
+                &lt;Metric&gt;
+            </td>
+            <td>
+                &lt;Service&gt;
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<br />
+<h3>
+    Estimation Considerations
+</h3>
+<p>
+    Plan for one iteration of Goal-Service Modeling for each business domain that falls within the scope of the project.
+    The level of effort for each iteration of the Goal-Service Model can be expected to fall in the range of 12 to 40
+    hours. This will complete the Goal-Service Model to the first elaboration.
+</p>
+<p>
+    For each business domain, in order to complete the Goal-Service Model <i>to the first level of elaboration</i>,
+    estimate:
+</p><br align="center" />
+<br />
+<table cellspacing="2" width="80%" border="1" cell="cell" padding="2">
+    <tbody>
+        <tr>
+            <td width="80%">
+                &nbsp;
+            </td>
+            <td width="10%">
+                <p>
+                    <b>Low</b>
+                </p>
+            </td>
+            <td width="10%">
+                <p>
+                    <b>High</b>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Prepare for interview or work session
+                </p>
+            </td>
+            <td>
+                <p>
+                    2
+                </p>
+            </td>
+            <td>
+                <p>
+                    6
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Interviews or facilitated work sessions
+                </p>
+            </td>
+            <td>
+                <p>
+                    4
+                </p>
+            </td>
+            <td>
+                <p>
+                    16
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Goal-Service Model refactoring and refinement
+                </p>
+            </td>
+            <td>
+                <p>
+                    2
+                </p>
+            </td>
+            <td>
+                <p>
+                    6
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Validation and final revisions
+                </p>
+            </td>
+            <td>
+                <p>
+                    4
+                </p>
+            </td>
+            <td>
+                <p>
+                    12
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Total
+                </p>
+            </td>
+            <td>
+                <p>
+                    12
+                </p>
+            </td>
+            <td>
+                <p>
+                    40
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<br />
+<p>
+    Note: the second elaboration of the Goal-Service Model is completed during Service Exposure Decisions, which may lead
+    to minor updates to the Goal-Service Model as a result of the validation and completion of the mapping of goals to
+    services. This can potentially add a small number of additional goals or sub-goals to address gaps found during the
+    mapping process. Effort for the second elaboration is considered to be part of the Service Exposure Decision task.
+</p>
+<p>
+    The duration and the amount of effort required to develop the Goal-Service Model will vary depending on:
+</p>
+<ul>
+    <li>
+        Complexity of goals for the business domain
+    </li>
+    <li>
+        Number of functional areas within the business domain
+    </li>
+    <li>
+        Quality and completeness of the input work products (i.e. list and description of high level goals)
+    </li>
+    <li>
+        Experience of team (in technique and industry)
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

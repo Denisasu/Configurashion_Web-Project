@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Концепция: Служба сообщений Java (JMS) </title>
+<meta content="Concept" name="uma.type">
+<meta content="java_messaging_service_jms" name="uma.name">
+<meta content="Служба сообщений Java (JMS) " name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jIamcOBoEe-aS_x8ARA3yA", "9.950419951286216E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "9.950419951286216E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lI0_AOBoEe-aS_x8ARA3yA", "9.950419951286216E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_liGaoOBoEe-aS_x8ARA3yA", "9.950419951286216E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.950419951286216E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Концепция: Служба сообщений Java (JMS) </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Этот раздел содержит подробное описание Службы сообщений Java (JMS). </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Разработчик архитектуры</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    Служба сообщений Java, JMS, предоставляет межплатформный стандарт для асинхронного обмена бизнес-данными и событиями в
+    предприятии. Обмен информацией обычно происходит между процессами и компьютерами. Объекты в приложениях, обычно
+    работающих на разных компьютерах, обмениваются информацией, обращаясь к службам промежуточного программного
+    обеспечения, ориентированного на работу с сообщениями (MOM), через стандартный набор интерфейсов, определенный в JMS.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/mom_example.gif" />
+    </p>
+</blockquote>
+<p>
+    JMS предоставляет набор интерфейсов, изолирующих программиста на Java (реализующего поставщики и приемники сообщений)
+    от провайдеров MOM.
+</p>
+<p>
+    Эта страница информационного наполнения описывает основные концепции и типичное применение JMS.
+</p>
+<h3>
+    <a id="Messages" name="Messages"></a>Сообщения
+</h3>
+<p>
+    Сообщение - это отдельный пакет бизнес-данных. Оно состоит из трех блоков:
+</p>
+<ul>
+    <li>
+        <b>Заголовок</b>: содержит информацию о сетевой маршрутизации и идентификаторы сообщений.
+    </li>
+    <li>
+        <b>Свойства</b>: содержит метаданные сообщения. Часть свойств задается службой JMS, однако прикладные программисты
+        могут добавить и собственные свойства.
+    </li>
+    <li>
+        <b>Полезная нагрузка</b>: содержит фактические бизнес-данные. Полезная нагрузка целиком контролируется прикладным
+        программистом.
+    </li>
+</ul>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/message_example.gif" />
+    </p>
+</blockquote>
+<p>
+    В JMS сообщение инкапсулируется в объект, реализующий интерфейс <i>javax.jms.Message</i>. Программа на Java может
+    обращаться к блокам сообщения через этот интерфейс, как показано на следующей диаграмме. У полезной нагрузки может быть
+    несколько разновидностей, обсуждаемых ниже.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/message_expanded_example.gif" />
+    </p>
+</blockquote>
+<p>
+    <b>Заголовок</b> содержит обязательные свойства сообщения. Это следующие свойства:
+</p>
+<ul>
+    <li>
+        MessageID
+    </li>
+    <li>
+        Timestamp
+    </li>
+    <li>
+        CorrelationID
+    </li>
+    <li>
+        ReplyTo
+    </li>
+    <li>
+        Destination
+    </li>
+    <li>
+        DeliveryMode
+    </li>
+    <li>
+        Redelivered
+    </li>
+    <li>
+        Type
+    </li>
+    <li>
+        Expiration
+    </li>
+    <li>
+        Priority
+    </li>
+</ul>
+<p>
+    <b>Свойства</b> позволяют прикладному программисту предоставлять метаданные для сообщения. Свойства состоят из
+    произвольного набора пар имя-значение.
+</p>
+<p>
+    JMS поддерживает шесть видов <b>полезной нагрузки</b>:
+</p>
+<ul>
+    <li>
+        Текстовые сообщения
+    </li>
+    <li>
+        Объектные сообщения
+    </li>
+    <li>
+        Байтовые сообщения
+    </li>
+    <li>
+        Сообщения отображения
+    </li>
+    <li>
+        Потоковые сообщения
+    </li>
+    <li>
+        Пустые сообщения (тело отсутствует)
+    </li>
+</ul>
+<p>
+    Типы полезной нагрузки отражены в иерархии классов, в которой интерфейсы расширяют <i>javax.jms.Message</i>. На
+    следующей диаграмме классов показаны часто используемые текстовые, объектные и байтовые сообщения. Текстовые сообщения
+    обычно содержат данные XML.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/message_hierarchy.gif" />
+    </p>
+</blockquote>
+<h3>
+    <a id="Destinations" name="Destinations"></a>Места назначения
+</h3>
+<p>
+    JMS определяет концепцию места назначения. Сообщения отправляют и получают из мест назначения. Места назначения бывают
+    двух видов:
+</p>
+<ul>
+    <li>
+        Очереди
+    </li>
+    <li>
+        Темы
+    </li>
+</ul>
+<p>
+    <b>Очереди</b> - это места назначения сообщений, применяемые, когда сообщения обрабатываются только одним получателем.
+    Если сравнивать рассылку сообщений с обычной почтой, то очереди - это почтовые ящики, принадлежащие конкретному
+    адресату. Обмен информацией с помощью очередей называется <i>двухточечной</i> связью.
+</p>
+<p>
+    <b>Темы</b> - это места назначения сообщений, применяемые, когда сообщения необходимо доставить нескольким получателям,
+    каждый из которых интересуется сообщениями определенного типа. Вновь пользуясь аналогией с обычной почтой, такие
+    сообщения можно сравнить с газетной статьей; сообщение может прочесть любое число получателей. Такой способ связи часто
+    называют <i>публикацией и подпиской</i>.
+</p>
+<h3>
+    <a id="Message_Delivery" name="Message_Delivery"></a>Доставка сообщений
+</h3>
+<p>
+    Доставка сообщений может быть двух типов:
+</p>
+<ul>
+    <li>
+        Постоянная
+    </li>
+    <li>
+        Непостоянная
+    </li>
+</ul>
+<p>
+    Постоянная доставка предусматривает хранение сообщения в файле или базе данных, что означает гарантированную доставку.
+    Непостоянная доставка выполняется быстрее и не требует таких затрат памяти, но доставка сообщения не гарантируется. В
+    большинстве приложений, работающих с JMS, обычно применяется постоянная доставка.
+</p>
+<h3>
+    <a id="JMS_Clients" name="JMS_Clients"></a>Клиенты JMS
+</h3>
+<p>
+    Клиенты JMS - это объекты Java, использующие JMS. Определены две роли:
+</p>
+<ul>
+    <li>
+        <b>Поставщики сообщений</b>: программы на Java, создающие и отправляющие сообщения.
+    </li>
+    <li>
+        <b>Приемники сообщений</b>: программы на Java, получающие сообщения.
+    </li>
+</ul>
+<p>
+    На следующей диаграмме представлена схема взаимодействия поставщика, приемников и <a href="#JMS_Providers">провайдеров
+    JMS</a>.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/jms_roles_collab.gif" />
+    </p>
+</blockquote>
+<p>
+    Поставщиком сообщений может быть любой класс Java, у которого есть доступ к реализации JMS. Поставщики сообщений
+    создают и отправляют сообщения.
+</p>
+<p>
+    Приемником сообщений может быть любой класс Java, у которого есть доступ к реализации JMS. Приемники сообщений
+    принимают и обрабатывают сообщения.
+</p>
+<p>
+    Клиент JMS использует набор интерфейсов для доступа к JMS. Объекты, реализующие интерфейсы JMS, создаются посредством
+    набора фабрик. Начальная фабрика - это фабрика соединений, <i>ConnectionFactory</i>. Поиск фабрики соединений
+    выполняется с помощью JNDI. Используя фабрику соединений, клиент JMS создает объект соединения. С помощью объекта
+    соединения создается сеансовый объект, который служит фабрикой для остальных объектов JMS. На следующем рисунке
+    показаны основные концептуальные взаимосвязи между фабриками; сведения об очередях и темах опущены.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/connection_factory.gif" />
+    </p>
+</blockquote>
+<p>
+    Фабрики соединений, соединения и сеансы могут быть двух видов: один предназначен для очередей, другой - для тем. На
+    следующей диаграмме классов показана иерархия интерфейсов для основных концепций JMS.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/iface_hierarchy.gif" />
+    </p>
+</blockquote>
+<h3>
+    <a id="JMS_Providers" name="JMS_Providers"></a>Провайдеры JMS
+</h3>
+<p>
+    Провайдер JMS - это реализация, удовлетворяющая спецификации JMS. Провайдер JMS отвечает за прием, хранение и доставку
+    сообщений.
+</p>
+<h3>
+    <a id="More_Information" name="More_Information"></a>Дополнительная информация
+</h3>
+<p>
+    Дополнительная информация о JMS приведена на Web-сайте <a href="http://java.sun.com/products/jms/" target="blank">http://java.sun.com/products/jms/</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="Логотип Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Данная информация полностью или частично разработана компанией <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

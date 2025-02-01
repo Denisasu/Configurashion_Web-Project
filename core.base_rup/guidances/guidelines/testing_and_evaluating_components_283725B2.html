@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Тестирование и оценка компонентов</title>
+<meta content="Guideline" name="uma.type">
+<meta content="testing_and_evaluating_components" name="uma.name">
+<meta content="Тестирование и оценка компонентов" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jFRy4OBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_jJHxEOBoEe-aS_x8ARA3yA", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_jJhZsOBoEe-aS_x8ARA3yA", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_M6RHkN7IEdm8G6yT7-Wdqw", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "_jmUDYOBoEe-aS_x8ARA3yA", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "_kBim0OBoEe-aS_x8ARA3yA", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_OKm3oN7UEdmjRZts2c4ZjQ", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "_kLcwwOBoEe-aS_x8ARA3yA", "2.1172640566834827E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.1172640566834827E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lGIQUOBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_lJGEwOBoEe-aS_x8ARA3yA", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_lJRD4OBoEe-aS_x8ARA3yA", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_M6RHkN7IEdm8G6yT7-Wdqw", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "_lNljMOBoEe-aS_x8ARA3yA", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_lYkrMOBoEe-aS_x8ARA3yA", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_lYvqUOBoEe-aS_x8ARA3yA", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lfZr8OBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}", "2.1172640566834827E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.1172640566834827E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Тестирование и оценка компонентов</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Эта рекомендация является собранием ссылок на ресурсы по тестированию и оценке компонентов.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Элемент реализации</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<p>
+    Далее приведены ссылки, содержащие общую информацию по началу работы с тестированием и оценкой компонентов:
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/developer_testing_D800236F.html" guid="7.256588791264849E-307">Концепции: тестирование разработчиками</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-first_design_6124EA6D.html" guid="2.5962561793181055E-305">Концепции: проектирование для раннего тестирования</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_catalog_D99926DE.html" guid="6.368392607593696E-305">Методика: каталог с идеями тестов</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_list_A6CEF011.html" guid="6.149711039531016E-305">Концепции: список с идеями тестов</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/stubs_9CB734F8.html" guid="6.347489919609074E-305">Концепции: заготовки</a>
+    </li>
+</ul>
+<p>
+    Следующие ссылки содержат более подробную информацию по определению тестов для оценки компонентов:
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_method_calls_B0A17E5C.html" guid="4.418859682485385E-305">Рекомендации по рабочему продукту: идеи тестов для вызовов методов</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_statechart_and_flow_diagrams_B881354C.html" guid="3.794638918140148E-305">Рекомендации по рабочему продукту: идеи тестов для диаграмм конечных состояний и
+        потока</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_booleans_and_boundaries_74AE938C.html" guid="1.8659406802663404E-305">Рекомендации по рабочему продукту: идеи тестов для булевских величин и границ</a>
+    </li>
+    <li>
+        <a href="./../../../core.base_rup/guidances/guidelines/resources/tstids_short-catalog.pdf">Каталог идей тестов: краткий каталог для разработчиков</a> &nbsp; (<a href="http://www.adobe.com/products/acrobat/alternate.html" target="_blank">Adobe Reader</a>)
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_booleans_ands_and_ors_BB81527B.html" guid="9.407283892342409E-306">Вспомогательные материалы: идеи тестов для смешанных случаев AND и OR</a>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

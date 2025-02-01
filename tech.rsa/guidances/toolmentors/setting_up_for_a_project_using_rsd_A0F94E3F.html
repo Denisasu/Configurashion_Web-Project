@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту: Setting Up for a Project Using Rational Systems Developer</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="setting_up_for_a_project_using_rsd" name="uma.name">
+<meta content="Setting Up for a Project Using Rational Systems Developer" name="uma.presentationName">
+<meta content="Tool:rsa_rational_systems_developer:Rational Systems Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Systems Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_JU13oK4OEdqFg48R_ivTjA", "_wIsqMK4LEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_JU13oK4OEdqFg48R_ivTjA", "_wIsqMK4LEdqFg48R_ivTjA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_JU13oK4OEdqFg48R_ivTjA", "_wIsqMK4LEdqFg48R_ivTjA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_wIsqMK4LEdqFg48R_ivTjA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту: Setting Up for a Project Using Rational Systems Developer</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This tool mentor describes how to set up the RSD modeling environment for a project.</td>
+</tr>
+<tr>
+<td>Инструмент: <a href="./../../../tech.rsa/tools/rsa_rational_systems_developer_349857FD.html" guid="_JU13oK4OEdqFg48R_ivTjA">Rational Systems Developer</a> 
+<br>Расширяет: <a href="./../../../tech.rsa/guidances/toolmentors/setting_up_for_a_project_using_rsa_8F3B64B6.html" guid="{C4D01FEE-0C3F-4061-A0C7-06988A6E964F}">Setting Up for a Project Using Rational Software Development Platform</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/support_development_1443EF07.html" guid="{35936CF9-4B04-402A-9482-07E5CFB45D99}">Разработка справочных материалов</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">Создание структуры модели реализации</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Overview
+</h3>
+<p>
+    Setting up for a project means laying the foundation that enables team members to work on the same model at the same
+    time. Developing complex systems requires that groups of analysts, architects, and developers have the ability see and
+    access the "big picture" at the same time as they are working on their own portion of that picture-simultaneously.
+    Successfully managing an environment in which multiple team members have different kinds of access to the same model
+    requires:
+</p>
+<ul>
+    <li>
+        formulating a working strategy for managing team activity
+    </li>
+    <li>
+        having the tools that can support that strategy
+    </li>
+</ul>
+<p>
+    In the guidance that follows, these terms will be used:
+</p>
+<p>
+    <i>Project</i> refers to a file system location that is known to the Eclipse workspace and is used to store the Eclipse
+    resources&nbsp;that are the work products of a development effort
+</p>
+<p>
+    <i>Conceptual models</i> are models that express abstract concepts like use cases, analysis classes, and design
+    components. They are not tightly bound to implementation code. They are stored in files with <i>.emx</i> extensions.
+    They are distinct from <i>implementation models</i>, which consist of implementation code itself, plus diagrams of the
+    code that are stored in files with <i>.dnx</i> extensions. (You can think of an implementation model as equivalent to
+    the project that contains the code and code diagrams.)
+</p>
+<p>
+    The following basic steps lay this foundation:
+</p>
+<ul>
+    <li>
+        <a href="#Establishing the Role">Establishing the Role of Conceptual Modeling and the Modeling Work
+        Breakdown</a>
+    </li>
+    <li>
+        <a href="#Tailor Templates and Defaults">Tailor Templates and Defaults</a> (optional)
+    </li>
+    <li>
+        <a href="#Determine Model Partitioning Strategy">Determine Model Partitioning Strategy</a>
+    </li>
+    <li>
+        <a href="#Create Project and Models">Create Modeling Projects and Models</a>
+    </li>
+</ul>
+<h3>
+    <a id="Establishing the Role" name="Establishing the Role">Establishing the Role of Conceptual Modeling and the
+    Modeling Work Breakdown</a>
+</h3>
+<p>
+    Part of laying the foundation is determining how conceptual models will be used in the development effort. Will they
+    drive development, or will they be used more retrospectively (e.g. as a form of documentation)?
+</p>
+<p>
+    If models will drive development, determine:
+</p>
+<ul>
+    <li>
+        What types of models (such as Use Case, Analysis, and Enterprise IT Design) will be used.
+    </li>
+    <li>
+        The makeup (size and skill sets) of the conceptual modeling team.
+    </li>
+    <li>
+        The anticipated scope of the conceptual modeling effort.
+    </li>
+    <li>
+        How conceptual modeling work assignments will be apportioned among the team members.
+    </li>
+    <li>
+        How likely it is that multiple members of the team will have to work concurrently in the same areas of the
+        conceptual models.
+    </li>
+    <li>
+        What configuration management tool will be used for storing and versioning conceptual model assets, and what the
+        typical CM activities will be.
+    </li>
+</ul>
+<p>
+    Another consideration is what kinds of conceptual models will be used. The tool provides a handful of model templates
+    that can be used to instantiate new conceptual models of specific types such as Use Case Model, Analysis Model, and
+    Enterprise IT Design Model. The templates typically provide a basic UML package structure, and some example content.
+    They may also have certain UML2 profiles pre-applied.
+</p>
+<h3>
+    <a id="Tailor Templates and Defaults" name="Tailor Templates and Defaults">Tailor Templates and Defaults (optional)</a>
+</h3>
+<p>
+    In the steps that follow, you create models using standard templates, that include a basic packaging structure that
+    follows the <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>.
+</p>
+<p>
+    You can optionally create your own specialized templates. In this way you can preset properties and options such as
+    default fonts, colors, line styles, file storage options, the ways in which stereotypes and other information are
+    presented. You can also define your own standard package structures and seed content, and have UML profiles of your
+    choice (including profiles you create) pre-applied.
+</p>
+<p>
+    For more information, refer to <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Setting Up and Working with Models and Modeling Projects</i>.
+</p>
+<h3>
+    <a id="Determine Model Partitioning Strategy" name="Determine Model Partitioning Strategy">Determine Model Partitioning
+    Strategy</a>
+</h3>
+<p>
+    Taking into account the modeling work breakdown you identified in the previous steps, and factoring in some other
+    considerations that are discussed in the Team Development sections of online Help, determine a strategy for allocating
+    conceptual models to physical modeling files.
+</p>
+<p>
+    The tool&nbsp;supports two main approaches for how to break logical model instances:
+</p>
+<ul>
+    <li>
+        a planned approach wherein you decompose the models at the outset, by creating multiple modeling files per model.
+    </li>
+    <li>
+        an ad-hoc approach, based on model refactoring.
+    </li>
+</ul>
+<p>
+    In the real world, a mix of these two approaches is more probable: even if the partitioning strategy has been planned
+    in advance, there will be occasions when a model refactoring is necessary for improving team activities. For a detailed
+    discussion about this topic, see the <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>.
+</p>
+<p>
+    For more information, refer to <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Working in a Team Environment</i>.
+</p>
+<h3>
+    <a id="Create Project and Models" name="Create Project and Models">Create Modeling Projects and Models</a>
+</h3>
+<p>
+    The following describes the process for establishing a set of conceptual models for a development effort. Note that you
+    will not necessarily create all of the projects and models at the outset - you may introduce them incrementally at
+    various stages of the development effort.
+</p>
+<ul>
+    <li>
+        Create a UML Project. Give it a name that reflects the development tasks and work products it will support (e.g.
+        "Timesheet Management System Models" or perhaps "Timesheet Management System Use Case Modeling Files")
+    </li>
+    <li>
+        When you create the project you will be asked to choose a type of conceptual modeling file to be created in the
+        project: 
+        <ul>
+            <li>
+                If your plan is to use a UML project per conceptual model type, then at this point you should select the
+                desired model type for the project.
+            </li>
+            <li>
+                If your plan is to use a UML project to house more than one type of conceptual model, then the model you
+                select at this point can be any of those types that you ultimately plan to house in the project.
+            </li>
+            <li>
+                Either way, choose a meaningful name for the new modeling file. The name should reflect the name of the
+                solution being developed and the type of the model (e.g. "Timesheet Management System Use Case Model" or
+                "Timesheet Management System Analysis Model"). If you plan to allocate the logical content of one
+                conceptual model to multiple modeling files, the name of each modeling file should also reflect the subset
+                of the logical content that is being housed in the file (e.g. "Timesheet Management System Employee
+                Management Use Cases" or "Timesheet Management System Project Management Use Cases").
+            </li>
+        </ul>
+    </li>
+    <li>
+        Add additional modeling files to the project as needed
+    </li>
+    <li>
+        Continue adding UML projects and adding additional modeling files to those projects until you have the set of UML
+        projects and modeling files you need.
+    </li>
+</ul>
+<p>
+    For a mapping between the RUP models and the&nbsp;tool specific&nbsp;ones and for a detailed description of the project
+    types, see the <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/whitepapers/model_structure_guidelines_for_rational_software_developer_DF8E00EB.html" guid="1.128046228219609E-305">Model Structure Guidelines for RSx</a>.
+</p>
+<p>
+    For more information, refer to <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"     width="16" /><i>Setting Up and Working with Models and Modeling Projects</i>.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

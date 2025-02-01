@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Задача: Document Service Realization Decisions</title>
+<meta content="Task" name="uma.type">
+<meta content="soa_service_realization" name="uma.name">
+<meta content="Document Service Realization Decisions" name="uma.presentationName">
+<meta content="Discipline:rup_implementation_discipline:Реализация" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i9H8cOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jE28IOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_jIzoAOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_yd3ExNnmEdmO6L4XMImrsA", "_jYJrkOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_jgehIOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{198EA2A5-4FBA-45D5-85BA-53B108728534}", "_jhcxgOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "_jht3QOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{855CE09A-D297-4373-BEEA-D38B8AB348DA}", "_jiWJYOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_jkh6sOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3lZjkCxqEdqYV4MWf8PiCw", "{198EA2A5-4FBA-45D5-85BA-53B108728534}", "_j8ZBEOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3lZjkCxqEdqYV4MWf8PiCw", "{855CE09A-D297-4373-BEEA-D38B8AB348DA}", "_j8d5kOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_j-1REOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_kBEFsOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "_kM3tEOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lBqAAOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lGD-4OBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_lJE2oOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_yd3ExNnmEdmO6L4XMImrsA", "_lKJNoOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lKo84OBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{198EA2A5-4FBA-45D5-85BA-53B108728534}", "_lLIsIOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "_lLPZ0OBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{855CE09A-D297-4373-BEEA-D38B8AB348DA}", "_lLpCcOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_lM0uMOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_lYjdEOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lcrvIOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lfTlUOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_IM79YE7NEduvcvbnLvkXhA", "_V6uMMCwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lstIIOBoEe-aS_x8ARA3yA", "_V6uMMCwUEduKcvYAyaKSaA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_V6uMMCwUEduKcvYAyaKSaA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Задача: Document Service Realization Decisions</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This task focuses on the realization of a service model in terms of software components to run in existing middleware environments. </td>
+</tr>
+<tr>
+<td>Дисциплины: <a href="./../../core.base_rup/disciplines/rup_implementation_discipline_263E22DB.html" guid="_yd3ExNnmEdmO6L4XMImrsA">Реализация</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Назначение</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    The purpose of this task is to provide a design model for implementation that may be used by developers to implement
+    service components to provide the required services.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Роли</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Основной исполнитель:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Проектировщик</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Дополнительные исполнители:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Разработчик архитектуры</a>
+</li>
+<li>
+<a href="./../../core.base_rup/roles/rup_implementer_D145E819.html" guid="{75501BAA-0CCE-4852-A7B2-B10CA71C002A}">Реализатор</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Входы</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Обязательный:
+								</span>
+<ul>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Service Model</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">Документ архитектуры программного обеспечения</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_reference_architecture_13D031C0.html" guid="{855CE09A-D297-4373-BEEA-D38B8AB348DA}">Контрольная архитектура</a>
+</li>
+</ul>
+<ul></ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Необязательный:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_architectural_proof_of_concept_9AF95095.html" guid="{198EA2A5-4FBA-45D5-85BA-53B108728534}">Доказательство концепции архитектуры</a>
+</li>
+</ul>
+<ul></ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Выходы</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Модель проектирования</a>
+</li>
+</ul>
+<ul></ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    The purpose of the <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Service Model</a></i> is primarily to identify services, their
+    organization, collaboration, and their detailed and complete specification. The role of implementation is delegated to
+    the existing Rational Unified Process (RUP) <i><a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Design
+    Model</a></i>, and specifically the <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_component_E259F3CC.html" guid="{447385A0-E565-4C87-A082-402AF21CA088}">Service Component</a></i> model element. In general, the service model is
+    realized by a design model. However, it would be possible to generate artifacts directly from the service model where
+    simply specifications are required. It may also be useful to create a use-case model from the service model that allows
+    for further description of the services before construction.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Шаги</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading">Determine Sourcing Approach</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    There are a number of alternatives to be considered relative to deciding how to realize services (see figure below).
+    This is not the straightforward build versus buy decision; other interesting options come into the picture.
+    “Transform”-ation uses a combination of techniques including business rules extraction to pull out a segment of
+    functionality to be used independently for the realization of the component’s service. “Integrate” is the “wrappering”
+    of legacy functionality to achieve functionality; integration is invocation-based. Subscription is based on the
+    availability of a publish-subscribe model (in a message-oriented middleware context) in which a consumer subscribes to
+    the services provided by the provider. One of the options is to outsource (e.g., Payroll) the functionality out to some
+    other business. As the web services and business-to-business&nbsp;integration becomes more prevalent, this option will
+    also be considered for use on a wider basis.
+</p>
+<ul>
+    <li>
+        <strong>Build</strong> - for various reasons, the decision is to go-ahead and develop the service in-house.
+    </li>
+    <li>
+        <strong>Buy</strong> - purchase a service that may be deployed and hosted internally.
+    </li>
+    <li>
+        <strong>Transform</strong> - uses a combination of techniques including business rules extraction to pull out a
+        segment of functionality to be used independently for the realization of the component’s service.
+    </li>
+    <li>
+        <strong>Subscribe</strong> - is based on the availability of a publish-subscribe model (in a message-oriented
+        middleware context) in which a consumer subscribes to the services provided by the provider.
+    </li>
+    <li>
+        <strong>Integrate</strong> - is the wrappering of legacy functionality to achieve functionality; integration is
+        invocation-based.
+    </li>
+    <li>
+        <strong>Outsource</strong> - as Web Services and business-to-business integration becomes more prevalent, this
+        option will also be considered for use on a wider basis.
+    </li>
+</ul>
+<p>
+    Service Realization Decisions are associated with service components. Each service component can be considered a
+    container of functionality that is needed to realize a service. It is composed of or uses both functional and technical
+    components. It is important to decide how these service components will be realized. It is not a simple “buy or build”
+    decision. There are other considerations that need to be looked at such as:
+</p>
+<ul>
+    <li>
+        Transformation which may involve extraction of rules or making a clone of existing code and rewriting it to perform
+        as a component with defined interface.
+    </li>
+    <li>
+        Integration with messaging or with wrappers.
+    </li>
+</ul>
+<h4>
+    Example
+</h4>
+<p>
+    We wish to capture the realization decisions for the Rent-a-Car example, though it is hard to do this in the UML model
+    we have been using in a number of examples. To help in this process, the Realization Matrix template&nbsp;can be used
+    to document the result of these decisions, as shown in the figure below.
+</p>
+<p align="center">
+    <img height="195" alt="" src="./../../soa.rup_soma/tasks/./resources/realization_decisions.gif" width="671" />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Determine Development Approach</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    The advantage of the choices described are that whichever choice you make, there is a connection between each in terms
+    of traceability from the use-case model to a design model and then to implementation.
+</p>
+<p align="center">
+    <img height="181" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/resources/soa_svce_components-01.gif"     width="373" border="0" />
+</p>
+<p>
+    It is our recommendation that the service model be realized using a design model. This provides the ability for the
+    <i><a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Designer</a></i> and <i><a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_implementer_D145E819.html" guid="{75501BAA-0CCE-4852-A7B2-B10CA71C002A}">Implementer</a></i> to apply patterns to the design model and model
+    additional capabilities and structures before generating implementation artifacts.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Fine-Grained Mapping of Existing Assets</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    One must not forget that very few solutions are built without consideration to existing applications that either will
+    provide functionality to support the solution or with which the solution must interact. As such it is vital that
+    existing legacy applications that will be reused as part of any solution be catalogued and their functionality
+    identified. With a service-oriented solution, we are able to take a number of routes to integrate new services with
+    existing functionality. These are demonstrated in the figure below:
+</p>
+<ul>
+    <li>
+        <b>Wrap existing function as a service</b>. In this case, we are looking to leave the function as-is, but use tools
+        or middleware to expose the existing function as a service. For example, IBM provides the capability to expose
+        legacy CICS transactions as SOAP Web services.
+    </li>
+    <li>
+        <b>Wrap and replace existing function with a service</b>. In this case, we wrap a function as above, but we use the
+        resulting service specification to redevelop the service at a later date, replacing the original service and having
+        clients redirected to the new implementation.
+    </li>
+    <li>
+        <b>Use an adapter more amenable to service invocation</b>. In some cases, it is not possible to wrap a function and
+        expose it as a service, but may be possible to wrap the function in something more able to integrate, such as a
+        message queuing interface or the Java Connector Architecture (JCA). This allows new services to access the function
+        in-place.
+    </li>
+    <li>
+        <b>Integrate the function into the service</b>. Obviously in some cases, it is possible for the new service to
+        access the legacy function in-place, simply using the function as a logical component within the implementation of
+        the service.
+    </li>
+</ul>
+<p align="center">
+    <img height="151" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/./resources/soa_svce_identification-04.gif"     width="397" border="0" />
+</p>
+<p>
+    It should be considered that the third and fourth options provide the most flexibility because they use the existing
+    function but do not continue to expose the function as-is to clients. On the other hand, the first and second options
+    may introduce issues with the wrapping of existing functions as services because the performance of Web-service
+    protocols and mismatches between native data formats and XML may introduce performance concerns.
+</p>
+<p>
+    Existing software assets and their dependencies and interfaces will have to be analyzed to determine if changes are
+    required to support the business functionality.<span style="mso-spacerun: yes">&nbsp;</span> For example, in order to
+    create a web services interface for a legacy implementation of a business function, analysis may involve the
+    examination of the composition and flow of online transactions or batch jobs, or persistent data stores that help
+    perform that function.<span style="mso-spacerun: yes">&nbsp;</span> The current design of these existing applications
+    may have to change to support the functionality.<span style="mso-spacerun: yes">&nbsp;</span> There is also a need to
+    identify any potential barriers to creating a web services interface with the desired quality of service. <span     style="mso-spacerun: yes">&nbsp;</span>For example, a monolithic batch implementation of a business function may
+    require sub second response time when invoked as a service.&nbsp;&nbsp;
+</p>
+<h4>
+    Wrapping Existing Assets as a Services Pattern
+</h4>
+<p>
+    In some cases, however, it is expedient to develop a legacy service partition where a set of low-level legacy functions
+    are exposed individually as services. This partition is only accessible to higher level services that utilize them in
+    presenting a more granular business-aligned specification to consumers. This encapsulation of the legacy functions
+    should be seen as a temporary solution and should only be undertaken if the performance characteristics of the wrapping
+    technology is well understood. For more information see the concept <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/guidances/concepts/solution_partitioning_352116F8.html" guid="1.6501323286225543E-305">Solution Partitioning</a></i>.
+</p>
+<p>
+    One way to look at the wrapping of a legacy function is a very simplified form of the <i><a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_provider_C00D3410.html" guid="{8427751F-3C14-4CEB-9816-5112BDB91EED}">Service Provider</a></i> model element, with a single service realizing a
+    single specification with only a single operation. The following diagram demonstrates this pattern for the legacy
+    function "UpdateCustomerAddress".
+</p>
+<p align="center">
+    &nbsp;<img height="162" alt="Diagram is described in the textual content."     src="./../../soa.rup_soma/tasks/./resources/soa_svce_identification-01.gif" />
+</p>
+<p>
+    In tailoring this pattern, you may wish to do the following:
+</p>
+<ul>
+    <li>
+        It is likely that a set of existing functions will be provided by the same component so the same service provider
+        should be used.
+    </li>
+    <li>
+        The pattern above was generated automatically; it might be preferable to rename the default operation name from
+        "exec${service}".
+    </li>
+    <li>
+        Similarly, it would be valuable to rename the default generated messages; also at this point, the message
+        structures should be modeled.
+    </li>
+    <li>
+        The default pattern assumes the operation takes a message input and return a message; it may be that the legacy
+        function returns no message or is a notification only and the signature of the operation generated should be
+        amended.
+    </li>
+    <li>
+        The architect/designer should ensure that the correct values are specified for the "allowedBindings" property on
+        the service provider.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Дополнительные сведения</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Концепции</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/concepts/service_composition_and_choreography_41EDEECB.html" guid="7.723783423994501E-306">Service Composition and Choreography</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Рекомендации</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/guidelines/service_realization_325D86D9.html" guid="_QNuHcEV1Edqpo8Lgp7-Wmg">Service Realization - BPEL services in a SOA application</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

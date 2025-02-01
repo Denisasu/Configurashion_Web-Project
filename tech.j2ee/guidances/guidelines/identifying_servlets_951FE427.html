@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Идентификация сервлетов </title>
+<meta content="Guideline" name="uma.type">
+<meta content="identifying_servlets" name="uma.name">
+<meta content="Идентификация сервлетов " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "6.749276633239724E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.749276633239724E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Идентификация сервлетов </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждается, как определить и смоделировать сервлеты для приложения J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Определение элементов проекта</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Введение
+</h3>
+<p>
+    Это руководство посвящено идентификации сервлетов. Дополнительное руководство о сервлетах находится в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/servlet_FB1EC186.html" guid="7.265155609265114E-306">Руководство: Сервлет</a>
+</p>
+<h3>
+    Идентификация сервлетов
+</h3>
+<p>
+    Сервлеты - это классы сервера, взаимодействующие web-клиентами. Они преимущественно идентифицируются от классов
+    управления (см. <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">Руководство:
+    Класс анализа</a>) в архитектурах web. Они могут использоваться для генерации Web-страниц в целях представления, но в
+    общем случае для этого больше подходят страницы JSP (см. <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/javaserver_page_jsp_C204C841.html" guid="2.5833499297818664E-306">Руководство: Страница JSP (Java Server Page)</a>). Их также можно использовать для
+    взаимодействия с базами данных, как в конфигурации развертывания, ориентированной на Web, что описано в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/j2ee_deployment_configurations_C0F819AF.html" guid="7.671163061311939E-306">Концепция: Конфигурации развертывания J2EE</a>. Также, начиная с J2EE 1.4, сервлеты можно
+    использовать для реализации Web-служб, как это определено в спецификации <a class="elementlinkwithusertext" href="http://java.sun.com/webservices/jaxrpc/index.jsp" target="_blank">JAX-RPC</a>.
+</p>
+<p>
+    Однако, для приложений с важной бизнес-логикой, или для приложений, требующих возможностей объектов EJB, более подходит
+    многоуровневая конфигурация развертывания (см. <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/j2ee_deployment_configurations_C0F819AF.html" guid="7.671163061311939E-306">Концепция: Конфигурации развертывания J2EE</a>). В этом случае, обычно применяются
+    сервлеты для координации логики оформления и обеспечения моста к бизнес-логике и данным, предоставленным объектами EJB.
+</p>
+<p>
+    Типичное применение сервлета - это Передний контроллер. Передние контроллеры предоставляют приложению единственную
+    точку входа, что облегчает и унифицирует поддержку защиты, состояния приложения и оформления. &nbsp; Передний
+    контроллер получает доступ к запросу пользователя, обрабатывает его и определяет подходящий компонент оформления,
+    которому перенаправляется запрос. Более подробная информация находится в разделе <i>Базовые шаблоны проекта J2EE -
+    Передний контроллер</i> ([<a class="elementlinkwithusertext" href="./../../../tech.j2ee/guidances/supportingmaterials/java_references_110189E3.html" guid="1.4494927535802764E-304">ALU01</a>]).
+</p>
+<p>
+    Если проект содержит большое количество страниц JSP с похожим управляющим кодом, то стоит создать сервлет для
+    объединения этой логики в одном месте.
+</p>
+<h3>
+    Моделирование сервлетов
+</h3>
+<p>
+    В RUP сервлеты представляет <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Рабочий
+    продукт: Класс проекта</a>, и они моделируются как классы. Сервлеты, управляющие запросами HTTP, имеют стереотип
+    &lt;&lt;HTTPServlet&gt;&gt;. Сервлеты, управляющие другими протоколами, имеют стереотип &lt;&lt;GenericServlet&gt;&gt;.
+</p>
+<p>
+    Можно думать о каждом сервлете как о способе предоставления одинакового интерфейса, одной операции, которая обслуживает
+    запросы и обеспечивает стандартную информацию контекста сервлета, сеанса и клиента. Таким образом, моделирование
+    сервлета не касается определения операций интерфейса, но определяет его ответственность и способ его взаимодействия с
+    другими элементами проекта, такими как клиенты, страницы JSP, вспомогательные классы, объекты EJB и так далее.
+</p>
+<h2>
+    Конечная точка Web-служб
+</h2>
+<p>
+    Как мы видели ранее, сервлет может использоваться для реализации Web-службы и должен удовлетворять следующим
+    требованиям:
+</p>
+<ul>
+    <li>
+        Он должен иметь конструктор типа public по умолчанию.
+    </li>
+    <li>
+        Он должен реализовывать все методы, объявленные <a class="elementlinkwithusertext" href="./../../../tech.j2ee/guidances/concepts/web_services_for_j2ee_4E401D7.html" guid="1.2274284020937826E-305">Интерфейсом конечной точки службы</a>, а его бизнес-методы должны иметь тип public,
+        а не final или static.
+    </li>
+    <li>
+        Он должен быть без сохранения состояния.
+    </li>
+    <li>
+        Класс должен иметь тип public, но не final, и не abstract.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

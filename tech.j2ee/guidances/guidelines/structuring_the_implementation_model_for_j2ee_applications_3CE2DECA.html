@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Структурирование модели реализации для приложений J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="structuring_the_implementation_model_for_j2ee_applications" name="uma.name">
+<meta content="Структурирование модели реализации для приложений J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "8.351669390824964E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="8.351669390824964E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Структурирование модели реализации для приложений J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждается структура модели реализации для приложения J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">Создание структуры модели реализации</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h2>
+    Введение
+</h2>
+<p>
+    Предполагается, что вы знакомы с общей информацией о J2EE как о технологической платформе, изложенной в <a href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html" guid="1.527482214591853E-307" class="elementLinkWithUserText">Концепция: Обзор J2EE (Java 2 Platform Enterprise
+    Edition)</a> и <a href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305" class="elementLinkWithUserText">Концепция: Преобразование из Проекта в Код</a>. Некоторые
+    концепции этого руководства принадлежат UML 1.4, несмотря на то что их можно применять в контексте модуля на основе UML
+    1.3. Если вам трудно в чем-то разобраться, поймите, что две спецификации UML говорят по сути.
+</p>
+<h2>
+    <a name="Structuring the Implementation Model" id="Structuring the Implementation Model"></a>Структурирование модели
+    реализации
+</h2>
+<p>
+    <a href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}" class="elementLinkWithUserText">Задача: Структурирование модели
+    реализации</a>&nbsp; описывает способ создания структуры Модели реализации, которая строго соответствует структуре
+    Модели проекта, но, в то же время, отражает все ограничения среды разработки, а также поддерживает параллельную
+    разработку и инкрементную интеграцию.
+</p>
+<p>
+    Структура Модели реализации для приложения J2EE зависит от среды разработки и реализации, однако, в общем случае,
+    существуют четыре потенциальные структуры Модели реализации J2EE:
+</p>
+<ul>
+    <li>
+        Поддержка развертывания (модули и файлы описания J2EE)
+    </li>
+    <li>
+        Виртуальная структура каталога (JSP, страницы HTML)
+    </li>
+    <li>
+        Каталог Java для элементов, развернутых на Web-сервере (сервлеты, объекты JavaBean)
+    </li>
+    <li>
+        Каталог Java для элементов, развернутых на сервере приложений EJB (объекты EJB)
+    </li>
+</ul>
+<h2>
+    <a name="Modeling Implementation Subsystems" id="Modeling Implementation Subsystems"></a>Моделирование подсистем
+    реализации
+</h2>
+<p>
+    Представление реализации в <a href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}" class="elementLinkWithUserText">Рабочий продукт: Документация по
+    архитектуре программного обеспечения</a> предоставляет обзор высокого уровня модели реализации. Сюда включена
+    идентификация Подсистем реализации. В приложении J2EE Подсистемы реализации могут не соответствовать одному каталогу
+    файловой системы или одному пакету модели, потому что Подсистема реализации может включать в себя элементы, отличные от
+    Java, из одной модели (такие как JSP и страницы HTML) и элементы Java из другой. Одна стратегия управления этим состоит
+    в том, чтобы иметь параллельные структуры пакетов в каждой модели. Пакеты с одинаковым именем в каждой модели неявно
+    связаны.<br />
+</p>
+<p>
+    Обычно Подсистема реализации предоставляет реализацию одного развертываемого Файла реализации (JAR, WAR или EAR). В
+    этом случае, идентификация развертываемых файлов может служить идентификации Подсистем реализации.
+</p>
+<p>
+    Представление физических элементов, состоящих из Каталогов реализации и Файлов реализации, может находится в каждой <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_subsystem_118747E9.html" guid="{0F629848-C19E-49AB-A6C1-C8D6A094898A}">Подсистеме реализации</a>. Могут существовать также логические элементы,
+    состоящие из <a href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}" class="elementlinkwithusertext">классов</a>, компонентов, <a href="./../../../core.base_rup/workproducts/rup_design_package_8376BC8E.html" guid="{80CC5437-F481-487B-A69B-957D9D236D8D}" class="elementlinkwithusertext">пакетов</a> и так далее, что соответствует элементам <a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}" class="elementLinkWithUserText">Рабочий продукт: Модель проекта</a>, но является точной моделью исходного кода (модель
+    проектирования полного обхода). В разделе <a href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305" class="elementLinkWithUserText">Концепция: Преобразование из Проекта в Код</a> находится более подробная информация о
+    взаимосвязи между <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">Моделью проекта</a> и <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">Моделью реализации</a>.<br />
+</p>
+<p>
+    Модели проектирования полного обхода предоставляют точное представление исходного кода. В J2EE каждый пакет модели Java
+    представляет пакет Java, каждый класс представляет класс Java, и так далее. Однако, часто возникает потребность
+    поддержки моделей проектирования полного обхода с дополнительной информацией, в том числе:
+</p>
+<ul>
+    <li>
+        диаграммы, которые показывают информацию и не создаются автоматически в процессе проектирования полного обхода
+    </li>
+    <li>
+        абстракции модели высокого уровня
+    </li>
+</ul>
+<p>
+    Модель проекта абстрагирует классы, компоненты, пакеты и так далее. Однако, может также возникнуть потребность в
+    абстракциях более высокого уровня или в дополнительных диаграммах физических элементов (файлов или каталогов). Они
+    описаны в последующих разделах.
+</p>
+<h2>
+    <a name="Modeling Implementation Directories" id="Modeling Implementation Directories"></a>Моделирование каталогов
+    реализации
+</h2>
+<p>
+    Проектирование полного обхода, как правило, управляет только подмножеством каталогов, требуемых в среде разработки.
+    Часто нужны дополнительные каталоги для организации тестовых артефактов, модулей развертывания, документации и так
+    далее. Обычно моделирование не требуется, потому что каталоги могут быть видны как часть файловой системы.
+</p>
+<h2>
+    <a name="Modeling Implementation Files" id="Modeling Implementation Files"></a>Моделирование файлов реализации
+</h2>
+<p>
+    Обычно файлы реализации не моделируются, если средством проектирования полного обхода не предоставлена некоторая
+    поддержка или не нужно показать некоторые неочевидные взаимосвязи.
+</p>
+<p>
+    Обычно существует один файл .java для каждого интерфейса или класса Java, и один скомпилированный файл .class для
+    каждого файла .java. Таким образом, моделирование этих файлов не очень интересно.
+</p>
+<p>
+    В J2EE подсистема обычно содержит один или несколько файлов архива (JAR, WAR или EAR).
+</p>
+<p>
+    Архивные файлы правильнее всего моделировать как составную взаимосвязь архивного файла и файлов, которые он содержит.
+    Однако, когда скомпилированные файлы .class составляют файл JAR, может оказаться более полезным показать зависимость от
+    файла JAR классов и интерфейсов, которые он в конечном счете реализует.
+</p>
+<p>
+    Подсистема реализации создает только один файл JAR, после чего нет необходимости в каком-либо моделировании, особенно
+    если все разворачиваемые файлы в Подсистеме реализации могут считаться частью файла JAR.
+</p>
+<h4>
+    Перекрытие архивных файлов
+</h4>
+<p>
+    Возможно, но не рекомендовано, определять два архивных файла, которые содержат некоторые одинаковые элементы. Например,
+    два файла EAR могут содержать некоторые, но не все, одинаковые файлы JAR EJB, или два файла JAR EJB могут содержать
+    одинаковые объекты EJB, но иметь разные файлы описания.
+</p>
+<p>
+    Лучше всего, чтобы архивные файлы <b>не</b> перекрывались, сохраняя точное соответствие между подсистемами реализации и
+    разворачиваемыми архивными файлами. Однако, если перекрытие необходимо, может оказаться полезным смоделировать его
+    вместе с причиной такого перекрытия.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

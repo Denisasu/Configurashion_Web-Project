@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Концепция: JavaBean</title>
+<meta content="Concept" name="uma.type">
+<meta content="javabean" name="uma.name">
+<meta content="JavaBean" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i99p8OBoEe-aS_x8ARA3yA", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i_Kj0OBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_jC070OBoEe-aS_x8ARA3yA", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_jDtFkOBoEe-aS_x8ARA3yA", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jFRy4OBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_jjZSQOBoEe-aS_x8ARA3yA", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_kATQsOBoEe-aS_x8ARA3yA", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "_kYEQcOBoEe-aS_x8ARA3yA", "7.536447688812142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "7.536447688812142E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lB0YEOBoEe-aS_x8ARA3yA", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lCgUkOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_lEvJMOBoEe-aS_x8ARA3yA", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_lFc64OBoEe-aS_x8ARA3yA", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lGIQUOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "_lMCrEOBoEe-aS_x8ARA3yA", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lc2uQOBoEe-aS_x8ARA3yA", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_ldiqwOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lfZr8OBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "7.536447688812142E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.536447688812142E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Концепция: JavaBean</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Этот раздел содержит обзор объектов JavaBean, простой и мощной модели компонентов для Java. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Проектирование класса</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    Объекты JavaBean определяют простую и мощную модель компонентов для Java. Цель объектов JavaBean - предоставить
+    отдельные и многоразовые единицы, которыми разработчики могут управлять как программно, так и визуально с помощью
+    инструментов компоновки.
+</p>
+<p>
+    Объекты JavaBean могут быть управляющими элементами GUI, но могут быть и не представленными визуально. Управляющие
+    элементы GUI в Java обычно являются объектами JavaBean, чтобы ими можно было управлять инструментами компоновки. В J2EE
+    простые объекты JavaBean обычно берутся из JSP, где они обеспечивают разделение презентации на языке HTML и кода на
+    языке Java, содержащегося в объектах JavaBean.
+</p>
+<p>
+    Объект JavaBean - это класс Java с тремя различными составляющими:
+</p>
+<ul>
+    <li>
+        <a href="#JavaBean_Properties">Свойства</a>,
+    </li>
+    <li>
+        <a href="#Events_and_Notification">События</a>,
+    </li>
+    <li>
+        Методы.
+    </li>
+</ul>
+<h3>
+    <a id="JavaBean_Properties" name="JavaBean_Properties"></a>Свойства JavaBean
+</h3>
+<p>
+    Свойства JavaBean доступны другим компонентам. Обычно свойство - это частное значение, которое можно получить с помощью
+    методов set и get, но оно может быть и вычисляемым значением. Обновление свойств может вызывать различные побочные
+    эффекты.
+</p>
+<p>
+    Методы доступа к свойствам иногда называют аксессорами. Аксессоры могут быть методами get и set и подчиняются
+    соглашениям об именах:
+</p>
+<p>
+    <font size="+0"><font size="2">void set<i>имя_свойства</i>(<i>тип_свойства</i> value); // метод set<br />
+     <i>тип_свойства</i> get<i>имя_свойства</i>() // метод get</font></font>
+</p>
+<p>
+    Для булевского свойства метод get может быть следующим:<br />
+    <br />
+     <font size="2">boolean is<i>имя_свойства</i>() // метод get для булевского свойства</font>
+</p>
+<p>
+    <b>Пример</b>: пользовательский объект JavaBean
+</p>
+<p>
+    Ниже приведен пример простого объекта JavaBean (Customer) с двумя простыми свойствами: name и email. Обратите внимание,
+    что свойства определяются парами методов set/get.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма UML со свойствами Customer." src="./../../../tech.j2ee/guidances/concepts/resources/customer.gif" />
+    </p>
+    <p>
+        public class Customer {<br />
+         private String name;<br />
+         private String email;<br />
+        <br />
+         public String getName() {<br />
+         return name;<br />
+         }<br />
+        <br />
+         public void setName(String aName) {<br />
+         name = aName;<br />
+         }<br />
+        <br />
+         public String getEmail() {<br />
+         return email;<br />
+         }<br />
+        <br />
+         public void setEmail(String aEmail) {<br />
+         email = aEmail;<br />
+         }<br />
+        <br />
+         }
+    </p>
+</blockquote>
+<p>
+    Такие простые объекты JavaBean часто используются в JSP, где они позволяют передавать значения из форм
+    Web-страниц.<br />
+</p>
+<h4>
+    <a id="Indexed_Properties" name="Indexed_Properties"></a>Индексированные свойства
+</h4>
+<p>
+    Помимо простых свойств, которые могут принимать только одно значение, существуют и свойства - массивы значений.
+</p>
+<p>
+    Индексированные свойства могут возвращать значение по указанному индексу или целый массив значений.
+</p>
+<p>
+    У индексированных свойств следующие сигнатуры:
+</p>
+<blockquote>
+    <p>
+        <font size="2">void set<i>имя_свойства</i>(int index, <i>тип_свойства</i> value); // индексированный set<br />
+         <i>тип_свойства</i> getter(int index); // индексированный get<br />
+         void set<i>имя_свойства</i>(<i>тип_свойства</i> values[]); // массив set<br />
+         <i>тип_свойства</i>[]get<i>имя_свойства</i>(); // массив get</font>
+    </p>
+</blockquote>
+<h4>
+    <a id="Bound_Properties" name="Bound_Properties"></a>Привязанные свойства
+</h4>
+<p>
+    Механизм привязанных свойств обеспечивает рассылку уведомлений при изменении свойства. Объекты, заинтересованные в
+    получении уведомлений об изменениях, регистрируют себя заранее, и когда свойство изменяется, зарегистрированным
+    объектам отправляется соответствующее уведомление. Обычно это уведомление рассылается посредством <a href="#Events_and_Notification">события</a>, выдаваемого компонентом с привязанным свойством после задания свойства.
+</p>
+<p>
+    Объект JavaBean с привязанным свойством предлагает методы регистрации и отмены регистрации заинтересованных объектов,
+    называемых получателями. Разработчики могут определить свой собственный механизм уведомлений, но библиотеки Java
+    предоставляют несколько распространенных классов поддержки в составе пакета <i>java.beans</i>.
+</p>
+<h4>
+    <a id="Constrained_Properties" name="Constrained_Properties"></a>Ограниченные свойства
+</h4>
+<p>
+    Ограниченные свойства схожи с привязанными свойствами, но уведомление отправляется до фактического задания свойства.
+    Это позволяет заинтересованным сторонам запретить изменение свойства, выдав исключительную ситуацию
+    <i>PropertyVetoException</i>.
+</p>
+<h3>
+    <a id="Events_and_Notification" name="Events_and_Notification"></a>События и уведомление
+</h3>
+<p>
+    События - это опция объектов JavaBean, позволяющая независимо разработанным компонентам обмениваться информацией друг с
+    другом путем рассылки уведомлений об изменении состояния. В этой модели некоторые компоненты выдают события, а другие
+    компоненты, находящиеся в роли получателей событий, их обрабатывают.
+</p>
+<p>
+    Для поддержки этой модели связи модель компонентов JavaBean предоставляет:
+</p>
+<ul>
+    <li>
+        свойства, которые могут выдавать события (<a href="#Bound_Properties">привязанные</a> и <a href="#Constrained_Properties">ограниченные</a>)
+    </li>
+    <li>
+        методы регистрации, чтобы получатели могли регистрироваться
+    </li>
+    <li>
+        события, содержащие информацию об изменении
+    </li>
+    <li>
+        получатели, которые могут реагировать на доставленное событие
+    </li>
+</ul>
+<p>
+    Следующая диаграмма классов иллюстрирует эти концепции для объекта JavaBean <i>EventSource</i> с простым свойством
+    <i>int</i>.
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/event_example.gif" />
+    </p>
+</blockquote>
+<p>
+    Во время настройки конкретные получатели регистрируются с объектом JavaBean. В один из последующих моментов другой
+    объект вызывает метод <i>setProperty</i>, который запустит процесс уведомления путем создания объекта событий. Объект
+    JavaBean EventSource вызовет метод <i>propertyChange</i> во всех зарегистрированных получателях. Получатели событий
+    получат событие, прочтут его значения и отреагируют на него.
+</p>
+<p>
+    На следующей последовательной диаграмме иллюстрируется порядок вызовов:
+</p>
+<blockquote>
+    <p>
+        <img alt="Диаграмма описана в прилагаемом тексте." src="./../../../tech.j2ee/guidances/concepts/resources/event_sequ_example.gif" />
+    </p>
+</blockquote>
+<p>
+    Уведомление получателей выполняется синхронно по отношению к экземпляру JavaBean, который является источником события,
+    однако получатель событий может обрабатывать их в другой нити.
+</p>
+<h3>
+    <a id="Introspection" name="Introspection"></a>Внутренний анализ
+</h3>
+<p>
+    Внутренний анализ - это механизм среды выполнения, позволяющий обнаруживать <a href="#JavaBean_Properties">свойства</a>, <a href="#Events_and_Notification">события</a> и методы JavaBean. Внутренний
+    анализ применяется инструментами разработки и программами, не использующими закодированные зависимости в других
+    компонентах. Работа механизма внутреннего анализа основана на анализе существующей информации с учетом соглашений об
+    именах методов и интерфейсов. Класс <i>BeanInfo</i> поддерживает дополнительные функции внутреннего анализа. Соглашения
+    об именах JavaBean, применяемые для внутреннего анализа, иногда называют "шаблонами проектирования", но их не следует
+    смешивать с понятием "шаблон проектирования", существующим в объектно-ориентированном проектировании.
+</p>
+<h3>
+    <a id="Persistence" name="Persistence"></a>Постоянные данные
+</h3>
+<p>
+    Объект JavaBean может постоянно храниться в памяти. Это достигается посредством механизма сериализации. Сериализация
+    может быть автоматической или пользовательской, в зависимости от того, какие интерфейсы реализует JavaBean -
+    <i>сериализуемые</i> или <i>импортируемые</i>. В JDK 1.4 появились новые классы <i>XMLEncoder</i> и <i>XMLDecoder</i>,
+    позволяющие хранить экземпляры JavaBean в формате XML.
+</p>
+<h3>
+    <a id="Customization" name="Customization"></a>Настройка
+</h3>
+<p>
+    Внешний вид и характеристики объекта JavaBean можно настраивать во время проектирования. Это особенно важно для
+    визуальных объектов JavaBean, применяемых в графических пользовательских интерфейсах. Настройка выполняется с помощью
+    редактора свойств или программ настройки. Программы настройки предоставляют пользовательский интерфейс для настройки
+    экземпляра JavaBean во время проектирования.
+</p>
+<h3>
+    <a id="BeanContext" name="BeanContext"></a>BeanContext
+</h3>
+<p>
+    BeanContext определяет логическую иерархию включений, позволяющую объектам JavaBean выяснять, какие функции и службы
+    доступны в их среде. Механизмы BeanContext предоставляют поддержку логической иерархии включений объектов JavaBean и
+    поиска служб, предлагаемых входящими в иерархию объектами JavaBean.
+</p>
+<h3>
+    <a id="JavaBeans_Activation_Framework" name="JavaBeans_Activation_Framework"></a>Среда активации объектов JavaBean&trade;
+</h3>
+<p>
+    Среда активации Java - это стандартное расширение Java, позволяющее определять тип фрагмента данных, инкапсулировать
+    его, выяснять набор его доступных операций и создавать экземпляр компонента программного обеспечения, отвечающего
+    требуемой операции над этим фрагментом.
+</p>
+<h3>
+    <a id="More_Information" name="More_Information"></a>Дополнительная информация
+</h3>
+<p>
+    Дополнительная информация об объектах JavaBean приведена в документе JavaBeans API Specification, Version 1.01 на
+    Web-сайте <a href="http://java.sun.com/" target="_blank">http://java.sun.com/</a>. Выберите ссылку <b>Docs &
+    Training &gt; Java 2 Platform, Standard Edition &gt; Java 2 SDK, SE v1.3 documentation &gt; JavaBeans &gt; JavaBeans
+    Specification</b>.
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.inferdata.com" target="_blank"><img alt="Логотип Inferdata"                 src="./../../../tech.j2ee/guidances/supportingmaterials/resources/inferdata.gif" width="100" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>Данная информация полностью или частично разработана компанией <a href="http://www.inferdata.com/" target="_blank">Inferdata Corporation</a>.</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; Copyright&nbsp;IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

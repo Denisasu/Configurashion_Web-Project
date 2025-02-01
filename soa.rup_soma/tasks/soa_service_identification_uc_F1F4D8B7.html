@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Задача: Business Use Case Analysis (SOA)</title>
+<meta content="Task" name="uma.type">
+<meta content="soa_service_identification_uc" name="uma.name">
+<meta content="Business Use Case Analysis (SOA)" name="uma.presentationName">
+<meta content="Discipline:rup_analysis_design_discipline:Анализ и проектирование" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_i9UwwOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jEoSoOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt62NnmEdmO6L4XMImrsA", "_jWyZoOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_jgehIOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_jgrVcOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_8loI0CuREdqL6tsHh4YXGw", "{CF53445C-3351-46C6-810E-8251830029A7}", "_j1E4IOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_8loI0CuREdqL6tsHh4YXGw", "{89BEF367-5875-47E0-97D6-23E5BCCE52B8}", "_j10fAOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{CF53445C-3351-46C6-810E-8251830029A7}", "_j9OHgOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{89BEF367-5875-47E0-97D6-23E5BCCE52B8}", "_j-ONEOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_j-1REOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_j-_CEOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_8loI0CuREdqL6tsHh4YXGw", "{CF53445C-3351-46C6-810E-8251830029A7}", "_kw8DcOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_8loI0CuREdqL6tsHh4YXGw", "{89BEF367-5875-47E0-97D6-23E5BCCE52B8}", "_kxZWcOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lBxUwOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lF608OBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_ydt62NnmEdmO6L4XMImrsA", "_lJqsgOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lKo84OBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lKyG0OBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lczD4OBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lfLpgOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_mLBhwE7NEduvcvbnLvkXhA", "{89BEF367-5875-47E0-97D6-23E5BCCE52B8}", "_lrMsQOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_mLBhwE7NEduvcvbnLvkXhA", "{CF53445C-3351-46C6-810E-8251830029A7}", "_lr5P0OBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_lstIIOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_UvSDoE7NEduvcvbnLvkXhA", "_vads0E7NEduvcvbnLvkXhA", "{E24679B7-19F1-483B-A1F1-578839C43888}", "_ls2SEOBoEe-aS_x8ARA3yA", "_GkKR4CwUEduKcvYAyaKSaA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_GkKR4CwUEduKcvYAyaKSaA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Задача: Business Use Case Analysis (SOA)</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This task identifies the design elements of a service-oriented solution in terms of services and partitions and documents the initial specification of those services.</td>
+</tr>
+<tr>
+<td>Дисциплины: <a href="./../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">Анализ и проектирование</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Назначение</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><ul>
+    <li>
+        To identify the design elements of a service-oriented solution in terms of services and partitions.
+    </li>
+    <li>
+        To document the initial specification of services.
+    </li>
+    <li>
+        To determine the initial dependencies and the communication between services.
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Роли</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Основной исполнитель:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Разработчик архитектуры</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Дополнительные исполнители:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Проектировщик</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Входы</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">Обязательный:
+								</span>
+<ul>
+<li>
+<a href="./../../extend.bus_model/workproducts/rup_business_analysis_model_9449F63A.html" guid="{CF53445C-3351-46C6-810E-8251830029A7}">Business Analysis Model</a>
+</li>
+</ul>
+<ul></ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">Необязательный:
+								</span>
+<ul>
+<li>
+<a href="./../../extend.bus_model/workproducts/rup_business_use_case_model_EC79264C.html" guid="{89BEF367-5875-47E0-97D6-23E5BCCE52B8}">Business Use Case Model</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Service Model</a>
+</li>
+</ul>
+<ul></ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Выходы</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/workproducts/soa_service_model_623494B9.html" guid="{E24679B7-19F1-483B-A1F1-578839C43888}">Service Model</a>
+</li>
+</ul>
+<ul></ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    This task uses <a class="elementLinkWithUserText" href="./../../extend.bus_model/workproducts/rup_business_use_case_realization_55CAF00D.html" guid="{47F095EB-E651-4A34-B75B-BACE38ED90C7}">Artifact: Business Use-Case Realization</a>&nbsp;as input and identifies
+    a set of candidate services which are included in the project service portfolio. These candidate services may yet
+    require additional refinement, however the steps included here provide an effective manner in which to produce an
+    initial set of <a class="elementLinkWithUserText" href="./../../soa.rup_soma/workproducts/soa_svce_model_svce_spec_37E89A91.html" guid="{20F06B5E-95D5-422C-AB68-7C213D28533A}">Artifact: Service Specification</a>.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Шаги</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading">Identify Candidate Services from Business Use Cases</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    In the development of more traditional component-based and object-oriented solutions, there tends to be a set of
+    transformations across levels of abstraction and adding levels of detail from Use Cases down to system design. This is
+    especially true when you take a Business Use Case as the starting point, as demonstrated in the <a class="elementLinkWithUserText" href="./../../extend.bus_model/guidances/guidelines/going_from_business_models_to_systems_3B55D8F4.html" guid="1.3212739617274792E-306">Guideline: Going from Business Models to Systems</a><i>;</i> where the guidance
+    demonstrates how to get from Business Use Cases to System Use Cases, we still have to develop an actual design model
+    from there.
+</p>
+<p>
+    Fortunately, we can also draw a parallel to the guideline provided for going to system-use cases in defining how a
+    service model can be derived from a Business Use Case Model, as shown below. In general the approach is to create a
+    candidate service for each operation defined on a <a class="elementLinkWithUserText" href="./../../extend.bus_model/workproducts/rup_business_worker_75AE475B.html" guid="{6C6AD4E6-C7B4-42E1-A3D1-FAC9DC2415B5}">Artifact: Business Worker</a>&nbsp;in the <a class="elementLinkWithUserText" href="./../../extend.bus_model/workproducts/rup_business_analysis_model_9449F63A.html" guid="{CF53445C-3351-46C6-810E-8251830029A7}">Artifact: Business Analysis Model</a>. There exists a
+    distinct&nbsp;parallel here to the <a class="elementLinkWithUserText" href="./../../soa.rup_soma/tasks/soa_service_identification_bp_D5A863FB.html" guid="_am-VYCwTEduKcvYAyaKSaA">Task:
+    Business Process Analysis</a>&nbsp;where individual tasks in a process model are identified as candidate services.
+</p>
+<p align="center">
+    <img height="385" alt="Diagram is described in the textual content." src="./../../soa.rup_soma/tasks/./resources/soa_svce_identification-02.gif"     width="481" border="0" />
+</p>
+<p>
+    This more direct connection between the business-analysis model and the service model allows for not only services that
+    can be seen to support the business needs, but by having less transformations between the expression of business needs
+    and the solution, we can more effectively respond to change in the Business Use Case or Analysis Models. Another
+    important aspect is that as the Business Use Case model also includes the Business Goals that are driving the business,
+    it is now much easier to actually identify the alignment between Services and Goals. For example, it is now possible to
+    list, for any Service Specification, all the Business Goals to which it contributes. For any Business Goal we can list
+    the Services actually deployed in our IT organization that contribute to the goal , by following the connection from
+    service to service specification.
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading">Refine Candidate Service Specifications</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><p>
+    In some cases the set of operations defined in the business use case realization may more correctly reflect a
+    <em>conversation</em> between parties related to a single service than it does to a set of distinct services; in such a
+    case the operations may be aggregated onto a single service specification (as shown below). The drawback to this
+    approach is that it requires more detailed analysis and understanding of the use case realization, and the role of the
+    workers within it, to identify this as a requirement.
+</p>
+<p align="center">
+    <img height="285" alt="" src="./../../soa.rup_soma/tasks/./resources/soa_svce_identification-02b.gif" width="481" />
+</p>
+<p>
+    By conversation we mean that often the actual completion of a service requires multiple interactions between parties;
+    for example, if we&nbsp;examine the service 'Place Order' we might actually find that this is a complex set of
+    interactions including acknowledgements, shipping notices, negations (for example if items are unavailable), as might
+    be shown by the following diagram.
+</p>
+<p align="center">
+    <img height="271" alt="" src="./../../soa.rup_soma/tasks/./resources/co_soa_conversations.png" width="334" />
+</p>
+<p>
+    <br />
+     &nbsp;
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Дополнительные сведения</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Концепции</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../soa.rup_soma/guidances/concepts/service_portfolio_52FD64AC.html" guid="1.851952881072508E-305">Service Portfolio</a>
+</li>
+<li>
+<a href="./../../soa.rup_soma/guidances/concepts/solution_partitioning_352116F8.html" guid="1.6501323286225543E-305">Solution Partitioning</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

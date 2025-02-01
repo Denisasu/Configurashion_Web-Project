@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту: Identifying Design Mechanisms Using Rational Software Development Platform</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="identifying_design_mechanisms_using_rsa" name="uma.name">
+<meta content="Identifying Design Mechanisms Using Rational Software Development Platform" name="uma.presentationName">
+<meta name="element_type" content="tool_mentor">
+<meta content="" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{98A3AB18-452B-4287-A38E-D5ED71F2A6A3}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту: Identifying Design Mechanisms Using Rational Software Development Platform</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This tool mentor describes how to identify design mechanisms using the SDP modeling environment.</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Overview
+</h3>
+<p>
+    The following steps are performed in this tool mentor:<br />
+</p>
+<ul>
+    <li>
+        <a href="#categorize clients">Categorize Clients of Analysis Mechanisms</a>
+    </li>
+    <li>
+        <a href="#inventory impl mechanisms">Inventory the Implementation Mechanisms</a>
+    </li>
+    <li>
+        <a href="#Map Design Mechanisms to Implementation Mechanisms">Map Design Mechanisms to Implementation
+        Mechanisms</a>
+    </li>
+    <li>
+        <a href="#document mechanisms">Document Architectural Mechanisms</a>
+    </li>
+</ul>
+<p>
+    <a href="#MoreInfo">Additional Tool Information</a>
+</p>
+<h3>
+    <a id="categorize clients" name="categorize clients">Categorize Clients of Analysis Mechanisms</a>
+</h3>
+<p>
+    As part of the support for <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Model
+    Driven Development and Model Driven Architecture</a>, the tool provides the capabilities to move from model to code
+    through the use of transformations. The main approach is based on a combination of type mappings (source model's
+    classes, their attributes, operations, relationships) and source model marking, defined in profiles. The reason for
+    this combined method is that in most of the cases the source model does not contain enough information to drive the
+    transformation. The architect has to add specific 'marks' which enables the transformation to perform. For more
+    information, refer to <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Analysis
+    Mechanisms</a>.
+</p>
+<p>
+    Depending on the profiles applied, the clients of analysis mechanisms will have to be 'marked' accordingly, using the
+    right stereotypes. For more information, see: <img height="16" alt="help book icon"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Applying Transformations.</i>
+</p>
+<p>
+    Note: even if you do not plan on using automated transformations you will find value in using profiles to 'mark' your
+    model. Base on the profile defined, this additional information added to a model can include stereotypes, properties
+    and constraints. By defining appropriate profiles, using them appropriately and communicating the meaning behind the
+    profiles – you can add a great deal of precision to your models which can lead to more effective transformations
+    (regardless of whether the transformation is automated or performed manually).
+</p>
+<p>
+    The key steps to follow in creating a profile include:
+</p>
+<ol>
+    <li>
+        Create a Profile Project
+    </li>
+    <li>
+        Add Stereotypes
+    </li>
+    <li>
+        Utilize extensions to connect the Stereotypes to UML elements
+    </li>
+    <li>
+        Test by applying the Profile to a project
+    </li>
+    <li>
+        Document
+    </li>
+    <li>
+        Package as a plug-in
+    </li>
+    <li>
+        Distribute via RAS
+    </li>
+</ol>
+<p>
+    The tool&nbsp;can assist you in finding the clients of each mechanism and document this information:
+</p>
+<ol>
+    <li>
+        Find clients by right clicking on the mechanism and using Filters &gt; Show Related Elements
+    </li>
+    <li>
+        Use a Topic Diagram. See: <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Topic Diagrams</i>
+    </li>
+    <li>
+        Use a Browse Diagram. See: <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif"         width="16" /><i>Browse Diagrams</i>
+    </li>
+    <li>
+        Use &lt;&lt;perspective&gt;&gt; packages to provide a view of the mechanisms that are used.
+    </li>
+    <li>
+        Use &lt;&lt;framework&gt;&gt; packages to provide a view of the internal workings of the mechanisms.&nbsp;
+    </li>
+</ol>
+<p>
+    Within the analysis mechanism's framework package, the clients are shown on a Client Usage Diagram, where the clients
+    have a dependency to the analysis mechanism clas.&nbsp;As part of the same framework package, create a profile
+    component for each characteristic profile needed. Use the Documentation Tab in the class's Properties View to document
+    the usage profiles. Group the clients according to their use of characteristic profiles and show the relationships
+    between clients and profile classes on a Profile Usage Diagram.
+</p>
+<h3>
+    <a id="inventory impl mechanisms" name="inventory impl mechanisms">Inventory the Implementation Mechanisms</a>
+</h3>
+<p>
+    The RAS repository is a good place for collecting all the potential candidates for reuse, especially patterns. In
+    addition, a RAS asset can be a model - which may provide a representation of the Implementation Mechanism. It would
+    then be possible to store the model representations of your implementation mechanisms in a shared RAS repository and
+    have the team query this repository as needed.
+</p>
+<p>
+    See: <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>RAS
+    Assets</i>&nbsp;and <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>RAS
+    Pattern Assets</i>.
+</p>
+<h3>
+    <a id="Map Design Mechanisms to Implementation Mechanisms" name="Map Design Mechanisms to Implementation Mechanisms">Map Design Mechanisms to Implementation Mechanisms</a>
+</h3>
+<p>
+    Note: some of the tool capabilities mentioned in this section are not supported in RSM.
+</p>
+<p>
+    If a Model Driven Development approach is taken, this step is performed with the assistance of the transformation
+    capabilities. There are two kinds of transformations: transforms and patterns. A transform is "a transformation
+    optimized for batch processing, primarily across metamodels, models and levels of abstraction".&nbsp;A pattern is a
+    special kind of transformation, "optimized for interactive, piecewise elaboration primarily in a single metamodel and
+    within the same level of abstraction, and often within the same model". See the <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/concepts/mdd_and_mda_8F9B3685.html" guid="4.227832989444728E-303">Model
+    Driven Development and Model Driven Architecture</a> and <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">Analysis
+    Mechanisms</a> concepts.
+</p>It may turn out that there are a number of implementation mechanisms that would be appropriate for realizing the design
+mechanism. One additional factor that should be taken into consideration as you make the selection is whether the
+implementation mechanism can be realized via a transformation. Also, watch for implementation mechanisms that are reused
+often in your development projects. These are good candidates for automation via patterns and transformations. As part of
+the analysis as whether to automate the mapping between the design and implementation mechanism you will need to calculate
+the return on the investment needed to automate. 
+<p>
+    Depending on the profiles applied to the model, a number of transforms are available "out of the box". For the more
+    advanced user,&nbsp;the tool&nbsp;provides a framework for building customized transformations. See <img height="16"     alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Applying Patterns</i> and <img     height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Applying
+    Transformations</i>. &nbsp;
+</p>
+<p>
+    In a more code-centric development environment, some of the mappings could be discovered starting with the existent
+    code and using the pattern and anti-pattern detection capabilities which are part of the support for Architectural
+    Analysis. See the <a class="elementLinkWithUserText" href="./../../../tech.rsa/guidances/guidelines/architectural_discovery,_analysis_and_control_2153BFC.html" guid="2.843707701997842E-305">Architectural Discovery, Analysis and Control</a> guidelines.
+</p>
+<p>
+    Once the mechanisms have been identified, create an Architecture Mechanisms Mapping Diagram, containing the analysis,
+    design and implementation mechanisms and the realization relationships between them.
+</p>
+<h3>
+    <a id="document mechanisms" name="document mechanisms">Document Architectural Mechanisms</a>
+</h3>
+<p>
+    Mechanisms themselves are Design Model elements (such as Design Package, Design Class, and Design Subsystem) that can
+    be represented in the Design Model as part of their respective design tasks. See <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">Identify Design Elements</a> for guidelines on creating Design Model
+    elements. Note that a pattern is particularly well suited to documenting a design and implementation mechanism, because
+    it allows clients of the mechanism to expand the pattern and to generate much of the required design and code. See:
+    <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Authoring Patterns</i>
+    and <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Packaging Assets
+    for Reuse</i> .
+</p>
+<p>
+    Other options for documenting the mechanisms include:
+</p>
+<ul>
+    <li>
+        Using notes on diagrams
+    </li>
+    <li>
+        Additional diagrams that specify the static and dynamic aspects of the mechanism
+    </li>
+    <li>
+        Using constraints
+    </li>
+    <li>
+        Using profiles
+    </li>
+    <li>
+        Deploying models of mechanisms as RAS assets (use the RAS packaging mechanism to hold documentation about the asset
+        in addition to the asset itself)
+    </li>
+</ul>
+<p>
+    An additional aspect to consider when documenting is to define code rules that can be used to enforce how the mechanism
+    is used. Once the guidelines have been defined, use Code Review to automate the application of the guidelines to ensure
+    adherence to the specified usage model.
+</p>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">Additional Tool Information</a>
+</h3>
+<p>
+    Tutorials:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Applying&nbsp;a
+        Pattern</i>
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Create a
+        Pattern&nbsp;</i>
+    </li>
+</ul>
+<p>
+    Samples:
+</p>
+<ul>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>RAS Assets - RAS
+        Asset to Import/Export</i>
+    </li>
+    <li>
+        <img height="16" alt="help book icon" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /><i>Patterns - Simple
+        UML Model</i>&nbsp;
+    </li>
+</ul><br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Дополнительные сведения</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Руководства по инструментам</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/identifying_design_mechanisms_using_rsa_ext_FB669B1E.html" guid="_FeM6EK4KEdqFg48R_ivTjA">Identifying Design Mechanisms Using Rational Software Architect</a>
+</li>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/identifying_design_mechanisms_using_rsm_620A9C.html" guid="_h79N4MTkEdqXoNSl7ytDxQ">Identifying Design Mechanisms Using Rational Software Modeler</a>
+</li>
+<li>
+<a href="./../../../tech.rsa/guidances/toolmentors/identifying_design_mechanisms_using_rsd_854C3CF7.html" guid="_BAG-IK4KEdqFg48R_ivTjA">Identifying Design Mechanisms Using Rational Systems Developer</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

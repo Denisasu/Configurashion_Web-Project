@@ -1,0 +1,2273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Шаблон возможностей: Итерация построения</title>
+<meta content="CapabilityPattern" name="uma.type">
+<meta content="construction_iteration" name="uma.name">
+<meta content="Итерация построения" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_gM9X0CGFEdqMcovRzkCQow&path=_gM9X0CGFEdqMcovRzkCQow';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  defaultQueryStr, false, true, true);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div autoWrap="true">
+<div id="page-guid" value="_gM9X0CGFEdqMcovRzkCQow"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Шаблон возможностей: Итерация построения</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/capabilitypattern.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Это пример итерации на этапе построения. В него включены операции, которые обычно выполняются в ходе одной итерации на этапе построения. Цель этапа построения заключается в формализации всех оставшихся требований и в завершении построения системы на основе базовой архитектуры. Этап построения во многом схож с процессом промышленного производства, где основное внимание уделяется управлению ресурсами и операциями для оптимизации стоимости, графика выпуска и качества продукта. В этой точке жизненного цикла идеология процесса управления переключается с разработки интеллектуальной собственности, проходившей на начальном этапе и на этапе уточнения, на изготовление готовых к внедрению продуктов на этапах построения и внедрения.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="middle">
+<td class="tab" width="10"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td><td class="tab" nowrap><a id="TAB_Description" class="tab" href="./../../core.base_rup/capabilitypatterns/construction_iteration_770E29E0.html_desc.html">Описание</a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_a.gif"></td><td class="activeTab" nowrap><span style="white-space:nowrap;">Структура работы</span></td><td width="1"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-a_i.gif"></td><td class="tab" nowrap><a id="TAB_TBS" class="tab" href="./../../core.base_rup/capabilitypatterns/construction_iteration_770E29E0.html_tbs.html"><span style="white-space:nowrap;">Распределение групп</span></a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap><a id="TAB_WPBS" class="tab" href="./../../core.base_rup/capabilitypatterns/construction_iteration_770E29E0.html_wpbs.html"><span style="white-space:nowrap;">Использование рабочего продукта</span></a></td><td width="21"><img title="" alt="" height="17" width="21" src="./../../images/tab_end-i.gif"></td><td width="50%"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td colspan="2"><img title="" alt="" height="2" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space_middle.gif"></td><td class="activeTab"><img title="" alt="" height="2" width="10" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space.gif"></td><td colspan="5"><img title="" alt="" height="2" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="10"><img title="" alt="" height="5" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="sectionHeading">Поток операций</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td align="left" colspan="2" class="sectionTableSingleCell">
+<p></p>
+<img diagramType="Activity" border="0" id="diagram_Activity" src="./../../core.base_rup/capabilitypatterns/resources/construction_iteration_770E29E0_Activity.jpeg" alt="Диаграмма операций: Итерация построения" title="Диаграмма операций: Итерация построения" usemap="#Activity_construction_iteration"><map name="Activity_construction_iteration">
+<area href="./../../core.base_rup/capabilitypatterns/prepare_environment_for_an_iteration_E7CA533F.html" relpath=",_wsn9UCGHEdqMcovRzkCQow" alt="Подготовка среды к выполнению итерации" title="Подготовка среды к выполнению итерации" coords="41, 68, 223, 135" shape="rect" guid="_wsn9UCGHEdqMcovRzkCQow"></area>
+<area href="./../../core.base_rup/capabilitypatterns/ongoing_management_and_support_52569977.html" relpath=",_gShAwDHtEdqLw-lQEI8RPw" alt="Текущее управление и поддержка" title="Текущее управление и поддержка" coords="8, 261, 175, 328" shape="rect" guid="_gShAwDHtEdqLw-lQEI8RPw"></area>
+<area href="./../../core.base_rup/capabilitypatterns/develop_components_within_scope_546FA961.html" relpath=",_J1u8gCGYEdqMcovRzkCQow" alt="Разработка компонентов [в пределах содержания]" title="Разработка компонентов [в пределах содержания]" coords="217, 214, 325, 309" shape="rect" guid="_J1u8gCGYEdqMcovRzkCQow"></area>
+<area href="./../../core.base_rup/capabilitypatterns/integrate_and_test_29F90B23.html" relpath=",_dTvnIEdlEdqVZeSWHJlGyA" alt="Интеграция и тестирование" title="Интеграция и тестирование" coords="361, 279, 448, 346" shape="rect" guid="_dTvnIEdlEdqVZeSWHJlGyA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/develop_support_material_within_scope_85BC29BF.html" relpath=",_w4sUUDUYEdq4Df-OFzTBKQ" alt="Разработайте справочные материалы [в пределах содержания]" title="Разработайте справочные материалы [в пределах содержания]" coords="503, 234, 635, 315" shape="rect" guid="_w4sUUDUYEdq4Df-OFzTBKQ"></area>
+<area href="./../../core.base_rup/capabilitypatterns/plan_for_next_iteration_D4501095.html" relpath=",_PPFm0CGYEdqMcovRzkCQow" alt="Создание плана следующей итерации" title="Создание плана следующей итерации" coords="270, 430, 378, 511" shape="rect" guid="_PPFm0CGYEdqMcovRzkCQow"></area>
+<area href="./../../core.base_rup/capabilitypatterns/produce_deployment_unit_506E9987.html" relpath=",_aiFlECGYEdqMcovRzkCQow" alt="Создание блока развертывания" title="Создание блока развертывания" coords="434, 457, 555, 524" shape="rect" guid="_aiFlECGYEdqMcovRzkCQow"></area>
+</map>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Структура</div>
+<div class="sectionContent">
+<div id="treeContent"></div>
+<script language="JavaScript">
+contentPage.processPage.treeTable.data = {
+title: "Структура", summary: "Структура", 
+columns: [
+["presentation_name", "Элемент структуры"],
+["steps", "Шаги"],
+["id", "Индекс"],
+["predecessors", "Предшественники"],
+["model_info", "Сведения о модели"],
+["type", "Тип"],
+["is_planned", "Запланированный"],
+["is_repeatable", "Повторяющийся"],
+["has_multiple_occurrences", "Несколько вхождений"],
+["is_ongoing", "Выполняющийся"],
+["is_event_driven", "Управляется событиями"],
+["is_optional", "Необязательный"],
+["teams", "Группа"]],
+rows: [
+		
+{id: "e3987cfa", parentId: "", relPath: ",_wsn9UCGHEdqMcovRzkCQow", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "1", prefix: "", name: "prepare_environment_for_an_iteration", title: "Подготовка среды к выполнению итерации", url: "./../../core.base_rup/capabilitypatterns/prepare_environment_for_an_iteration_E7CA533F.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "fc471ea4", parentId: "e3987cfa", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_mmSb0EoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "2", prefix: "", name: "develop_development_case", title: "Разработка прецедента разработки", url: "./../../core.base_rup/capabilitypatterns/develop_development_case_5CF1FBF8.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "5553c3f4", parentId: "fc471ea4", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_mmSb0EoeEdqrjq4i3fchvA,_CZ6IcRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_process_engineer", title: "Инженер", url: "./../../core.base_rup/capabilitypatterns/rup_process_engineer_51CC276E.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "5a2a48ce", parentId: "fc471ea4", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_mmSb0EoeEdqrjq4i3fchvA,_CZ6Icxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_plan", title: "План разработки программного обеспечения", url: "./../../core.base_rup/capabilitypatterns/rup_project_plan_4B031B94.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "1ede4338", parentId: "fc471ea4", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_mmSb0EoeEdqrjq4i3fchvA,_CZ6Ichi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_case", title: "Прецедент разработки", url: "./../../core.base_rup/capabilitypatterns/rup_development_case_40653B84.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "f4b5193c", parentId: "fc471ea4", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_mmSb0EoeEdqrjq4i3fchvA,_CZ6Ichi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_case", title: "Прецедент разработки", url: "./../../core.base_rup/capabilitypatterns/rup_development_case_40653B84.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "e1438f4e", parentId: "e3987cfa", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_nQgdgEoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "3", prefix: "", name: "prepare_project_specific_guidelines", title: "Подготовка рекомендации по проекту", url: "./../../core.base_rup/capabilitypatterns/prepare_project_specific_guidelines_720DF412.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "3d4be6e0", parentId: "e1438f4e", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_nQgdgEoeEdqrjq4i3fchvA,_CZ6IcRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_process_engineer", title: "Инженер", url: "./../../core.base_rup/capabilitypatterns/rup_process_engineer_51CC276E.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "7029ed18", parentId: "e1438f4e", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_nQgdgEoeEdqrjq4i3fchvA,_CZ6Idxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tools", title: "Инструменты", url: "./../../core.base_rup/capabilitypatterns/rup_tools_F94FDB3.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "fc2ce24c", parentId: "e1438f4e", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_nQgdgEoeEdqrjq4i3fchvA,_CZ6IdBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_process", title: "Процесс разработки", url: "./../../core.base_rup/capabilitypatterns/rup_development_process_BC0297D.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "eee85e14", parentId: "e1438f4e", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_nQgdgEoeEdqrjq4i3fchvA,_CZ6Iehi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_specific_guidelines", title: "Рекомендации по проекту", url: "./../../core.base_rup/capabilitypatterns/rup_project_specific_guidelines_C988FFC2.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "1b995e96", parentId: "e3987cfa", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_oNDlUEoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "4", prefix: "", name: "develop_manual_styleguide", title: "Подготовка руководства по стилю публикаций", url: "./../../core.base_rup/capabilitypatterns/develop_manual_styleguide_C2B9A70B.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "a5f5f0e6", parentId: "1b995e96", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_oNDlUEoeEdqrjq4i3fchvA,_oNJr8EoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_technical_writer", title: "Технический писатель", url: "./../../core.base_rup/capabilitypatterns/rup_technical_writer_BDFC5A48.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "befe9948", parentId: "1b995e96", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_oNDlUEoeEdqrjq4i3fchvA,_CZ6Icxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_plan", title: "План разработки программного обеспечения", url: "./../../core.base_rup/capabilitypatterns/rup_project_plan_4B031B94.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "54faea3c", parentId: "1b995e96", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_oNDlUEoeEdqrjq4i3fchvA,_CZ6Idxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tools", title: "Инструменты", url: "./../../core.base_rup/capabilitypatterns/rup_tools_F94FDB3.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "29b52d42", parentId: "1b995e96", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_oNDlUEoeEdqrjq4i3fchvA,_CZ6IdBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_process", title: "Процесс разработки", url: "./../../core.base_rup/capabilitypatterns/rup_development_process_BC0297D.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "38b91f38", parentId: "1b995e96", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_oNDlUEoeEdqrjq4i3fchvA,_oNJr8UoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_manual_styleguide", title: "Руководство по стилю публикаций", url: "./../../core.base_rup/capabilitypatterns/rup_manual_styleguide_C89A3A58.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "ab1b662", parentId: "1b995e96", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_oNDlUEoeEdqrjq4i3fchvA,_oNJr8UoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_manual_styleguide", title: "Руководство по стилю публикаций", url: "./../../core.base_rup/capabilitypatterns/rup_manual_styleguide_C89A3A58.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "cbb37596", parentId: "e3987cfa", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_tBDf0EoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "5", prefix: "", name: "prepare_project_specific_templates", title: "Подготовка шаблонов для проекта", url: "./../../core.base_rup/capabilitypatterns/prepare_project_specific_templates_9116D119.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "9baf161a", parentId: "cbb37596", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_tBDf0EoeEdqrjq4i3fchvA,_CZ6IcRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_process_engineer", title: "Инженер", url: "./../../core.base_rup/capabilitypatterns/rup_process_engineer_51CC276E.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "5b73197c", parentId: "cbb37596", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_tBDf0EoeEdqrjq4i3fchvA,_CZ6Idxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tools", title: "Инструменты", url: "./../../core.base_rup/capabilitypatterns/rup_tools_F94FDB3.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "5e309134", parentId: "cbb37596", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_tBDf0EoeEdqrjq4i3fchvA,_CZ6IdBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_process", title: "Процесс разработки", url: "./../../core.base_rup/capabilitypatterns/rup_development_process_BC0297D.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "4b92e342", parentId: "cbb37596", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_tBDf0EoeEdqrjq4i3fchvA,_CZ6IeBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_specific_templates", title: "Шаблоны проекта", url: "./../../core.base_rup/capabilitypatterns/rup_project_specific_templates_D0520B9C.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "19be24aa", parentId: "e3987cfa", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_uE9z4EoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "6", prefix: "", name: "launch_development_process", title: "Запуск процесса разработки", url: "./../../core.base_rup/capabilitypatterns/launch_development_process_6D0A61B6.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "e633e4ae", parentId: "19be24aa", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_uE9z4EoeEdqrjq4i3fchvA,_CZ6IcRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_process_engineer", title: "Инженер", url: "./../../core.base_rup/capabilitypatterns/rup_process_engineer_51CC276E.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "fbc780e8", parentId: "19be24aa", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_uE9z4EoeEdqrjq4i3fchvA,_CZ6IdBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_process", title: "Процесс разработки", url: "./../../core.base_rup/capabilitypatterns/rup_development_process_BC0297D.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "cda4fd86", parentId: "19be24aa", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_uE9z4EoeEdqrjq4i3fchvA,_CZ6IeBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_specific_templates", title: "Шаблоны проекта", url: "./../../core.base_rup/capabilitypatterns/rup_project_specific_templates_D0520B9C.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "d2174dfc", parentId: "19be24aa", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_uE9z4EoeEdqrjq4i3fchvA,_uFD6gEoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_change_request", title: "Запрос изменения", url: "./../../core.base_rup/capabilitypatterns/rup_change_request_F565A235.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "2f3ef562", parentId: "e3987cfa", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_u61E4EoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "7", prefix: "", name: "setup_tools", title: "Настройка инструментов", url: "./../../core.base_rup/capabilitypatterns/setup_tools_DEBF0F3A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "dadb6a3c", parentId: "2f3ef562", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_u61E4EoeEdqrjq4i3fchvA,_CZ6Ifhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tool_specialist", title: "Специалист по инструментам", url: "./../../core.base_rup/capabilitypatterns/rup_tool_specialist_8E1AE1E1.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "131058b6", parentId: "2f3ef562", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_u61E4EoeEdqrjq4i3fchvA,_CZ6Idxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tools", title: "Инструменты", url: "./../../core.base_rup/capabilitypatterns/rup_tools_F94FDB3.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "a073999c", parentId: "2f3ef562", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_u61E4EoeEdqrjq4i3fchvA,_CZ6IdBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_process", title: "Процесс разработки", url: "./../../core.base_rup/capabilitypatterns/rup_development_process_BC0297D.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "a314e250", parentId: "2f3ef562", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_u61E4EoeEdqrjq4i3fchvA,_CZ6Idxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tools", title: "Инструменты", url: "./../../core.base_rup/capabilitypatterns/rup_tools_F94FDB3.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "456df708", parentId: "e3987cfa", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_wHUtNUoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "8", prefix: "", name: "verify_tool_config_installation", title: "Проверка результатов установки и конфигурации инструментов", url: "./../../core.base_rup/capabilitypatterns/verify_tool_config_installation_2504B68B.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "c82ec216", parentId: "456df708", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_wHUtNUoeEdqrjq4i3fchvA,_CZ6Ifhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tool_specialist", title: "Специалист по инструментам", url: "./../../core.base_rup/capabilitypatterns/rup_tool_specialist_8E1AE1E1.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "e25f5822", parentId: "456df708", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_wHUtNUoeEdqrjq4i3fchvA,_wHaz0EoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_infrastructure", title: "Инфраструктура разработки", url: "./../../core.base_rup/capabilitypatterns/rup_development_infrastructure_BEE2ADD3.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "c16783f4", parentId: "456df708", relPath: ",_wsn9UCGHEdqMcovRzkCQow,_wHUtNUoeEdqrjq4i3fchvA,_CZ6IdBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_process", title: "Процесс разработки", url: "./../../core.base_rup/capabilitypatterns/rup_development_process_BC0297D.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "3aa528fe", parentId: "", relPath: ",_gShAwDHtEdqLw-lQEI8RPw", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "9", prefix: "", name: "ongoing_management_and_support", title: "Текущее управление и поддержка", url: "./../../core.base_rup/capabilitypatterns/ongoing_management_and_support_52569977.html", 
+	predecessors: "1", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "true", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "ac00256a", parentId: "3aa528fe", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_foD1wCJbEdqQipbmJ0SDbw", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "10", prefix: "", name: "manage_iteration", title: "Управление итерацией", url: "./../../core.base_rup/capabilitypatterns/manage_iteration_FC22F596.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "bec50e40", parentId: "ac00256a", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_foD1wCJbEdqQipbmJ0SDbw,_Jq8b8EogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "11", prefix: "", name: "acquire_staff", title: "Получение персонала", url: "./../../core.base_rup/capabilitypatterns/acquire_staff_954197B4.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "63c2f72a", parentId: "ac00256a", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_foD1wCJbEdqQipbmJ0SDbw,_KodNEEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "12", prefix: "", name: "initiate_iteration", title: "Начало итерации", url: "./../../core.base_rup/capabilitypatterns/initiate_iteration_BC7F1824.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "f6887afe", parentId: "ac00256a", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_foD1wCJbEdqQipbmJ0SDbw,_MAaegEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "13", prefix: "", name: "iteration_evaluation_criteria_review", title: "Проверка критериев оценки итерации", url: "./../../core.base_rup/capabilitypatterns/iteration_evaluation_criteria_review_64D7BD8C.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "8803fca6", parentId: "ac00256a", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_foD1wCJbEdqQipbmJ0SDbw,_M_WzAEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "14", prefix: "", name: "identify_and_assess_risks", title: "Определение и оценка рисков", url: "./../../core.base_rup/capabilitypatterns/identify_and_assess_risks_83C4972F.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "9ae198", parentId: "ac00256a", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_foD1wCJbEdqQipbmJ0SDbw,_NtedQEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "15", prefix: "", name: "assess_iteration", title: "Оценка итерации", url: "./../../core.base_rup/capabilitypatterns/assess_iteration_5A29E9EF.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "115687e", parentId: "ac00256a", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_foD1wCJbEdqQipbmJ0SDbw,_OoTt2kogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "16", prefix: "", name: "iteration_acceptance_review", title: "Приемка итерации", url: "./../../core.base_rup/capabilitypatterns/iteration_acceptance_review_46264B2F.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "7fb55076", parentId: "3aa528fe", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_hpF5YCJbEdqQipbmJ0SDbw", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "17", prefix: "", name: "monitor_control_project", title: "Мониторинг и управление проектом", url: "./../../core.base_rup/capabilitypatterns/monitor_control_project_129C1475.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "80cce26", parentId: "7fb55076", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_hpF5YCJbEdqQipbmJ0SDbw,_Cuj4oEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "18", prefix: "", name: "schedule_and_assign_work", title: "Планирование и распределение работы", url: "./../../core.base_rup/capabilitypatterns/schedule_and_assign_work_9E5335E8.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "ade32e84", parentId: "7fb55076", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_hpF5YCJbEdqQipbmJ0SDbw,_D0wrsEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "19", prefix: "", name: "monitor_project_status", title: "Мониторинг состояния проекта", url: "./../../core.base_rup/capabilitypatterns/monitor_project_status_6461DCCF.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "4ce11514", parentId: "7fb55076", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_hpF5YCJbEdqQipbmJ0SDbw,_E70aYEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "20", prefix: "", name: "report_status", title: "Создание отчетов о состоянии", url: "./../../core.base_rup/capabilitypatterns/report_status_661264A5.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true]},
+	
+		
+		
+{id: "cec51306", parentId: "7fb55076", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_hpF5YCJbEdqQipbmJ0SDbw,_GAAbQEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "21", prefix: "", name: "handle_exceptions_and_problems", title: "Обработка исключительных ситуаций и неполадок", url: "./../../core.base_rup/capabilitypatterns/handle_exceptions_and_problems_FBF1FE05.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "78c55726", parentId: "7fb55076", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_hpF5YCJbEdqQipbmJ0SDbw,_G13sQEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "22", prefix: "", name: "pra_project_review", title: "Проверка проекта в Совете проекта (PRA)", url: "./../../core.base_rup/capabilitypatterns/pra_project_review_2FD96A94.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "1a75bd98", parentId: "7fb55076", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_hpF5YCJbEdqQipbmJ0SDbw,_IHuVsEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "23", prefix: "", name: "organize_review", title: "Организация проверки", url: "./../../core.base_rup/capabilitypatterns/organize_review_E56F2828.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "b14e0d00", parentId: "7fb55076", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_hpF5YCJbEdqQipbmJ0SDbw,_I049sEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "24", prefix: "", name: "conduct_review", title: "Провести проверку", url: "./../../core.base_rup/capabilitypatterns/conduct_review_9AB3A314.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true]},
+	
+		
+		
+{id: "f9f05256", parentId: "3aa528fe", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_kcnw8CJbEdqQipbmJ0SDbw", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "25", prefix: "", name: "manage_changing_requirements", title: "Управление изменением требований", url: "./../../core.base_rup/capabilitypatterns/manage_changing_requirements_E2D15960.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "true", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "5ec09bf4", parentId: "f9f05256", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_kcnw8CJbEdqQipbmJ0SDbw,_IbNc8kohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "26", prefix: "", name: "structure_use_case_model", title: "Создание структуры модели прецедентов", url: "./../../core.base_rup/capabilitypatterns/structure_use_case_model_5A6AA6D8.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "114a2d2", parentId: "f9f05256", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_kcnw8CJbEdqQipbmJ0SDbw,_JHbpwEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "27", prefix: "", name: "manage_dependencies", title: "Управление зависимостями", url: "./../../core.base_rup/capabilitypatterns/manage_dependencies_8A62DA11.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "37f4fe9e", parentId: "f9f05256", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_kcnw8CJbEdqQipbmJ0SDbw,_J3d_kEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "28", prefix: "", name: "review_requirements", title: "Проверка требований", url: "./../../core.base_rup/capabilitypatterns/review_requirements_71F34BF5.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "9bc7be1e", parentId: "3aa528fe", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_lxX9YCJbEdqQipbmJ0SDbw", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "29", prefix: "", name: "manage_change_requests", title: "Управление запросами изменений", url: "./../../core.base_rup/capabilitypatterns/manage_change_requests_118544AB.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "true", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "88d31516", parentId: "9bc7be1e", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_lxX9YCJbEdqQipbmJ0SDbw,_G_TccEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "30", prefix: "", name: "submit_change_request", title: "Оформление запроса изменения", url: "./../../core.base_rup/capabilitypatterns/submit_change_request_393BB55C.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+	
+		
+		
+{id: "71f9c7da", parentId: "9bc7be1e", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_lxX9YCJbEdqQipbmJ0SDbw,_HwAgpkodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "31", prefix: "", name: "update_change_request", title: "Обновление запроса изменения", url: "./../../core.base_rup/capabilitypatterns/update_change_request_E85E81C3.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+	
+		
+		
+{id: "90e18f92", parentId: "9bc7be1e", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_lxX9YCJbEdqQipbmJ0SDbw,_I7dnIEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "32", prefix: "", name: "review_change_request", title: "Проверка запросов изменений", url: "./../../core.base_rup/capabilitypatterns/review_change_request_A7FF7087.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "f93646e0", parentId: "9bc7be1e", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_lxX9YCJbEdqQipbmJ0SDbw,_JyR6aEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "33", prefix: "", name: "confirm_duplicate_or_rejected_cr", title: "Подтверждение повторного или отклоненного запроса изменения", url: "./../../core.base_rup/capabilitypatterns/confirm_duplicate_or_rejected_cr_94FB346A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "6a59af6e", parentId: "9bc7be1e", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_lxX9YCJbEdqQipbmJ0SDbw,_NTGVwEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "34", prefix: "", name: "schedule_and_assign_work", title: "Планирование и распределение работы", url: "./../../core.base_rup/capabilitypatterns/schedule_and_assign_work_82D813F6.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "17ed1ce8", parentId: "9bc7be1e", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_lxX9YCJbEdqQipbmJ0SDbw,_PxWg6kodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "35", prefix: "", name: "verify_changes_in_release_build", title: "Проверка изменений в компиляции", url: "./../../core.base_rup/capabilitypatterns/verify_changes_in_release_build_88007D60.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "7efdb788", parentId: "3aa528fe", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_de6X8CJbEdqQipbmJ0SDbw", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "36", prefix: "", name: "support_environment_during_an_iteration", title: "Обеспечение поддержки среды во время итерации", url: "./../../core.base_rup/capabilitypatterns/support_environment_during_an_iteration_BB526EE2.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "745433b0", parentId: "7efdb788", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_de6X8CJbEdqQipbmJ0SDbw,_w9eSEEoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "37", prefix: "", name: "support_development", title: "Разработка справочных материалов", url: "./../../core.base_rup/capabilitypatterns/support_development_6B764CE4.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "f679fc28", parentId: "3aa528fe", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_nj3CEDHaEdqLw-lQEI8RPw", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "38", prefix: "", name: "change_and_deliver_configuration_items", title: "Изменение элементов конфигурации и организация их поставки", url: "./../../core.base_rup/capabilitypatterns/change_and_deliver_configuration_items_B8C9175D.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "true", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "89a17766", parentId: "f679fc28", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_nj3CEDHaEdqLw-lQEI8RPw,_WymWEkodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "39", prefix: "", name: "create_development_workspace", title: "Создание рабочей области разработки", url: "./../../core.base_rup/capabilitypatterns/create_development_workspace_D4101D25.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "eb45e73c", parentId: "f679fc28", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_nj3CEDHaEdqLw-lQEI8RPw,_XcDiwkodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "40", prefix: "", name: "make_changes_to_configuration_items", title: "Внесение изменений", url: "./../../core.base_rup/capabilitypatterns/make_changes_to_configuration_items_6FE7317.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "9b92e716", parentId: "f679fc28", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_nj3CEDHaEdqLw-lQEI8RPw,_YIvpoEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "41", prefix: "", name: "deliver_changes", title: "Доставка изменений", url: "./../../core.base_rup/capabilitypatterns/deliver_changes_579C453.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "df4c8db2", parentId: "f679fc28", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_nj3CEDHaEdqLw-lQEI8RPw,_Y4ymgEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "42", prefix: "", name: "update_workspace", title: "Обновление рабочей области", url: "./../../core.base_rup/capabilitypatterns/update_workspace_2644EDA0.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "8110227c", parentId: "f679fc28", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_nj3CEDHaEdqLw-lQEI8RPw,_Zs7ZMEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "43", prefix: "", name: "create_baseline", title: "Создание контрольных версий", url: "./../../core.base_rup/capabilitypatterns/create_baseline_D43F9607.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "c72a7446", parentId: "f679fc28", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_nj3CEDHaEdqLw-lQEI8RPw,_an2wZEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "44", prefix: "", name: "promote_baseline", title: "Предложение контрольных версий", url: "./../../core.base_rup/capabilitypatterns/promote_baseline_4774370.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true]},
+	
+		
+		
+{id: "27547d96", parentId: "3aa528fe", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_o6SpgDHaEdqLw-lQEI8RPw", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "45", prefix: "", name: "manage_baselines_releases", title: "Управление контрольными версиями и выпусками", url: "./../../core.base_rup/capabilitypatterns/manage_baselines_releases_E6CAF6B3.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "true", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "5a6ba782", parentId: "27547d96", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_o6SpgDHaEdqLw-lQEI8RPw,_b2REQEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "46", prefix: "", name: "create_deployment_unit", title: "Создание блока развертывания", url: "./../../core.base_rup/capabilitypatterns/create_deployment_unit_76F634EA.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "fe722d1e", parentId: "27547d96", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_o6SpgDHaEdqLw-lQEI8RPw,_cqIKIEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "47", prefix: "", name: "create_baseline", title: "Создание контрольных версий", url: "./../../core.base_rup/capabilitypatterns/create_baseline_9FDF0A7F.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "2ba4be08", parentId: "27547d96", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_o6SpgDHaEdqLw-lQEI8RPw,_duB3IEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "48", prefix: "", name: "promote_baseline", title: "Предложение контрольных версий", url: "./../../core.base_rup/capabilitypatterns/promote_baseline_BB629471.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true]},
+	
+		
+		
+{id: "8479d3f8", parentId: "3aa528fe", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_qX4o4DHaEdqLw-lQEI8RPw", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "49", prefix: "", name: "monitor_report_configuration_status", title: "Организация отслеживания состояния конфигурации и формирование сопутствующих отчетов", url: "./../../core.base_rup/capabilitypatterns/monitor_report_configuration_status_9CD3A3A4.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "b7a1d23c", parentId: "8479d3f8", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_qX4o4DHaEdqLw-lQEI8RPw,_eu-WxEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "50", prefix: "", name: "report_on_configuration_status", title: "Создание отчета о состоянии конфигурации", url: "./../../core.base_rup/capabilitypatterns/report_on_configuration_status_445FFC1A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true]},
+	
+		
+		
+{id: "7c4ccbfa", parentId: "8479d3f8", relPath: ",_gShAwDHtEdqLw-lQEI8RPw,_qX4o4DHaEdqLw-lQEI8RPw,_fpCyUEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "51", prefix: "", name: "perform_configuration_audit", title: "Контроль конфигурации", url: "./../../core.base_rup/capabilitypatterns/perform_configuration_audit_E48068C3.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "5224e786", parentId: "", relPath: ",_J1u8gCGYEdqMcovRzkCQow", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "52", prefix: "", name: "develop_components_within_scope", title: "Разработка компонентов [в пределах содержания]", url: "./../../core.base_rup/capabilitypatterns/develop_components_within_scope_546FA961.html", 
+	predecessors: "1", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "true", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "2351c0ae", parentId: "5224e786", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Cgn1MCCdEdq3qtLcbHn6PQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "53", prefix: "", name: "analyze_behavior", title: "Анализ поведения", url: "./../../core.base_rup/capabilitypatterns/analyze_behavior_28F55487.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "2b8f35b0", parentId: "2351c0ae", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Cgn1MCCdEdq3qtLcbHn6PQ,_fNJV8EocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "54", prefix: "", name: "identify_design_elements", title: "Определение элементов проекта", url: "./../../core.base_rup/capabilitypatterns/identify_design_elements_D0EF4513.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,false]},
+	
+		
+		
+{id: "354e40bc", parentId: "2351c0ae", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Cgn1MCCdEdq3qtLcbHn6PQ,_fzcg-UocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "55", prefix: "", name: "use_case_analysis", title: "Анализ прецедентов", url: "./../../core.base_rup/capabilitypatterns/use_case_analysis_DAB10D12.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true,false]},
+	
+		
+		
+{id: "63d30158", parentId: "2351c0ae", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Cgn1MCCdEdq3qtLcbHn6PQ,_gqW60EocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "56", prefix: "", name: "operation_analysis", title: "Анализ операции", url: "./../../core.base_rup/capabilitypatterns/operation_analysis_F9BB2A10.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true]},
+	
+		
+		
+{id: "e94b631e", parentId: "2351c0ae", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Cgn1MCCdEdq3qtLcbHn6PQ,_jJX68EocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "57", prefix: "", name: "design_user_interface", title: "Проектирование интерфейса", url: "./../../core.base_rup/capabilitypatterns/design_user_interface_AE2FDA9D.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "eb88da44", parentId: "2351c0ae", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Cgn1MCCdEdq3qtLcbHn6PQ,_kI43MEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "58", prefix: "", name: "prototype_user_interface", title: "Создание прототипа интерфейса", url: "./../../core.base_rup/capabilitypatterns/prototype_user_interface_4C52E1A7.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "542e4d50", parentId: "2351c0ae", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Cgn1MCCdEdq3qtLcbHn6PQ,_lJQIAEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "59", prefix: "", name: "review_the_design", title: "Проверка проекта", url: "./../../core.base_rup/capabilitypatterns/review_the_design_9294A7AC.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,false]},
+	
+		
+		
+{id: "977dc182", parentId: "5224e786", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "60", prefix: "", name: "identify_services", title: "Service Identification", url: "./../../core.base_rup/capabilitypatterns/identify_services_284A5FE4.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "15238956", parentId: "977dc182", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_J5kdIExCEduGSMz-5zscXg", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "61", prefix: "", name: "domain_decomposition", title: "Domain Decomposition", url: "./../../soa.rup_soma/capabilitypatterns/domain_decomposition_113B478C.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+	
+		
+		
+{id: "36c2e348", parentId: "15238956", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_J5kdIExCEduGSMz-5zscXg,_JaZMwE-CEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "62", prefix: "", name: "functional_area_analysis", title: "Functional Area Analysis", url: "./../../soa.rup_soma/capabilitypatterns/functional_area_analysis_DF192E46.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+	
+		
+		
+{id: "9b91ba16", parentId: "15238956", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_J5kdIExCEduGSMz-5zscXg,_Vt6N4ExCEduGSMz-5zscXg", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "63", prefix: "", name: "refine_business_use_case", title: "Refine a Business Use-Case", url: "./../../soa.rup_soma/capabilitypatterns/refine_business_use_case_B8071CF3.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+	
+		
+		
+{id: "fef22db0", parentId: "15238956", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_J5kdIExCEduGSMz-5zscXg,_PPNrEE-CEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "64", prefix: "", name: "soa_service_identification_bp", title: "Business Process Analysis", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_bp_A99F2AD2.html", 
+	predecessors: "63", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true]},
+	
+		
+		
+{id: "27b41b00", parentId: "15238956", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_J5kdIExCEduGSMz-5zscXg,_PPNrEU-CEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "65", prefix: "", name: "soa_service_identification_uc", title: "Business Use Case Analysis (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_uc_B43D0AE2.html", 
+	predecessors: "63", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+	
+		
+		
+{id: "fe72f2ca", parentId: "977dc182", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_6TO11U-AEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "66", prefix: "", name: "goal_service_modeling", title: "Goal-Service Modeling", url: "./../../soa.rup_soma/capabilitypatterns/goal_service_modeling_DD4E7230.html", 
+	predecessors: "61", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+	
+		
+		
+{id: "691338c0", parentId: "fe72f2ca", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_6TO11U-AEdu0EMZ-3o0kDQ,_6TO10E-AEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "67", prefix: "", name: "identify_business_goals", title: "Identify Business Goals and KPIs", url: "./../../soa.rup_soma/capabilitypatterns/identify_business_goals_E1EB001.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "1ea27b36", parentId: "fe72f2ca", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_6TO11U-AEdu0EMZ-3o0kDQ,_6TIvME-AEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "68", prefix: "", name: "soa_goal_service_assignment", title: "Identify and Associate Services to Goals", url: "./../../soa.rup_soma/capabilitypatterns/soa_goal_service_assignment_53C6A04F.html", 
+	predecessors: "67", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true]},
+	
+		
+		
+{id: "752d754e", parentId: "977dc182", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_7ZObICxuEdupJ8eX04kqLQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "69", prefix: "", name: "existing_asset_analysis", title: "Existing Asset Analysis", url: "./../../soa.rup_soma/capabilitypatterns/existing_asset_analysis_4B247136.html", 
+	predecessors: "66", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+	
+		
+		
+{id: "29d3b646", parentId: "752d754e", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_7ZObICxuEdupJ8eX04kqLQ,_tr7IMCxvEdupJ8eX04kqLQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "70", prefix: "", name: "soa_service_identification_legacy", title: "Existing Asset Analysis", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_legacy_26AC3B2D.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "c1351f74", parentId: "752d754e", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_7ZObICxuEdupJ8eX04kqLQ,_jqzBgCxvEdupJ8eX04kqLQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "71", prefix: "", name: "soa_service_identification_data", title: "Data Model Analysis", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_data_CF5D6132.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true]},
+	
+		
+		
+{id: "c0b8ebb2", parentId: "752d754e", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_7ZObICxuEdupJ8eX04kqLQ,_otgtcCxvEdupJ8eX04kqLQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "72", prefix: "", name: "soa_service_identification_rules", title: "Business Rule Analysis", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_identification_rules_7DC18CF9.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true]},
+	
+		
+		
+{id: "1143b7e", parentId: "752d754e", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_PBJLwFj3EduKcJV_Q8r68A,_7ZObICxuEdupJ8eX04kqLQ,_n_OoEE-CEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "73", prefix: "", name: "soa_construct_arch_proof", title: "Construct Architectural Proof-of-Concept (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_construct_arch_proof_A8E41D1F.html", 
+	predecessors: "70,71,72", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "f90042d8", parentId: "5224e786", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_RP00kCCdEdq3qtLcbHn6PQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "74", prefix: "", name: "design_components", title: "Проектирование компонентов", url: "./../../core.base_rup/capabilitypatterns/design_components_B496820.html", 
+	predecessors: "53,60", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "90908986", parentId: "f90042d8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_RP00kCCdEdq3qtLcbHn6PQ,_mL0YQEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "75", prefix: "", name: "use_case_design", title: "Проектирование прецедентов", url: "./../../core.base_rup/capabilitypatterns/use_case_design_7A33E90E.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "afd838f6", parentId: "f90042d8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_RP00kCCdEdq3qtLcbHn6PQ,_nM9FIUocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "76", prefix: "", name: "subsystem_design", title: "Проектирование подсистемы", url: "./../../core.base_rup/capabilitypatterns/subsystem_design_D46CB04A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "ebde4a02", parentId: "f90042d8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_RP00kCCdEdq3qtLcbHn6PQ,_oPbOwEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "77", prefix: "", name: "operation_design", title: "Проектирование операций", url: "./../../core.base_rup/capabilitypatterns/operation_design_1C3ED1EE.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "7958e8e6", parentId: "f90042d8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_RP00kCCdEdq3qtLcbHn6PQ,_p-f_sEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "78", prefix: "", name: "class_design", title: "Проектирование классов", url: "./../../core.base_rup/capabilitypatterns/class_design_50C0E8FA.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "6d3fd958", parentId: "f90042d8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_RP00kCCdEdq3qtLcbHn6PQ,_r5BysEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "79", prefix: "", name: "define_testability_elements", title: "Установка критериев пригодности к тестированию", url: "./../../core.base_rup/capabilitypatterns/define_testability_elements_131FD27E.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "7f5b49be", parentId: "f90042d8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_RP00kCCdEdq3qtLcbHn6PQ,_tOmegEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "80", prefix: "", name: "design_testability_elements", title: "Проектирование критериев пригодности к тестированию", url: "./../../core.base_rup/capabilitypatterns/design_testability_elements_7BCFC43.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "2dcb1882", parentId: "f90042d8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_RP00kCCdEdq3qtLcbHn6PQ,_udG5AEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "81", prefix: "", name: "capsule_design", title: "Проектирование капсул", url: "./../../core.base_rup/capabilitypatterns/capsule_design_772F2393.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true]},
+	
+		
+		
+{id: "540b5a9a", parentId: "f90042d8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_RP00kCCdEdq3qtLcbHn6PQ,_vT1FoEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "82", prefix: "", name: "review_the_design", title: "Проверка проекта", url: "./../../core.base_rup/capabilitypatterns/review_the_design_46C4395B.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,false]},
+	
+		
+		
+{id: "b8f27696", parentId: "5224e786", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Sc_yUCCdEdq3qtLcbHn6PQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "83", prefix: "", name: "design_the_database", title: "Проектирование базы данных", url: "./../../core.base_rup/capabilitypatterns/design_the_database_C8EC2822.html", 
+	predecessors: "53,60", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "3616a984", parentId: "b8f27696", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Sc_yUCCdEdq3qtLcbHn6PQ,_xrlnMEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "84", prefix: "", name: "class_design", title: "Проектирование классов", url: "./../../core.base_rup/capabilitypatterns/class_design_374819A6.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "2b1a2cf4", parentId: "b8f27696", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Sc_yUCCdEdq3qtLcbHn6PQ,_1EYvAEocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "85", prefix: "", name: "design_database_migration", title: "Задание параметров переноса данных", url: "./../../core.base_rup/capabilitypatterns/design_database_migration_B6C7BB67.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "d8d2ca1e", parentId: "b8f27696", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Sc_yUCCdEdq3qtLcbHn6PQ,_2Bsr0EocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "86", prefix: "", name: "database_design", title: "Проектирование базы данных", url: "./../../core.base_rup/capabilitypatterns/database_design_5998D016.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "55da085c", parentId: "b8f27696", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_Sc_yUCCdEdq3qtLcbHn6PQ,_3G8crkocEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "87", prefix: "", name: "review_the_design", title: "Проверка проекта", url: "./../../core.base_rup/capabilitypatterns/review_the_design_56A6742A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,false]},
+	
+		
+		
+{id: "a2e9d1a0", parentId: "5224e786", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_VmaJQEudEdq5N8CMS7wKPw", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "88", prefix: "", name: "design_services", title: "Service Specification", url: "./../../core.base_rup/capabilitypatterns/design_services_3B799678.html", 
+	predecessors: "53,60", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "96c68fe8", parentId: "a2e9d1a0", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_VmaJQEudEdq5N8CMS7wKPw,_zL1rsEn2EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "89", prefix: "", name: "soa_specify_services", title: "Perform Service Specification", url: "./../../soa.rup_soma/capabilitypatterns/soa_specify_services_D308DA60.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+	
+		
+		
+{id: "4bf4a51e", parentId: "96c68fe8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_VmaJQEudEdq5N8CMS7wKPw,_zL1rsEn2EduC74V7YHXTOQ,_iSjHME-EEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "90", prefix: "", name: "soa_service_qualification", title: "Apply Services Litmus Tests", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_qualification_627E9310.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "55e3260e", parentId: "96c68fe8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_VmaJQEudEdq5N8CMS7wKPw,_zL1rsEn2EduC74V7YHXTOQ,_MZp_AEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "91", prefix: "", name: "soa_service_specification", title: "Service Specification", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_specification_907039BC.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "92979550", parentId: "96c68fe8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_VmaJQEudEdq5N8CMS7wKPw,_zL1rsEn2EduC74V7YHXTOQ,_P5_SMEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "92", prefix: "", name: "soa_service_message_design", title: "Message Design", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_message_design_8300B60D.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "d6916da0", parentId: "96c68fe8", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_VmaJQEudEdq5N8CMS7wKPw,_zL1rsEn2EduC74V7YHXTOQ,_TO-4EEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "93", prefix: "", name: "sec_identify_security_patterns", title: "Identify Security Patterns", url: "./../../soa.rup_soma/capabilitypatterns/sec_identify_security_patterns_9AD3C9BE.html", 
+	predecessors: "91", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "c0b2ac5a", parentId: "a2e9d1a0", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_VmaJQEudEdq5N8CMS7wKPw,_WjrjAEn3EduC74V7YHXTOQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "94", prefix: "", name: "soa_subsystem_analysis", title: "Perform Subsystem Analysis", url: "./../../soa.rup_soma/capabilitypatterns/soa_subsystem_analysis_40CEBC0B.html", 
+	predecessors: "89", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+	
+		
+		
+{id: "285a5b3c", parentId: "c0b2ac5a", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_VmaJQEudEdq5N8CMS7wKPw,_WjrjAEn3EduC74V7YHXTOQ,_WhgqgUxBEduGSMz-5zscXg", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "95", prefix: "", name: "soa_subsystem_design", title: "Subsystem Design (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_subsystem_design_F5793D14.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "4b3b1984", parentId: "a2e9d1a0", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_VmaJQEudEdq5N8CMS7wKPw,__dhMkE-EEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "96", prefix: "", name: "perform_component_specification", title: "Perform Component Specification", url: "./../../soa.rup_soma/capabilitypatterns/perform_component_specification_35965214.html", 
+	predecessors: "94", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+	
+		
+		
+{id: "58d74a74", parentId: "4b3b1984", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_VmaJQEudEdq5N8CMS7wKPw,__dhMkE-EEdu0EMZ-3o0kDQ,_FEZVgE-FEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "97", prefix: "", name: "soa_component_specification", title: "Component Specification (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_component_specification_63B8F64A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,false]},
+	
+		
+		
+{id: "29983414", parentId: "5224e786", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_CqsSkFmeEdug4JP2vBrnCQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "98", prefix: "", name: "realize_services", title: "Service Realization", url: "./../../core.base_rup/capabilitypatterns/realize_services_4A5C193F.html", 
+	predecessors: "53,60", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "4b3e5636", parentId: "29983414", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_CqsSkFmeEdug4JP2vBrnCQ,_QR1wQE-DEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "99", prefix: "", name: "realization_decisions", title: "Realization Decisions", url: "./../../soa.rup_soma/capabilitypatterns/realization_decisions_A107742A.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "na",
+	steps: []},
+	
+		
+		
+{id: "e7cc8e68", parentId: "4b3e5636", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_CqsSkFmeEdug4JP2vBrnCQ,_QR1wQE-DEdu0EMZ-3o0kDQ,_bI3kME-DEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "100", prefix: "", name: "soa_service_realization", title: "Document Service Realization Decisions", url: "./../../soa.rup_soma/capabilitypatterns/soa_service_realization_3787C666.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "69493cc8", parentId: "4b3e5636", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_CqsSkFmeEdug4JP2vBrnCQ,_QR1wQE-DEdu0EMZ-3o0kDQ,_uxzSoE-DEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "101", prefix: "", name: "soa_component_specification", title: "Component Specification (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_component_specification_94D30541.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [false,false,false,false,false,true]},
+	
+		
+		
+{id: "2fc28172", parentId: "4b3e5636", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_CqsSkFmeEdug4JP2vBrnCQ,_QR1wQE-DEdu0EMZ-3o0kDQ,_zXdPIE-DEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "102", prefix: "", name: "soa_construct_arch_proof", title: "Construct Architectural Proof-of-Concept (SOA)", url: "./../../soa.rup_soma/capabilitypatterns/soa_construct_arch_proof_23C1D835.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "f713d1be", parentId: "4b3e5636", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_CqsSkFmeEdug4JP2vBrnCQ,_QR1wQE-DEdu0EMZ-3o0kDQ,_57XBAE-DEdu0EMZ-3o0kDQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "103", prefix: "", name: "assess_viability_of_proof", title: "Assess Viability of Architectural Proof-of-Concept", url: "./../../soa.rup_soma/capabilitypatterns/assess_viability_of_proof_2886FBF.html", 
+	predecessors: "102", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "7542fda6", parentId: "5224e786", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_XMg1cCCdEdq3qtLcbHn6PQ", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "104", prefix: "", name: "implement_components", title: "Реализация компонентов", url: "./../../core.base_rup/capabilitypatterns/implement_components_79814689.html", 
+	predecessors: "53,60", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "87065582", parentId: "7542fda6", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_XMg1cCCdEdq3qtLcbHn6PQ,_EefaoEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "105", prefix: "", name: "plan_subsystem_integration", title: "Планирование интеграции подсистемы", url: "./../../core.base_rup/capabilitypatterns/plan_subsystem_integration_105FBE46.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "ec29b95c", parentId: "7542fda6", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_XMg1cCCdEdq3qtLcbHn6PQ,_FVf7IUofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "106", prefix: "", name: "implement_component", title: "Элементы проекта реализации", url: "./../../core.base_rup/capabilitypatterns/implement_component_F8F15C22.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "8fa226e4", parentId: "7542fda6", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_XMg1cCCdEdq3qtLcbHn6PQ,_GJ1iIEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "107", prefix: "", name: "analyze_runtime_behavior", title: "Анализ поведения среды выполнения", url: "./../../core.base_rup/capabilitypatterns/analyze_runtime_behavior_14736AAC.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "89241b22", parentId: "7542fda6", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_XMg1cCCdEdq3qtLcbHn6PQ,_G7NUsEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "108", prefix: "", name: "implement_testability_elements", title: "Реализация критериев пригодности к тестированию", url: "./../../core.base_rup/capabilitypatterns/implement_testability_elements_910DF0DE.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+	
+		
+		
+{id: "7c090ec8", parentId: "7542fda6", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_XMg1cCCdEdq3qtLcbHn6PQ,_H1X24UofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "109", prefix: "", name: "implement_developer_test", title: "Реализация теста разработчика", url: "./../../core.base_rup/capabilitypatterns/implement_developer_test_64BC2739.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true]},
+	
+		
+		
+{id: "93f6b402", parentId: "7542fda6", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_XMg1cCCdEdq3qtLcbHn6PQ,_IvQFMEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "110", prefix: "", name: "perform_developer_test", title: "Выполнение тестов разработчика", url: "./../../core.base_rup/capabilitypatterns/perform_developer_test_3400090F.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "da666180", parentId: "7542fda6", relPath: ",_J1u8gCGYEdqMcovRzkCQow,_XMg1cCCdEdq3qtLcbHn6PQ,_JrOlSEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "111", prefix: "", name: "review_code", title: "Проверка кода", url: "./../../core.base_rup/capabilitypatterns/review_code_DB94104C.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "977cfbd6", parentId: "", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "112", prefix: "", name: "integrate_and_test", title: "Интеграция и тестирование", url: "./../../core.base_rup/capabilitypatterns/integrate_and_test_29F90B23.html", 
+	predecessors: "1", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "true", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "979a57da", parentId: "977cfbd6", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_ZqWJ0EetEdq_lfJYt-Zj8A", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "113", prefix: "", name: "verify_test_approach", title: "Проверка подхода к тестированию", url: "./../../core.base_rup/capabilitypatterns/verify_test_approach_E58263F5.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "true", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "2c58cb78", parentId: "979a57da", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_ZqWJ0EetEdq_lfJYt-Zj8A,_lqVpkEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "114", prefix: "", name: "define_test_environment_configurations", title: "Определение конфигурации среды тестирования", url: "./../../core.base_rup/capabilitypatterns/define_test_environment_configurations_5A384EF0.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "13be89a4", parentId: "979a57da", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_ZqWJ0EetEdq_lfJYt-Zj8A,_oBDCTEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "115", prefix: "", name: "identify_testability_mechanisms", title: "Определение механизмов определения пригодности к тестированию", url: "./../../core.base_rup/capabilitypatterns/identify_testability_mechanisms_8444D9BA.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "f9e92bce", parentId: "979a57da", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_ZqWJ0EetEdq_lfJYt-Zj8A,_meY8sEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "116", prefix: "", name: "define_testability_elements", title: "Определение критериев пригодности к тестированию", url: "./../../core.base_rup/capabilitypatterns/define_testability_elements_27C1B960.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "a3928464", parentId: "979a57da", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_ZqWJ0EetEdq_lfJYt-Zj8A,_pY0GcEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "117", prefix: "", name: "define_test_details", title: "Определение сведений о тесте", url: "./../../core.base_rup/capabilitypatterns/define_test_details_CF19AA59.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "105b7ed4", parentId: "979a57da", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_ZqWJ0EetEdq_lfJYt-Zj8A,_qS-oskohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "118", prefix: "", name: "implement_test", title: "Реализация теста", url: "./../../core.base_rup/capabilitypatterns/implement_test_B8187D13.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "d353f9d4", parentId: "979a57da", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_ZqWJ0EetEdq_lfJYt-Zj8A,_q4_fwEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "119", prefix: "", name: "implement_test_suite", title: "Реализация комплекта тестов", url: "./../../core.base_rup/capabilitypatterns/implement_test_suite_4D41C58F.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "2fbdc8f4", parentId: "979a57da", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_ZqWJ0EetEdq_lfJYt-Zj8A,_mMldUEsZEdqlNo9QEt4izQ", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "120", prefix: "", name: "obtain_testability_commitment", title: "Получение подтверждения пригодности к тестированию", url: "./../../core.base_rup/capabilitypatterns/obtain_testability_commitment_EA2FA33C.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "a11ea660", parentId: "977cfbd6", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "121", prefix: "", name: "integrate_and_build_within_scope", title: "Интеграция и тестирование компиляции", url: "./../../core.base_rup/capabilitypatterns/integrate_and_build_within_scope_1597192B.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "true", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "1a043bdc", parentId: "a11ea660", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_3B7j8EdiEdqVZeSWHJlGyA", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "122", prefix: "", name: "integrate_each_subsystem", title: "Интегрирование всех подсистем", url: "./../../core.base_rup/capabilitypatterns/integrate_each_subsystem_34DF846B.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "f456c15a", parentId: "1a043bdc", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_3B7j8EdiEdqVZeSWHJlGyA,_Ku1-YEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "123", prefix: "", name: "implement_developer_test", title: "Реализация теста разработчика", url: "./../../core.base_rup/capabilitypatterns/implement_developer_test_616ACA87.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true]},
+	
+		
+		
+{id: "91cf2c88", parentId: "1a043bdc", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_3B7j8EdiEdqVZeSWHJlGyA,_LsJ7MEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "124", prefix: "", name: "perform_developer_test", title: "Выполнение тестов разработчика", url: "./../../core.base_rup/capabilitypatterns/perform_developer_test_3F5DC181.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+	
+		
+		
+{id: "1060b2b0", parentId: "1a043bdc", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_3B7j8EdiEdqVZeSWHJlGyA,_MpqsUEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "125", prefix: "", name: "integrate_subsystem", title: "Интегрирование подсистемы", url: "./../../core.base_rup/capabilitypatterns/integrate_subsystem_423E3E4A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+	
+		
+		
+{id: "2d2ee8ec", parentId: "a11ea660", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_3ldHwEdiEdqVZeSWHJlGyA", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "126", prefix: "", name: "integrate_the_system", title: "Интегрирование системы", url: "./../../core.base_rup/capabilitypatterns/integrate_the_system_CB02447.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "1aff8900", parentId: "2d2ee8ec", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_3ldHwEdiEdqVZeSWHJlGyA,_NnEvwUofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "127", prefix: "", name: "integrate_system", title: "Интегрирование системы", url: "./../../core.base_rup/capabilitypatterns/integrate_system_6EBE4304.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+	
+		
+		
+{id: "91f4dc14", parentId: "a11ea660", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_6oxHwEdiEdqVZeSWHJlGyA", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "128", prefix: "", name: "validate_build_stability", title: "Проверка стабильности компиляции", url: "./../../core.base_rup/capabilitypatterns/validate_build_stability_DEB0F413.html", 
+	predecessors: "126", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "7d6ed8a4", parentId: "91f4dc14", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_6oxHwEdiEdqVZeSWHJlGyA,_uhc0MEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "129", prefix: "", name: "define_test_details", title: "Определение сведений о тесте", url: "./../../core.base_rup/capabilitypatterns/define_test_details_F3122FEF.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "95d94ff2", parentId: "91f4dc14", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_6oxHwEdiEdqVZeSWHJlGyA,_rx6EwEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "130", prefix: "", name: "implement_test", title: "Реализация теста", url: "./../../core.base_rup/capabilitypatterns/implement_test_9086C75A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "d95c9586", parentId: "91f4dc14", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_6oxHwEdiEdqVZeSWHJlGyA,_shqGsEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "131", prefix: "", name: "execute_test_suite", title: "Выполнение комплекта тестов", url: "./../../core.base_rup/capabilitypatterns/execute_test_suite_38D6CCD4.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "7d52a9a0", parentId: "91f4dc14", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_6oxHwEdiEdqVZeSWHJlGyA,_tegJcEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "132", prefix: "", name: "analyze_test_failure", title: "Анализ ошибки при тестировании", url: "./../../core.base_rup/capabilitypatterns/analyze_test_failure_AD204A8D.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "7cf341c4", parentId: "91f4dc14", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_6oxHwEdiEdqVZeSWHJlGyA,_vqUgwEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "133", prefix: "", name: "determine_test_results", title: "Определение результатов тестирования", url: "./../../core.base_rup/capabilitypatterns/determine_test_results_AFA8EC72.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "8303989a", parentId: "91f4dc14", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA,_6oxHwEdiEdqVZeSWHJlGyA,_wwmzYEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "134", prefix: "", name: "assess_advocate_quality", title: "Оценка и обоснование оценки качества", url: "./../../core.base_rup/capabilitypatterns/assess_advocate_quality_737D42B0.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "e323743e", parentId: "977cfbd6", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "135", prefix: "", name: "test_and_evaluate_within_scope", title: "Тестирование и оценка [в пределах содержания]", url: "./../../core.base_rup/capabilitypatterns/test_and_evaluate_within_scope_3C6279C7.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "true", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "5eb5a41e", parentId: "e323743e", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1clqUdWEdqMoerwwyqMKQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "136", prefix: "", name: "test_and_evaluate", title: "Тестирование и оценка", url: "./../../core.base_rup/capabilitypatterns/test_and_evaluate_883E3A46.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "5db7374e", parentId: "5eb5a41e", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1clqUdWEdqMoerwwyqMKQ,_AUVnAEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "137", prefix: "", name: "define_test_details", title: "Определение сведений о тесте", url: "./../../core.base_rup/capabilitypatterns/define_test_details_DF9EA9C8.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "208fb1fc", parentId: "5eb5a41e", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1clqUdWEdqMoerwwyqMKQ,_6SZ50kohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "138", prefix: "", name: "implement_test", title: "Реализация теста", url: "./../../core.base_rup/capabilitypatterns/implement_test_63F0D54A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "f1f67484", parentId: "5eb5a41e", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1clqUdWEdqMoerwwyqMKQ,_66OuwEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "139", prefix: "", name: "implement_test_suite", title: "Реализация комплекта тестов", url: "./../../core.base_rup/capabilitypatterns/implement_test_suite_F880024B.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "29f8e5f6", parentId: "5eb5a41e", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1clqUdWEdqMoerwwyqMKQ,_7uL7QEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "140", prefix: "", name: "execute_test_suite", title: "Выполнение комплекта тестов", url: "./../../core.base_rup/capabilitypatterns/execute_test_suite_E4D96734.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "9f7f7300", parentId: "5eb5a41e", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1clqUdWEdqMoerwwyqMKQ,_8jADYEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "141", prefix: "", name: "analyze_test_failure", title: "Анализ ошибки при тестировании", url: "./../../core.base_rup/capabilitypatterns/analyze_test_failure_830E66F8.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "e5fb86a6", parentId: "5eb5a41e", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1clqUdWEdqMoerwwyqMKQ,_9VPYoEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "142", prefix: "", name: "structure_the_test_implementation", title: "Создание реализации теста", url: "./../../core.base_rup/capabilitypatterns/structure_the_test_implementation_639FF693.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "5e309134", parentId: "5eb5a41e", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1clqUdWEdqMoerwwyqMKQ,_-1sewEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "143", prefix: "", name: "identify_test_ideas", title: "Определение идеи тестирования", url: "./../../core.base_rup/capabilitypatterns/identify_test_ideas_B6EBB07B.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "4d018c46", parentId: "5eb5a41e", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1clqUdWEdqMoerwwyqMKQ,_BRd9oEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "144", prefix: "", name: "determine_test_results", title: "Определение результатов тестирования", url: "./../../core.base_rup/capabilitypatterns/determine_test_results_A923A1B3.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "dd7fd29c", parentId: "e323743e", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1WfBkdWEdqMoerwwyqMKQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "145", prefix: "", name: "achieve_acceptable_mission", title: "Получение приемлемой цели", url: "./../../core.base_rup/capabilitypatterns/achieve_acceptable_mission_B27A73B1.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "ee616c88", parentId: "dd7fd29c", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1WfBkdWEdqMoerwwyqMKQ,_kwkTgEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "146", prefix: "", name: "assess_improve_test_effort", title: "Оценка и улучшение схемы тестирования", url: "./../../core.base_rup/capabilitypatterns/assess_improve_test_effort_E8801BCB.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "a6c631d8", parentId: "dd7fd29c", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1WfBkdWEdqMoerwwyqMKQ,_ljeXIEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "147", prefix: "", name: "assess_advocate_quality", title: "Оценка и обоснование оценки качества", url: "./../../core.base_rup/capabilitypatterns/assess_advocate_quality_8B076005.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "9091b686", parentId: "dd7fd29c", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D1WfBkdWEdqMoerwwyqMKQ,_PYIOEEsZEdqlNo9QEt4izQ", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "148", prefix: "", name: "determine_test_results", title: "Определение результатов тестирования", url: "./../../core.base_rup/capabilitypatterns/determine_test_results_70FC8B83.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "384abd28", parentId: "e323743e", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D2HUJUdWEdqMoerwwyqMKQ", isSuppressed: "", indentSize: 2, hasChildren:true, 
+	index: "149", prefix: "", name: "improve_test_assets", title: "Улучшение ресурсов тестирования", url: "./../../core.base_rup/capabilitypatterns/improve_test_assets_BA3D58B2.html", 
+	predecessors: "145,136", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "905a857e", parentId: "384abd28", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D2HUJUdWEdqMoerwwyqMKQ,_pi8dYEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "150", prefix: "", name: "prepare_project_specific_guidelines", title: "Подготовка рекомендации по проекту", url: "./../../core.base_rup/capabilitypatterns/prepare_project_specific_guidelines_CE2D5D49.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true]},
+	
+		
+		
+{id: "49eec654", parentId: "384abd28", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D2HUJUdWEdqMoerwwyqMKQ,_s1oWIEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "151", prefix: "", name: "define_test_approach", title: "Определение подхода к тестированию", url: "./../../core.base_rup/capabilitypatterns/define_test_approach_A948CE9A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "8d6b566a", parentId: "384abd28", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D2HUJUdWEdqMoerwwyqMKQ,_tvIJ8EoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "152", prefix: "", name: "define_testability_elements", title: "Определение критериев пригодности к тестированию", url: "./../../core.base_rup/capabilitypatterns/define_testability_elements_B3ABE808.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "fcf22b68", parentId: "384abd28", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D2HUJUdWEdqMoerwwyqMKQ,_urfEgEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "153", prefix: "", name: "structure_the_test_implementation", title: "Создание реализации теста", url: "./../../core.base_rup/capabilitypatterns/structure_the_test_implementation_5797B052.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "75c2388c", parentId: "384abd28", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D2HUJUdWEdqMoerwwyqMKQ,_vxS2AEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "154", prefix: "", name: "identify_test_ideas", title: "Определение идеи тестирования", url: "./../../core.base_rup/capabilitypatterns/identify_test_ideas_876370FD.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "834a70fa", parentId: "384abd28", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D2HUJUdWEdqMoerwwyqMKQ,_wmlfQEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "155", prefix: "", name: "define_test_details", title: "Определение сведений о тесте", url: "./../../core.base_rup/capabilitypatterns/define_test_details_31DE8B7C.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "3d9e8140", parentId: "384abd28", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D2HUJUdWEdqMoerwwyqMKQ,_xhg2cEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "156", prefix: "", name: "define_assessment_and_traceability_needs", title: "Определение потребностей в оценке и прослеживаемости", url: "./../../core.base_rup/capabilitypatterns/define_assessment_and_traceability_needs_FEE455B5.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "a23a0c5e", parentId: "384abd28", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D2HUJUdWEdqMoerwwyqMKQ,_yfaCEEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "157", prefix: "", name: "implement_test", title: "Реализация теста", url: "./../../core.base_rup/capabilitypatterns/implement_test_9DA51D47.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "cc30567c", parentId: "384abd28", relPath: ",_dTvnIEdlEdqVZeSWHJlGyA,_mUqf8EdjEdqVZeSWHJlGyA,_D2HUJUdWEdqMoerwwyqMKQ,_y7rHUEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 3, hasChildren:false, 
+	index: "158", prefix: "", name: "implement_test_suite", title: "Реализация комплекта тестов", url: "./../../core.base_rup/capabilitypatterns/implement_test_suite_FCC1519C.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "45076d22", parentId: "", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "159", prefix: "", name: "develop_support_material_within_scope", title: "Разработайте справочные материалы [в пределах содержания]", url: "./../../core.base_rup/capabilitypatterns/develop_support_material_within_scope_85BC29BF.html", 
+	predecessors: "1", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "true", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "7035af18", parentId: "45076d22", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_iKfCMDUSEdqNn71iifr4xw", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "160", prefix: "", name: "develop_support_material", title: "Разработать справочные материалы", url: "./../../core.base_rup/capabilitypatterns/develop_support_material_78DFC2E.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "b169d4b0", parentId: "7035af18", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_iKfCMDUSEdqNn71iifr4xw,_9Jc8MEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "161", prefix: "", name: "develop_training_materials", title: "Разработка учебных материалов", url: "./../../core.base_rup/capabilitypatterns/develop_training_materials_F7B31291.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+	
+		
+		
+{id: "8edcddc8", parentId: "7035af18", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_iKfCMDUSEdqNn71iifr4xw,_9_InAkodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "162", prefix: "", name: "develop_end_user_support_materials", title: "Разработка материалов поддержки", url: "./../../core.base_rup/capabilitypatterns/develop_end_user_support_materials_9E2069E8.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "39b6c65c", parentId: "7035af18", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_iKfCMDUSEdqNn71iifr4xw,_-9BLkEodEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "163", prefix: "", name: "create_product_artwork", title: "Создание графических материалов", url: "./../../core.base_rup/capabilitypatterns/create_product_artwork_11D18603.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "87ec9ea8", parentId: "7035af18", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_iKfCMDUSEdqNn71iifr4xw,_AIRdwUoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "164", prefix: "", name: "develop_installation_artifacts", title: "Разработка установочных продуктов", url: "./../../core.base_rup/capabilitypatterns/develop_installation_artifacts_BB39E64C.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "ded52678", parentId: "45076d22", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_kKwQ0DUSEdqNn71iifr4xw", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "165", prefix: "", name: "test_and_evaluate", title: "Тестирование и оценка", url: "./../../core.base_rup/capabilitypatterns/test_and_evaluate_712368C6.html", 
+	predecessors: "", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "b3b7bd58", parentId: "ded52678", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_kKwQ0DUSEdqNn71iifr4xw,_AUVnAEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "166", prefix: "", name: "define_test_details", title: "Определение сведений о тесте", url: "./../../core.base_rup/capabilitypatterns/define_test_details_DF9EA9C8.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "dfcab420", parentId: "ded52678", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_kKwQ0DUSEdqNn71iifr4xw,_6SZ50kohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "167", prefix: "", name: "implement_test", title: "Реализация теста", url: "./../../core.base_rup/capabilitypatterns/implement_test_63F0D54A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "e9b9c52e", parentId: "ded52678", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_kKwQ0DUSEdqNn71iifr4xw,_66OuwEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "168", prefix: "", name: "implement_test_suite", title: "Реализация комплекта тестов", url: "./../../core.base_rup/capabilitypatterns/implement_test_suite_F880024B.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "97f45e92", parentId: "ded52678", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_kKwQ0DUSEdqNn71iifr4xw,_7uL7QEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "169", prefix: "", name: "execute_test_suite", title: "Выполнение комплекта тестов", url: "./../../core.base_rup/capabilitypatterns/execute_test_suite_E4D96734.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "a70a0792", parentId: "ded52678", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_kKwQ0DUSEdqNn71iifr4xw,_8jADYEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "170", prefix: "", name: "analyze_test_failure", title: "Анализ ошибки при тестировании", url: "./../../core.base_rup/capabilitypatterns/analyze_test_failure_830E66F8.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "62ceb388", parentId: "ded52678", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_kKwQ0DUSEdqNn71iifr4xw,_9VPYoEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "171", prefix: "", name: "structure_the_test_implementation", title: "Создание реализации теста", url: "./../../core.base_rup/capabilitypatterns/structure_the_test_implementation_639FF693.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "68f709bc", parentId: "ded52678", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_kKwQ0DUSEdqNn71iifr4xw,_-1sewEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "172", prefix: "", name: "identify_test_ideas", title: "Определение идеи тестирования", url: "./../../core.base_rup/capabilitypatterns/identify_test_ideas_B6EBB07B.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "6a0c48ea", parentId: "ded52678", relPath: ",_w4sUUDUYEdq4Df-OFzTBKQ,_kKwQ0DUSEdqNn71iifr4xw,_BRd9oEoiEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "173", prefix: "", name: "determine_test_results", title: "Определение результатов тестирования", url: "./../../core.base_rup/capabilitypatterns/determine_test_results_A923A1B3.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true]},
+	
+		
+		
+{id: "8efd5978", parentId: "", relPath: ",_PPFm0CGYEdqMcovRzkCQow", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "174", prefix: "", name: "plan_for_next_iteration", title: "Создание плана следующей итерации", url: "./../../core.base_rup/capabilitypatterns/plan_for_next_iteration_D4501095.html", 
+	predecessors: "52,112,159", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "7c813bae", parentId: "8efd5978", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_TIvMGkogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "175", prefix: "", name: "develop_iteration_plan", title: "Разработка плана итерации", url: "./../../core.base_rup/capabilitypatterns/develop_iteration_plan_968F9FE6.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "91f32f38", parentId: "7c813bae", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_TIvMGkogEdqrjq4i3fchvA,_Cbh5Fxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_manager", title: "Руководитель проекта", url: "./../../core.base_rup/capabilitypatterns/rup_project_manager_97906593.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "5ea6c6f0", parentId: "7c813bae", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_TIvMGkogEdqrjq4i3fchvA,_Cbh5FBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_plan", title: "План разработки программного обеспечения", url: "./../../core.base_rup/capabilitypatterns/rup_project_plan_93BB915D.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "362fb8dc", parentId: "7c813bae", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_TIvMGkogEdqrjq4i3fchvA,_TI1SsEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_process", title: "Процесс разработки", url: "./../../core.base_rup/capabilitypatterns/rup_development_process_C9CB0BFF.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "28d68efe", parentId: "7c813bae", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_TIvMGkogEdqrjq4i3fchvA,_Cbh5Exi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_risk_list", title: "Список рисков", url: "./../../core.base_rup/capabilitypatterns/rup_risk_list_D2FE8374.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "8af64b66", parentId: "7c813bae", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_TIvMGkogEdqrjq4i3fchvA,_Cbh5GBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_vision", title: "Видение", url: "./../../core.base_rup/capabilitypatterns/rup_vision_584D737C.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "9326da64", parentId: "7c813bae", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_TIvMGkogEdqrjq4i3fchvA,_TI1SsUogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_software_architecture_document", title: "Документ архитектуры программного обеспечения", url: "./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_D468EC0F.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "29232b58", parentId: "7c813bae", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_TIvMGkogEdqrjq4i3fchvA,_Cbh5Ehi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_iteration_plan", title: "План итерации", url: "./../../core.base_rup/capabilitypatterns/rup_iteration_plan_C860A364.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "15cdd06e", parentId: "8efd5978", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_UHxAIEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "176", prefix: "", name: "develop_business_case", title: "Разработка экономического обоснования проекта", url: "./../../core.base_rup/capabilitypatterns/develop_business_case_CBB04CCE.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true]},
+	
+		
+		
+{id: "8a785f04", parentId: "15cdd06e", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_UHxAIEogEdqrjq4i3fchvA,_Cbh5Fxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_manager", title: "Руководитель проекта", url: "./../../core.base_rup/capabilitypatterns/rup_project_manager_97906593.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "21e0fefc", parentId: "15cdd06e", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_UHxAIEogEdqrjq4i3fchvA,_Cbh5GBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_vision", title: "Видение", url: "./../../core.base_rup/capabilitypatterns/rup_vision_584D737C.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "d9a56510", parentId: "15cdd06e", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_UHxAIEogEdqrjq4i3fchvA,_UH3GwEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_case", title: "Экономическое обоснование проекта", url: "./../../core.base_rup/capabilitypatterns/rup_business_case_8146714B.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "b93a7bf6", parentId: "8efd5978", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_VUdcwEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "177", prefix: "", name: "iteration_plan_review", title: "Проверка плана итерации", url: "./../../core.base_rup/capabilitypatterns/iteration_plan_review_802D5CC2.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true]},
+	
+		
+		
+{id: "8e70d5b8", parentId: "b93a7bf6", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_VUdcwEogEdqrjq4i3fchvA,_VUjjYEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_management_reviewer", title: "Проверяющий", url: "./../../core.base_rup/capabilitypatterns/rup_management_reviewer_84888FA1.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "af4846be", parentId: "b93a7bf6", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_VUdcwEogEdqrjq4i3fchvA,_Cbh5Ehi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_iteration_plan", title: "План итерации", url: "./../../core.base_rup/capabilitypatterns/rup_iteration_plan_C860A364.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "12d219ae", parentId: "b93a7bf6", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_VUdcwEogEdqrjq4i3fchvA,_Cbh5Exi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_risk_list", title: "Список рисков", url: "./../../core.base_rup/capabilitypatterns/rup_risk_list_D2FE8374.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "cab6fb72", parentId: "b93a7bf6", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_VUdcwEogEdqrjq4i3fchvA,_Cbh5FBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_plan", title: "План разработки программного обеспечения", url: "./../../core.base_rup/capabilitypatterns/rup_project_plan_93BB915D.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "cc30567c", parentId: "b93a7bf6", relPath: ",_PPFm0CGYEdqMcovRzkCQow,_VUdcwEogEdqrjq4i3fchvA,_VUpqAEogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_review_record", title: "Проверка записи", url: "./../../core.base_rup/capabilitypatterns/rup_review_record_244F0F3A.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "47a464ac", parentId: "", relPath: ",_aiFlECGYEdqMcovRzkCQow", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "178", prefix: "", name: "produce_deployment_unit", title: "Создание блока развертывания", url: "./../../core.base_rup/capabilitypatterns/produce_deployment_unit_506E9987.html", 
+	predecessors: "52,112,159", info: "", type: "Операция", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+	
+		
+		
+{id: "4b85160e", parentId: "47a464ac", relPath: ",_aiFlECGYEdqMcovRzkCQow,_GrujsEoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "179", prefix: "", name: "write_release_notes", title: "Составление примечаний к выпуску", url: "./../../core.base_rup/capabilitypatterns/write_release_notes_4714C8A6.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "b06843b6", parentId: "4b85160e", relPath: ",_aiFlECGYEdqMcovRzkCQow,_GrujsEoeEdqrjq4i3fchvA,_GrujsUoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_deployment_manager", title: "Администратор развертывания", url: "./../../core.base_rup/capabilitypatterns/rup_deployment_manager_51B2A8B6.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "c55cf384", parentId: "4b85160e", relPath: ",_aiFlECGYEdqMcovRzkCQow,_GrujsEoeEdqrjq4i3fchvA,_CXnpdhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_deployment_plan", title: "План развертывания", url: "./../../core.base_rup/capabilitypatterns/rup_deployment_plan_EC20FBD0.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "4e39eff0", parentId: "4b85160e", relPath: ",_aiFlECGYEdqMcovRzkCQow,_GrujsEoeEdqrjq4i3fchvA,_Gr0qUUoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_iteration_assessment", title: "Оценка итерации", url: "./../../core.base_rup/capabilitypatterns/rup_iteration_assessment_79A40DC0.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "6dacfd6", parentId: "4b85160e", relPath: ",_aiFlECGYEdqMcovRzkCQow,_GrujsEoeEdqrjq4i3fchvA,_CXnpdxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_bill_of_materials", title: "Перечень файлов", url: "./../../core.base_rup/capabilitypatterns/rup_bill_of_materials_F6BEDBE0.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "c82fef16", parentId: "4b85160e", relPath: ",_aiFlECGYEdqMcovRzkCQow,_GrujsEoeEdqrjq4i3fchvA,_Gr0qUEoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_integration_build_plan", title: "План компоновки интеграции", url: "./../../core.base_rup/capabilitypatterns/rup_integration_build_plan_6F062DB0.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "456173da", parentId: "4b85160e", relPath: ",_aiFlECGYEdqMcovRzkCQow,_GrujsEoeEdqrjq4i3fchvA,_CXnpehi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_release_notes", title: "Примечания к выпуску", url: "./../../core.base_rup/capabilitypatterns/rup_release_notes_B0B2DDEF.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "4ad03e74", parentId: "47a464ac", relPath: ",_aiFlECGYEdqMcovRzkCQow,_InaNQEoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "180", prefix: "", name: "create_deployment_unit", title: "Создание блока развертывания", url: "./../../core.base_rup/capabilitypatterns/create_deployment_unit_6F14EF3A.html", 
+	predecessors: "", info: "", type: "Дескриптор задачи", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "7a018f2", parentId: "4ad03e74", relPath: ",_aiFlECGYEdqMcovRzkCQow,_InaNQEoeEdqrjq4i3fchvA,_IngT4EoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_configuration_manager", title: "Администратор конфигурации", url: "./../../core.base_rup/capabilitypatterns/rup_configuration_manager_6A57A277.html", 
+	predecessors: "", info: "Основной исполнитель", type: "Дескриптор роли", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "d4bcdede", parentId: "4ad03e74", relPath: ",_aiFlECGYEdqMcovRzkCQow,_InaNQEoeEdqrjq4i3fchvA,_IngT4UoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_build", title: "Компиляция", url: "./../../core.base_rup/capabilitypatterns/rup_build_74F58287.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "beab393c", parentId: "4ad03e74", relPath: ",_aiFlECGYEdqMcovRzkCQow,_InaNQEoeEdqrjq4i3fchvA,_CXnpdhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_deployment_plan", title: "План развертывания", url: "./../../core.base_rup/capabilitypatterns/rup_deployment_plan_EC20FBD0.html", 
+	predecessors: "", info: "Обязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "5a4d85d2", parentId: "4ad03e74", relPath: ",_aiFlECGYEdqMcovRzkCQow,_InaNQEoeEdqrjq4i3fchvA,_CXnpcxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_installation_artifacts", title: "Артефакты установки", url: "./../../core.base_rup/capabilitypatterns/rup_installation_artifacts_322CF9C1.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "31a5a314", parentId: "4ad03e74", relPath: ",_aiFlECGYEdqMcovRzkCQow,_InaNQEoeEdqrjq4i3fchvA,_IngT5EoeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_support_material", title: "Материалы поддержки пользователей", url: "./../../core.base_rup/capabilitypatterns/rup_support_material_2EE98496.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "901dd64c", parentId: "4ad03e74", relPath: ",_aiFlECGYEdqMcovRzkCQow,_InaNQEoeEdqrjq4i3fchvA,_IngT40oeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_deployment_model", title: "Модель развертывания", url: "./../../core.base_rup/capabilitypatterns/rup_deployment_model_CC686C62.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "fa087a7e", parentId: "4ad03e74", relPath: ",_aiFlECGYEdqMcovRzkCQow,_InaNQEoeEdqrjq4i3fchvA,_CXnpdxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_bill_of_materials", title: "Перечень файлов", url: "./../../core.base_rup/capabilitypatterns/rup_bill_of_materials_F6BEDBE0.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "919fcf2c", parentId: "4ad03e74", relPath: ",_aiFlECGYEdqMcovRzkCQow,_InaNQEoeEdqrjq4i3fchvA,_IngT4koeEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_repository", title: "Хранилище проектов", url: "./../../core.base_rup/capabilitypatterns/rup_project_repository_638E969D.html", 
+	predecessors: "", info: "Необязательный вход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+		
+{id: "6a4a209e", parentId: "4ad03e74", relPath: ",_aiFlECGYEdqMcovRzkCQow,_InaNQEoeEdqrjq4i3fchvA,_CXnpgBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_deployment_unit", title: "Блок развертывания", url: "./../../core.base_rup/capabilitypatterns/rup_deployment_unit_409FAE07.html", 
+	predecessors: "", info: "Выход", type: "Дескриптор артефакта", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+	
+		
+]};
+				</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

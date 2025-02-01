@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Описание архитектуры среды выполнения для приложений J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="describing_the_run-time_architecture_for_j2ee_applications" name="uma.name">
+<meta content="Описание архитектуры среды выполнения для приложений J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.7390519818410197E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.7390519818410197E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Описание архитектуры среды выполнения для приложений J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом разделе обсуждается моделирование архитектуры среды выполнения для приложения J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Создание описания архитектуры среды выполнения</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    Архитектура среды выполнения приложения описана в панели процессов, архитектурной панели, описывающей параллельные
+    элементы системы. Эти разделы содержат конкретные указания по моделированию панели процессов для приложения J2EE.
+</p>
+<p>
+    Дополнительная информация приведена в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/process_view_E3DD0B09.html" guid="6.45284088262517E-306">Концепция: панель
+    процессов</a>.
+</p>
+<h3>
+    <a id="Modeling" name="Modeling"></a>Моделирование панели процессов
+</h3>
+<p>
+    Компоненты J2EE (см. раздел <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html#J2EE_Components" guid="1.527482214591853E-307">Концепция: обзор J2EE: компоненты J2EE</a>) развертываются в средах, называемых
+    контейнерами. Описание различных типов контейнеров J2EE приведено в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/java_2_platform_enterprise_edition_j2ee_overview_9A95BA45.html#J2EE_Containers" guid="1.527482214591853E-307">Концепция: обзор J2EE: компоненты J2EE</a>.
+</p>
+<p>
+    Каждый контейнер - это параллельный элемент, поэтому он должен быть показан в панели процессов архитектуры. Другие
+    важные параллельные элементы, обычно показанные в панели процессов высокого уровня, - это внешние системы.
+</p>
+<p>
+    Ниже приведена типичная диаграмма панели процессов высокого уровня для приложения J2EE.
+</p>
+<p align="center">
+    <img src="./../../../tech.j2ee/guidances/guidelines/resources/process_view.gif" alt="Диаграмма описана в прилагаемом тексте." />
+</p>
+<p>
+    В настоящем примере будет представлено промежуточное программное обеспечение, ориентированное на работу с сообщениями
+    (MOM), конкретного вендора, а также конкретные устаревшие системы и клиенты приложения. Однако контейнер Web и
+    контейнер EJB - это стандартные контейнеры, которые показаны во всех панелях процессов J2EE.
+</p>
+<p>
+    Заметьте, что на этой диаграмме не отображено физическое распределение этих систем по узлам аппаратного обеспечения.
+    Оно показано в модели развертывания (см. раздел <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_distribution_for_j2ee_applications_93B5A232.html" guid="2.0306406686133254E-306">Технология: описание распределения приложений J2EE</a>).
+</p>
+<p>
+    В этом примере показаны выбранные механизмы межпроцессной связи, применяемые контейнерами. J2EE предоставляет
+    конкретные механизмы межпроцессной связи. Они перечислены ниже:
+</p>
+<ul>
+    <li>
+        Java Remote Method Invocation (RMI) для синхронной связи между классами Java
+    </li>
+    <li>
+        RMI-IIOP для взаимодействия с клиентами CORBA (обычно - устаревшими приложениями)
+    </li>
+    <li>
+        HTTP/HTTPS для связи с Web-клиентами (хотя могут поддерживаться и другие Web-протоколы, например при взаимодействии
+        с Web-службами XML)
+    </li>
+    <li>
+        Служба сообщений Java (JMS) для обмена сообщениями и взаимодействия с промежуточным программным обеспечением,
+        ориентированным на работу с сообщениями (MOM)
+    </li>
+</ul>
+<p>
+    При создании панели процессов нужно, в частности, решить, когда следует применять JMS или RMI (или RMI-IIOP). В этом
+    примере приложение-клиент, контейнер EJB и другая устаревшая система обмениваются информацией посредством сообщений.
+    Однако не совсем ясно, между какими именно элементами осуществляется связь. Для устранения неоднозначности попробуйте
+    удалить систему MOM с диаграммы и отобразить JMS как связь между элементами, обменивающимися информацией посредством
+    сообщений.
+</p>
+<p>
+    Другая неоднозначность: неясно, обмениваются ли объекты EJB информацией между собой посредством сообщений. Это можно
+    выяснить, отобразив связь JMS контейнера EJB с самим собой. Окончательный вид диаграммы будет следующим:
+</p>
+<p align="center">
+    <img src="./../../../tech.j2ee/guidances/guidelines/resources/process_view_simplified.gif" alt="Диаграмма описана в прилагаемом тексте." />
+</p>
+<p>
+    Панель процессов, однако, содержит не только контейнеры и системы высокого уровня. В ней также показан параллелизм в
+    этих контейнерах и системах.
+</p>
+<p>
+    Панель процессом должна идентифицировать и моделировать следующие типы активных классов.
+</p>
+<ul>
+    <li>
+        Нити Java
+    </li>
+    <li>
+        места назначения сообщений
+    </li>
+    <li>
+        управляемые сообщениями объекты EJB (поскольку они активизируются асинхронно посредством сообщений). Конкретные
+        стереотипы, применяемые для моделирования управляемых сообщениями объектов EJB, описаны в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Технология: идентификация объектов EJB</a>.
+    </li>
+    <li>
+        дополнительные процессы, являющиеся частью общего проекта системы. Примером такого процесса может служить отдельный
+        процесс таймера.
+    </li>
+</ul>
+<p>
+    При использовании JMS вы можете связать поставщики и приемники сообщений напрямую или смоделировать взаимосвязь более
+    точно, смоделировав темы и очереди.
+</p>
+<p>
+    Синхронная и асинхронная связь между элементами проектирования отражена на диаграммах взаимодействия. С помощью этих
+    диаграмм можно также анализировать параллельное изменение производительности и логических проблем. В частности,
+    архитектор программного обеспечения может получить информацию о частой передаче сообщений или передаче больших объектов
+    данных по сети. На основе этой информации архитектор может заново спроектировать интерфейсы или перераспределить
+    элементы проектирования между управляющими нитями, между серверами или между клиентом и сервером.<br />
+</p>
+<p>
+    Заметьте, что в контейнере EJB нитями и процессами управляет контейнер EJB - сами объекты EJB не могут ни создавать
+    нити, ни управлять ими. С логической точки зрения, каждый объект EJB следует рассматривать как активный класс, однако,
+    поскольку вызовы сеансовых и сущностных объектов EJB - это синхронные блокирующие вызовы, эти объекты, как правило, не
+    моделируются как активные классы. Панель процессов для контейнера EJB, вообще говоря, ограничена одним механизмом
+    параллелизма - JMS с управляемыми сообщениями объектами EJB JMS.
+</p>
+<p>
+    Несмотря на то, что сеансовые и сущностные объекты EJB обычно не моделируются как активные классы, в некоторых случаях
+    им приходится работать параллельно - например, когда один объект EJB считывает информацию из базы данных, а другой -
+    записывает в нее. Эти проблемы решаются с помощью транзакций. Подход к применению транзакций должен быть
+    задокументирован в указаниях по работе с проектом.
+</p>
+<h3>
+    <a id="Allocating" name="Allocating"></a>Выделение элементов проектирования активным классам
+</h3>
+<p>
+    в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">Задача: описать архитектуру среды выполнения</a> указывается, зачем
+    элементы проектирования необходимо выделять процессам и нитям. В приложении J2EE все Web-компоненты выделяются
+    контейнеру Web, а все объекты EJB - контейнеру EJB. Эта простое правило избавляет от необходимости моделировать это
+    выделение.
+</p>
+<p>
+    Если, однако, проект включает дополнительные параллельные процессы (например, два различных приложения-клиента), то
+    может быть полезно указать, какие элементы проектирования будут выполняться в каждом приложении.
+</p>
+<p>
+    Для нитей Java, управляемых сообщениями объектов EJB и тем и очередей JMS более сложной проблемой является организация
+    их взаимодействия во избежание тупиковых ситуаций, несогласованных данных и т.п. Лучше всего ознакомиться с этим
+    вопросом, изучив реализации use-case, в которых участвуют эти элементы.
+</p>
+<h3>
+    <a id="Alternatives" name="Alternatives"></a>Другие возможности моделирования
+</h3>
+<p>
+    Из-за сходства между панелью процессов и панелью развертывания диаграммы высокого уровня для этих панелей часто
+    объединяются.
+</p>
+<p>
+    Кроме того, поскольку каждый контейнер J2EE - это не только процесс, но и среда выполнения, его можно моделировать как
+    "логический узел", а не как активный класс.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

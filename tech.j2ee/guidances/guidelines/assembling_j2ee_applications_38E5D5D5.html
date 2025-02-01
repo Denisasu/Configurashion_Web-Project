@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Сборка приложений J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="assembling_j2ee_applications" name="uma.name">
+<meta content="Сборка приложений J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.347498143656868E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.347498143656868E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Сборка приложений J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом разделе рассматривается сборка приложения J2EE из модулей J2EE. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/integrate_system_9AFF7BFD.html" guid="{3233A207-6271-4492-A8BF-64E1D89D6C5E}">Интегрирование системы</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Введение
+</h3>
+<p>
+    Ассемблеры приложений J2EE собирают <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">приложение J2EE</a> из&nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">модулей J2EE</a>. Ассемблеры приложений могут загружать готовые поставляемые модули и
+    использовать их в своих приложениях путем простой модификации существующих или предоставления альтернативных файлов
+    описания.
+</p>
+<p>
+    Некоторым серверам приложений требуется "обертка" EAR для EJB-JAR, WAR и других архивов JAR для их развертывания, что
+    означает, что провайдеру компонентов приложения J2EE также может понадобиться собрать EAR для тестирования.
+</p>
+<p>
+    Подробное описание этапов сборки приложения J2EE приведено в спецификации J2EE, раздел J2EE.8.3 Application Assembly.
+    Ниже приведена краткая обзорная выдержка из этого раздела.
+</p>
+<h3>
+    <a id="Topic 1" name="Topic 1"></a>Сборка приложения J2EE
+</h3>
+<p>
+    Для сборки приложения J2EE выполните следующие действия:
+</p>
+<ol>
+    <li>
+        Выберите модули J2EE, которые будут использоваться приложением.
+    </li>
+    <li>
+        Создайте структуру каталогов приложения.
+    </li>
+    <li>
+        Согласуйте файлы описания модулей J2EE. 
+        <ul>
+            <li>
+                Отредактируйте файлы описания модуля J2EE, связав внутренне соблюденные зависимости и исключив избыточные
+                названия ролей защиты.
+            </li>
+            <li>
+                Определите транзакции, роли защиты, права доступа методов и т.п.
+            </li>
+            <li>
+                При необходимости укажите альтернативный файл описания с помощью элемента alt-dd, сохранив при этом
+                исходный файл описания.
+            </li>
+            <li>
+                Присвойте корневой контекст каждому Web-модулю, входящему в приложение J2EE.
+            </li>
+            <li>
+                Проверьте правильность описания зависимостей компонентов.
+            </li>
+            <li>
+                Убедитесь, что в приложении встречается только одна версия каждого класса.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Создайте файл описания XML для приложения "application.xml".
+    </li>
+    <li>
+        Упакуйте приложение.<br />
+         a. Поместите модули J2EE в соответствующие каталоги. Поместите файл описания в META-INF/application.xml.<br />
+         b. Упакуйте приложение в файл ".EAR".
+    </li>
+</ol>
+<h3>
+    <a id="Topic 2" name="Topic 2"></a>Добавление и удаление модулей
+</h3>
+<p>
+    Модули J2EE можно добавлять в приложение перед развертыванием.<br />
+     Для этого выполните следующие действия:
+</p>
+<ol>
+    <li>
+        Выберите расположение для нового модуля в пакете приложения. При необходимости<br />
+         создайте каталоги в иерархии пакета приложения.
+    </li>
+    <li>
+        Скопируйте новые модули J2EE в выбранное расположение в пакете приложения.<br />
+    </li>
+    <li>
+        Отредактируйте файлы описания модулей J2EE, связав зависимости,<br />
+         внутренне соблюденные модулями J2EE приложения.
+    </li>
+    <li>
+        Отредактируйте соответствующим образом файл описания приложения J2EE.
+    </li>
+</ol>
+<p>
+    Аналогично, для удаления модуля удалите его из иерархии пакета приложения и устраните возникшие из-за этого
+    несогласованности в файлах описания.
+</p>
+<h3>
+    Проверка приложения
+</h3>
+<p>
+    Настоятельно рекомендуется проверять содержимое архива перед началом развертывания, поскольку скрытые ошибки, особенно
+    в серверной части приложения, могут приводить к сообщениям о недоступности или отсутствии компонентов. Например,
+    убедитесь, что в EAR определен по крайней мере один модуль.
+</p>
+<p>
+    Проверить EAR можно и с помощью инструмента проверки J2EE, поставляемого с SDK J2EE. Он позволяет убедиться, что EAR
+    внутренне согласован и правильно сформирован. Например, он проверяет соответствие архивов модулей и приложения
+    стандартным спецификациям (J2EE, Сервлет и EJB).
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

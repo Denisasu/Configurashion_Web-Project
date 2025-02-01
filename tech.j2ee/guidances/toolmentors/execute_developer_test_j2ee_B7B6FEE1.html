@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту:  Выполнение тестирования J2EE с помощью Rational XDE Developer - Java Platform Edition</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="execute_developer_test_j2ee" name="uma.name">
+<meta content=" Выполнение тестирования J2EE с помощью Rational XDE Developer - Java Platform Edition" name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{2A51E42A-769C-4E39-98D7-9C5650A9ECFF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{2A51E42A-769C-4E39-98D7-9C5650A9ECFF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{2A51E42A-769C-4E39-98D7-9C5650A9ECFF}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{2A51E42A-769C-4E39-98D7-9C5650A9ECFF}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{2A51E42A-769C-4E39-98D7-9C5650A9ECFF}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту:  Выполнение тестирования J2EE с помощью Rational XDE Developer - Java Platform Edition</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этой памятке по инструменту приведены инструкции по тестированию приложений J2EE с помощью Rational XDE. </td>
+</tr>
+<tr>
+<td>Инструмент: <a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_XDE_Developer_-_Java_Platform_Edition__Executing_J2EE_Developer_Tests" name="XE_XDE_Developer_-_Java_Platform_Edition__Executing_J2EE_Developer_Tests"></a> 
+<h3>
+    Назначение
+</h3>
+<p>
+    В этой памятке по инструменту приведены инструкции по тестированию приложений J2EE с помощью Rational XDE.
+</p>
+<h4>
+    Обзор
+</h4>
+<p>
+    В этой памятке по инструменту предусмотрены следующие шаги:
+</p>
+<ul>
+    <li>
+        <a href="#SetUp_the_Testing_Environment">Настройка среды тестирования</a>
+    </li>
+    <li>
+        <a href="#Execute_Test">Выполнение теста</a>
+    </li>
+</ul>
+<p>
+    Ссылки на разделы Web-справки Rational XDE&trade; помечены значком <img height="16" alt="справка"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" />.
+</p>
+<h3>
+    <a id="SetUp_the_Testing_Environment" name="SetUp_the_Testing_Environment">Настройка среды тестирования</a>
+</h3>
+<p>
+    В приложении J2EE для полнофункционального тестирования отдельного компонента может понадобиться собрать компонент в
+    Приложение J2EE и фактически развернуть его. Конечно, в этой ситуации выполняется минимальная сборка и развертывание,
+    необходимые для выполнения компонента в среде тестирования. Дополнительная информация о сборке приложений J2EE
+    приведена в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/toolmentors/assembling_j2ee_mods_and_apps_729DC5B.html" guid="{3B38F989-686C-4AC9-91EE-981F90D75F0D}">Наставник по инструменту: Сборка модулей и приложений J2EE с помощью
+    Rational XDE Developer - Java Platform Edition</a>. Дополнительная информация о развертывании приложений J2EE приведена
+    в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/toolmentors/deploying_j2ee_mods_and_apps_934BB4EE.html" guid="{709B15F1-BB9D-4379-920E-5A6E7DB36536}">Памятка по инструменту: Развертывание модулей и приложений J2EE с помощью
+    Rational XDE Developer - Java Platform Edition</a>.
+</p>
+<p>
+    Если в системе установлен WebSphere Studio Application Developer, можно тестировать компоненты во встроенной среде
+    WebSphere Test Environment (WTE). Выберите компоненты в проекции J2EE браузера J2EE и вызовите команду "Выполнить на
+    сервере" контекстного меню. За дополнительной информацией обратитесь к Web-справке о работе компонента WebSphere Studio
+    Application Developer.
+</p>
+<p>
+    Для отладки приложения на отдельном сервере приложений, запустите этот сервер с подключенной функцией отладки. За
+    инструкциями обратитесь к документации сервера. После развертывания приложения подключите к серверу отладчик Eclipse и
+    выполните отладку приложения. Заметьте, что большинство серверов приложений не предоставляют возможности отладки
+    страниц JSP (которые скомпилированы в код Java). За подробностями обратитесь к документации сервера.<br />
+</p>
+<h3>
+    <a id="Execute_Test" name="Execute_Test">Выполнение теста</a>
+</h3>
+<p>
+    После развертывания приложения выполните отладку компонентов в обычном режиме с помощью встроенного отладчика Java и
+    других доступных инструментов по отладке и анализу.
+</p>
+<p>
+    Заметьте, что при использовании WebSphere Studio Application Developer and XDE можно применять функцию Trace Rational
+    Purify and XDE для отладки и трассировки выполняющихся компонентов J2EE в среде тестирования WebSphere Test Environment
+    (WTE), которая является частью Application Developer. Заметьте также, что XDE Trace не поддерживает компонентов,
+    выполняющихся на удаленных серверах приложений J2EE. Более подробная информация находится в разделе <img     alt="значок справки" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Анализ поведения во время выполнения с помощью
+    Rational PurifyPlus</i>. <!-- Removed Javascript - ReferenceHelpTopic(topicTitle,"tr","tr_o_home.htm");-->
+     В настоящий момент невозможно использовать Trace или PurifyPlus для страниц JSP.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,11 @@
+theApp.settings.enableProfiling=false
+theApp.settings.enableBookmark=true
+theApp.settings.autoSyncContentWithView=true
+theApp.settings.enableSearch=true
+theApp.settings.searchServlet=null
+theApp.settings.showBanner=true
+theApp.feedbackURL="denislopushansky@yandex.ru"
+theApp.configurationTitle="Конфигурация методология - Защитник природы"
+theApp.infoFileName="about.htm"
+theApp.bannerFileName="banner.jpg"
+theApp.bannerHeight="67px"

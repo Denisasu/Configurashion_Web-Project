@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Подсистема реализации</title>
+<meta content="Guideline" name="uma.type">
+<meta content="implementation_subsystem" name="uma.name">
+<meta content="Подсистема реализации" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{502B4138-0772-4A4E-A183-C647497AFCB8}", "_i8zMUOBoEe-aS_x8ARA3yA", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jFRy4OBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jGxAoOBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_jJHxEOBoEe-aS_x8ARA3yA", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_jJhZsOBoEe-aS_x8ARA3yA", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_M6RHkN7IEdm8G6yT7-Wdqw", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "_jmUDYOBoEe-aS_x8ARA3yA", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "_kBim0OBoEe-aS_x8ARA3yA", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "_kXlIQOBoEe-aS_x8ARA3yA", "9.455380296721554E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "9.455380296721554E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{502B4138-0772-4A4E-A183-C647497AFCB8}", "_lBeZ0OBoEe-aS_x8ARA3yA", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lGIQUOBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lHTVAOBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_lJGEwOBoEe-aS_x8ARA3yA", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_lJRD4OBoEe-aS_x8ARA3yA", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_M6RHkN7IEdm8G6yT7-Wdqw", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "_lNljMOBoEe-aS_x8ARA3yA", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_lYkrMOBoEe-aS_x8ARA3yA", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "_lYvqUOBoEe-aS_x8ARA3yA", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lfZr8OBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lgl-wOBoEe-aS_x8ARA3yA", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.455380296721554E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Подсистема реализации</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Подсистемы реализации применяются при создании модели реализации и позволяют упрощать ее. В этой рекомендации приведены замечания по проектированию подсистемы реализации.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_implementation_subsystem_118747E9.html" guid="{0F629848-C19E-49AB-A6C1-C8D6A094898A}">Подсистема реализации</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_implementation_subsystem__guidelines_for" name="XE_implementation_subsystem__guidelines_for"></a> 
+<h3>
+    <a id="Explanation" name="Explanation"></a>Объяснение
+</h3>
+<p>
+    Основной способ упростить модель реализации, в которую могут входить сотни элементов, - создать подсистемы реализации.
+</p>
+<p>
+    Подсистемы обычно принимают форму каталогов с дополнительной информацией о структуре или управлении. Например,
+    подсистему можно оформить в виде каталога или папки в файловой системе, в виде подсистемы в Rational Apex для C++ или
+    Ada, либо в виде пакетов, использующих Java. В разработках Rational XDE, согласно Интегрированной среде разработки
+    (IDE), подсистема является "проектом".
+</p>
+<p>
+    Подсистема реализации - это аналог реализации <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/design_package_74F2CD5B.html" guid="_yF4CmdnmEdmO6L4XMImrsA">пакета
+    проектирования</a> <i>(или на более высоком уровне - <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Подсистемы проектирования</a>).</i> Создание модели реализации и
+    подсистемы реализации - основная цель <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/implementation_view_CC9CEB3B.html" guid="_yKpN1tnmEdmO6L4XMImrsA">представления реализации</a>, и поэтому им уделяется основное внимание в процессе
+    разработки.
+</p>
+<h4>
+    <a id="XE_implementation_subsystem__exporting_elements" name="XE_implementation_subsystem__exporting_elements"></a><a id="XE_element__exporting_from_implementation_subsystems" name="XE_element__exporting_from_implementation_subsystems"></a>Экспорт элементов
+</h4>
+<p>
+    Подсистема реализации контролирует внешнюю видимость своих материалов. Элементы, не входящие в подсистему, могут
+    ссылаться на внутренний элемент подсистемы, если он виден - то есть "экспортирован" его подсистемой.
+</p>
+<p>
+    Все элементы (и все вложенные подсистемы) обычно видны извне подсистемы по умолчанию. Это значит, что элементы, не
+    входящие в подсистему, могут ссылаться на все элементы подсистемы. Например, в C++ это означает, что внешние элементы
+    могут включать все элементы подсистемы.
+</p>
+<h3>
+    <a id="Use" name="Use"></a>Использование
+</h3>
+<p>
+    Модель реализации может быть более или менее близка к модели проекта, в зависимости от способа преобразования пакетов
+    проектирования в подсистемы реализации в модели реализации.
+</p>
+<p>
+    Рекомендуется придерживаться метода один-к-одному, то есть один пакет проектирования преобразовывать в одну подсистему
+    реализации. Это делается для поддержки непрерывной трассируемости от проектирования к коду.
+</p>
+<p>
+    Иногда необходимо, чтобы подсистемы реализации отличались от пакетов и подстистем проектирования. Дополнительная
+    информация приведена в <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">Задаче: Структурирование модели реализации</a>. Описание процесса
+    преобразования приведено в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_specific_guidelines_8DC8DA32.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">Рабочем продукте: Рекомендации к проекту</a>.
+</p>
+<p>
+    Разделять систему на подсистемы можно для разных целей. В реализации действуют те же критерии, что и в проектировании.
+    Дополнительная информация приведена в разделе <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_package_8CF100B8.html" guid="3.3691722315666536E-305">Рекомендация:
+    Пакет проектирования</a>.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

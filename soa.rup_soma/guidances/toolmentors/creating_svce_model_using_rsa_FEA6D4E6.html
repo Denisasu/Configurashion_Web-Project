@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Руководство по инструменту: Creating a Service Model using RSA</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="creating_svce_model_using_rsa" name="uma.name">
+<meta content="Creating a Service Model using RSA" name="uma.presentationName">
+<meta content="Tool:rup_rational_software_architect:Rational Software Architect" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Software Architect" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "_T5H-cEUCEdqMr9-tA4TBpQ", "{23A022B3-1564-406B-88B5-E8312C764A82}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "_T5H-cEUCEdqMr9-tA4TBpQ", "{23A022B3-1564-406B-88B5-E8312C764A82}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "_T5H-cEUCEdqMr9-tA4TBpQ", "{23A022B3-1564-406B-88B5-E8312C764A82}"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}", "_lpy-EOBoEe-aS_x8ARA3yA", "{23A022B3-1564-406B-88B5-E8312C764A82}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{23A022B3-1564-406B-88B5-E8312C764A82}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Руководство по инструменту: Creating a Service Model using RSA</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">This tool mentor describes the steps for creating a simple service model using Rational Software Architect.</td>
+</tr>
+<tr>
+<td>Инструмент: <a href="./../../../core.base_rup/tools/rup_rational_software_architect_736B9F40.html" guid="_T5H-cEUCEdqMr9-tA4TBpQ">Rational Software Architect</a> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_service_specification_AB6BA763.html" guid="{9EB2B302-79F6-4DF8-AEB7-98E6AC1756DD}">Service Specification</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Purpose
+</h3>
+<p>
+    The steps in this tool mentor match those in the task. Links to topics in the Rational Software Architect (RSA) online
+    Help are marked with <img height="16" alt="" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />.
+</p>
+<h3>
+    Overview
+</h3>
+<p>
+    This tool mentor describes the steps for creating a simple service model using RSA. The UML Profile for Software
+    Services and the template model described in this tool mentor may not be installed in earlier versions of RSA. A
+    downloadable package which contains these items and installation instructions is available from IBM developerWorks.
+</p>
+<p>
+    The following steps are performed in this tool mentor:
+</p>
+<ul>
+    <li>
+        <a href="#New_Modeling_Project">Create a new Modeling Project</a>.
+    </li>
+    <li>
+        <a href="#New_Service_Model">Create a new Service Design Model</a>.
+    </li>
+    <li>
+        <a href="#New_Messages">Creating Messages for your Service</a>.
+    </li>
+    <li>
+        <a href="#New_Services">Creating a new Service from the Model Library</a>.
+    </li>
+    <li>
+        <a href="#New_Partition">Creating a Service Partition</a>.
+    </li>
+</ul>
+<h3>
+    <a id="Develop Architecture Overview" name="Develop Architecture Overview">Develop Architecture
+    Overview</a><b>&nbsp;</b>
+</h3>
+<h3>
+    <a id="New_Modeling_Project" name="New_Modeling_Project">Create a New Modeling Project</a>
+</h3>
+<p>
+    This step will also create a Service Design Model, once complete jump to step number 3.
+</p>
+<ol>
+    <li>
+        From the RSA menu, select File --&gt; New --&gt; Project.
+    </li>
+    <li>
+        In the resulting wizard, select the "Modeling" folder and then the "UML Project" from the tree. If these elements
+        are not visible in the tree, check the box "Show All Wizards" just below the tree. Select the Next button.
+    </li>
+    <li>
+        Give your project a name such as "my.first.servicemodel.project" and then select the Next button.
+    </li>
+    <li>
+        From the list of model templates, select "Service Design Model" and then select the Next button.
+    </li>
+    <li>
+        When presented with the list of projects you may reference, select the Finish button.
+    </li>
+</ol>
+<p>
+    For more information on creating a new project, see the State Transition topic in the Rational Rose online help.
+</p>
+<h3>
+    <a id="New_Service_Model" name="New_Service_Model">Create a New Service Design Model</a>
+</h3>
+<p>
+    If you already have a modeling project, this step will add a Service Design Model to your project.
+</p>
+<ol>
+    <li>
+        Select the project to add the Service Design Model to.
+    </li>
+    <li>
+        From the RSA menu, select File --&gt; New --&gt; Other.
+    </li>
+    <li>
+        In the resulting wizard, select the "Modeling" folder and then the "UML Model" from the tree. If these elements are
+        not visible in the tree, check the box "Show All Wizards" just below the tree. Select the Next button.
+    </li>
+    <li>
+        From the list of model templates select "Service Design Model" and if you wish, you can choose a new name for your
+        model. Select the Finish button.
+    </li>
+</ol>
+<h3>
+    <a id="New_Messages" name="New_Messages">Creating Messages for your Service from the Model Library</a>
+</h3>
+<ol>
+    <li>
+        In the package named "Message View," create a new Class named Customer.
+    </li>
+    <li>
+        Create another new Class named Address.
+    </li>
+    <li>
+        Create an aggregation association from Customer to Address.
+    </li>
+    <li>
+        Open the model library named "Reusable Design Elements" and ctrl-drag the &lt;&lt;Message&gt;&gt; Class into the
+        message view package.
+    </li>
+    <li>
+        Right-click on the newly created class in the message view and select "Find/Replace...." 
+        <ol>
+            <li>
+                In the dialog type, the text "${service.message}" in the "Find What" text box.
+            </li>
+            <li>
+                Select the "Replace" button.
+            </li>
+            <li>
+                In the dialog type the text "CreateCustomer" in the "Replace with" text box.
+            </li>
+            <li>
+                Select OK.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Drag the new message class onto the class diagram with Customer and Address and add an aggregation association from
+        CreateCustomer to Customer.
+    </li>
+    <li>
+        Now ctrl-drag another &lt;&lt;Message&gt;&gt; Class into the message-view package and rename it
+        "UpdateCustomerAddress" using the find/replace dialog.
+    </li>
+    <li>
+        Drag the new message class onto the class diagram and add an aggregation association from UpdateCustomerAddress to
+        Address.
+    </li>
+</ol>
+<h3>
+    <a id="New_Services" name="New_Services">Creating a new Service and Provider</a>
+</h3>
+<ol>
+    <li>
+        Ctrl-drag the &lt;&lt;ServiceProvider&gt;&gt; Component into the service view package and, using the find/replace
+        technique described above, rename it "CustomerInfo" (the "Find what" text is "${service}" in this case).
+    </li>
+    <li>
+        The actual elements created are: 
+        <ol>
+            <li>
+                A Component named "CustomerInfoProvider" with a nested composite structure diagram.
+            </li>
+            <li>
+                An Interface named ICustomerInfo stereotyped as a &lt;&lt;ServiceSpecification&gt;&gt; and containing an
+                Activity diagram.
+            </li>
+            <li>
+                A Port on the component named CustomerInfo stereotyped &lt;&lt;Service&gt;&gt; and typed as ICustomerInfo.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Add an operation to ICustomerInfo called "createCustomer" and add a parameter typed with the CreateCustomer message
+        created above.
+    </li>
+    <li>
+        Add another operation called "updateCustomerAddress" and add a parameter typed with the UpdateCustomerAddress
+        message created above.
+    </li>
+</ol>
+<h3>
+    <a id="New_Partition" name="New_Partition">Creating a Service Partition</a>
+</h3>
+<ol>
+    <li>
+        Create another service, following the instructions above, but name it "AccountMgmt" (no need to add operations in
+        this case).
+    </li>
+    <li>
+        Ctrl-drag the &lt;&lt;ServicePartition&gt;&gt; Node into the collaboration view package and, using the find/replace
+        technique above, rename it "Back Office." The "Find what" text is "${partition}" in this case.
+    </li>
+    <li>
+        Open the structure diagram nested in the partition and add two parts to the diagram, when prompted choose to select
+        an existing element, and choose the two service providers created so far.
+    </li>
+    <li>
+        This should result in the parts not only being typed but also displaying the ports and interfaces associated with
+        the providers.
+    </li>
+    <li>
+        To create a service channel between the two services, choose the Connector from the toolbox and connect to the two
+        ports. 
+        <ol>
+            <li>
+                Stereotype the connector &lt;&lt;ServiceChannel&gt;&gt;.
+            </li>
+            <li>
+                Select the Advanced tab in the properties view and set the binding to "RMI."
+            </li>
+        </ol>
+    </li>
+</ol>
+<p>
+    To create a strict partition and expose only the AccountMgmt service, follow the additional steps below.
+</p>
+<ol>
+    <li>
+        Right click on the Partition in the Model Explorer and add a new Port.
+    </li>
+    <li>
+        Name the Port and set its stereotype to &lt;&lt;ServiceGateway&gt;&gt;.
+    </li>
+    <li>
+        In the properties view, set the Type of the Port to the IAccountMgmt service specification.
+    </li>
+    <li>
+        Open the composite structure diagram we created above and see that the new Port is shown on the diagram.
+    </li>
+    <li>
+        Create a &lt;&lt;ServiceChannel&gt;&gt; from service gateway to the AccountMgmt service.
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

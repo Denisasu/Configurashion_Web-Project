@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Концепция: Отображение J2EE в RUP </title>
+<meta content="Concept" name="uma.type">
+<meta content="j2ee_to_rup_mapping" name="uma.name">
+<meta content="Отображение J2EE в RUP " name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "1.8262162566452063E-305", "1.2359367463319947E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "1.8262162566452063E-305", "1.2359367463319947E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_jAxtYOBoEe-aS_x8ARA3yA", "1.2359367463319947E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_jEP4IOBoEe-aS_x8ARA3yA", "1.2359367463319947E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_jIamcOBoEe-aS_x8ARA3yA", "1.2359367463319947E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "1.2359367463319947E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_lD6CwOBoEe-aS_x8ARA3yA", "1.2359367463319947E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{86253FE7-0036-4D14-8BD7-C18CE86A5E14}", "_lFqWQOBoEe-aS_x8ARA3yA", "1.2359367463319947E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_lI0_AOBoEe-aS_x8ARA3yA", "1.2359367463319947E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "_le7x4OBoEe-aS_x8ARA3yA", "1.2359367463319947E-305"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_pTvboE7MEduvcvbnLvkXhA", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "_liGaoOBoEe-aS_x8ARA3yA", "1.2359367463319947E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.2359367463319947E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Концепция: Отображение J2EE в RUP </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../tech.j2ee/guidances/concepts/resources/road_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом разделе рассмотрено отображение ролей и элементов реализации J2EE в объекты RUP. </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Проектировщик</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_capsule_designer_F3E66EDF.html" guid="{86253FE7-0036-4D14-8BD7-C18CE86A5E14}">Проектировщик капсул</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Разработчик архитектуры</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="J2EE Role to RUP Role Mapping" name="J2EE Role to RUP Role Mapping"></a>Отображение ролей J2EE в роли RUP
+</h3>
+<p>
+    Спецификация платформы J2EE определяет набор ролей. Модуль J2EE добавляет необходимые полномочия в существующие роли
+    RUP, чтобы они соответствовали ролям J2EE. &nbsp; Пополнение существующих ролей вместо определения новых позволяет
+    модулю использовать существующую информацию RUP, обеспечивает прямое соответствие между J2EE и RUP, а также
+    способствует более четкому разграничению понятий.
+</p>
+<p>
+    В следующей таблице указано соответствие между ролями J2EE и ролями RUP и приведены ссылки на соответствующие
+    модификации процесса, обусловленные применением J2EE.
+</p>
+<table style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"  cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+    <tbody>
+        <tr>
+            <th align="left" width="39%">
+                Роль J2EE
+            </th>
+            <th align="left" width="61%">
+                Роль RUP
+            </th>
+        </tr>
+        <tr>
+            <td valign="top" width="39%">
+                <b>Провайдер компонентов приложений и системы</b> 
+                <p>
+                    Провайдер компонентов приложений фактически охватывает несколько ролей, например, разработчиков EJB и
+                    проектировщиков документов HTML. Эти роли отвечают за создание компонентов приложений J2EE и упаковку
+                    их в соответствующие модули J2EE.
+                </p>
+                <p>
+                    Провайдер компонентов системы - это специализация провайдера компонентов приложений, поэтому его можно
+                    отобразить в те же роли RUP.
+                </p>
+            </td>
+            <td width="61%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">Архитектор программного обеспечения</a> 
+                <ul>
+                    <li>
+                        Выяснение того, какие механизмы J2EE использовать и каким образом 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/architectural_analysis_for_j2ee_applications_7F202AD8.html" guid="4.041153751920514E-305">Указания: анализ архитектуры для приложений J2EE</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Указания: проектирование состояния для приложений J2EE</a>
+                            </li>
+                            <li>
+                                <a class="elementlinkswithtype" href="./../../../tech.j2ee/guidances/guidelines/java_messaging_service_jms_6295841F.html" guid="1.706166121514094E-306">Технология: служба сообщений Java</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_the_run-time_architecture_for_j2ee_applications_58C0C0A2.html" guid="1.7390519818410197E-305">Указания: описание архитектуры среды выполнения для
+                                приложений J2EE</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/describing_distribution_for_j2ee_applications_93B5A232.html" guid="2.0306406686133254E-306">Указания: описание распределения для приложений J2EE</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="LIST-STYLE-TYPE: none">
+                        <br />
+                    </li>
+                    <li>
+                        Идентификация компонентов J2EE и определение их правильного размещения и использования в общей
+                        архитектуре. 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_j2ee_application_clients_A6AFA9D0.html" guid="1.2221823675598937E-305">Указания: идентификация приложений-клиентов J2EE</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Указания: идентификация объектов EJB</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_java_classes_DAD8355.html" guid="2.5015077375422883E-305">Указания: идентификация классов Java</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_javabeans_B4489D75.html" guid="2.8184208504373704E-306">Указания: идентификация объектов JavaBean</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_javaserver_pages_jsps_73396F00.html" guid="1.5318932051119773E-305">Технология: идентификация страниц JSP</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_servlets_951FE427.html" guid="6.749276633239724E-306">Указания: идентификация сервлетов</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="LIST-STYLE-TYPE: none">
+                        <br />
+                    </li>
+                    <li>
+                        Выбор единиц интеграции и развертывания 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/architectural_analysis_for_j2ee_applications_7F202AD8.html" guid="4.041153751920514E-305">Технология: структурирование модели реализации для
+                                приложений J2EE</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">Проектировщик</a>
+                </p>
+                <ul>
+                    <li>
+                        Проектировка компонентов J2EE 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Задача: проектирование классов</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_subsystems_for_j2ee_applications_B6B8EE31.html" guid="7.612097453921368E-307">Указания: проектирование подсистем для приложений J2EE</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_j2ee_application_clients_4272B482.html" guid="3.078384841899093E-305">Указания: проектирование приложений-клиентов J2EE</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_enterprise_javabeans_ejbs_1F6B0E88.html" guid="2.8082009592332426E-306">Технология: проектирование объектов EJB</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_javabeans_D9D65D19.html" guid="1.360568578285337E-305">Указания: проектирование объектов JavaBean</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_javaserver_pages_jsps_D9156656.html" guid="2.2384712199461326E-305">Технология: проектирование страниц JSP</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_servlets_FD9084F5.html" guid="1.1396160853725076E-306">Указания: проектирование сервлетов</a>. &nbsp;
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_implementer_D145E819.html" guid="{75501BAA-0CCE-4852-A7B2-B10CA71C002A}">Средство реализации</a>
+                </p>
+                <ul>
+                    <li>
+                        Реализация и тестирование единиц компонентов J2EE 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/implementing_design_elements_for_j2ee_applications_46D210D5.html" guid="2.693634112172613E-305">Технология: реализация элементов проекта J2EE</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/developer_testing_for_j2ee_applications_AFE14184.html" guid="7.478154848063033E-306">Указания: тестирование приложений J2EE на стадии
+                                разработки</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_integrator_284A604C.html" guid="{502B4138-0772-4A4E-A183-C647497AFCB8}">Средство интеграции</a>
+                </p>
+                <ul>
+                    <li>
+                        Упаковка этих компонентов в соответствующий <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">модуль J2EE</a> 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_modules_17925A58.html" guid="3.7932077950837037E-305">Указания: сборка модулей J2EE</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_tester_8ADFF3FA.html" guid="{A719CEAE-35FB-42F6-A076-F501B83E5B85}">Средство тестирования</a>
+                </p>
+                <ul>
+                    <li>
+                        Выполнение соответствующих наборов тестов, необходимых для определения качества создаваемых модулей
+                        J2EE 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/executing_test_suite_for_a_j2ee_application_31E47C14.html" guid="5.236825716449536E-305">Указания: выполнение набора тестов для приложения J2EE</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="39%">
+                <b>Ассемблер приложений</b> 
+                <p>
+                    Ассемблер приложений создает приложение J2EE из компонентов приложения J2EE и доставляет его как файл
+                    EAR. Ассемблер приложений также описывает все внешние зависимости, существующие в приложении J2EE.
+                </p>
+            </td>
+            <td width="61%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_integrator_284A604C.html" guid="{502B4138-0772-4A4E-A183-C647497AFCB8}">Средство интеграции</a> 
+                <ul>
+                    <li>
+                        <b>Интеграция подсистемы реализации</b>: помимо встраивания содержимого отдельных подсистем
+                        реализации, упаковка содержимого встроенных подсистем реализации в соответствующий <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">модуль J2EE</a> 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/integrating_subsystems_for_j2ee_applications_7D2EB54C.html" guid="1.986073787007646E-306">Указания: интеграция подсистем для приложений J2EE</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_modules_17925A58.html" guid="3.7932077950837037E-305">Указания: сборка модулей J2EE</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="LIST-STYLE-TYPE: none">
+                        <br />
+                    </li>
+                    <li>
+                        <b>Интеграция системы</b>: помимо встраивания отдельных подсистем реализации с целью создания
+                        полной системы, упаковка всей системы в &nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">приложение J2EE</a> 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/integrating_systems_for_j2ee_applications_5D7228F5.html" guid="1.4066786725391081E-306">Указания: интеграция систем для приложений J2EE</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_applications_38E5D5D5.html" guid="3.347498143656868E-305">Указания: сборка приложений J2EE</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="LIST-STYLE-TYPE: none">
+                        <br />
+                    </li>
+                    <li>
+                        Компоновка подсистем и систем 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/builds_for_j2ee_applications_5F120A77.html" guid="4.964235556359333E-307">Указания: компоновка приложений J2EE</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_tester_8ADFF3FA.html" guid="{A719CEAE-35FB-42F6-A076-F501B83E5B85}">Средство тестирования</a>
+                </p>
+                <ul>
+                    <li>
+                        Выполнение соответствующих наборов тестов, необходимых для определения качества создаваемого
+                        приложения J2EE 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/executing_test_suite_for_a_j2ee_application_31E47C14.html" guid="5.236825716449536E-305">Указания: выполнение набора тестов для приложения J2EE</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="39%">
+                <b>Средство развертывания</b> 
+                <p>
+                    Средство развертывания отвечает за развертывание приложения J2EE в операционной среде. Первый этап
+                    развертывания заключается в установке различных компонентов приложения в соответствующих контейнерах
+                    J2EE. Второй этап - в настройке всех объявленных внешних зависимостей для их обработки. Например,
+                    определенные роли защиты отображаются в группы пользователей и учетные записи в операционной среде. На
+                    третьем этапе развертывания новое приложение выполняется, чтобы оно было готово к приему запросов.
+                </p>
+            </td>
+            <td width="61%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_system_administrator_BE5AEF12.html" guid="{57519B77-801E-4C38-AC0A-0032A0BDB2B6}">Системный администратор</a> 
+                <ul>
+                    <li>
+                        Развертывание собранных&nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">модулей J2EE</a> и/или&nbsp;<a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">приложения J2EE</a> в операционной среде 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/supporting_development_for_j2ee_applications_900F87D7.html" guid="4.0581546953366576E-305">Указания: поддержка разработки приложений J2EE</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/deploying_j2ee_modules_and_applications_62A4A967.html" guid="5.3908533897796765E-306">Указания: развертывание модулей и приложений J2EE</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td width="39%">
+                <b>Провайдер продуктов J2EE</b> 
+                <p>
+                    Провайдер продуктов J2EE - это поставщик реализации платформы J2EE, называемой также продуктом J2EE.
+                    Примерами провайдеров продуктов J2EE могут служить BEA, IBM и Sun Microsystems. Эти организации обычно
+                    используют имеющиеся у них широкие возможности при создании реализации платформы J2EE. Например,
+                    реализация BEA создана на основе исключительно успешного монитора обработки транзакций Tuxedo BEA.
+                    Провайдер продуктов J2EE может также предоставлять инструменты, необходимые для поддержки развертывания
+                    приложений и управления ими.
+                </p>
+            </td>
+            <td width="61%">
+                Нет. 
+                <p>
+                    Предоставление реализации платформы J2EE не входит в сферу действия RUP.&nbsp; Платформа J2EE - это
+                    один из инструментов, используемых в проекте (он считается входными данными процесса).
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="39%">
+                <b>Системный администратор</b> 
+                <p>
+                    Системный администратор отвечает за инфраструктуру среды выполнения, включающую все развернутые
+                    приложения J2EE.
+                </p>
+            </td>
+            <td width="61%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_system_administrator_BE5AEF12.html" guid="{57519B77-801E-4C38-AC0A-0032A0BDB2B6}">Системный администратор</a> 
+                <ul>
+                    <li>
+                        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/supporting_development_for_j2ee_applications_900F87D7.html" guid="4.0581546953366576E-305">Указания: поддержка разработки приложений J2EE</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="39%">
+                <b>Провайдер инструментов</b> 
+                <p>
+                    Провайдер инструментов предоставляет инструменты, предназначенные для поддержки разработки и упаковки
+                    компонентов приложений. Эти инструменты часто соответствуют различным типам создаваемых компонентов
+                    приложений и включают IDE, например Rational XDE (фирмы Rational Software), WebSphere Studio
+                    Application Developer (фирмы IBM) и JBuilder (фирмы Borland).
+                </p>
+            </td>
+            <td width="61%">
+                Нет. 
+                <p>
+                    Предоставление инструментов для поддержки разработки J2EE не входит в сферу действия RUP.&nbsp;
+                    Возможные инструменты, которые могут использоваться в проекте, считаются входными данными процесса.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<br />
+<h3>
+    <a id="J2EE Element to RUP Artifact Mapping" name="J2EE Element to RUP Artifact Mapping"></a>Отображение элементов J2EE
+    в артефакты RUP
+</h3>
+<p>
+    В следующей таблице указано, каким образом ключевые элементы J2EE представляются с помощью артефактов RUP.
+    &nbsp;Приведены также ссылки на более подробные разделы по каждому элементу J2EE, если они есть.
+</p>
+<table style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"  cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+    <tbody>
+        <tr>
+            <th width="11%">
+                Элемент J2EE
+            </th>
+            <th width="21%">
+                Артефакт модели проекта RUP&nbsp;
+            </th>
+            <th width="29%">
+                Артефакт модели реализации RUP
+            </th>
+            <th width="39%">
+                Указания по моделированию
+            </th>
+        </tr>
+        <tr>
+            <td width="11%">
+                Приложение-клиент
+            </td>
+            <td width="21%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">Подсистема проектирования</a> со стереотипом
+                &lt;&lt;ApplicationClient&gt;&gt;
+            </td>
+            <td width="29%">
+                Набор <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">элементов реализации</a> для отдельных классов Java,
+                реализующих приложение-клиент.
+            </td>
+            <td width="39%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_client_3499CC99.html" guid="8.333388171077014E-306">Указания: приложение-клиент J2EE</a> 
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_j2ee_application_clients_A6AFA9D0.html" guid="1.2221823675598937E-305">Указания: идентификация приложений-клиентов J2EE</a>
+                </p>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_j2ee_application_clients_4272B482.html" guid="3.078384841899093E-305">Указания: проектирование приложений-клиентов J2EE</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                Файл описания
+            </td>
+            <td width="21%">
+                Файлы описания не представлены в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">модели проекта</a>.
+            </td>
+            <td width="29%">
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Элемент реализации</a> со стереотипом &lt;&lt;EJB-JAR
+                    Descriptor&gt;&gt;, &lt;&lt;JARDescriptor&gt;&gt;, &lt;&lt;WARDescriptor&gt;&gt; или
+                    &lt;&lt;EARDescriptor&gt;&gt;
+                </p>
+            </td>
+            <td width="39%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">Указания для рабочего продукта: модуль J2EE</a> (файлы описания модулей
+                J2EE) 
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">Указания для рабочего продукта: приложения J2EE</a> (файлы описания
+                    приложений J2EE)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                Enterprise JavaBean (EJB)
+            </td>
+            <td width="21%">
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Класс проекта</a>
+                </p>
+                <p>
+                    Подробные сведения о конкретных применяемых стереотипах приведены в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Указания: идентификация объектов EJB</a>
+                </p>
+            </td>
+            <td width="29%">
+                Набор <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">элементов реализации</a> для отдельных элементов EJB.
+            </td>
+            <td width="39%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305">Указания для рабочего продукта: Enterprise JavaBean (EJB)</a> 
+                <ul>
+                    <li>
+                        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/entity_bean_E721D57E.html" guid="4.528918585369678E-307">Указания для рабочего продукта: сущностный объект EJB</a>
+                    </li>
+                    <li>
+                        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/message-driven_bean_12D6102.html" guid="3.616542707987638E-305">Указания для рабочего продукта: управляемый сообщениями объект
+                        EJB</a>
+                    </li>
+                    <li>
+                        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/session_bean_B41C78.html" guid="7.831474550884131E-306">Указания для рабочего продукта: сеансовый объект EJB</a>
+                    </li>
+                </ul><a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_enterprise_javabeans_ejbs_2581AEE5.html" guid="9.931732120190802E-307">Указания: идентификация объектов EJB</a>&nbsp; 
+                <ul>
+                    <li>
+                        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_entity_beans_F497D4.html" guid="4.3141371110020564E-306">Указания: идентификация сущностных объектов EJB</a>
+                    </li>
+                    <li>
+                        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_message-driven_beans_63C9FE78.html" guid="1.4428031829474456E-305">Указания: идентификация управляемых сообщениями объектов EJB</a>
+                    </li>
+                    <li>
+                        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_session_beans_5E45D5DA.html" guid="6.241144674389355E-307">Указания: идентификация сеансовых объектов EJB</a>
+                    </li>
+                </ul><a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_enterprise_javabeans_ejbs_1F6B0E88.html" guid="2.8082009592332426E-306">Технология: проектирование объектов EJB</a> 
+                <ul>
+                    <li>
+                        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_entity_beans_7CD45D28.html" guid="5.953653009453999E-307">Технология: проектирование сущностных объектов EJB</a>
+                    </li>
+                    <li>
+                        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_message-driven_beans_DE3F4EC4.html" guid="7.497484412493539E-306">Технология: проектирование управляемых сообщениями объектов EJB</a>
+                    </li>
+                    <li>
+                        <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_session_beans_BDBA5DEB.html" guid="5.207478815358005E-306">Технология: проектирование сеансовых объектов EJB</a>
+                    </li>
+                </ul>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/interfaces_for_j2ee_applications_23711CC0.html" guid="4.292643163694118E-306">Указания: интерфейсы приложений J2EE</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                <a id="HTML Page" name="HTML Page">Страница HTML</a>
+            </td>
+            <td width="21%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Класс проекта</a> со стереотипом &lt;&lt;ClientPage&gt;&gt;
+            </td>
+            <td width="29%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Элемент реализации</a> со стереотипом
+                &lt;&lt;ClientPage&gt;&gt; 
+                <p>
+                    Страницы клиентов моделируются в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">модели реализации</a>, только если страница клиента
+                    представлена статическим файлом на диске (а не создается динамически страницей <a href="#JSP">JSP</a>).
+                </p>
+            </td>
+            <td width="39%">
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                Класс Java
+            </td>
+            <td width="21%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Класс проекта</a>
+            </td>
+            <td width="29%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Элемент реализации</a>
+            </td>
+            <td width="39%">
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/java_class_4A84BF61.html" guid="1.6644977676714253E-305">Указания: класс Java</a>
+                </p>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_java_classes_DAD8355.html" guid="2.5015077375422883E-305">Указания: идентификация классов Java</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                JavaBean
+            </td>
+            <td width="21%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Класс проекта</a>
+            </td>
+            <td width="29%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Элемент реализации</a>
+            </td>
+            <td width="39%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/concepts/javabean_D488CF3B.html" guid="7.536447688812142E-306">Концепция: JavaBean</a> 
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/javabean_1FDD37B1.html" guid="1.679360250491396E-305">Указания: JavaBean</a>
+                </p>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_javabeans_B4489D75.html" guid="2.8184208504373704E-306">Указания: идентификация объектов JavaBean</a>
+                </p>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_javabeans_D9D65D19.html" guid="1.360568578285337E-305">Указания: проектирование объектов JavaBean</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                Пакет Java
+            </td>
+            <td width="21%">
+                Пакеты Java не представлены в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">модели проекта</a>.
+            </td>
+            <td width="29%">
+                Пакет в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">модели проекта</a> (стереотип не требуется) 
+                <p>
+                    Содержит <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">элементы реализации</a> Java; например, <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/ejb_enterprise_javabean_EF267D72.html" guid="_yHXQW9nmEdmO6L4XMImrsA">EJB (Enterprise JavaBean)</a>, <a href="#Servlet">сервлеты</a>
+                </p>
+            </td>
+            <td width="39%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/structuring_the_implementation_model_for_j2ee_applications_3CE2DECA.html" guid="8.351669390824964E-306">Указания: структурирование модели реализации для приложений J2EE</a>
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                Страница JSP
+            </td>
+            <td width="21%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Класс проекта</a> со стереотипом &lt;&lt;ServerPage&gt;&gt;
+            </td>
+            <td width="29%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Элемент реализации</a> со стереотипом
+                &lt;&lt;ServerPage&gt;&gt;
+            </td>
+            <td width="39%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/javaserver_page_jsp_C204C841.html" guid="2.5833499297818664E-306">Указания для рабочего продукта: страница JSP</a> 
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_javaserver_pages_jsps_73396F00.html" guid="1.5318932051119773E-305">Технология: идентификация страниц JSP</a>
+                </p>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_javaserver_pages_jsps_D9156656.html" guid="2.2384712199461326E-305">Технология: проектирование страниц JSP</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                Пользовательский тег JSP
+            </td>
+            <td width="21%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Класс проекта</a> со стереотипом &lt;&lt;JSPTag&gt;&gt;
+            </td>
+            <td width="29%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Элемент реализации</a> со стереотипом &lt;&lt;JSPTag&gt;&gt;
+            </td>
+            <td width="39%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/java_server_page_jsp_custom_tag_5B86336F.html" guid="2.7697091422782074E-305">Указания: пользовательский тег JSP</a>
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                <a id="J2EE Application" name="J2EE Application">Приложение J2EE</a>
+            </td>
+            <td width="21%">
+                Приложения J2EE не представлены в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">модели проекта</a>.
+            </td>
+            <td width="29%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">Приложение J2EE</a>&nbsp;со стереотипом &lt;&lt;EAR&gt;&gt;
+            </td>
+            <td width="39%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_436A58D2.html" guid="1.6057780853529704E-306">Указания для рабочего продукта: приложения J2EE</a> 
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_applications_38E5D5D5.html" guid="3.347498143656868E-305">Указания: сборка приложений J2EE</a>
+                </p>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/deploying_j2ee_modules_and_applications_62A4A967.html" guid="5.3908533897796765E-306">Указания: развертывание модулей и приложений J2EE</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                <a id="J2EE Module" name="J2EE Module">Модуль J2EE (архивный файл)</a>
+            </td>
+            <td width="21%">
+                Модули J2EE не представлены в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">модели проекта</a>.
+            </td>
+            <td width="29%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">Модуль J2EE</a>&nbsp;со стереотипом &lt;&lt;EJB-JAR&gt;&gt;,
+                &lt;&lt;JAR&gt;&gt; или &lt;&lt;WAR&gt;&gt;
+            </td>
+            <td width="39%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/j2ee_module_B302A794.html" guid="1.5663580058239784E-305">Указания для рабочего продукта: модуль J2EE</a> 
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/assembling_j2ee_modules_17925A58.html" guid="3.7932077950837037E-305">Указания: сборка модулей J2EE</a>
+                </p>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/deploying_j2ee_modules_and_applications_62A4A967.html" guid="5.3908533897796765E-306">Указания: развертывание модулей и приложений J2EE</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                <a id="Servlet" name="Servlet">Сервлет</a>
+            </td>
+            <td width="21%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">Класс проекта</a> со стереотипом
+                &lt;&lt;GenericServlet&gt;&gt; или &lt;&lt;HttpServlet&gt;&gt;
+            </td>
+            <td width="29%">
+                <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">Элемент реализации</a> со стереотипом
+                &lt;&lt;GenericServlet&gt;&gt; или &lt;&lt;HttpServlet&gt;&gt;
+            </td>
+            <td width="39%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/servlet_FB1EC186.html" guid="7.265155609265114E-306">Указания: сервлет</a> 
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/identifying_servlets_951FE427.html" guid="6.749276633239724E-306">Указания: идентификация сервлетов</a>
+                </p>
+                <p>
+                    <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_servlets_FD9084F5.html" guid="1.1396160853725076E-306">Указания: проектирование сервлетов</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="11%">
+                Виртуальный каталог
+            </td>
+            <td width="21%">
+                Виртуальные каталоги не представлены в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">модели проекта</a>.
+            </td>
+            <td width="29%">
+                Пакет в <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">модели реализации</a> со стереотипом
+                &lt;&lt;VirtualDirectory&gt;&gt; 
+                <p>
+                    Содержит Web-компоненты J2EE&nbsp; (<a href="#HTML Page">Страницы HTML</a>, <a href="#JSP">JSP</a>,&nbsp; и т.д.)
+                </p>
+            </td>
+            <td width="39%">
+                <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/structuring_the_implementation_model_for_j2ee_applications_3CE2DECA.html" guid="8.351669390824964E-306">Указания: структурирование модели реализации для приложений J2EE</a>
+            </td>
+        </tr>
+    </tbody>
+</table>&nbsp; <br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

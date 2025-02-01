@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация:  Проектирование подсистем для приложений J2EE </title>
+<meta content="Guideline" name="uma.type">
+<meta content="designing_subsystems_for_j2ee_applications" name="uma.name">
+<meta content=" Проектирование подсистем для приложений J2EE " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "7.612097453921368E-307"]}, {view: "view:_OAq98E7KEduvcvbnLvkXhA", path: ["_OAq98E7KEduvcvbnLvkXhA", "_vyfnwE7MEduvcvbnLvkXhA", "_BIPLkE7NEduvcvbnLvkXhA", "{FACE1697-1CB6-4F57-8B39-ED507BE7006F}", "_lqPC8OBoEe-aS_x8ARA3yA", "7.612097453921368E-307"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.612097453921368E-307"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация:  Проектирование подсистем для приложений J2EE </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждаются способы проектирования подсистем для приложения J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../soa.rup_soma/tasks/soa_subsystem_design_B9BB36BD.html" guid="{FACE1697-1CB6-4F57-8B39-ED507BE7006F}">Subsystem Design (SOA)</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">Проектирование подсистемы</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    Введение
+</h3>
+<p>
+    Эти руководство дополняет <a href="./../../../core.base_rup/guidances/guidelines/design_subsystem_B26FD609.html" guid="1.2314266786534317E-305" class="elementLinkWithUserText">Руководство: Подсистема проекта</a> рекомендациями,
+    относящимися к разработке приложений J2EE. Мы рекомендуем вам прочесть "Руководство: Подсистема проекта", прежде чем
+    читать эти рекомендации, относящиеся к J2EE. Это руководство применяется к подсистемам проекта более высокого уровня
+    дискретности, чем отдельные объекты EJB. Дополнительная информация об объектах EJBs приведена в разделе <a href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305" class="elementLinkWithUserText">Рекомендация: Объект EJB (Enterprise JavaBean)</a>.
+</p>
+<p>
+    Заметьте также, что Клиент приложения считается специализированной Подсистемой проекта. См. раздел <a href="./../../../tech.j2ee/guidances/guidelines/j2ee_application_client_3499CC99.html" guid="8.333388171077014E-306" class="elementLinkWithUserText">Руководство: Клиент приложения J2EE</a>.
+</p>
+<h3>
+    <a name="Evolving Design Subsystems" id="Evolving Design Subsystems"></a>Разработка подсистем проекта
+</h3>
+<p>
+    При первой идентификации подсистемы она может быть изначально технологически нейтральной. То есть, она может быть
+    задана с помощью интерфейсов, текстовых описаний и некоторых конечных автоматов, которые описывают ожидаемое поведение
+    операций. Однако, такие технологически нейтральные подсистемы обычно развиваются в специализированные технологические
+    представления.
+</p>
+<p>
+    Ниже приведен пример того, как технологически нейтральная подсистема проекта развивается в специализированную
+    технологическую подсистему.
+</p>
+<h5>
+    Спецификация подсистемы (представление подсистемы в виде черного ящика)
+</h5>
+<p>
+    Спецификация подсистемы может первоначально моделироваться с помощью абстрактных интерфейсов UML.
+</p>
+<p>
+    Рассмотрим предварительный проект подсистемы Клиент, показанный на Рисунке 1.&nbsp;
+</p>
+<p align="center">
+    <img alt="Диаграмма, описанная в сопроводительном тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/dsub_abstract_external.gif" />
+</p>
+<p align="center">
+    <b><font size="2">Рисунок 1: Предварительный проект - Подсистема Клиент</font></b>
+</p>
+<p>
+    Для ICustomerMgt определяются операции, такие как "getCustomerDetails" и "setCustomerDetails".
+</p>
+<p>
+    По мере того как проект становится более подробным (<a href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}" class="elementLinkWithUserText">Задача:
+    subsystem_design_real-time_design</a>), эти абстрактные интерфейсы заменяются элементами, характерными для языка или
+    технологии. (Можно поддерживать более абстрактную модель подсистемы, например, если есть потребность реализовать
+    одинаковый проект на нескольких языках или технологиях. Эти опции обсуждаются в разделе <a href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305" class="elementLinkWithUserText">Концепция: Преобразование из Проекта в Код</a>.) Соответствующий проект <a href="./../../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}" class="elementLinkWithUserText">Рабочий продукт: Реализация прецедентов</a> изменяется таким образом, чтобы
+    соответствовать изменениям интерфейса.
+</p>
+<p>
+    В этом примере, Рисунок 2 - это черный ящик или представление спецификации подсистемы Клиент. Последующий проект
+    указывает на то, что подсистема Клиент должна быть EJB сущности. &nbsp; Подсистема предварительного проекта
+    преобразуется в интерфейсы EJB, как показано ниже:
+</p>
+<ul>
+    <li>
+        ICustomerMgt =&gt; 
+        <ul>
+            <li>
+                CustomerHome ?EJBEntityHomeInterface?
+            </li>
+        </ul>
+    </li>
+    <li>
+        ICustomer =&gt; 
+        <ul>
+            <li>
+                Customer ?EJBRemoteInterface?
+            </li>
+        </ul>
+    </li>
+</ul>
+<p align="center">
+    <img alt="Диаграмма, описанная в сопроводительном тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/dsub_external.gif" />
+</p>
+<p align="center">
+    <b>Рисунок 2: Представление черного ящика Подсистемы проекта Клиент</b>
+</p>
+<p>
+    Открытые Подсистемами проекта <i>интерфейсы</i> могут включать в себя стандартные интерфейсы Java, интерфейсы EJB
+    (такие как интерфейсы Java), интерфейсы EJB (удаленные и домашние) и даже один или несколько классов
+    <i>делегирования</i> или <i>доступа</i>, которые полностью скрывают существование одного или нескольких объектов EJB.
+    Заметьте, что все они, включая интерфейсы Java, моделируются как классы UML, а не интерфейсы UML (<a href="./../../../tech.j2ee/guidances/guidelines/interfaces_for_j2ee_applications_23711CC0.html" guid="4.292643163694118E-306" class="elementLinkWithUserText">Руководство: Интерфейсы для приложений J2EE</a>).
+    Например, bean-объект сеанса часто используется как фасадный метод для доступа к набору тесно связанных bean-объектов
+    сущности. В этом случае, только интерфейсы bean-объекта сеанса будут открыты в подсистеме.
+</p>
+<p>
+    Bean-объекты, управляемые сообщениями, асинхронно используют сообщения из назначения (или конечной точки). Поэтому,
+    назначение может также служить "интерфейсом" для Подсистемы проекта, содержащей bean-объекты, управляемые сообщениями.
+</p>
+<p>
+    Заметьте, что локальные интерфейсы используются другими тесно связанными объектами EJB в той же Подсистеме проекта, и
+    они появляются в реализации подсистем более часто, чем в видимых интерфейсах, открытых системой.
+</p>
+<p>
+    Более подробная информация о интерфейсах в приложении J2EE находится в разделе <a href="./../../../tech.j2ee/guidances/guidelines/interfaces_for_j2ee_applications_23711CC0.html" guid="4.292643163694118E-306" class="elementLinkWithUserText">Руководство: Интерфейсы для приложений J2EE</a>.
+    Дополнительная информация о моделировании объектов EJB приведена в разделе <a href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305" class="elementLinkWithUserText">Руководство: Объект EJB (Enterprise JavaBean)</a>.
+</p>
+<h5>
+    Реализация подсистемы (представление подсистемы в виде белого ящика)
+</h5>
+<p>
+    Подсистемы проекта должны открывать только то, что требуется клиентам. &nbsp;Поэтому, класс, который реализует объект
+    EJB, является частным для подсистемы и является логической частью подсистемы реализации. Подсистема реализации может
+    стать:
+</p>
+<ul>
+    <li>
+        набором взаимодействующих объектов EJB и классов, скрытых одним или несколькими видимыми классами
+        <i>делегирования</i> или <i>доступа</i>
+    </li>
+    <li>
+        отдельным объектом EJB без других взаимодействующих классов
+    </li>
+</ul>
+<p>
+    Продолжая предыдущий пример подсистемы Клиент, ее реализация включает в себя:
+</p>
+<ul>
+    <li>
+        CustomerEntityEJB (компонент) ?EJBEntityBean?
+    </li>
+    <li>
+        CustomerBean ?EJBImplementation?
+    </li>
+    <li>
+        дополнительные вспомогательные классы
+    </li>
+</ul>
+<p>
+    На Рисунке 3 показано представление белого ящика (то есть, <i>внутренняя часть</i>) Подсистемы проекта. Заметьте, что
+    классы EJB смоделированы, как это описано в <a href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305" class="elementLinkWithUserText">Руководство: Объект EJB</a> . Это внутреннее
+    представление подсистемы называется реализацией подсистемы. В этом представлении мы видим решения, невидимые для
+    клиента. Например, в этой реализации подсистемы класс Объекта доступа к данным (DAO) получает доступ к постоянным
+    данным с помощью API JDBC. (В другом проекте может использоваться хранилище, управляемое контейнером.) Более подробная
+    информация о классах DAO находится в разделе <a href="./../../../tech.j2ee/guidances/guidelines/enterprise_javabean_ejb_7F0C3AFF.html" guid="1.5078998518719443E-305" class="elementLinkWithUserText">Рекомендация: EJB</a>.
+</p>
+<p align="center">
+    <img alt="Диаграмма, описанная в сопроводительном тексте." src="./../../../tech.j2ee/guidances/guidelines/resources/ejb_structure.gif" />
+</p>
+<p align="center">
+    <b><font size="2">Рисунок 3: Представление белого ящика Подсистемы проекта Клиент</font></b>
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

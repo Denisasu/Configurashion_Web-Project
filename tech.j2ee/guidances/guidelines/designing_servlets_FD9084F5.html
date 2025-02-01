@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="ru" xml:lang="ru">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Рекомендация: Проектирование сервлетов </title>
+<meta content="Guideline" name="uma.type">
+<meta content="designing_servlets" name="uma.name">
+<meta content="Проектирование сервлетов " name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.1396160853725076E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.1396160853725076E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">Рекомендация: Проектирование сервлетов </td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">В этом руководстве обсуждаются способы проектирования сервлетов для приложения J2EE.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Взаимосвязи</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">Связанные элементы</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">Проектирование классов</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">Основное описание</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <a id="Introduction" name="Introduction"></a>Введение
+</h3>
+<p>
+    Это руководство посвящено проектированию сервлетов. Дополнительное руководство о сервлетах, например, о способе их
+    идентификации и моделирования, находится в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/servlet_FB1EC186.html" guid="7.265155609265114E-306">Руководство
+    по рабочему продукту: Сервлеты</a>s.
+</p>
+<h3>
+    <a id="Session State" name="Session State"></a>Состояние сеанса
+</h3>
+<p>
+    Данные о состоянии сеанса, которыми управляет сервлет, должны быть документированы в проекте сервлета. Дополнительная
+    информация о состоянии сеанса находится в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Прием: Проектирование состояния для приложений J2EE</a>.
+</p>
+<h3>
+    <a id="servlet_context" name="servlet_context"></a>Контекст сервлета
+</h3>
+<p>
+    Все взаимодействия с контекстом сервлета, должны быть документированы в проекте сервлета. Контекст сервлета - это
+    глобальные для приложения данные, управление которыми требует осторожности. Дополнительная информация об этом механизме
+    находится в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Прием: Проектирование состояния для приложений J2EE</a>.
+</p>
+<h3>
+    <a id="Long Lived State" name="Long Lived State"></a>Долговременное состояние
+</h3>
+<p>
+    Сервлет может также управлять данными, которые предназначены для использования в течении нескольких клиентских сеансов.
+    Например, он может иметь непосредственный доступ к базе данных через JDBC, или он может сохранять данные в cookie на
+    стороне клиента.
+</p>
+<p>
+    Если сервлет управляет такими долговременными данными, это должно быть отмечено в его описании в Модели проекта. Проект
+    долговременного состояния обсуждается также в разделе <a class="elementLinkWithUserText" href="./../../../tech.j2ee/guidances/guidelines/designing_state_for_j2ee_applications_C145BCA3.html" guid="7.896195949843941E-306">Прием: Проектирование состояния для приложений J2EE</a>.
+</p>
+<h3>
+    <a id="Granularity" name="Granularity"></a>Уровень дискретности
+</h3>
+<p>
+    Сервлеты могут вызывать другие сервлеты, страницы JSP, вспомогательные классы и объекты EJB. Если сервлет становится
+    очень большим, то можно:
+</p>
+<ul>
+    <li>
+        создать вспомогательные классы, которые могут быть отдельно протестированы;
+    </li>
+    <li>
+        переместить весь исходный код HTML в страницы JSP;
+    </li>
+    <li>
+        перенести всю бизнес-логику в объекты EJB.
+    </li>
+</ul>
+<h3>
+    <a id="Transactions" name="Transactions">Транзакции</a>
+</h3>
+<p>
+    Сервлеты обычно имеют дело с временным состоянием сеанса и не требуют транзакций. Если необходимо использовать
+    транзакции, то ситуации, в которых они должны применяться, должны быть указаны в руководстве по проекту.
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;Все права защищены..
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>
